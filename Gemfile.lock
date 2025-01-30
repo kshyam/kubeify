@@ -199,5 +199,8 @@ DEPENDENCIES
   sinatra
   sinatra-cross_origin (~> 0.3.1)
 
+RUBY VERSION
+   ruby 3.3.3p89
+
 BUNDLED WITH
    2.6.2
