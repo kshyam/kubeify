@@ -1,0 +1,206 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <!-- <div class="container"> -->
+    <a class="navbar-brand" href="/"
+      ><img src="{{ site.baseurl }}/images/kubeify-logo.png" alt=""
+    /></a>
+
+    <button class="navbar-toggler" type="button" id="sidebarCollapse">
+      <!-- <span class="navbar-toggler-icon"></span> -->
+      <span class="icon"></span>
+      <span class="icon"></span>
+      <span class="icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/services">Services</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/why-kubernetes">Why Kubernetes</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://blog.kubeify.com">Blog</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/webinars">Webinars</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About Us</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact Us</a>
+        </li>
+
+        <li class="nav-item ml-md-4">
+          <a
+            class="nav-link btn btn-warning btn-rounded text-white pr-4 pl-4"
+            href="/schedule-meeting"
+            >Schedule Meeting</a
+          >
+        </li>
+      </ul>
+    </div>
+  <!-- </div> -->
+</nav>
+
+<div class="sidebar__wrapper">
+  <!-- Sidebar -->
+  <nav id="sidebar">
+    <div class="sideBar__content">
+      <div id="dismiss">
+        <!-- <i class="fas fa-arrow-left"></i> -->
+        <span class="modal-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="24"
+            height="24"
+            viewBox="0 0 172 172"
+            style="fill: #000000;"
+          >
+            <g
+              fill="none"
+              fill-rule="nonzero"
+              stroke="none"
+              stroke-width="1"
+              stroke-linecap="butt"
+              stroke-linejoin="miter"
+              stroke-miterlimit="10"
+              stroke-dasharray=""
+              stroke-dashoffset="0"
+              font-family="none"
+              font-weight="none"
+              font-size="none"
+              text-anchor="none"
+              style="mix-blend-mode: normal;"
+            >
+              <path d="M0,172v-172h172v172z" fill="none"></path>
+              <g fill="#000">
+                <path
+                  d="M33.73372,23.59961l-10.13411,10.13411l52.26628,52.26628l-52.26628,52.26628l10.13411,10.13411l52.26628,-52.26628l52.26628,52.26628l10.13411,-10.13411l-52.26628,-52.26628l52.26628,-52.26628l-10.13411,-10.13411l-52.26628,52.26628z"
+                ></path>
+              </g>
+            </g>
+          </svg>
+        </span>
+      </div>
+
+      <!-- <div class="sidebar-header">
+        <h3>Bootstrap Sidebar</h3>
+      </div> -->
+      <!-- <div class="nav__title">
+        Menu
+      </div> -->
+      <ul class="list-unstyled components">
+        <li class="nav-item active">
+          <a class="nav-link" href="/services">Services</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/why-kubernetes">Why Kubernetes</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://blog.kubeify.com">Blog</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/webinars">Webinars</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About Us</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact Us</a>
+        </li>
+
+        <li class="nav-item ml-md-4">
+          <a
+            class="nav-link btn btn-warning btn-rounded text-white pr-4 pl-4"
+            href="/schedule-meeting"
+            >Schedule Meeting</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <!-- <div id="content">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <button type="button" id="sidebarCollapse" class="btn btn-info">
+          <i class="fas fa-align-left"></i>
+          <span>Toggle Sidebar</span>
+        </button>
+      </div>
+    </nav>
+  </div> -->
+  <!-- Dark Overlay element -->
+  <div class="overlay"></div>
+</div>
+<script src="{{ site.baseurl }}/js/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    // $("#sidebar").mCustomScrollbar({
+    //   theme: "minimal",
+    // });
+
+    $("#dismiss, .overlay").on("click", function () {
+      $("#sidebar").removeClass("active");
+      $(".overlay").removeClass("active");
+    });
+
+    $("#sidebarCollapse").on("click", function () {
+      $("#sidebar").addClass("active");
+      $(".overlay").addClass("active");
+      // $(".collapse.in").toggleClass("in");
+      // $("a[aria-expanded=true]").attr("aria-expanded", "false");
+    });
+
+    // $(window).scroll(function () {
+    //   if ($(document).scrollTop() > $(".navbar").height()) {
+    //     $("header").addClass("sticky_header");
+    //     $(".navbar").addClass("navbar-light bg-white");
+    //   } else {
+    //     $("header").removeClass("sticky_header");
+    //     $(".navbar").removeClass("navbar-light bg-white");
+    //   }
+    // });
+
+    // $(".list-unstyled li.active").removeClass("active");
+    // console.log(
+    //   $("a[href*='" + location.pathname + "']")
+    //     .parent()
+    //     .addClass("active")
+    // );
+    $(".list-unstyled li.active").removeClass("active");
+
+    $(".list-unstyled li a").each(function (i, obj) {
+      console.log(obj.classList.contains("btn"));
+      if (
+        obj.pathname === location.pathname &&
+        !obj.classList.contains("btn")
+      ) {
+        $(".list-unstyled li.active").removeClass("active");
+
+        console.log($(obj).parent().addClass("active"));
+      }
+    });
+
+    // let $parent = $(this).parent();
+    // $parent.addClass("active");
+    // window.location.assign($(this).attr("href"));
+    // e.preventDefault();
+  });
+</script>

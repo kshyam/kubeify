@@ -1,0 +1,48 @@
+.section-head {
+  padding: 0;
+  text-align: center;
+}
+.msg-txt-16 {
+  font-size: 1rem;
+  color: #343434;
+  line-height: 1.5;
+}
+.msg-txt-18 {
+  font-size: 1.1rem;
+  color: #343434;
+  line-height: 1.5;
+}
+.list-styled {
+  list-style: none;
+  padding: 0;
+}
+.list-styled > li {
+  position: relative;
+  padding-left: 30px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+.list-styled > li::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: theme-color('primary');
+}
+.btn-200 {
+  width: 200px !important;
+}
+.f-18 {
+  font-size: 1.1rem;
+}
+.font-primary {
+  font-family: $font-family-primary;
+}
+.font-weight-medium {
+  font-weight: 500;
+}

@@ -1,0 +1,28 @@
+# Site settings
+title: Kubeify
+email: support@kubeify.com
+description: > # thi
+  Kubeify - a team who helps teams to quick start with Kubernetes & docker based DevOps process.
+
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://kubeify.com/" # the base hostname & protocol for your site
+twitter_username: kubeify
+github_username: kubeify
+
+# Build settings
+markdown: kramdown
+paginate: 1
+# paginate_path: "/_posts/page:num/"
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-redirect-from
+
+jekyll_admin:
+  hidden_links:
+    - datafiles
+
+sass:
+  sass_dir: _sass
+  style: compressed

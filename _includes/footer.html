@@ -1,0 +1,112 @@
+<div class="footer footer--dark">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 footer-item">
+        <div class="footer-logo">
+          <img src="{{ baseurl }}/images/kubeify-logo.png" alt="" />
+        </div>
+        <p>
+          Accelerate your cloud native transformation, adoption of kubernetes
+          with Kubeify's team of experts.
+        </p>
+        <p class="text-primary font-weight-bold mb-1">
+          <a href="tel:+918688468400"><i class="fa fa-mobile"></i> +91 86884 68400</a>
+        </p>
+        <p class="text-primary font-weight-bold mb-0">
+          <a href="mailto:support@kubeify.com?Subject=Hello%20again" target="_top">support@kubeify.com</a>
+        </p>
+        <br>
+        <p><a href="/join-slack" target="_blank">
+            <img  src="/images/join-us-on-slack.png" alt="slack" class="img-responsive" style="width: 50%">
+          </a>
+        </p>
+
+        </p>
+      </div>
+      <div class="col-md-8 mt-4 mt-md-0">
+        <div class="d-flex justify-content-between">
+          <div class="footer-item">
+            <h4 class="cta__title">Company</h4>
+            <ul class="footer-nav">
+              <li><a href="/about" title="About">About Us</a></li>
+              <li><a href="/contact" title="Contact Us">Contact Us</a></li>
+              <li>
+                <a href="/join-our-team" title="Join our team">Join our team</a>
+              </li>
+              <li>
+                <a href="/schedule-meeting" title="Schedule a meeting">Schedule a Meeting</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-item">
+            <h4 class="cta__title">Services</h4>
+            <ul class="footer-nav">
+              <li><a href="/services">Services Offered</a></li>
+              <li><a href="/why-kubernetes">Why Kubernetes</a></li>
+              <li><a href="/customers" title="Customers">Customers</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-item">
+            <h4 class="cta__title">Resources</h4>
+            <ul class="footer-nav">
+              <li><a href="https://blog.kubeify.com" target="_blank">Blog</a></li>
+              <li><a href="/webinars">Webinars</a></li>
+              <li><a href="/join-webinars">Join Webinars</a></li>
+              <li><a href="https://www.cncf.io/newsroom/case-studies/" target="_blank">Case Studies</a></li>
+              <!-- <li><a href="/learn-kubernetes" target="_blank">Learn Kubernetes</a></li> -->
+            </ul>
+          </div>
+
+          <div class="footer-item">
+            <h4 class="cta__title">Social</h4>
+            <ul class="footer-nav">
+              <li><a href="https://www.linkedin.com/company/kubeify" title="linkedin" target="_blank">LinkedIn</a></li>
+              <li><a href="https://twitter.com/kubeify" target="_blank">Twitter</a></li>
+              <li><a href="https://www.youtube.com/channel/UCgT2HIveAxhTWBCXEau688Q" target="_blank">YouTube</a></li>
+              <li><a href="/join-slack" target="_blank">Slack</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <br />
+  <hr />
+  <div class="lower-footer text-center">
+    <span class="d-inline-block">
+      Copyright &copy; <span id="year"></span> Kubeify, All Rights
+      Reserved.&nbsp;
+    </span>
+  </div>
+</div>
+
+<!-- {% include home-message-box.html %} -->
+
+
+<script src="{{ site.baseurl }}/js/jquery.min.js"></script>
+<script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
+<script src="{{ site.baseurl }}/js/app.js"></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $("#year").html(new Date().getFullYear());
+  });
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142118821-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "UA-142118821-1");
+</script>
+
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/7280691.js"></script>
+<!-- End of HubSpot Embed Code -->

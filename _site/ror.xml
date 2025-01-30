@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for https://kubeify.com/</title>
+  <link>https://kubeify.com/</link>
+
+<item>
+     <link>https://kubeify.com/</link>
+     <title>Get enterprise Kubernetes support for multi cloud environments | Kubeify</title>
+     <description>Accelerate your cloud native transformation, adoption of kubernetes with Kubeify’s team of experts.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://kubeify.com/join-webinars</link>
+     <title>Join Webinars - Getting Started with Docker and Kubernetes Saturday, JUNE 6th, 2020, 11:30 AM – 12:30 PM, IST | Kubeify</title>
+     <description>Kubeify partners with DevOps leaders to provide you with the most valuable content. Check out our upcoming online webinars, meet us in person at event or Meetup, or watch one of our on-demand videos.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://kubeify.com/services</link>
+     <title>Kubernetes as a Service on Your Infrastructure | Kubeify</title>
+     <description>Your developers enjoy the benefits of Kubernetes. We do everything else. We are your Kubernetes ops team.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://kubeify.com/why-kubernetes</link>
+     <title>Why Kubernetes | Kubeify</title>
+     <description>Kubernetes is the open source standard for managing application containers from local to planetary scale.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://kubeify.com/webinars</link>
+     <title>Webinars | Kubeify</title>
+     <description>Kubeify partners with DevOps leaders to provide you with the most valuable content. Check out our upcoming online webinars, meet us in person at event or Meetup, or watch one of our on-demand videos.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://kubeify.com/about</link>
+     <title>Read about | Kubeify</title>
+     <description>Kubeify helps developers and operators build, deploy, manage, and scale their applications on top of Kubernetes.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://kubeify.com/contact</link>
+     <title>Contact at support@kubeify.com | Kubeify</title>
+     <description>Get in Touch with Kubeify - If you have any questions or need assistance in any way, please feel free to reach out using the form here. We’ll be sure to respond within 4 hours.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://kubeify.com/schedule-meeting</link>
+     <title>Schedule a meeting with Kubeify and Get FREE 20 Hours Support. | Kubeify</title>
+     <description>Razorops is a container native CI/CD platform to automate testing and deployment across the environments in few steps.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://kubeify.com/join-our-team</link>
+     <title>Join our team | Kubeify</title>
+     <description>Customers worldwide rely on Kubeify for cloud infrastructure setup that is fast, easy, and affordable.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://kubeify.com/customers</link>
+     <title>Hire Kubeify for cloud infrastructure setup | Kubeify</title>
+     <description>Customers worldwide rely on Kubeify for cloud infrastructure setup that is fast, easy, and affordable.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  
