@@ -1,4 +1,15 @@
 
+body {
+  margin: 0;
+  font-family: "Open Sans";
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+
 .feature-img {
   width: 30%;
   height 30%;
