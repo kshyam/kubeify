@@ -118,10 +118,16 @@ h6 {
 }
 
 /*----footer----*/
-
+.brand-text{
+  font-size: 22px;
+  font-weight: 900;
+}
 .footer {
   // background-color: #f4f5f7 !important;
   padding: 3rem 0 2rem 0;
+  border-top: 1px solid #efefee;
+
+  color: #FFF;
 }
 .footer-item {
   width: 100%;
@@ -155,7 +161,7 @@ h6 {
 }
 .footer-nav > li > a {
   display: block;
-  color: theme-color("text-light");
+  color: #FFF;
 }
 /*---home-page----*/
 .home-banner {
@@ -1237,7 +1243,13 @@ h2{
   margin-top: 10px;
 }
 
+a {
+  text-decoration: none;
+}
 
+a:hover {
+  text-decoration: none;
+}
 
 .blue-text {
   background-image: linear-gradient(225deg, #28d8ff, #032eff);
