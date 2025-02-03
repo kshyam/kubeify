@@ -1,12 +1,13 @@
 ---
-layout: post
 title: Why I Decided to Use Karpenter for Kubernetes Autoscaling
-description: Before diving into **Karpenter**, let’s briefly discuss **autoscaling** in Kubernetes.
-permalink: "/blog/:title"
-date: 2025-01-29T16:05:00.000Z
+description: "Kubernetes has become the de facto standard for container
+  orchestration, offering unmatched scalability, flexibility, and efficiency. "
+image: /images/blog/kubeify-team.jpg
+layout: post
+permalink: /blog/:title
 author: Shyam Mohan
 category: DevOps
-image: "/images/blog/kubeify-team.jpg"
+date: 2025-01-29T16:05:00.000Z
 ---
 
 Kubernetes has become the **de facto standard** for container orchestration, offering unmatched scalability, flexibility, and efficiency. However, managing node autoscaling in Kubernetes has always been a challenge. Traditional Kubernetes Cluster Autoscaler (CA) works well in many cases but comes with **limitations** in speed, efficiency, and cost optimization.  
