@@ -702,21 +702,7 @@ h6 {
   padding-top: 50px !important;
   padding-bottom: 50px !important;
 }
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 35px;
-  height: 0;
-  overflow: hidden;
-}
 
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
 
 .after-loop {
   padding: 3rem 0 5rem;
@@ -1278,6 +1264,7 @@ a:hover {
   border-radius: 15px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
   animation: fadeInScale 1s ease-in-out; /* Animation */
+  margin-bottom: 20px;
 }
 
 /* Make the iframe responsive */
@@ -1317,6 +1304,7 @@ a:hover {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   animation: fadeInScale 1s ease-in-out; /* Animation */
   color: #007BFF;
+  margin-bottom: 20px;
 }
 
 /* Animation keyframes */

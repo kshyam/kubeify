@@ -264,22 +264,24 @@
     </header>
 
     <div class="content-wraper">
-      <header class="bg-dark text-white text-center py-5">
+      <header class="text-white text-center py-5 bg-primary1 pb-5 pt-5 cta">
     <h1>Kubeify Blog</h1>
     <div class="row mb-4">
-      <div class="col-md-6 col-xs-6 mx-auto p-4">
-          <input type="text" class="form-control" placeholder="Search for blogs...">
+      <div class="col-md-4 col-xs-4 mx-auto p-4">
+          <form method="get" action="https://www.google.com/search" target="_blank">
+            <input type="hidden" name="sitesearch" value="kubeify.com">
+            <input type="text" name="q" maxlength="255" placeholder="Search Kubeify Website" class="form-control">
+          </form>
       </div>
     </div>
-    <h2 class="text-center mb-4">Latest Blog Post</h2>
 </header>
 
 <div class="container mt-4 mb-4">
   <div class="row">
     
-      <div class="col-md-4">
+      <div class="col-md-4 ">
         <a href="/blog/why-i-decided-to-use-karpenter-for-kubernetes-autoscaling" title="Why I Decided to Use Karpenter for Kubernetes Autoscaling">
-          <div class="card blog-card p-3 promotional-container">
+          <div class="card blog-card p-3 bg-gray-800">
             <img src="/images/blog/kubeify-team.jpg" alt="Why I Decided to Use Karpenter for Kubernetes Autoscaling" class="card-img-top" title="Why I Decided to Use Karpenter for Kubernetes Autoscaling">
             <div class="card-body">
               <span class="time">29 Jan 2025</span>
