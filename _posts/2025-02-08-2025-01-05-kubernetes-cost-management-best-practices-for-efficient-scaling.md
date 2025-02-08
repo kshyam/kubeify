@@ -1,5 +1,5 @@
 ---
-title: 2025-01-05 Kubernetes Cost Management Best Practices for Efficient Scaling
+title: Kubernetes Cost Management Best Practices for Efficient Scaling
 description: "As more organizations adopt Kubernetes for container
   orchestration, it becomes increasingly crucial to manage and optimize its
   costs. "
