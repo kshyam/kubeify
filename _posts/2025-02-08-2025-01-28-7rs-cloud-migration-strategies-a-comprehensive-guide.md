@@ -3,7 +3,7 @@ title: "7Rs Cloud Migration Strategies: A Comprehensive Guide"
 description: "Organizations moving to the cloud need to evaluate multiple
   strategies based on their business needs, technical challenges, and long-term
   goals. "
-image: images/blog/cloud-migration-strategies.jpeg
+image: /images/blog/cloud-migration-strategies.jpeg
 layout: post
 permalink: /blog/:title
 author: Shyam Mohan

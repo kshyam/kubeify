@@ -3,7 +3,7 @@ title: Kubernetes Cost Management Best Practices for Efficient Scaling
 description: "As more organizations adopt Kubernetes for container
   orchestration, it becomes increasingly crucial to manage and optimize its
   costs. "
-image: images/blog/kubernetes-cost-management-best-practices-for-efficient-scaling.webp
+image: /images/blog/kubernetes-cost-management-best-practices-for-efficient-scaling.webp
 layout: post
 permalink: /blog/:title/
 author: Shyam Mohan

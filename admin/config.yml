@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: main # Replace with your default branch
 
-media_folder: "images/blog"
-public_folder: "images/blog"
+media_folder: "/images/blog"
+public_folder: "/images/blog"
 
 collections:
   - name: "blog"
