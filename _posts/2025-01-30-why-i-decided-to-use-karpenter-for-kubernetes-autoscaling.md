@@ -2,7 +2,7 @@
 title: Why I Decided to Use Karpenter for Kubernetes Autoscaling
 description: "Kubernetes has become the de facto standard for container
   orchestration, offering unmatched scalability, flexibility, and efficiency. "
-image: /images/blog/kubeify-team.jpg
+image: images/blog/karpenter-the-ultimate-solution-for-kubernetes-autoscaling.webp
 layout: post
 permalink: /blog/:title
 author: Shyam Mohan
