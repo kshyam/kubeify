@@ -1,5 +1,5 @@
 ---
-title: 2025-01-15-How to Secure Nginx with SSL Using Certbot on Ubuntu
+title: How to Secure Nginx with SSL Using Certbot on Ubuntu
 description: Securing your website with SSL (Secure Sockets Layer) is crucial
   for encrypting data and ensuring secure communication between a web server and
   users.
