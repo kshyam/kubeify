@@ -1,5 +1,5 @@
 ---
-title: 2025-01-08-Getting Started with Terraform
+title: Getting Started with Terraform
 description: Terraform is an Infrastructure as Code (IaC) tool that allows you
   to define and provision cloud resources in a declarative way. It supports AWS,
   Azure, Google Cloud, DigitalOcean, Kubernetes, and many more.
