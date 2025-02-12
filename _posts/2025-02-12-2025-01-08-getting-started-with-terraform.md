@@ -10,7 +10,7 @@ author: Shyam Mohan
 category: DevOps
 date: 2025-01-08T19:54:00.000Z
 ---
-# **Getting Started with Terraform 🚀**
+
 
 Terraform is an **Infrastructure as Code (IaC)** tool that allows you to define and provision cloud resources in a **declarative** way. It supports **AWS, Azure, Google Cloud, DigitalOcean, Kubernetes**, and many more.
 
