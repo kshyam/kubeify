@@ -1,5 +1,5 @@
 ---
-title: 2025-01-07 Secrets to Kubernetes Cost Control Implementing Efficient Clusters
+title: Secrets to Kubernetes Cost Control Implementing Efficient Clusters
 description: "Kubernetes is a powerful tool for managing containerized
   applications at scale, but without the proper strategies in place, it can
   quickly lead to high infrastructure costs. "
