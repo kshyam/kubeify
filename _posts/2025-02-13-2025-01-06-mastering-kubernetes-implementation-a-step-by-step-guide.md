@@ -1,5 +1,5 @@
 ---
-title: 2025-01-06 Mastering Kubernetes Implementation A Step-by-Step Guide
+title: Mastering Kubernetes Implementation A Step-by-Step Guide
 description: "Kubernetes has become the go-to solution for managing
   containerized applications in production at scale. With its flexibility and
   scalability, Kubernetes allows organizations to deploy, scale, and manage
