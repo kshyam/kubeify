@@ -4,7 +4,7 @@ description: "Kubernetes has become the go-to solution for managing
   containerized applications in production at scale. With its flexibility and
   scalability, Kubernetes allows organizations to deploy, scale, and manage
   applications with ease. "
-image: /images/blog/mastering-kubernetes-implementation-a-step-by-step-guide.webp
+image: /images/blog/mastering-kubernetes-implementation-a-step-by-step-guide-1-.webp
 layout: post
 permalink: /blog/:title/
 author: Shyam Mohan
