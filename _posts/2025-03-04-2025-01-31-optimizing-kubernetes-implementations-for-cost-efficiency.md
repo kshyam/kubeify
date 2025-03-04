@@ -1,5 +1,5 @@
 ---
-title: 2025-01-31 Optimizing Kubernetes Implementations for Cost Efficiency
+title: Optimizing Kubernetes Implementations for Cost Efficiency
 description: "Kubernetes has become the de facto standard for container
   orchestration, offering scalability, flexibility, and resilience. "
 image: /images/blog/optimizing-kubernetes-implementations-for-cost-efficiency.webp
