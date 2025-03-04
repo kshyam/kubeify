@@ -1,5 +1,5 @@
 ---
-title: 2025-01-30 Reducing Kubernetes Costs with Effective Resource Allocation
+title: Reducing Kubernetes Costs with Effective Resource Allocation
 description: "Kubernetes is a powerful tool for container orchestration, but
   managing costs can be a challenge if resources are not allocated effectively.
   "
