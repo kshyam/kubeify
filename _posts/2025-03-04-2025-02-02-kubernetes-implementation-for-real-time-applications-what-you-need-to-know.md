@@ -1,6 +1,5 @@
 ---
-title: 2025-02-02 Kubernetes Implementation for Real-Time Applications What You
-  Need to Know
+title: Kubernetes Implementation for Real-Time Applications What You Need to Know
 description: " These applications require low latency, high availability, and
   dynamic scalability. Kubernetes, the leading container orchestration platform,
   provides an ideal environment for deploying and managing real-time
