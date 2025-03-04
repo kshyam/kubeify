@@ -1,7 +1,7 @@
 ---
 title: Reducing Kubernetes Costs with Effective Resource Allocation
 description: "Kubernetes is a powerful tool for container orchestration, but
-  managing costs can be a challenge if resources are not allocated effectively.
+  managing costs can be a challenge if resources are not allocated  effectively.
   "
 image: /images/blog/reducing-kubernetes-costs-with-effective-resource-allocation.webp
 layout: post
