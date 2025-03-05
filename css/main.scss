@@ -12,6 +12,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.cta-button{
+  background-image: linear-gradient(to right, #f32170, #ff6b08, #cf23cf);
+  color: #ffffff !important;
+  border: 1px solid white;
+  text-shadow: 1px 1px #000;
+}
 .btn-warning {
   color: #fff;
   background-color: #fa765f;
@@ -117,9 +123,38 @@ h6 {
    #3c58cd 60%, #3c58cd 20%);
 }
 
-.cta__title {
-  text-transform: uppercase;
+/*-----Call to Action-------*/
+
+.looking-details-wraper {
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid #FFF;
+    border-radius: 20px;
+    padding: 0px 50px;
+    align-items: flex-end;
+    position: relative;
 }
+
+.looking-details-content {
+    padding: 50px 0px;
+    color: #fff;
+    width: 60%;
+}
+
+.looking-details-image {
+    margin-left: auto;
+    position: absolute;
+    right: 0px;
+}
+
+
+
+/*-----Call to Action end-------*/
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
 
 /*----footer----*/
 .brand-text{
@@ -288,37 +323,90 @@ h6 {
   padding: 1.8rem 0;
 }
 
-.how-we-work {
-  background-color: #fff;
-  padding: 1.8rem 0;
+
+#kubernetes-implementation{
+  .how-we-work {
+    background-color: #fff;
+    padding: 1.8rem 0;
+  }
+
+  .page-bg-header h1,
+  .page-bg-header p {
+    color: theme-color("white");
+  }
+
+  .card {
+      position: relative;
+      overflow: hidden;
+      border: none;
+      transition: transform 0.3s ease-in-out;
+      text-align: center;
+  }
+  .card:hover {
+      transform: scale(1.05);
+  }
+  .card .bottom-section {
+      position: absolute;
+      bottom: 0%;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 80, 200, 0.9);
+      color: white;
+      padding: 40px;
+      text-align: center;
+      clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
+      transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  .card:hover .bottom-section {
+      bottom: 0;
+  }
+  .card:hover .bottom-section {
+      transform: translateY(120%);
+  }
+  .card .overlay {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 80, 200, 0.9);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: top 0.5s ease-in-out;
+      padding: 15px;
+      text-align: center;
+  }
+  .card:hover .overlay {
+      top: 0;
+  }
+  .read-more {
+      background: white;
+      color: #0050C8;
+      padding: 8px 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+  }
+  .read-more:hover {
+      background-image: linear-gradient(90deg, #7114EF 0%, #1475F7 50%, #7114EF);
+      color: #ffffff !important;
+      border: 1px solid white;
+  }
+
 }
 
-.page-bg-header h1,
-.page-bg-header p {
-  color: theme-color("white");
+.work-ul{
+  font-size: 18px;
 }
-.services-wraper {
-  padding-top: 4rem;
-  img {
-    max-width: 100%;
-  }
-}
-.service-item-msg h4 {
-  font-size: 2rem;
-  color: theme-color("primary");
-  font-weight: 700;
-}
-.service-item {
-  padding-bottom: 8rem;
-}
-@media (min-width: 992px) {
-  .service-item-img-l {
-    text-align: left;
-  }
-  .service-item-img-r {
-    text-align: right;
-  }
-}
+
+
+
+
+
+
 /*----products-------*/
 .flow-comparison {
   position: relative;
@@ -499,7 +587,9 @@ h6 {
       background-color: #3e92d9;
     }
     h4 {
-      color: #2c4ab0;
+      background-image: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
+      color: transparent;
+      background-clip: text;
       font-size: 12px;
       // line-height: 1rem;
     }
@@ -698,7 +788,9 @@ h6 {
     }
     .current {
       h4 {
-        color: #2c4ab0;
+        background-image: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
+        color: transparent;
+        background-clip: text;
         font-size: 1.1rem;
         line-height: 1.5rem;
       }
@@ -1216,9 +1308,8 @@ p {
 }
 
 .index-heading{
-  background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
-  -webkit-background-clip: text;
+  color: #FFF !important;
+  text-shadow: 2px 2px #000;
   font-weight: 600 !important;
   font-size: 55px !important;
 }
@@ -1246,7 +1337,7 @@ p {
   justify-content: center;
 }
 
-h1 { 
+.red-text { 
   background: linear-gradient(to right, #f32170, 
           #ff6b08, #cf23cf, #eedd44); 
   -webkit-text-fill-color: transparent; 
