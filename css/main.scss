@@ -128,8 +128,11 @@ h6 {
 .looking-details-wraper {
     display: flex;
     flex-wrap: wrap;
-    border: 2px solid #FFF;
-    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.22);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.2px);
+    -webkit-backdrop-filter: blur(2.2px);
     padding: 0px 50px;
     align-items: flex-end;
     position: relative;
@@ -145,6 +148,25 @@ h6 {
     margin-left: auto;
     position: absolute;
     right: 0px;
+}
+.looking-details-image img {
+    margin-top: -40px;
+    max-width: 100%
+}
+
+@media (max-width: 767px) {
+    .looking-details-wraper {
+        padding: 0px 15px;
+        flex-direction: column-reverse;
+    }
+    .looking-details-content {
+        width: 100%;
+        padding: 20px 0px;
+    }
+    .looking-details-image {
+    position: static;
+    margin: 0 auto;
+    }
 }
 
 
@@ -164,7 +186,7 @@ h6 {
 .footer {
   // background-color: #f4f5f7 !important;
   padding: 3rem 0 .5rem 0;
-  border-top: 1px solid #efefee;
+  // border-top: 1px solid #efefee;
   color: #FFF;
 }
 
