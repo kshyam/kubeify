@@ -34,27 +34,15 @@
             <h4><a href="/blog">Blog / </a> <a href="{{ page.url }}">{{ page.title }}</a></h4>
             <div class="blog-post-content">
               <img src="{{ page.image }}" alt="{{ page.title }}" class="card-img-top" title="{{ page.title }}">
-              <h1>{{ page.title }}</h1>
+              <h1 class="mt-4" style="color:black;">{{ page.title }}</h1>
               <time>
                 {{ page.date | date_to_string }} -
                 <small>{{ page.author }}</small>
               </time>
+              <div class="px-5">
               {{ content }}
+              </div>
             </div>
-            <br><br>
-            <div class="blog-post-content">
-              <center>
-                <p><b>Enjoyed this article? Share it.</b>
-                  <p>
-              </center>
-              <br>
-              <div class="sharethis-inline-share-buttons"></div>
-            </div>
-            <br><br>
-          </div>
-
-          <div class="col-md-3">
-            {% include blog-menu.html %}
           </div>
 
         </div>
@@ -62,6 +50,8 @@
     </div>
   </div>
 </body>
+<br><br><br>
+{% include cta.html %}
 {% include footer.html %}
 
 </html>

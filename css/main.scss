@@ -128,11 +128,9 @@ h6 {
 .looking-details-wraper {
     display: flex;
     flex-wrap: wrap;
-    background: rgba(255, 255, 255, 0.22);
+    background-color: #3c58cd;
+    background-image: radial-gradient(circle, #338cf1 30%, #3c58cd 60%, #3c58cd 20%);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(2.2px);
-    -webkit-backdrop-filter: blur(2.2px);
     padding: 0px 50px;
     align-items: flex-end;
     position: relative;
