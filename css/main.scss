@@ -1278,8 +1278,40 @@ h6 {
   }
 }
 
+/* Monokai-inspired styling for inline code */
+code {
+  background-color: #272822;
+  color: #f8f8f2;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95em;
+}
+
+/* Monokai-inspired styling for code blocks */
+pre {
+  background-color: #272822;
+  color: #f8f8f2;
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: 'Courier New', monospace;
+  line-height: 1.5;
+}
+
+/* Syntax highlighting */
+pre .keyword { color: #f92672; } /* Pink */
+pre .string { color: #e6db74; } /* Yellow */
+pre .comment { color: #75715e; font-style: italic; } /* Grey */
+pre .number { color: #ae81ff; } /* Purple */
+pre .function { color: #a6e22e; } /* Green */
+pre .variable { color: #f8f8f2; } /* White */
 
 
+.list-services {
+  font-size: 16px !important;
+  text-align: left;
+}
 
 a {
   text-decoration: none;
@@ -1337,7 +1369,7 @@ p {
 .schedule-btn{
   border-color: #FFF;
   color: #FFF;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .schedule-btn:hover{
@@ -1411,7 +1443,7 @@ a:hover {
   padding-bottom: 56.25%; /* 16:9 aspect ratio (height/width * 100) */
   overflow: hidden;
   border: .76px solid #dfdfdf;
-  border-radius: 15px; /* Rounded corners */
+  border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
   animation: fadeInScale 1s ease-in-out; /* Animation */
 }
@@ -1423,7 +1455,7 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 15px;
+  padding: 8px;
 }
 
 /* Animation keyframes */
