@@ -74,34 +74,43 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="/services">Services</a>
-        </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="services" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+              </a>
+              <!-- <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                  <li><a class="dropdown-item" href="services">Service 1</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 2</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 3</a></li>
+                  <li><a class="dropdown-item" href="/service1">Service 4</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 5</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 6</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 7</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 8</a></li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="/why-kubernetes">Why Kubernetes</a>
-        </li>
+              </ul> -->
+          </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="/blog">Blog</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="/webinars">Webinars</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="/about">About Us</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="/contact">Contact Us</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link btn btn-primary btn-rounded" href="/schedule-meeting">Schedule Meeting</a>
-        </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/why-kubernetes">Why Kubernetes</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/blog">Blog</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/webinars">Webinars</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/about">About Us</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/contact">Contact Us</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link btn cta-button btn-rounded" href="/schedule-meeting" style="margin-left: 10px;">Schedule Meeting</a>
+          </li>
       </ul>
+
     </div>
   </div>
 </nav>
@@ -155,38 +164,41 @@
       <!-- <div class="nav__title">
         Menu
       </div> -->
-      <ul class="list-unstyled components">
-        <li class="nav-item active">
-          <a class="nav-link" href="/services">Services</a>
-        </li>
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+              </a>
+              <!-- <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                  <li><a class="dropdown-item" href="/service1">Service 1</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 2</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 3</a></li>
+                  <li><a class="dropdown-item" href="/service1">Service 4</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 5</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 6</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 7</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 8</a></li>
+              </ul> -->
+          </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="/why-kubernetes">Why Kubernetes</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="/blog">Blog</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="/webinars">Webinars</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="/about">About Us</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="/contact">Contact Us</a>
-        </li>
-
-        <li class="nav-item ml-md-4">
-          <a
-            class="nav-link btn btn-warning btn-rounded text-white pr-4 pl-4"
-            href="/schedule-meeting"
-            >Schedule Meeting</a
-          >
-        </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/why-kubernetes">Why Kubernetes</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/blog">Blog</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/webinars">Webinars</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/about">About Us</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/contact">Contact Us</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link btn cta-button btn-rounded" href="/schedule-meeting">&nbsp;&nbsp;Schedule Meeting&nbsp;&nbsp;</a>
+          </li>
       </ul>
     </div>
   </nav>
@@ -262,17 +274,22 @@
   });
 </script>
 
+
+<meta name="google-adsense-account" content="ca-pub-4088406505945385">
     </header>
 
     <div class="content-wraper">
       <!-- Hero Section -->
-<section class="text-center py-5 hero">
+<section class="text-center py-5 hero page-bg-header cta">
   <div class="container">
-    <div class="row">
-      <div class="col-sm-6">
-      <br>
-      <h1 >Empowering Your Cloud Journey with Kubernetes</h1>
-      <p class="blue-text ">Expert solutions for custom development, implementation, migration, performance, and cost optimization.</p>
+    <div class="row" style="row-gap: 30px;">
+      <div class="col-sm-6 hero-left-side">
+        <div class="badge-with-arrow">
+          <div style="color: #000;">☸ Top Kubernetes experts</div>
+        </div>
+      <h1 class="index-heading blue-bg">Empowering Your Cloud Journey with Kubernetes</h1>
+      <p style="font-size: 18px !important; color:#FFF;">Expert solutions for kubernetes custom development, implementation, migration, performance, and cost optimization.</p>
+      <a class="nav-link btn schedule-btn" href="/schedule-meeting">Schedule Meeting</a>
       </div>
       <div class="col-sm-6">
        <div class="video-container">
@@ -287,6 +304,14 @@
             allowfullscreen>
           </iframe>
         </div>
+        
+        <div class="spacer-small"></div>
+        <div class="hero_testimonial">
+          <p style="color: #000;">One of the best team I ever worked!</p>
+        <div class="hero_testimonial-author">
+          <img src="https://cdn.prod.website-files.com/648776302927d2295495964e/648c803b74d4a4a4f5f8c4da_amit-gud-doordash.webp" loading="lazy" width="26" alt="" class="hero_testimonial-photo">
+          <div class="author-designation text-bold">Mark Mooney, CTO, Biqmind, Singapore</div>
+        </div>
       </div>
     </div>
   </div>
@@ -297,41 +322,181 @@
 <!-- Kubernetes Implementation Section -->
 <section id="kubernetes-implementation" class="py-5 bg-dark">
 <div class="container text-center">
-  <h1>What we do?</h1>
+  <h1 class="red-text">What we do?</h1>
   <p>
     We help teams to adopt production ready Kubernetes deployments.
   </p>
 </div>
+<div class="container mt-4">
+    <div class="row g-4">
+        <!-- Repeat this block for 8 items -->
+        <div class="col-sm-6 col-md-3 mb-4">
+            <div class="card">
+                <img src="/images/services/services.jpg" class="card-img" alt="Before Hover">
+                <div class="bottom-section">
+                    <h5>Kubernetes Consulting & Strategy</h5>
+                </div>
+                <div class="overlay">
+                    <h5>Kubernetes Consulting & Strategy</h5>
+                    <p>
+                      <ul class="list-services">
+                        <li> Architecture design and best practices</li>
+                        <li> Kubernetes adoption roadmap</li>
+                        <li> Platform assessment and optimization</li>
+                      </ul>
+                    </p>
+                    <a href="#" class="read-more btn btn-rounded">Read more</a>
+                </div>
+            </div>
+        </div>
 
-  <div class="container">
-    <div class="row">
-    <div class="col-sm-4">
-      <div class="promotional-container">
-      <img src="/images/kubernetes-with-multi-cloud.gif" title="" alt="" class="rounded img-fluid">
-      <h2 class='grd-text'>Kubernetes Implementation</h2>
-      <p class="blue-text">Seamlessly deploy and manage Kubernetes clusters on any cloud platform. Scale applications effortlessly, ensure high availability, and optimize costs with Kubeify's expert Kubernetes solutions. Future-proof your infrastructure with the industry's leading container orchestration platform. 🚀</p>
-      </div>
+        <!-- Repeat till 8 items are filled -->
+        <div class="col-sm-6 col-md-3 mb-4">
+            <div class="card">
+                <img src="/images/services/services.jpg" class="card-img" alt="Before Hover">
+                <div class="bottom-section">
+                    <h5>Kubernetes Cluster Setup & Management</h5>
+                </div>
+                <div class="overlay">
+                    <h5>Kubernetes Cluster Setup & Management</h5>
+                    <p>
+                      <ul class="list-services">
+                        <li> Cluster provisioning (On-prem, AWS EKS, GCP GKE, Azure AKS)</li>
+                        <li> High availability and scalability setup</li>
+                        <li> Monitoring, logging, and alerting integration</li>
+                      </ul>
+                    </p>
+                    <a href="#" class="read-more btn btn-rounded">Read more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3 mb-4">
+            <div class="card">
+                <img src="/images/services/services.jpg" class="card-img" alt="Before Hover">
+                <div class="bottom-section">
+                    <h5>CI/CD Pipeline Automation</h5>
+                </div>
+                <div class="overlay">
+                    <h5>CI/CD Pipeline Automation</h5>
+                    <p>
+                      <ul class="list-services">
+                        <li> Kubernetes-native CI/CD with tools like ArgoCD, Jenkins, and RazorOps</li>
+                        <li> GitOps implementation</li>
+                        <li> Automated deployments and rollbacks</li>
+                      </ul>
+                    </p>
+                    <a href="#" class="read-more btn btn-rounded">Read more</a>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="col-sm-6 col-md-3 mb-4">
+          <div class="card">
+              <img src="/images/services/services.jpg" class="card-img" alt="Before Hover">
+              <div class="bottom-section">
+                  <h5>MLOps & AI/ML Deployment</h5>
+              </div>
+              <div class="overlay">
+                  <h5>MLOps & AI/ML Deployment</h5>
+                  <p>
+                    <ul class="list-services">
+                      <li> Kubernetes for machine learning model deployment</li>
+                      <li> Scalable inference services with KServe or Seldon</li>
+                      <li> Model training pipelines with Kubeflow</li>
+                    </ul>
+                  </p>
+                  <a href="#" class="read-more btn btn-rounded">Read more</a>
+              </div>
+          </div>
+        </div>
+      
+
+      
+        <!-- Repeat till 4 items are filled -->
+
+
+        <div class="col-sm-6 col-md-3 mb-4">
+          <div class="card">
+              <img src="/images/services/services.jpg" class="card-img" alt="Before Hover">
+              <div class="bottom-section">
+                  <h5>Kubernetes Monitoring & Observability</h5>
+              </div>
+              <div class="overlay">
+                  <h5>Kubernetes Monitoring & Observability</h5>
+                  <p>
+                    <ul class="list-services">
+                      <li> Prometheus, Grafana, and Loki setup</li>
+                      <li> Application and infrastructure monitoring</li>
+                      <li> Distributed tracing with Jaeger or OpenTelemetry
+                      </li>
+                    </ul>
+                  </p>
+                  <a href="#" class="read-more btn btn-rounded">Read more</a>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3 mb-4">
+            <div class="card">
+                <img src="/images/services/services.jpg" class="card-img" alt="Before Hover">
+                <div class="bottom-section">
+                    <h5>Disaster Recovery & Backup Solutions</h5>
+                </div>
+                <div class="overlay">
+                    <h5>Disaster Recovery & Backup Solutions</h5>
+                    <p>
+                      <ul class="list-services">
+                        <li> Cluster backup with tools like Velero</li>
+                        <li> DR strategy and failover setup</li>
+                        <li> Data persistence and storage solutions</li>
+                      </ul>
+                    </p>
+                    <a href="#" class="read-more btn btn-rounded">Read more</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-3 mb-4">
+            <div class="card">
+                <img src="/images/services/services.jpg" class="card-img" alt="Before Hover">
+                <div class="bottom-section">
+                    <h5>Cost Optimization & Resource Efficiency</h5>
+                </div>
+                <div class="overlay">
+                    <h5>Cost Optimization & Resource Efficiency</h5>
+                    <p>
+                      <ul class="list-services">
+                        <li> Right-sizing pods and nodes</li>
+                        <li> Horizontal and vertical pod autoscaling</li>
+                        <li> Cost monitoring and reporting with tools like Kubecost</li>
+                      </ul>
+                    </p>
+                    <a href="#" class="read-more btn btn-rounded">Read more</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-3 mb-4">
+            <div class="card">
+                <img src="/images/services/services.jpg" class="card-img" alt="Before Hover">
+                <div class="bottom-section">
+                    <h5>Kubernetes Training & Workshops</h5>
+                </div>
+                <div class="overlay">
+                    <h5>Kubernetes Training & Workshops</h5>
+                    <p>
+                      <ul class="list-services">
+                        <li> Hands-on Kubernetes bootcamps</li>
+                        <li> DevOps and GitOps training</li>
+                        <li> MLOps and AI/ML deployment workshops</li>
+                      </ul>
+                    </p>
+                    <a href="#" class="read-more btn btn-rounded">Read more</a>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="col-sm-4">
-      <div class="promotional-container">
-      <img src="/images/kubernetes-implementation.gif" title="" alt="" class="rounded img-fluid" >
-      <h2 class='grd-text'>K8s Migration & Multi Cloud</h2>
-       <p class="blue-text">Unlock the power of multi-cloud flexibility with Kibeify's Kubernetes solutions. Seamlessly deploy, manage, and scale your applications across any cloud platform. Achieve unmatched resilience, avoid vendor lock-in, and optimize costs while maintaining consistent performance everywhere. Go multi-cloud with confidence. 🚀</p>
-      </div>
-    </div>
-
-    <div class="col-sm-4">
-      <div class="promotional-container">
-      <img src="/images/kubernetes-cost.gif" title="" alt="" class="rounded img-fluid">
-      <h2 class='grd-text'>Kubernetes Performance & Cost</h2>
-      <p class="blue-text">Maximize efficiency and minimize costs with Kubeify's Kubernetes optimization solutions. Fine-tune your clusters for peak performance, reduce resource waste, and achieve significant cloud savings—all while ensuring your applications run faster and smoother than ever. Optimize smarter, not harder. 🚀</p>
-      </div>
-    </div>
-
-
-  </div>
-  </div>
+</div>
 </section>
 
 
@@ -340,7 +505,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-6">
-        <h2 class='grd-text'>Kubernetes Custom Development 🚀</h2>
+        <h1 class='grd-text'>Kubernetes Custom Development</h1>
         <p>Unlock the full potential of Kubernetes with our custom development solutions! We specialize in building tailored Kubernetes operators, multi-cluster management, automated CI/CD pipelines, and scalable microservices architectures. Whether you're migrating to Kubernetes, optimizing workloads, or enhancing automation, our cloud-native expertise ensures seamless, high-performance solutions for your business.<br>
           ✅ Custom Kubernetes Operators<br>
           ✅ Multi-Cluster & Hybrid Cloud Deployments<br>
@@ -349,10 +514,12 @@
         <br>
         Let’s build and scale your Kubernetes-powered applications with precision! 🔥 #Kubernetes #DevOps #CloudNative #Automation
         </p>
+        
       </div>
       <div class="col-sm-6">
         <img src="/images/kubernetes-architecture.jpg" title="" alt="" class="rounded img-fluid" >
       </div>
+
     </div>
   </div>
 </section>
@@ -366,7 +533,7 @@
 
 <div class="services-offered-wraper">
   <div class="container">
-    <h2 class="section-head mb-5" id="features">Kubernetes Services Offered</h2>
+    <h1 class="section-head mb-5 " id="features">Kubernetes Services Offered</h1>
     <div class="row pb-4">
       <div class="col-sm-6">
         <div class="media">
@@ -453,7 +620,7 @@
             <p>
               Get enterprise Kubernetes support for multi cloud environments:
             </p>
-            <ul class="service__offers__ul">
+            <ul class="service__offers__ul" style="font-size: 14px;">
               <li>Public Cloud - AWS, GCE/GKE, Azure, and more</li>
               <li>
                 Data Center - Install Kubernetes with kismatic Enterprise
@@ -477,7 +644,7 @@
               Determine your organization's technological maturity and gain
               actionable next steps:
             </p>
-            <ul class="service__offers__ul">
+            <ul class="service__offers__ul" style="font-size: 14px;">
               <li>Infrastructure apps and operational procedure review</li>
               <li>Kubernetes readiness</li>
             </ul>
@@ -487,19 +654,19 @@
     </div>
 
     <div class="learn-more-block">
-      <h4 class="mb-4">Learn more about our complete set of offerings here</h4>
-      <a href="/services" class="btn btn-warning btn-rounded"
-        >KUBEIFY OFFERINGS</a
+      <h4 class="mb-4">Learn more about our complete set of Kubernetes offerings...</h4>
+      <a href="/services" class="btn btn-rounded cta-button"
+        >Kubeify Services</a
       >
     </div>
   </div>
 </div>
 
-<div class="how-we-work">
+<div class="how-we-work mt-4">
   <div class="container text-center">
     <div class="row">
       <div class="col-md-8 offset-md-2">
-        <h1>How we work</h1>
+        <h1 class="red-text">How we work</h1>
         <p class="f-18 font-primary">
           We help thoughout your Kubernetes DevOps Journey.
         </p>
@@ -709,7 +876,7 @@
             </p>
           </div>
           <div class="col-md-6">
-            <ul>
+            <ul class="work-ul">
               <li>
                 Dockerfile generation
               </li>
@@ -757,7 +924,7 @@
             </p>
           </div>
           <div class="col-md-6">
-            <ul>
+            <ul class="work-ul">
               <li>
                 Hashicorp Terraform
               </li>
@@ -804,7 +971,7 @@
             </p>
           </div>
           <div class="col-md-6">
-            <ul>
+            <ul class="work-ul">
               <li>
                 Kubernetes
               </li>
@@ -858,7 +1025,7 @@
             </p>
           </div>
           <div class="col-md-6">
-            <ul>
+            <ul class="work-ul">
               <li>
                 Setup CI/CD so that changes to your source code automatically
                 results in a new container being built, tested, and promoted
@@ -910,7 +1077,7 @@
             </p>
           </div>
           <div class="col-md-6">
-            <ul>
+            <ul class="work-ul">
               <li>
                 Intrustion detection and prevention
               </li>
@@ -973,7 +1140,7 @@
             </p>
           </div>
           <div class="col-md-6">
-            <ul>
+            <ul class="work-ul">
               <li>
                 Log aggregation and management
               </li>
@@ -1165,6 +1332,55 @@
     });
   });
 </script>
+<div class="container mb-4 text-center">
+<h1 class="mb-4 red-text">Latest Blogs</h1>
+  <div class="row">
+        
+         <div class="col-md-4 ">
+        <a href="/blog/why-i-decided-to-use-karpenter-for-kubernetes-autoscaling" title="Why I Decided to Use Karpenter for Kubernetes Autoscaling" style="color: unset;">
+          <div class="card blog-card p-3 bg-gray-800">
+            <img src="/images/blog/karpenter-the-ultimate-solution-for-kubernetes-autoscaling.webp" alt="Why I Decided to Use Karpenter for Kubernetes Autoscaling" class="card-img-top" title="Why I Decided to Use Karpenter for Kubernetes Autoscaling">
+            <div class="card-body">
+              <span class="time">29 Jan 2025</span>
+              <h5 class="card-title">Why I Decided to Use Karpenter for Kubernetes Autoscaling</h5>
+              <p class="card-text">Kubernetes has become the de facto standard for container orchestration, offering unmatched scalability, flexibility, and efficiency. </p>
+            </div>
+          </div>
+        </a>
+      </div>
+        
+         <div class="col-md-4 ">
+        <a href="/blog/2025-01-28-7rs-cloud-migration-strategies-a-comprehensive-guide" title="7Rs Cloud Migration Strategies: A Comprehensive Guide" style="color: unset;">
+          <div class="card blog-card p-3 bg-gray-800">
+            <img src="/images/blog/cloud-migration-strategies.jpeg" alt="7Rs Cloud Migration Strategies: A Comprehensive Guide" class="card-img-top" title="7Rs Cloud Migration Strategies: A Comprehensive Guide">
+            <div class="card-body">
+              <span class="time">28 Jan 2025</span>
+              <h5 class="card-title">7Rs Cloud Migration Strategies: A Comprehensive Guide</h5>
+              <p class="card-text">Organizations moving to the cloud need to evaluate multiple strategies based on their business needs, technical challenges, and long-term goals. </p>
+            </div>
+          </div>
+        </a>
+      </div>
+        
+         <div class="col-md-4 ">
+        <a href="/blog/2025-01-15-how-to-secure-nginx-with-ssl-using-certbot-on-ubuntu" title="How to Secure Nginx with SSL Using Certbot on Ubuntu" style="color: unset;">
+          <div class="card blog-card p-3 bg-gray-800">
+            <img src="/images/blog/how-to-secure-nginx-with-ssl-using-certbot-on-ubuntu.webp" alt="How to Secure Nginx with SSL Using Certbot on Ubuntu" class="card-img-top" title="How to Secure Nginx with SSL Using Certbot on Ubuntu">
+            <div class="card-body">
+              <span class="time">15 Jan 2025</span>
+              <h5 class="card-title">How to Secure Nginx with SSL Using Certbot on Ubuntu</h5>
+              <p class="card-text">Securing your website with SSL (Secure Sockets Layer) is crucial for encrypting data and ensuring secure communication between a web server and users.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+        
+    </div>
+    <a href="/blog" class="btn btn-rounded cta-button mt-4" style="font-size:18px;">Read More</a>
+</div>
+
+
+
 <div class="bg-light pt-5 pb-5 work-hero">
   <div class="container">
     <div class="row">
@@ -1248,15 +1464,21 @@
     </div>
   </div>
 </div>
-<div class="bg-primary1 pb-5 pt-5 cta">
+<section class="mb-4">
   <div class="container">
-    <div class="text-center text-white">
-      <h4>Ready to get started?</h4>
-      <p>Let us know what you are working on? <br> We would help you to build a fault tolerant, secure and scalable system over kubernetes.</p>
-      <a href="/schedule-meeting" class="btn btn-warning btn-rounded">SCHEDULE A MEETING</a>
-    </div>
+    <div class="looking-details-wraper">
+        <div class="looking-details-content">
+          <h4>Ready to get started?</h4>
+          <p>Let us know what you are working on? <br> We would help you to build a fault tolerant, secure and scalable system over kubernetes.</p>
+          <a class="btn cta-button btn-rounded" href="/schedule-meeting">SCHEDULE A MEETING</a>
+        </div>
+        <div class="looking-details-image">
+          <img src="/images/home-cta2.png" alt="formore-details" data-lazy-src="/images/home-cta2.png" height="350px">
+        </div>
+      </div>
   </div>
-</div>
+</section>
+
 
 
     </div>
@@ -1315,8 +1537,7 @@
             <ul class="footer-nav">
               <li><a href="https://www.linkedin.com/company/kubeify" title="linkedin" target="_blank">LinkedIn</a></li>
               <li><a href="https://twitter.com/kubeify" target="_blank">Twitter</a></li>
-              <li><a href="https://www.youtube.com/channel/UCgT2HIveAxhTWBCXEau688Q" target="_blank">YouTube</a></li>
-              <li><a href="/join-slack" target="_blank">Slack</a></li>
+              <li><a href="https://www.youtube.com/@kubeifyk8s45/videos" target="_blank">YouTube</a></li>
             </ul>
           </div>
         </div>
@@ -1327,7 +1548,7 @@
   <br />
   <hr />
   <div class="lower-footer text-center">
-    <span class="d-inline-block">
+    <span class="d-inline-block copyright">
       Copyright &copy; <span id="year"></span> Kubeify, All Rights
       Reserved.&nbsp;
     </span>

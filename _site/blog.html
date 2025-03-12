@@ -73,34 +73,43 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="/services">Services</a>
-        </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="services" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+              </a>
+              <!-- <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                  <li><a class="dropdown-item" href="services">Service 1</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 2</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 3</a></li>
+                  <li><a class="dropdown-item" href="/service1">Service 4</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 5</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 6</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 7</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 8</a></li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="/why-kubernetes">Why Kubernetes</a>
-        </li>
+              </ul> -->
+          </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="/blog">Blog</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="/webinars">Webinars</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="/about">About Us</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="/contact">Contact Us</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link btn btn-primary btn-rounded" href="/schedule-meeting">Schedule Meeting</a>
-        </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/why-kubernetes">Why Kubernetes</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/blog">Blog</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/webinars">Webinars</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/about">About Us</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/contact">Contact Us</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link btn cta-button btn-rounded" href="/schedule-meeting" style="margin-left: 10px;">Schedule Meeting</a>
+          </li>
       </ul>
+
     </div>
   </div>
 </nav>
@@ -154,38 +163,41 @@
       <!-- <div class="nav__title">
         Menu
       </div> -->
-      <ul class="list-unstyled components">
-        <li class="nav-item active">
-          <a class="nav-link" href="/services">Services</a>
-        </li>
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+              </a>
+              <!-- <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                  <li><a class="dropdown-item" href="/service1">Service 1</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 2</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 3</a></li>
+                  <li><a class="dropdown-item" href="/service1">Service 4</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 5</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 6</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 7</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 8</a></li>
+              </ul> -->
+          </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="/why-kubernetes">Why Kubernetes</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="/blog">Blog</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="/webinars">Webinars</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="/about">About Us</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="/contact">Contact Us</a>
-        </li>
-
-        <li class="nav-item ml-md-4">
-          <a
-            class="nav-link btn btn-warning btn-rounded text-white pr-4 pl-4"
-            href="/schedule-meeting"
-            >Schedule Meeting</a
-          >
-        </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/why-kubernetes">Why Kubernetes</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/blog">Blog</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/webinars">Webinars</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/about">About Us</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/contact">Contact Us</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link btn cta-button btn-rounded" href="/schedule-meeting">&nbsp;&nbsp;Schedule Meeting&nbsp;&nbsp;</a>
+          </li>
       </ul>
     </div>
   </nav>
@@ -261,6 +273,8 @@
   });
 </script>
 
+
+<meta name="google-adsense-account" content="ca-pub-4088406505945385">
     </header>
 
     <div class="content-wraper">
@@ -306,9 +320,74 @@
       </div>
     
       <div class="col-md-4 ">
+        <a href="/blog/2025-01-15-how-to-secure-nginx-with-ssl-using-certbot-on-ubuntu" title="How to Secure Nginx with SSL Using Certbot on Ubuntu">
+          <div class="card blog-card p-3 bg-gray-800">
+            <img src="/images/blog/how-to-secure-nginx-with-ssl-using-certbot-on-ubuntu.webp" alt="How to Secure Nginx with SSL Using Certbot on Ubuntu" class="card-img-top" title="How to Secure Nginx with SSL Using Certbot on Ubuntu">
+            <div class="card-body">
+              <span class="time">15 Jan 2025</span>
+              <h5 class="card-title">How to Secure Nginx with SSL Using Certbot on Ubuntu</h5>
+              <p class="card-text">Securing your website with SSL (Secure Sockets Layer) is crucial for encrypting data and ensuring secure communication between a web server and users.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-md-4 ">
+        <a href="/blog/2025-01-09-how-to-implement-kubernetes-and-scale-applications-with-ease/" title="How to Implement Kubernetes and Scale Applications with Ease">
+          <div class="card blog-card p-3 bg-gray-800">
+            <img src="/images/blog/how-to-implement-kubernetes-and-scale-applications-with-ease-1-.webp" alt="How to Implement Kubernetes and Scale Applications with Ease" class="card-img-top" title="How to Implement Kubernetes and Scale Applications with Ease">
+            <div class="card-body">
+              <span class="time">09 Jan 2025</span>
+              <h5 class="card-title">How to Implement Kubernetes and Scale Applications with Ease</h5>
+              <p class="card-text">Kubernetes has become the gold standard for managing containerized applications at scale, offering unparalleled flexibility and scalability. Whether you're new to Kubernetes or looking to optimize your deployment,</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-md-4 ">
+        <a href="/blog/2025-01-08-getting-started-with-terraform" title="Getting Started with Terraform">
+          <div class="card blog-card p-3 bg-gray-800">
+            <img src="/images/blog/getting-started-with-terraform.webp" alt="Getting Started with Terraform" class="card-img-top" title="Getting Started with Terraform">
+            <div class="card-body">
+              <span class="time">09 Jan 2025</span>
+              <h5 class="card-title">Getting Started with Terraform</h5>
+              <p class="card-text">Terraform is an Infrastructure as Code (IaC) tool that allows you to define and provision cloud resources in a declarative way. It supports AWS, Azure, Google Cloud, DigitalOcean, Kubernetes, and many more.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-md-4 ">
+        <a href="/blog/2025-01-07-secrets-to-kubernetes-cost-control-implementing-efficient-clusters/" title="Secrets to Kubernetes Cost Control Implementing Efficient Clusters">
+          <div class="card blog-card p-3 bg-gray-800">
+            <img src="/images/blog/secrets-to-kubernetes-cost-control-implementing-efficient-clusters.webp" alt="Secrets to Kubernetes Cost Control Implementing Efficient Clusters" class="card-img-top" title="Secrets to Kubernetes Cost Control Implementing Efficient Clusters">
+            <div class="card-body">
+              <span class="time">07 Jan 2025</span>
+              <h5 class="card-title">Secrets to Kubernetes Cost Control Implementing Efficient Clusters</h5>
+              <p class="card-text">Kubernetes is a powerful tool for managing containerized applications at scale, but without the proper strategies in place, it can quickly lead to high infrastructure costs. </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-md-4 ">
+        <a href="/blog/2025-01-06-mastering-kubernetes-implementation-a-step-by-step-guide/" title="Mastering Kubernetes Implementation A Step-by-Step Guide">
+          <div class="card blog-card p-3 bg-gray-800">
+            <img src="/images/blog/mastering-kubernetes-implementation-a-step-by-step-guide-1-.webp" alt="Mastering Kubernetes Implementation A Step-by-Step Guide" class="card-img-top" title="Mastering Kubernetes Implementation A Step-by-Step Guide">
+            <div class="card-body">
+              <span class="time">06 Jan 2025</span>
+              <h5 class="card-title">Mastering Kubernetes Implementation A Step-by-Step Guide</h5>
+              <p class="card-text">Kubernetes has become the go-to solution for managing containerized applications in production at scale. With its flexibility and scalability, Kubernetes allows organizations to deploy, scale, and manage applications with ease. </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-md-4 ">
         <a href="/blog/2025-01-05-kubernetes-cost-management-best-practices-for-efficient-scaling/" title="Kubernetes Cost Management Best Practices for Efficient Scaling">
           <div class="card blog-card p-3 bg-gray-800">
-            <img src="/images/blog/kubernetes-cost-management-best-practices-for-efficient-scaling.webp" alt="Kubernetes Cost Management Best Practices for Efficient Scaling" class="card-img-top" title="Kubernetes Cost Management Best Practices for Efficient Scaling">
+            <img src="/images/blog/kubernetes-cost-management-best-practices-for-efficient-scaling-1-.webp" alt="Kubernetes Cost Management Best Practices for Efficient Scaling" class="card-img-top" title="Kubernetes Cost Management Best Practices for Efficient Scaling">
             <div class="card-body">
               <span class="time">06 Jan 2025</span>
               <h5 class="card-title">Kubernetes Cost Management Best Practices for Efficient Scaling</h5>
@@ -401,8 +480,7 @@
             <ul class="footer-nav">
               <li><a href="https://www.linkedin.com/company/kubeify" title="linkedin" target="_blank">LinkedIn</a></li>
               <li><a href="https://twitter.com/kubeify" target="_blank">Twitter</a></li>
-              <li><a href="https://www.youtube.com/channel/UCgT2HIveAxhTWBCXEau688Q" target="_blank">YouTube</a></li>
-              <li><a href="/join-slack" target="_blank">Slack</a></li>
+              <li><a href="https://www.youtube.com/@kubeifyk8s45/videos" target="_blank">YouTube</a></li>
             </ul>
           </div>
         </div>
@@ -413,7 +491,7 @@
   <br />
   <hr />
   <div class="lower-footer text-center">
-    <span class="d-inline-block">
+    <span class="d-inline-block copyright">
       Copyright &copy; <span id="year"></span> Kubeify, All Rights
       Reserved.&nbsp;
     </span>
