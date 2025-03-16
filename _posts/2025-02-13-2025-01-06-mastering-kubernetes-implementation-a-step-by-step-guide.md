@@ -156,6 +156,7 @@ Mastering Kubernetes implementation requires careful planning and execution, but
 By following these steps, you’ll be able to deploy applications faster, scale effortlessly, and maintain the reliability and security of your Kubernetes environment. 🛠️🚀
 
 Ready to get started? Let’s deploy and scale your applications with Kubernetes! 🌍
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uyuQU9Sq5Uk?si=8mJnHifQePM4HfXC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
 
 
 
