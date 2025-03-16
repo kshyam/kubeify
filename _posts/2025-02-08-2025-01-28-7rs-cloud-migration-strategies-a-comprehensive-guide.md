@@ -374,3 +374,5 @@ The **7Rs of cloud migration** provide a structured approach to cloud adoption, 
 
 🔹 Which cloud migration strategy fits your organization best? Let us know in the comments! 🚀
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0zrHnsexrFM?si=nT_0vWyoMzwJwW7T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
