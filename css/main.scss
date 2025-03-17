@@ -12,6 +12,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+h4{
+  font-size: 24px !important;
+}
+
 .cta-button{
   background-image: linear-gradient(to right, #f32170, #ff6b08, #cf23cf);
   color: #ffffff !important;
@@ -377,6 +381,10 @@ h6 {
       clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
       transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
   }
+
+  .card .bottom-section h5{
+    margin-top: revert;
+  }
   .card:hover .bottom-section {
       bottom: 0;
   }
@@ -396,7 +404,6 @@ h6 {
       justify-content: center;
       align-items: center;
       transition: top 0.5s ease-in-out;
-      padding: 15px;
       text-align: center;
   }
   .card:hover .overlay {
@@ -591,7 +598,6 @@ h6 {
   }
   h4 {
     font-weight: 700;
-    font-size: 11px;
     line-height: 1rem;
   }
   .current {
@@ -610,7 +616,6 @@ h6 {
       background-image: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
       color: transparent;
       background-clip: text;
-      font-size: 12px;
       // line-height: 1rem;
     }
   }
@@ -803,7 +808,6 @@ h6 {
     }
     & h4 {
       font-weight: 700;
-      font-size: 1rem;
       line-height: 1.2rem;
     }
     .current {
@@ -811,7 +815,6 @@ h6 {
         background-image: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
         color: transparent;
         background-clip: text;
-        font-size: 1.1rem;
         line-height: 1.5rem;
       }
     }
@@ -1309,7 +1312,7 @@ pre .variable { color: #f8f8f2; } /* White */
 
 
 .list-services {
-  font-size: 16px !important;
+  font-size: 15px !important;
   text-align: left;
 }
 
