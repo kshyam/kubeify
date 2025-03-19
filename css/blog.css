@@ -10,6 +10,21 @@ body {
   background-color: #fff;
 }
 
+.landing-page{
+  background-color: #031336; /* Background color */
+  background-image: 
+    url('/images/curve1.png'), 
+    url('/images/curve2.png'), 
+    url('/images/curve3.png');
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: center 0%, center 25%, center 60%; 
+  background-size: contain, contain, contain; /* Ensure all images scale */
+}
+.dark-bg{
+  background-color: #031336; /* Background color */
+}
+
+
 .feature-img {
   width: 30%;
   height 30%;
@@ -225,3 +240,15 @@ body {
  color: #FFF !important;
 }
 
+.breadcrumb-item {
+  white-space: nowrap;       /* Prevents text from wrapping */
+  overflow: hidden;          /* Hides overflowing text */
+  text-overflow: ellipsis;   /* Displays "..." for overflowed content */
+  }
+
+/* Responsive adjustment for smaller devices */
+@media (max-width: 768px) {
+  .breadcrumb-item {
+    max-width: 80%; /* Decrease max-width on smaller screens */
+  }
+}
