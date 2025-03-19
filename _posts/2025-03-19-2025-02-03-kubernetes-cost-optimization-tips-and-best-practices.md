@@ -1,5 +1,5 @@
 ---
-title: 2025-02-03 Kubernetes Cost Optimization Tips and Best Practices
+title: Kubernetes Cost Optimization Tips and Best Practices
 description: Kubernetes has become the go-to container orchestration platform,
   enabling organizations to deploy and scale applications efficiently.
 image: /images/blog/kubernetes-cost-optimization-tips-and-best-practises.webp
