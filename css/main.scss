@@ -434,7 +434,7 @@ p{
 
 
 /*----services------*/
-#kubernetes-implementation{
+#kubernetes-implementation{ 
   .how-we-work {
     padding: 1.8rem 0;
   }
@@ -508,6 +508,17 @@ p{
 .work-ul{
   font-size: 18px;
 }
+
+/*----SERVICES PAGE -------*/
+#service-header{
+  height: 60vh;
+  background: #031336;
+  align-items: center;
+  padding: 20px;
+  display: flex;
+
+}
+
 
 
 
