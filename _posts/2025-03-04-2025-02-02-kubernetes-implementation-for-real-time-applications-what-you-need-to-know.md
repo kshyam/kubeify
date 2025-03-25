@@ -106,3 +106,5 @@ To successfully run real-time applications on Kubernetes, follow these best prac
 ## Conclusion
 
 Kubernetes provides a powerful platform for running real-time applications, but its implementation requires careful planning and optimization. By addressing latency, resource management, networking, statefulness, and observability challenges, organizations can build resilient and high-performance real-time applications on Kubernetes. Adopting best practices and leveraging Kubernetes-native tools ensures that these applications run smoothly in production environments, meeting stringent performance and reliability requirements.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3-QCLv2O47o?si=9ZLpZ5LyPZtI_HaR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
