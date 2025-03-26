@@ -1,6 +1,5 @@
 ---
-title: 2025-02-05 How to Implement Kubernetes for High Availability and Disaster
-  Recovery
+title: How to Implement Kubernetes for High Availability and Disaster Recovery
 description: "Kubernetes is the backbone of modern cloud-native applications,
   providing scalability, automation, and resilience. "
 image: /images/blog/how-to-implement-kubernetes-for-high-availability-and-disaster-recovery.webp
