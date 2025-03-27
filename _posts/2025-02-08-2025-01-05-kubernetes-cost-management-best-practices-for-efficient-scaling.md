@@ -326,3 +326,5 @@ budget intact. 🛠️📊
 Start implementing these strategies today
 to achieve more scalable and cost-efficient Kubernetes deployments
 tomorrow! 🌟
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LpEX7oQFk3M?si=vjT3lioG6Yf0xP_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
