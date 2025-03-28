@@ -1,5 +1,5 @@
 ---
-title: 2024-03-01-How to Optimize AWS Cloud Cost with Best Practices
+title: How to Optimize AWS Cloud Cost with Best Practices
 description: Optimize AWS costs with best practices like right-sizing,
   auto-scaling, and spot instances. Cut expenses and boost efficiency with
   expert cloud strategies!
