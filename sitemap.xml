@@ -9,53 +9,148 @@
 
 <url>
   <loc>https://kubeify.com/</loc>
-  <lastmod>2020-06-01T04:09:54+00:00</lastmod>
+  <lastmod>2025-03-28T13:49:42+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://kubeify.com/join-webinars</loc>
-  <lastmod>2020-06-01T04:09:54+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
   <loc>https://kubeify.com/services</loc>
-  <lastmod>2020-06-01T04:09:54+00:00</lastmod>
+  <lastmod>2025-03-28T13:49:42+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kubeify.com/why-kubernetes</loc>
-  <lastmod>2020-06-01T04:09:54+00:00</lastmod>
+  <lastmod>2025-03-28T13:49:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kubeify.com/blog</loc>
+  <lastmod>2025-03-28T13:49:42+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kubeify.com/webinars</loc>
-  <lastmod>2020-06-01T04:09:54+00:00</lastmod>
+  <lastmod>2025-03-28T13:49:42+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kubeify.com/about</loc>
-  <lastmod>2020-06-01T04:09:54+00:00</lastmod>
+  <lastmod>2025-03-28T13:49:42+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kubeify.com/contact</loc>
-  <lastmod>2020-06-01T04:09:54+00:00</lastmod>
+  <lastmod>2025-03-28T13:49:42+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kubeify.com/schedule-meeting</loc>
-  <lastmod>2020-06-01T04:09:54+00:00</lastmod>
+  <lastmod>2025-03-28T13:49:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kubeify.com/blog/2025-02-10-devops-for-early-stage-startups-a-complete-guide</loc>
+  <lastmod>2025-03-28T13:49:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kubeify.com/blog/2025-02-05-how-to-implement-kubernetes-for-high-availability-and-disaster-recovery/</loc>
+  <lastmod>2025-03-28T13:49:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kubeify.com/blog/2025-02-04-best-practices-for-efficient-kubernetes-deployment-and-cost-reduction/</loc>
+  <lastmod>2025-03-28T13:49:42+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kubeify.com/join-our-team</loc>
-  <lastmod>2020-06-01T04:09:54+00:00</lastmod>
+  <lastmod>2025-03-28T13:49:42+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kubeify.com/customers</loc>
-  <lastmod>2020-06-01T04:09:54+00:00</lastmod>
+  <lastmod>2025-03-28T13:49:42+00:00</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kubeify.com/join-webinars</loc>
+  <lastmod>2025-03-28T13:49:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kubeify.com/blog/2025-02-03-kubernetes-cost-optimization-tips-and-best-practices/</loc>
+  <lastmod>2025-03-28T13:49:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kubeify.com/blog/2025-02-02-kubernetes-implementation-for-real-time-applications-what-you-need-to-know/</loc>
+  <lastmod>2025-03-28T13:49:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kubeify.com/blog/2025-02-01-kubernetes-cluster-deployment-best-practices-for-a-smooth-implementation/</loc>
+  <lastmod>2025-03-28T13:49:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kubeify.com/blog/2025-01-31-optimizing-kubernetes-implementations-for-cost-efficiency/</loc>
+  <lastmod>2025-03-28T13:49:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kubeify.com/blog/2025-01-30-reducing-kubernetes-costs-with-effective-resource-allocation/</loc>
+  <lastmod>2025-03-28T13:49:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kubeify.com/blog/why-i-decided-to-use-karpenter-for-kubernetes-autoscaling</loc>
+  <lastmod>2025-03-28T13:49:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kubeify.com/blog/2025-01-28-7rs-cloud-migration-strategies-a-comprehensive-guide</loc>
+  <lastmod>2025-03-28T13:49:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kubeify.com/blog/2025-01-15-how-to-secure-nginx-with-ssl-using-certbot-on-ubuntu</loc>
+  <lastmod>2025-03-28T13:49:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kubeify.com/blog/2025-01-09-how-to-implement-kubernetes-and-scale-applications-with-ease/</loc>
+  <lastmod>2025-03-28T13:49:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kubeify.com/blog/2025-01-08-getting-started-with-terraform</loc>
+  <lastmod>2025-03-28T13:49:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kubeify.com/blog/2025-01-07-secrets-to-kubernetes-cost-control-implementing-efficient-clusters/</loc>
+  <lastmod>2025-03-28T13:49:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kubeify.com/blog/2025-01-06-mastering-kubernetes-implementation-a-step-by-step-guide/</loc>
+  <lastmod>2025-03-28T13:49:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kubeify.com/blog/2025-01-05-kubernetes-cost-management-best-practices-for-efficient-scaling/</loc>
+  <lastmod>2025-03-28T13:49:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kubeify.com/blog/2024-03-01-how-to-optimize-aws-cloud-cost-with-best-practices</loc>
+  <lastmod>2025-03-28T13:49:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kubeify.com/join-slack</loc>
+  <lastmod>2025-03-28T13:49:42+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 

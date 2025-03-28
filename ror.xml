@@ -6,18 +6,10 @@
 
 <item>
      <link>https://kubeify.com/</link>
-     <title>Get enterprise Kubernetes support for multi cloud environments | Kubeify</title>
-     <description>Accelerate your cloud native transformation, adoption of kubernetes with Kubeify’s team of experts.</description>
+     <title>Get Enterprise Kubernetes support for multi cloud environments | Kubeify</title>
+     <description>Accelerate your cloud native transformation and adoption of kubernetes with Kubeify’s team of experts.</description>
      <ror:updatePeriod></ror:updatePeriod>
      <ror:sortOrder>0</ror:sortOrder>
-     <ror:resourceOf>sitemap</ror:resourceOf>
-</item>
-<item>
-     <link>https://kubeify.com/join-webinars</link>
-     <title>Join Webinars - Getting Started with Docker and Kubernetes Saturday, JUNE 6th, 2020, 11:30 AM – 12:30 PM, IST | Kubeify</title>
-     <description>Kubeify partners with DevOps leaders to provide you with the most valuable content. Check out our upcoming online webinars, meet us in person at event or Meetup, or watch one of our on-demand videos.</description>
-     <ror:updatePeriod></ror:updatePeriod>
-     <ror:sortOrder>1</ror:sortOrder>
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
@@ -37,6 +29,14 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
+     <link>https://kubeify.com/blog</link>
+     <title>Get Enterprise Kubernetes support for multi cloud environments | Kubeify</title>
+     <description>Accelerate your cloud native transformation and adoption of kubernetes with Kubeify’s team of experts.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
      <link>https://kubeify.com/webinars</link>
      <title>Webinars | Kubeify</title>
      <description>Kubeify partners with DevOps leaders to provide you with the most valuable content. Check out our upcoming online webinars, meet us in person at event or Meetup, or watch one of our on-demand videos.</description>
@@ -46,42 +46,194 @@
 </item>
 <item>
      <link>https://kubeify.com/about</link>
-     <title>Read about | Kubeify</title>
-     <description>Kubeify helps developers and operators build, deploy, manage, and scale their applications on top of Kubernetes.</description>
+     <title>Kubeify team of Certified Container Native DevOps Engineers. | Kubeify</title>
+     <description>Kubeify team helps developers and operators build, deploy, manage, and scale their applications on top of Kubernetes.</description>
      <ror:updatePeriod></ror:updatePeriod>
      <ror:sortOrder>1</ror:sortOrder>
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
      <link>https://kubeify.com/contact</link>
-     <title>Contact at support@kubeify.com | Kubeify</title>
-     <description>Get in Touch with Kubeify - If you have any questions or need assistance in any way, please feel free to reach out using the form here. We’ll be sure to respond within 4 hours.</description>
+     <title>Contact Kubeify team support@kubeify.com | Kubeify</title>
+     <description>Get in Touch with Kubeify - If you have any questions or need assistance in Container Native DevOps, Please feel free to reach out using the form here. We’ll be sure to respond within 4 hours.</description>
      <ror:updatePeriod></ror:updatePeriod>
      <ror:sortOrder>1</ror:sortOrder>
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
      <link>https://kubeify.com/schedule-meeting</link>
-     <title>Schedule a meeting with Kubeify and Get FREE 20 Hours Support. | Kubeify</title>
-     <description>Razorops is a container native CI/CD platform to automate testing and deployment across the environments in few steps.</description>
+     <title>Schedule a meeting with Kubeify and Get FREE DevOps Assessment. | Kubeify</title>
+     <description>Kubeify team of Certified Container Native DevOps Engineers who help companies to move fast with scalable and scured systems deployments.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://kubeify.com/blog/2025-02-10-devops-for-early-stage-startups-a-complete-guide</link>
+     <title>DevOps for Early Stage Startups: A Complete Guide | Kubeify</title>
+     <description>Why Do Early-Stage Startups Need DevOps? or Can DevOps Cut Down Server Costs?</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://kubeify.com/blog/2025-02-05-how-to-implement-kubernetes-for-high-availability-and-disaster-recovery/</link>
+     <title>How to Implement Kubernetes for High Availability and Disaster Recovery | Kubeify</title>
+     <description>Kubernetes is the backbone of modern cloud-native applications, providing scalability, automation, and resilience.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://kubeify.com/blog/2025-02-04-best-practices-for-efficient-kubernetes-deployment-and-cost-reduction/</link>
+     <title>Best Practices for Efficient Kubernetes Deployment and Cost Reduction | Kubeify</title>
+     <description>Kubernetes has become the de facto standard for container orchestration, enabling organizations to scale their applications efficiently.</description>
      <ror:updatePeriod></ror:updatePeriod>
      <ror:sortOrder>1</ror:sortOrder>
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
      <link>https://kubeify.com/join-our-team</link>
-     <title>Join our team | Kubeify</title>
-     <description>Customers worldwide rely on Kubeify for cloud infrastructure setup that is fast, easy, and affordable.</description>
+     <title>Join Kubeify team shyam@kubeify.com | Kubeify</title>
+     <description>We are Hiring Software Engineer, Kubernetes and Golang, DevOps Sales &amp;amp; Marketing</description>
      <ror:updatePeriod></ror:updatePeriod>
      <ror:sortOrder>1</ror:sortOrder>
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
      <link>https://kubeify.com/customers</link>
-     <title>Hire Kubeify for cloud infrastructure setup | Kubeify</title>
+     <title>Hire Kubeify Team for cloud infrastructure setup | Kubeify</title>
      <description>Customers worldwide rely on Kubeify for cloud infrastructure setup that is fast, easy, and affordable.</description>
      <ror:updatePeriod></ror:updatePeriod>
      <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://kubeify.com/join-webinars</link>
+     <title>Join Webinars - Managing kubernetes Manifests using Jsonnet &amp;amp; Tanaka 21st Aug, 2020, 9:30 PM – 10:30 PM, IST 9 AM - 10 AM Canada (GMT-7) 11 AM to 12 Noon CST | Kubeify</title>
+     <description>Kubeify partners with DevOps leaders to provide you with the most valuable content. Check out our upcoming online webinars, meet us in person at event or Meetup, or watch one of our on-demand videos.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://kubeify.com/blog/2025-02-03-kubernetes-cost-optimization-tips-and-best-practices/</link>
+     <title>Kubernetes Cost Optimization Tips and Best Practices | Kubeify</title>
+     <description>Kubernetes has become the go-to container orchestration platform, enabling organizations to deploy and scale applications efficiently.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://kubeify.com/blog/2025-02-02-kubernetes-implementation-for-real-time-applications-what-you-need-to-know/</link>
+     <title>Kubernetes Implementation for Real-Time Applications What You Need to Know | Kubeify</title>
+     <description>These applications require low latency, high availability, and dynamic scalability. Kubernetes, the leading container orchestration platform, provides an ideal environment for deploying and managing real-time applications.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://kubeify.com/blog/2025-02-01-kubernetes-cluster-deployment-best-practices-for-a-smooth-implementation/</link>
+     <title>Kubernetes Cluster Deployment Best Practices for a Smooth Implementation | Kubeify</title>
+     <description>Kubernetes has become the de facto standard for container orchestration, enabling organizations to deploy, manage, and scale containerized applications seamlessly.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://kubeify.com/blog/2025-01-31-optimizing-kubernetes-implementations-for-cost-efficiency/</link>
+     <title>Optimizing Kubernetes Implementations for Cost Efficiency | Kubeify</title>
+     <description>Kubernetes has become the de facto standard for container orchestration, offering scalability, flexibility, and resilience.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://kubeify.com/blog/2025-01-30-reducing-kubernetes-costs-with-effective-resource-allocation/</link>
+     <title>Reducing Kubernetes Costs with Effective Resource Allocation | Kubeify</title>
+     <description>Kubernetes is a powerful tool for container orchestration, but managing costs can be a challenge if resources are not allocated effectively.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://kubeify.com/blog/why-i-decided-to-use-karpenter-for-kubernetes-autoscaling</link>
+     <title>Why I Decided to Use Karpenter for Kubernetes Autoscaling | Kubeify</title>
+     <description>Kubernetes has become the de facto standard for container orchestration, offering unmatched scalability, flexibility, and efficiency.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://kubeify.com/blog/2025-01-28-7rs-cloud-migration-strategies-a-comprehensive-guide</link>
+     <title>7Rs Cloud Migration Strategies: A Comprehensive Guide | Kubeify</title>
+     <description>Organizations moving to the cloud need to evaluate multiple strategies based on their business needs, technical challenges, and long-term goals.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://kubeify.com/blog/2025-01-15-how-to-secure-nginx-with-ssl-using-certbot-on-ubuntu</link>
+     <title>How to Secure Nginx with SSL Using Certbot on Ubuntu | Kubeify</title>
+     <description>Securing your website with SSL (Secure Sockets Layer) is crucial for encrypting data and ensuring secure communication between a web server and users.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://kubeify.com/blog/2025-01-09-how-to-implement-kubernetes-and-scale-applications-with-ease/</link>
+     <title>How to Implement Kubernetes and Scale Applications with Ease | Kubeify</title>
+     <description>Kubernetes has become the gold standard for managing containerized applications at scale, offering unparalleled flexibility and scalability. Whether you’re new to Kubernetes or looking to optimize your deployment,</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://kubeify.com/blog/2025-01-08-getting-started-with-terraform</link>
+     <title>Getting Started with Terraform | Kubeify</title>
+     <description>Terraform is an Infrastructure as Code (IaC) tool that allows you to define and provision cloud resources in a declarative way. It supports AWS, Azure, Google Cloud, DigitalOcean, Kubernetes, and many more.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://kubeify.com/blog/2025-01-07-secrets-to-kubernetes-cost-control-implementing-efficient-clusters/</link>
+     <title>Secrets to Kubernetes Cost Control Implementing Efficient Clusters | Kubeify</title>
+     <description>Kubernetes is a powerful tool for managing containerized applications at scale, but without the proper strategies in place, it can quickly lead to high infrastructure costs.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://kubeify.com/blog/2025-01-06-mastering-kubernetes-implementation-a-step-by-step-guide/</link>
+     <title>Mastering Kubernetes Implementation A Step-by-Step Guide | Kubeify</title>
+     <description>Kubernetes has become the go-to solution for managing containerized applications in production at scale. With its flexibility and scalability, Kubernetes allows organizations to deploy, scale, and manage applications with ease.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://kubeify.com/blog/2025-01-05-kubernetes-cost-management-best-practices-for-efficient-scaling/</link>
+     <title>Kubernetes Cost Management Best Practices for Efficient Scaling | Kubeify</title>
+     <description>As more organizations adopt Kubernetes for container orchestration, it becomes increasingly crucial to manage and optimize its costs.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://kubeify.com/blog/2024-03-01-how-to-optimize-aws-cloud-cost-with-best-practices</link>
+     <title>How to Optimize AWS Cloud Cost with Best Practices | Kubeify</title>
+     <description>Optimize AWS costs with best practices like right-sizing, auto-scaling, and spot instances. Cut expenses and boost efficiency with expert cloud strategies!</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://kubeify.com/join-slack</link>
+     <title>Join Kubeify on Slack and ask your Cloud Native Questions | Kubeify</title>
+     <description>Accelerate your cloud native transformation and adoption of kubernetes with Kubeify’s team of experts.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 </channel>
