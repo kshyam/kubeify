@@ -33,7 +33,7 @@ Spot instances and preemptible VMs are an excellent way to reduce cloud infrastr
 
 **Best Practices:**
 
-●	**Use Spot Instances for Non-Critical Workloads:** If your workloads are fault-tolerant and can handle interruptions, take advantage of cheaper spot instances (e.g., AWS Spot Instances, Google Preemptible VMs). 💸
+●	**Use Spot Instances for Non-Critical Workloads:** If your workloads are fault-tolerant and can handle interruptions, take advantage of cheaper spot instances (e.g., AWS Spot Instances, Google Preemptible VMs). 
 
 ●	**Combine with Cluster Autoscaler:** Automatically scale your Kubernetes cluster by adding or removing spot instances based on demand. 
 
