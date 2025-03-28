@@ -40,7 +40,7 @@ The first step in implementing Kubernetes is setting up a cluster. There are a f
 
 **Best Practice:** If you’re new to Kubernetes, consider starting with a managed service to simplify the setup process.
 
-**3. Define Your Application and Prepare Containers **
+**3. Define Your Application and Prepare Containers**
 
 Once your cluster is set up, the next step is to define your application and prepare it for deployment.
 
@@ -52,7 +52,7 @@ Once your cluster is set up, the next step is to define your application and pre
 
 Pro Tip: Leverage Helm for managing Kubernetes applications. Helm simplifies deployment and management by packaging Kubernetes resources into reusable charts. 
 
-**4. Deploy Your Application with Kubernetes **
+**4. Deploy Your Application with Kubernetes**
 
 Now that your application is containerized and defined in Kubernetes manifests, it’s time to deploy it to your cluster.
 
