@@ -14,7 +14,7 @@ date: 2025-01-09T08:42:00.000Z
 Kubernetes has become the gold standard for managing containerized applications at scale, offering unparalleled flexibility and scalability. Whether you're new to Kubernetes or looking to optimize your deployment, this guide will walk you through the key steps to implement Kubernetes and scale your applications efficiently and effortlessly! 
 
 
-**1.Understand the Basics: What is Kubernetes?**
+**1. Understand the Basics: What is Kubernetes?**
 
 Before diving into implementation, it’s important to have a solid understanding of what Kubernetes is and how it works. At its core, Kubernetes is an open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications.
 
@@ -28,7 +28,7 @@ Before diving into implementation, it’s important to have a solid understandin
 
 ●	Deployments: Define the desired state for applications, ensuring that they run and scale as needed. 
 
-**2. Set Up Your Kubernetes Cluster **
+**2. Set Up Your Kubernetes Cluster**
 
 The first step in implementing Kubernetes is setting up a cluster. There are a few ways to do this, depending on your infrastructure and preferences.
 
