@@ -65,7 +65,7 @@ Now that your application is containerized and defined in Kubernetes manifests, 
 Best Practice: Make sure to define liveness and readiness probes for your application to ensure Kubernetes can monitor and restart your pods when necessary. 
 
 
-**5. Scale Your Application with Ease **
+**5. Scale Your Application with Ease**
 
 One of the most powerful features of Kubernetes is its ability to automatically scale applications based on traffic or resource usage. Scaling your application can be done manually or automatically.
 
@@ -87,7 +87,7 @@ kubectl autoscale deployment <deployment-name> --cpu-percent=50 --min=1 --max=10
 
 ●	Best Practice: Always monitor resource usage (CPU, memory) to set appropriate scaling thresholds for HPA.
 
-**6. Load Balancing and Service Discovery **
+**6. Load Balancing and Service Discovery**
 
 Kubernetes makes it easy to expose your applications and manage traffic with load balancing and service discovery.
 
@@ -111,7 +111,7 @@ spec:
 Pro Tip: Use DNS-based service discovery to easily find and connect services in your Kubernetes cluster. 
 
 
-**7. Implement Monitoring and Logging **
+**7. Implement Monitoring and Logging**
 
 When scaling applications, it’s important to monitor their health and performance. Kubernetes provides built-in solutions and integrations for monitoring and logging.
 
@@ -123,7 +123,7 @@ When scaling applications, it’s important to monitor their health and performa
 
 Best Practice: Set up alerts based on specific thresholds to catch performance issues early and avoid scaling problems.
 
-**8. Set Up CI/CD Pipelines for Continuous Scaling **
+**8. Set Up CI/CD Pipelines for Continuous Scaling**
 
 To achieve continuous scaling and updates, integrating Kubernetes with a CI/CD pipeline is crucial. This ensures that code changes are automatically built, tested, and deployed to your Kubernetes environment.
 
@@ -135,7 +135,7 @@ To achieve continuous scaling and updates, integrating Kubernetes with a CI/CD p
 
 Pro Tip: Use GitOps tools like ArgoCD or Flux to continuously deploy and manage your Kubernetes applications directly from a Git repository. 
 
-**9. Implement Security Best Practices **
+**9. Implement Security Best Practices**
 As you scale your Kubernetes applications, maintaining security is crucial to prevent vulnerabilities.
 
 **Best Practices:**
@@ -147,7 +147,7 @@ As you scale your Kubernetes applications, maintaining security is crucial to pr
 ●	Use Secrets Management: Store sensitive information like passwords and API keys securely with Kubernetes Secrets or integrate with external tools like Vault. 
 
 
-**10. Ongoing Maintenance & Optimization **
+**10. Ongoing Maintenance & Optimization**
 
 Kubernetes is a powerful tool, but to maximize its benefits, regular maintenance and optimization are necessary to ensure that your clusters are running efficiently.
 
