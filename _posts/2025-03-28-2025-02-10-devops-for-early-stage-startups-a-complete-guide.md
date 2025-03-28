@@ -1,5 +1,5 @@
 ---
-title: "2025-02-10-DevOps for Early Stage Startups: A Complete Guide"
+title: "DevOps for Early Stage Startups: A Complete Guide"
 description: Why Do Early-Stage Startups Need DevOps? or Can DevOps Cut Down Server Costs?
 image: /images/blog/devops-for-early-stage-startups.webp
 layout: post
