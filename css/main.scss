@@ -73,6 +73,7 @@ h4{
   color: #ffffff !important;
   border: 1px solid white;
   text-shadow: 1px 1px #000;
+  font-size: 15px !important;
 }
 .btn-warning {
   color: #fff;
@@ -142,7 +143,6 @@ p{
   text-align: left !important; /* Center align text */
   display: flex;
   align-items: center;
-  margin-top: -20px;
 }
 
 .hero-left-side{
@@ -222,7 +222,6 @@ p{
 @media (max-width: 767px) {
     .looking-details-wraper {
         padding: 0px 15px;
-        flex-direction: column-reverse;
     }
     .looking-details-content {
         width: 100%;
@@ -232,6 +231,11 @@ p{
     position: static;
     margin: 0 auto;
     }
+    .looking-details-image img {
+    margin-top: -90px;
+    max-width: 100%;
+    padding-left: 90px;
+    } 
 }
 /*-----Call to Action end-------*/
 
