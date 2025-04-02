@@ -60,27 +60,27 @@ It offers **faster, more flexible, and cost-efficient scaling** for Kubernetes w
 
 After evaluating **Karpenter** for my Kubernetes infrastructure, I found several key **advantages**:  
 
-### ✅ **1. Faster Node Provisioning** 🚀  
+### ✅ **1. Faster Node Provisioning**  
 - Unlike CA, which depends on autoscaling groups, **Karpenter directly requests compute resources** from the cloud provider API.  
 - Nodes are **provisioned within seconds** instead of minutes, reducing the risk of pod scheduling delays.  
 
-### ✅ **2. Intelligent Resource Allocation** 🤖  
+### ✅ **2. Intelligent Resource Allocation** 
 - Karpenter selects the **most efficient instance type** based on **workload requirements** instead of using pre-defined autoscaling groups.  
 - It ensures **better resource utilization**, reducing the risk of over-provisioning or under-provisioning.  
 
-### ✅ **3. Native Spot Instance Support** 💰  
+### ✅ **3. Native Spot Instance Support** 
 - One of the biggest reasons I switched to Karpenter is its **native support for Spot Instances**.  
 - It intelligently provisions a mix of **On-Demand and Spot Instances**, optimizing cost without compromising reliability.  
 
-### ✅ **4. Works with Any Cloud Provider** 🌎  
+### ✅ **4. Works with Any Cloud Provider**   
 - While Karpenter was initially designed for AWS, it’s **cloud-agnostic** and supports other cloud providers like GCP and Azure.  
 - This makes it a great choice for **multi-cloud Kubernetes clusters**.  
 
-### ✅ **5. Automated Node Cleanup** 🛠️  
+### ✅ **5. Automated Node Cleanup** 
 - Karpenter **automatically deprovisions underutilized nodes** based on workload demand.  
 - This helps reduce unnecessary costs and keeps the cluster efficient.  
 
-### ✅ **6. Simplified Configuration** ⚙️  
+### ✅ **6. Simplified Configuration**  
 - Unlike Cluster Autoscaler, which requires **node groups and scaling policies**, Karpenter only needs a **simple provisioner YAML file** to define scaling behavior.  
 
 ---
@@ -131,7 +131,7 @@ After using **Karpenter** in production, I can confidently say that it **outperf
 ✅ **Cost Savings** – **Spot instance optimization** leads to lower cloud bills.  
 ✅ **Simplicity** – No more managing complex **autoscaling groups** or **node pools**.  
 
-If you’re running **Kubernetes clusters in the cloud** and want a **smarter, faster, and more cost-effective autoscaling solution**, **Karpenter is a game-changer**. 🚀  
+If you’re running **Kubernetes clusters in the cloud** and want a **smarter, faster, and more cost-effective autoscaling solution**, **Karpenter is a game-changer**.  
 
 ---
 
@@ -145,6 +145,8 @@ If you:
 
 Then **YES!** Karpenter is **absolutely worth trying**.  
 
-I’d love to hear your thoughts! Have you used **Karpenter** in your Kubernetes clusters? Let’s discuss in the comments! 🚀  
+I’d love to hear your thoughts! Have you used **Karpenter** in your Kubernetes clusters? Let’s discuss in the comments!   
 
 🔹 **#Kubernetes #DevOps #Karpenter #CloudNative #AWS #EKS #Autoscaling**
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cNp-XLHaMYE?si=W80XeYPoTzElYXls" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
