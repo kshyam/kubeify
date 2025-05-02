@@ -365,37 +365,37 @@
 
 <p>After evaluating <strong>Karpenter</strong> for my Kubernetes infrastructure, I found several key <strong>advantages</strong>:</p>
 
-<h3 id="-1-faster-node-provisioning-">✅ <strong>1. Faster Node Provisioning</strong> 🚀</h3>
+<h3 id="-1-faster-node-provisioning">✅ <strong>1. Faster Node Provisioning</strong></h3>
 <ul>
   <li>Unlike CA, which depends on autoscaling groups, <strong>Karpenter directly requests compute resources</strong> from the cloud provider API.</li>
   <li>Nodes are <strong>provisioned within seconds</strong> instead of minutes, reducing the risk of pod scheduling delays.</li>
 </ul>
 
-<h3 id="-2-intelligent-resource-allocation-">✅ <strong>2. Intelligent Resource Allocation</strong> 🤖</h3>
+<h3 id="-2-intelligent-resource-allocation">✅ <strong>2. Intelligent Resource Allocation</strong></h3>
 <ul>
   <li>Karpenter selects the <strong>most efficient instance type</strong> based on <strong>workload requirements</strong> instead of using pre-defined autoscaling groups.</li>
   <li>It ensures <strong>better resource utilization</strong>, reducing the risk of over-provisioning or under-provisioning.</li>
 </ul>
 
-<h3 id="-3-native-spot-instance-support-">✅ <strong>3. Native Spot Instance Support</strong> 💰</h3>
+<h3 id="-3-native-spot-instance-support">✅ <strong>3. Native Spot Instance Support</strong></h3>
 <ul>
   <li>One of the biggest reasons I switched to Karpenter is its <strong>native support for Spot Instances</strong>.</li>
   <li>It intelligently provisions a mix of <strong>On-Demand and Spot Instances</strong>, optimizing cost without compromising reliability.</li>
 </ul>
 
-<h3 id="-4-works-with-any-cloud-provider-">✅ <strong>4. Works with Any Cloud Provider</strong> 🌎</h3>
+<h3 id="-4-works-with-any-cloud-provider">✅ <strong>4. Works with Any Cloud Provider</strong></h3>
 <ul>
   <li>While Karpenter was initially designed for AWS, it’s <strong>cloud-agnostic</strong> and supports other cloud providers like GCP and Azure.</li>
   <li>This makes it a great choice for <strong>multi-cloud Kubernetes clusters</strong>.</li>
 </ul>
 
-<h3 id="-5-automated-node-cleanup-️">✅ <strong>5. Automated Node Cleanup</strong> 🛠️</h3>
+<h3 id="-5-automated-node-cleanup">✅ <strong>5. Automated Node Cleanup</strong></h3>
 <ul>
   <li>Karpenter <strong>automatically deprovisions underutilized nodes</strong> based on workload demand.</li>
   <li>This helps reduce unnecessary costs and keeps the cluster efficient.</li>
 </ul>
 
-<h3 id="-6-simplified-configuration-️">✅ <strong>6. Simplified Configuration</strong> ⚙️</h3>
+<h3 id="-6-simplified-configuration">✅ <strong>6. Simplified Configuration</strong></h3>
 <ul>
   <li>Unlike Cluster Autoscaler, which requires <strong>node groups and scaling policies</strong>, Karpenter only needs a <strong>simple provisioner YAML file</strong> to define scaling behavior.</li>
 </ul>
@@ -450,7 +450,7 @@ helm <span class="nb">install </span>karpenter karpenter/karpenter <span class="
 ✅ <strong>Cost Savings</strong> – <strong>Spot instance optimization</strong> leads to lower cloud bills.<br />
 ✅ <strong>Simplicity</strong> – No more managing complex <strong>autoscaling groups</strong> or <strong>node pools</strong>.</p>
 
-<p>If you’re running <strong>Kubernetes clusters in the cloud</strong> and want a <strong>smarter, faster, and more cost-effective autoscaling solution</strong>, <strong>Karpenter is a game-changer</strong>. 🚀</p>
+<p>If you’re running <strong>Kubernetes clusters in the cloud</strong> and want a <strong>smarter, faster, and more cost-effective autoscaling solution</strong>, <strong>Karpenter is a game-changer</strong>.</p>
 
 <hr />
 
@@ -464,9 +464,11 @@ helm <span class="nb">install </span>karpenter karpenter/karpenter <span class="
 
 <p>Then <strong>YES!</strong> Karpenter is <strong>absolutely worth trying</strong>.</p>
 
-<p>I’d love to hear your thoughts! Have you used <strong>Karpenter</strong> in your Kubernetes clusters? Let’s discuss in the comments! 🚀</p>
+<p>I’d love to hear your thoughts! Have you used <strong>Karpenter</strong> in your Kubernetes clusters? Let’s discuss in the comments!</p>
 
 <p>🔹 <strong>#Kubernetes #DevOps #Karpenter #CloudNative #AWS #EKS #Autoscaling</strong></p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cNp-XLHaMYE?si=W80XeYPoTzElYXls" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
 
               </div>
             </div>
@@ -476,8 +478,32 @@ helm <span class="nb">install </span>karpenter karpenter/karpenter <span class="
       </div>
     </div>
   </div>
+  
 </body>
-<br><br><br>
+<div class="bg-light pt-5 pb-5 work-hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <div class="media">
+          <img
+            src="/images/clients/yaron-oren.jpeg"
+            class="mr-4 rounded-circle"
+            width="120"
+            alt="yaron-oren"
+          />
+          <div class="align-self-center msg-txt-18 font-italic mt-4 mt-md-0">
+            Kubeify's team <b>decrease the time</b> it takes to adopt open
+            source technology while enabling consistent application environments
+            across deployments...letting our developers focus on application
+            code while improving speed and quality of our releases.<br />
+            <b>- Yaron Oren, Founder Maverick.ai (acquired by OutboundWorks)</b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <section class="bg-light py-4">
   <div class="container">
     <div class="looking-details-wraper">
@@ -617,5 +643,6 @@ helm <span class="nb">install </span>karpenter karpenter/karpenter <span class="
 <!-- Start of HubSpot Embed Code -->
 <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/7280691.js"></script>
 <!-- End of HubSpot Embed Code -->
+
 
 </html>

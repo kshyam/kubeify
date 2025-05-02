@@ -12,6 +12,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+
 /* Scroll Animations */
 
 .fade-in, .scale-up, .slide-left, .slide-right, .slide-up, .blur-in {
@@ -172,7 +174,13 @@ p{
   color: #FFF !important;
   text-shadow: 2px 2px #000;
   font-weight: 600 !important;
-  font-size: 55px !important;
+  
+}
+
+@media(min-width:758px){
+  .index-heading{
+    font-size: 55px !important;
+  }
 }
 
 .schedule-btn{
@@ -235,6 +243,9 @@ p{
     margin-top: -90px;
     max-width: 100%;
     padding-left: 90px;
+    }
+    .hero_testimonial{
+      display: none;
     } 
 }
 /*-----Call to Action end-------*/
@@ -260,6 +271,9 @@ p{
   }
   .card-text{
     color: #B0B3B8;
+  }
+  .row{
+    row-gap:20px;
   }
 
 }
@@ -835,7 +849,6 @@ p{
   p {
     color: #737373;
     font-size: 1rem;
-    line-height: 2.7rem;
     font-weight: 500;
   }
   ul {
@@ -1420,6 +1433,7 @@ pre .variable { color: #f8f8f2; } /* White */
 .list-services {
   font-size: 15px !important;
   text-align: left;
+  padding-right: 15px;
 }
 
 a {
