@@ -107,6 +107,12 @@ p{
   color: #B0B3B8;
 }
 
+#kubernetes-performance{
+  .sub-head{
+    color: #373839;
+  }
+}
+
 
 .btn {
   font-family: $font-family-primary;
@@ -537,6 +543,12 @@ p{
 
 }
 
+// Contact page
+.contact-locations{
+  .card{
+    border: none;
+  }
+}
 
 
 

@@ -6,7 +6,7 @@
     {% for post in site.posts limit:3 %}
     <div class="col-md-4 {{ classes[forloop.index0] }}">
       <a href="{{ post.url }}" title="{{ post.title }}" style="color: unset;">
-        <div class="card blog-card p-3 bg-gray-800">
+        <div class="card blog-card p-1 bg-gray-800">
           <img src="{{ post.image }}" alt="{{ post.title }}" class="card-img-top" title="{{ post.title }}">
           <div class="card-body">
             <span class="time">{{ post.date | date_to_string }}</span>
@@ -20,6 +20,6 @@
   </div>
 
     <div class="text-center">
-    <a href="/blog" class="btn btn-rounded cta-button mt-4" style="font-size:18px;">Read More</a>
+    <a href="/blog" class="btn schedule-btn mt-4" style="font-size:18px;">Read More</a>
     </div>
 </div>
