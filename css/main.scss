@@ -294,13 +294,15 @@ p{
 }
 .footer {
   // background-color: #f4f5f7 !important;
-  padding: 3rem 0 .5rem 0;
+  padding: 3rem 0 0 0;
   // border-top: 1px solid #efefee;
   color: #FFF;
 }
-
+.lower-footer{
+  background-color: #2b2b2b;
+}
 .copyright{
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .footer-item {
@@ -550,6 +552,29 @@ p{
   }
 }
 
+// Join our team
+.join-team{
+  .job-card {
+    background: #f9f9f9;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  }
+
+  .job-card h4 {
+    font-weight: 600;
+  }
+
+  .gallery-img {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-img:hover {
+    transform: scale(1.02);
+  }
+}
 
 
 
