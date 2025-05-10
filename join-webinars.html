@@ -7,7 +7,7 @@ canonical_url: 'https://kubeify.com/join-webinars'
 image: /images/webinars/managing-kubernetes-manifests-using-jsonnet-tanaka.jpg
 ---
 
-<div class="page-bg-header">
+<div class="page-bg-header dark-bg text-white py-5">
   <div class="container text-center">
     <div class="row">
       <div class="col-md-8 offset-md-2">
@@ -44,56 +44,65 @@ image: /images/webinars/managing-kubernetes-manifests-using-jsonnet-tanaka.jpg
   </div>
 </div>
 
-<div class="kubernetes-info-wraper">
+<section class="dark-bg text-white py-5 text-center">
   <div class="container">
-    <div class="row">
-
-      <div class="col-md-6 pr-md-5">
-        <div class="kubernetes-info-msg text-white">
-          <h5 class="mb-4">Getting Started with Docker and Kubernetes Part 1</h5>
-          <div class="embed-responsive embed-responsive-16by9 mb-4">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/avZjHUHCB_M?rel=0&amp;showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <br>
-          <a href="https://blog.kubeify.com/2020/05/17/getting-started-with-docker-and-kubernetes-part-1/" target="_blank" class="btn btn-white btn-call-action">READ MORE</a>
-        </div>
-      </div>
-
-       <div class="col-md-6 pr-md-5">
-        <div class="kubernetes-info-msg text-white">
-          <h5 class="mb-4">Getting Started with Docker and Kubernetes Part 2</h5>
-          <div class="embed-responsive embed-responsive-16by9 mb-4">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/EP4xC8kC1Cg?rel=0&amp;showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <br>
-          <a href="https://blog.kubeify.com/2020/06/06/getting-started-with-docker-and-kubernetes-part-2/" target="_blank" class="btn btn-white btn-call-action">READ MORE</a>
-        </div>
-      </div>
-
-      <!-- <div class="col-md-6 pl-md-5">
-        <div class="kubernetes-info-video">
-          <h5 class="mb-4">Getting Started with Cloud Native DevOps</h5>
-          <div class="embed-responsive embed-responsive-16by9 mb-4">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/hjPB4cKLbu0?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <a href="https://blog.kubeify.com/2020/04/25/getting-started-with-cloud-native-devops/" target="_blank" class="btn btn-white btn-call-action">READ MORE</a>
-        </div>
-      </div>
-       -->
-    </div>
-
+    <h2 class="display-5 fw-bold">Getting Started with Docker & Kubernetes</h2>
+    <p class="lead mb-0">Video tutorials and guides to help you kickstart your container journey</p>
   </div>
-</div>
+</section>
 
+<!-- Section: Video Cards -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row g-4">
 
-<div class="page-bg-header">
-  <div class="container text-center">
-    <div class="row">
-      <div class="col-sm-8 offset-md-2">
-        <a href="/join-slack" target="_blank">
-          <img  src="/images/join-us-on-slack.png" alt="slack" class="img-responsive" style="width: 40%; margin-top: 20px;">
-        </a>
+      <!-- Card: Part 1 -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow border-0">
+          <div class="ratio ratio-16x9 webinar-video py-3">
+            <iframe src="https://www.youtube.com/embed/avZjHUHCB_M?rel=0&showinfo=0" title="Docker & Kubernetes Part 1" allowfullscreen></iframe>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Part 1: Introduction to Docker & Kubernetes</h5>
+            <p class="card-text">A beginner-friendly introduction to containers and orchestration using Docker and Kubernetes.</p>
+            <a href="https://blog.kubeify.com/2020/05/17/getting-started-with-docker-and-kubernetes-part-1/" target="_blank" class="btn btn-primary w-100">Read Full Article</a>
+          </div>
+        </div>
       </div>
+
+      <!-- Card: Part 2 -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow border-0">
+          <div class="ratio ratio-16x9 webinar-video py-3">
+            <iframe src="https://www.youtube.com/embed/EP4xC8kC1Cg?rel=0&showinfo=0" title="Docker & Kubernetes Part 2" allowfullscreen></iframe>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Part 2: Setting Up Kubernetes Cluster</h5>
+            <p class="card-text">Continue your journey by learning how to create and manage a Kubernetes cluster effectively.</p>
+            <a href="https://blog.kubeify.com/2020/06/06/getting-started-with-docker-and-kubernetes-part-2/" target="_blank" class="btn btn-primary w-100">Read Full Article</a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
-</div>
+</section>
+
+<!-- Slack Call to Action -->
+<section class="bg-white py-5 text-center">
+  <div class="container">
+    <h4 class="mb-4">Join Our DevOps Community</h4>
+    <a href="/join-slack" target="_blank">
+      <img src="/images/join-us-on-slack.png" alt="Join us on Slack" class="img-fluid" style="max-width: 200px;">
+    </a>
+  </div>
+</section>
+
+
+
+<style>
+  .webinar-video{
+    display: flex;
+    justify-content: center;
+  }
+</style>
