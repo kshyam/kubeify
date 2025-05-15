@@ -1,12 +1,11 @@
 ---
-layout: blog
+layout: default
 title: Get Enterprise Kubernetes support for multi cloud environments
 description: Accelerate your cloud native transformation and adoption of kubernetes with Kubeify's team of experts.
 canonical_url: "https://kubeify.com/blog"
 image: /images/kubeify.png
 ---
-
-<header class="text-white text-center py-5 pb-5 pt-5 dark-bg">
+<!-- <header class="text-white text-center py-5 pb-5 pt-5 dark-bg">
     <h1>Kubeify Blog</h1>
     <div class="row mb-4">
       <div class="col-md-4 col-xs-4 mx-auto p-4">
@@ -16,60 +15,88 @@ image: /images/kubeify.png
           </form>
       </div>
     </div>
-</header>
+</header> -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <!-- LEFT: Articles -->
+      <div class="col-lg-8 bg-white">
+        <h2 class="mb-4 mt-3" style="font-size: 2rem !important;">Latest Blogs</h2>
 
-<div class="container mt-4 mb-4">
-  <div class="row">
-    {% for post in site.posts %}
-      <div class="col-md-4 ">
-        <a href="{{ post.url }}" title="{{ post.title }}">
-          <div class="card blog-card p-3 bg-gray-800">
-            <img src="{{ post.image }}" alt="{{ post.title }}" class="card-img-top" title="{{ post.title }}">
-            <div class="card-body">
-              <span class="time">{{ post.date | date_to_string }}</span>
-              <h5 class="card-title">{{ post.title }}</h5>
-              <p class="card-text">{{ post.description }}</p>
+        <div id="posts-container">
+          {% for post in site.posts %}
+          <div class="row g-3 mb-4 pb-3 border-bottom blog-post">
+            <div class="col-4">
+              <img src="{{ post.image }}" alt="{{ post.title }}" class="rounded h-100" >
+            </div>
+            <div class="col-8">       
+              <span class="badge bg-light text-dark border">{{ post.category }}</span>
+              <h5 class="fw-semibold mt-2 mb-1">
+                <a href="{{ post.url }}" class="text-decoration-none text-dark">{{ post.title }}</a>
+              </h5>
+              <p class="mb-1 text-muted">{{ post.excerpt | strip_html | truncate: 100 }}</p>
+              <small class="text-muted" style="font-size:medium;">{{ post.date | date: "%b %d, %Y" }}</small>
             </div>
           </div>
-        </a>
-      </div>
-    {% endfor %}
-  </div>
-</div>
+          {% endfor %}
+        </div>
 
+        <!-- Pagination Controls -->
+        <nav class="mt-4">
+          <ul class="pagination justify-content-center" id="pagination-controls"></ul>
+        </nav>
+      </div>
+
+      <!-- RIGHT SIDEBAR -->
+      <div class="col-lg-4">
+        <div class="mb-4 p-3 border rounded bg-white">
+          <h4 class="fw-bold mb-3">Recent Posts</h4>
+          {% for post in site.posts limit: 4 %}
+          <p class="mb-3" >
+            <a href="{{ post.url }}" class="text-decoration-none" style="color: black !important;">{{ post.title }}</a><br>
+            <small class="text-muted">{{ post.date | date_to_long_string }}</small>
+          </p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 {% include cta.html %}
 
 
-<style>
-  .row{
-    row-gap: 20px;
-  }
-  .card{
-    background-color: rgb(255, 255, 255);
-  }
-  .time {
-    color: Gray;
-    text-transform: uppercase;
-    font-size: 14px;
+<script>
+  const postsPerPage = 4;
+  const posts = document.querySelectorAll('.blog-post');
+  const pagination = document.getElementById('pagination-controls');
+  const totalPages = Math.ceil(posts.length / postsPerPage);
+
+  let currentPage = 1;
+
+  function showPage(page) {
+    currentPage = page;
+    const start = (page - 1) * postsPerPage;
+    const end = start + postsPerPage;
+
+    posts.forEach((post, index) => {
+      post.style.display = (index >= start && index < end) ? 'flex' : 'none';
+    });
+
+    renderPagination();
   }
 
-  .card-title {
-    margin-top: 5px;
-    color: black;
-  }
-  .card-text{
-    color: rgb(103, 103, 103);
-  }
-  .card-body{
-    padding: 0;
-    padding-top: 10px;
+  function renderPagination() {
+    pagination.innerHTML = '';
+
+    for (let i = 1; i <= totalPages; i++) {
+      const li = document.createElement('li');
+      li.className = `page-item ${i === currentPage ? 'active' : ''}`;
+      li.innerHTML = `<a class="page-link" href="javascript:void(0);">${i}</a>`;
+      li.addEventListener('click', () => showPage(i));
+      pagination.appendChild(li);
+    }
   }
 
-
-  .blog-card {
-      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  }
-  .blog-card:hover {
-      transform: translateY(-10px);
-  }
-</style>
+  // Initialize
+  showPage(1);
+</script>
