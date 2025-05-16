@@ -5,7 +5,7 @@ description: Accelerate your cloud native transformation and adoption of kuberne
 canonical_url: "https://kubeify.com/blog"
 image: /images/kubeify.png
 ---
-<!-- <header class="text-white text-center py-5 pb-5 pt-5 dark-bg">
+<header class="text-white text-center py-5 pb-5 pt-5 dark-bg">
     <h1>Kubeify Blog</h1>
     <div class="row mb-4">
       <div class="col-md-4 col-xs-4 mx-auto p-4">
@@ -15,7 +15,7 @@ image: /images/kubeify.png
           </form>
       </div>
     </div>
-</header> -->
+</header>
 <section class="py-5 bg-light">
   <div class="container">
     <div class="row">
@@ -25,19 +25,21 @@ image: /images/kubeify.png
 
         <div id="posts-container">
           {% for post in site.posts %}
-          <div class="row g-3 mb-4 pb-3 border-bottom blog-post">
+           <a href="{{ post.url }}" class="text-decoration-none text-dark">
+          <div class="row g-3 mb-4 py-3 border-bottom blog-post">
             <div class="col-4">
               <img src="{{ post.image }}" alt="{{ post.title }}" class="rounded h-100" >
             </div>
             <div class="col-8">       
-              <span class="badge bg-light text-dark border">{{ post.category }}</span>
+              <span class="badge bg-light text-dark border" style="font-size: 12px;">{{ post.category }}</span>
               <h5 class="fw-semibold mt-2 mb-1">
-                <a href="{{ post.url }}" class="text-decoration-none text-dark">{{ post.title }}</a>
+               {{ post.title }}
               </h5>
-              <p class="mb-1 text-muted">{{ post.excerpt | strip_html | truncate: 100 }}</p>
-              <small class="text-muted" style="font-size:medium;">{{ post.date | date: "%b %d, %Y" }}</small>
+              <p class="mb-1 text-muted d-none d-md-block">{{ post.excerpt | strip_html | truncate: 100 }}</p>
+              <small class="text-muted d-none d-md-block" style="font-size:medium;">{{ post.date | date: "%b %d, %Y" }}</small>
             </div>
           </div>
+          </a>
           {% endfor %}
         </div>
 
