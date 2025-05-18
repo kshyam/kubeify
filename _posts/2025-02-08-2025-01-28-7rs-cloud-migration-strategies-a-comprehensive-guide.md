@@ -59,7 +59,7 @@ Rehosting, also known as "lift and shift," is a cloud migration strategy where y
 * **Performance testing:** Thoroughly test the application in the cloud to identify any performance bottlenecks.
 * **Security:** Implement appropriate security measures to protect your application and data in the cloud.
 
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXffMn0Zd3HFAvd_6RHYroa1wNKPUnu-Z-0jgEO2DNu8jYeceaSzjSql12XUbNfGzNUlkFS_aguECzQYXKwJ6Khc8EZD-rZ7AHE-ETqsgs_nZz5gFAF_dGq0NkY7Pvmc2JoLhuHB0A?key=1beB9YyK6sUFfwFz2OxSuA)
+![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXffMn0Zd3HFAvd_6RHYroa1wNKPUnu-Z-0jgEO2DNu8jYeceaSzjSql12XUbNfGzNUlkFS_aguECzQYXKwJ6Khc8EZD-rZ7AHE-ETqsgs_nZz5gFAF_dGq0NkY7Pvmc2JoLhuHB0A?key=1beB9YyK6sUFfwFz2OxSuA){:.img-responsive} 
 
 
 ### 2️⃣ Replatform (Lift, Tinker, and Shift)
@@ -107,7 +107,7 @@ Replatforming, often referred to as "lift, tinker, and shift," is a cloud migrat
 * **Testing:** Thoroughly test the application after making changes to ensure it functions correctly in the cloud.
 * **Security:** Implement appropriate security measures to protect your application and data in the cloud.
 
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdHnzsPqF-agsJRcW8RwCDyrUXAUsEySMM5WHDvojepoyMUyZ7BgvF4PbWnJGBP3On-NVARZAFKA9mEsUamx0-niu6AMI1_Hk4Xn2FEWrFGSAVF90Bl9TQwnLqmhMGkJnv9jUjt?key=1beB9YyK6sUFfwFz2OxSuA)
+![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdHnzsPqF-agsJRcW8RwCDyrUXAUsEySMM5WHDvojepoyMUyZ7BgvF4PbWnJGBP3On-NVARZAFKA9mEsUamx0-niu6AMI1_Hk4Xn2FEWrFGSAVF90Bl9TQwnLqmhMGkJnv9jUjt?key=1beB9YyK6sUFfwFz2OxSuA){:.img-responsive}
 
 
 ### 3️⃣ Repurchase (Drop and Shop)
@@ -161,7 +161,7 @@ Here's a detailed look at repurchasing:
 * **Data Migration Planning:**  Develop a detailed plan for migrating your data to the new SaaS platform.
 * **Change Management:**  Prepare your users for the change and provide adequate training.
 
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXfGtd4_uxijHrLSGZvosDfuLsYQQXeVN2iXIpLBHsjIcw82mj6LO4SEDA2-5pmmnAzwuLVjrOtDM6Ag0qBAvLpNXgyNvabHWyAf5M1zUQp7wv-39SpjC8uoz-fTpYgUD-EI34wt?key=1beB9YyK6sUFfwFz2OxSuA)
+![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXfGtd4_uxijHrLSGZvosDfuLsYQQXeVN2iXIpLBHsjIcw82mj6LO4SEDA2-5pmmnAzwuLVjrOtDM6Ag0qBAvLpNXgyNvabHWyAf5M1zUQp7wv-39SpjC8uoz-fTpYgUD-EI34wt?key=1beB9YyK6sUFfwFz2OxSuA){:.img-responsive}
 
 💡 **Example:**
 Switching from a self-hosted email system to **Microsoft 365** or moving from an in-house CRM to **Salesforce**.
@@ -214,7 +214,8 @@ Refactoring, also known as re-architecting, is a cloud migration strategy that i
 * **Incremental Approach:** Consider refactoring the application in phases to reduce risk and allow for continuous delivery.
 * **Testing and Quality Assurance:** Implement rigorous testing and quality assurance processes throughout the refactoring process.
 
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXc4vxb0Gq2IQ9SV3SmwKv3b9MHq42vHn6tSx9kiA41N0KTDIblvn-osx__tzdLYNX7PcreYbTvqS5o2xDc8VA2eVluUXEyuGPU2F-i-y08BJF1iOqX-loBRibqZ7RKpb4wywQUz4Q?key=1beB9YyK6sUFfwFz2OxSuA)****
+![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXc4vxb0Gq2IQ9SV3SmwKv3b9MHq42vHn6tSx9kiA41N0KTDIblvn-osx__tzdLYNX7PcreYbTvqS5o2xDc8VA2eVluUXEyuGPU2F-i-y08BJF1iOqX-loBRibqZ7RKpb4wywQUz4Q?key=1beB9YyK6sUFfwFz2OxSuA){:.img-responsive}
+
 
 💡 **Example:**
 Breaking a **monolithic** application into **microservices** and deploying it on **AWS Lambda, Google Cloud Run, or Kubernetes**.
@@ -250,7 +251,7 @@ Here's how we can understand "Relocate" in the context of cloud migration:
 * **Disaster recovery:** When you need to move your infrastructure to a different location for disaster recovery purposes.
 * **Edge computing:** When you're deploying infrastructure closer to the edge of the network.
 
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXc5TKhaRA6HrWCEduqD3dPxOpINMmJCZzgeeW5HJAwlc3p80o2rntKmUiFigG3zVe2J5eiY5uwYdM8IHB2O9tSgAaEilH8eiYZdp5ZpyCXHsm-Ycl56kg-6GnSaljAg3zNLW8MtLg?key=1beB9YyK6sUFfwFz2OxSuA)
+![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXc5TKhaRA6HrWCEduqD3dPxOpINMmJCZzgeeW5HJAwlc3p80o2rntKmUiFigG3zVe2J5eiY5uwYdM8IHB2O9tSgAaEilH8eiYZdp5ZpyCXHsm-Ycl56kg-6GnSaljAg3zNLW8MtLg?key=1beB9YyK6sUFfwFz2OxSuA){:.img-responsive}
 
 💡 **Example:**
 Migrating **VMware workloads** from an on-premises data center to **Google Cloud VMware Engine**.
@@ -304,7 +305,7 @@ Here's a breakdown of "Retire" in cloud migration:
 
 "Retire" is about eliminating resources, not migrating them.  It often goes hand-in-hand with the other strategies.  For example, you might refactor some applications, repurchase others, and retire those that are no longer needed.
 
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXeMyiAJLqZeQQ7KUrh24U7PEJ-uJF8cFx3kX8wVaKP9NkLqr0RVjcdXYC1GBcu_2BGx73o_4SXKzh8pjxqvUOp3r9iZRLE_vij28PxXAlCjusX7TGgiXQRGZt4ZhUWMi3GmkaDLUg?key=1beB9YyK6sUFfwFz2OxSuA)
+![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXeMyiAJLqZeQQ7KUrh24U7PEJ-uJF8cFx3kX8wVaKP9NkLqr0RVjcdXYC1GBcu_2BGx73o_4SXKzh8pjxqvUOp3r9iZRLE_vij28PxXAlCjusX7TGgiXQRGZt4ZhUWMi3GmkaDLUg?key=1beB9YyK6sUFfwFz2OxSuA){:.img-responsive}
 
 💡 **Example:**
 Shutting down an **old HR management system** after moving to a modern **cloud-based HR platform**.
@@ -349,7 +350,7 @@ Here's a breakdown of "Retain" in cloud migration:
 
 "Retain" is about *not* migrating. It's a valid and often necessary part of a comprehensive cloud strategy. It's important to make informed decisions about which systems to retain based on a thorough assessment of business requirements, technical considerations, and cost-benefit analysis.  A hybrid approach, where some systems are in the cloud and others are retained on-premises, is a common and often effective strategy.
 
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXem4dlgt_dYZjF7_oNWO5vmq3vDHPyWEn4A5owhTP5t46bY2G8URUpkvKxm0KkOu9irRgz88nboeeHUZeh9aVeDkeLJaspenPvwLstYN2-rSEYQl8izNqqxJQWC0H4OoHgXFgE0?key=1beB9YyK6sUFfwFz2OxSuA)
+![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXem4dlgt_dYZjF7_oNWO5vmq3vDHPyWEn4A5owhTP5t46bY2G8URUpkvKxm0KkOu9irRgz88nboeeHUZeh9aVeDkeLJaspenPvwLstYN2-rSEYQl8izNqqxJQWC0H4OoHgXFgE0?key=1beB9YyK6sUFfwFz2OxSuA){:.img-responsive}
 
 💡 **Example:**
 A **high-frequency trading** system that needs ultra-low latency may remain on-premises while other workloads move to the cloud.

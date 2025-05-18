@@ -71,11 +71,12 @@ h4{
 }
 
 .cta-button{
-  background-image: linear-gradient(to right, #f32170, #ff6b08, #cf23cf);
-  color: #ffffff !important;
-  border: 1px solid white;
-  text-shadow: 1px 1px #000;
-  font-size: 15px !important;
+  background: blue;
+  font-size: 14px !important;
+  color: #FFF !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+
 }
 .btn-warning {
   color: #fff;
@@ -319,10 +320,10 @@ p{
   }
 }
 .footer-item h4 {
-  font-size: 1.1rem;
+  font-size: 18px;
 
   color: theme-color("primary");
-  font-weight: 400;
+  font-weight: 600;
   @media (max-width: 400px) {
     font-size: 13px;
   }
@@ -333,8 +334,8 @@ p{
   margin: 0;
 }
 .footer-nav > li {
-  margin-bottom: 0.3rem;
-  font-size: 1rem;
+  margin-bottom: 0.3rem !important;
+  font-size: 15px !important;
   @media (max-width: 360px) {
     font-size: 12px;
   }
@@ -343,6 +344,28 @@ p{
   display: block;
   color: #FFF;
 }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.page-bg-header{
+  background-image: url('/images/header-bg-1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; /* or 'contain' depending on the effect */
+  height: 300px; /* adjust height as needed */
+  color: white; /* optional: for text contrast */
+}
+
 
 
 
@@ -552,7 +575,7 @@ p{
 // Contact page
 .contact-locations{
   .card{
-    border: none;
+    border: 1px solid #9d9d9d;
   }
 
   .card:hover {

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-05-16T16:42:02+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Kubeify</title><subtitle>Kubeify - a team who helps teams to quick start with Kubernetes &amp; docker based DevOps process.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-05-19T02:52:08+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Kubeify</title><subtitle>Kubeify - a team who helps teams to quick start with Kubernetes &amp; docker based DevOps process.
 </subtitle><entry><title type="html">DevOps for Early Stage Startups: A Complete Guide</title><link href="http://localhost:4000/blog/2025-02-10-devops-for-early-stage-startups-a-complete-guide" rel="alternate" type="text/html" title="DevOps for Early Stage Startups: A Complete Guide" /><published>2025-02-11T00:13:00+05:30</published><updated>2025-02-11T00:13:00+05:30</updated><id>http://localhost:4000/blog/2025-02-10-devops-for-early-stage-startups-a-complete-guide</id><content type="html" xml:base="http://localhost:4000/blog/2025-02-10-devops-for-early-stage-startups-a-complete-guide"><![CDATA[<h2 id="table-of-contents">Table of Contents</h2>
 <ol>
   <li>Introduction</li>
@@ -1311,7 +1311,7 @@ helm <span class="nb">install </span>karpenter karpenter/karpenter <span class="
   <li><strong>Security:</strong> Implement appropriate security measures to protect your application and data in the cloud.</li>
 </ul>
 
-<p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXffMn0Zd3HFAvd_6RHYroa1wNKPUnu-Z-0jgEO2DNu8jYeceaSzjSql12XUbNfGzNUlkFS_aguECzQYXKwJ6Khc8EZD-rZ7AHE-ETqsgs_nZz5gFAF_dGq0NkY7Pvmc2JoLhuHB0A?key=1beB9YyK6sUFfwFz2OxSuA" alt="" /></p>
+<p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXffMn0Zd3HFAvd_6RHYroa1wNKPUnu-Z-0jgEO2DNu8jYeceaSzjSql12XUbNfGzNUlkFS_aguECzQYXKwJ6Khc8EZD-rZ7AHE-ETqsgs_nZz5gFAF_dGq0NkY7Pvmc2JoLhuHB0A?key=1beB9YyK6sUFfwFz2OxSuA" alt="" class="img-responsive" /></p>
 
 <h3 id="2️⃣-replatform-lift-tinker-and-shift">2️⃣ Replatform (Lift, Tinker, and Shift)</h3>
 <p>Replatforming, often referred to as “lift, tinker, and shift,” is a cloud migration strategy that involves making some modifications to an application to take advantage of cloud capabilities while minimizing code changes. It’s a middle ground between rehosting (lift and shift) and refactoring (re-architecting).</p>
@@ -1373,7 +1373,7 @@ helm <span class="nb">install </span>karpenter karpenter/karpenter <span class="
   <li><strong>Security:</strong> Implement appropriate security measures to protect your application and data in the cloud.</li>
 </ul>
 
-<p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdHnzsPqF-agsJRcW8RwCDyrUXAUsEySMM5WHDvojepoyMUyZ7BgvF4PbWnJGBP3On-NVARZAFKA9mEsUamx0-niu6AMI1_Hk4Xn2FEWrFGSAVF90Bl9TQwnLqmhMGkJnv9jUjt?key=1beB9YyK6sUFfwFz2OxSuA" alt="" /></p>
+<p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdHnzsPqF-agsJRcW8RwCDyrUXAUsEySMM5WHDvojepoyMUyZ7BgvF4PbWnJGBP3On-NVARZAFKA9mEsUamx0-niu6AMI1_Hk4Xn2FEWrFGSAVF90Bl9TQwnLqmhMGkJnv9jUjt?key=1beB9YyK6sUFfwFz2OxSuA" alt="" class="img-responsive" /></p>
 
 <h3 id="3️⃣-repurchase-drop-and-shop">3️⃣ Repurchase (Drop and Shop)</h3>
 <p>In this approach, an existing application is <strong>replaced</strong> with a SaaS-based solution.</p>
@@ -1438,7 +1438,7 @@ Repurchasing, often referred to as “drop and shop,” is a cloud migration str
   <li><strong>Change Management:</strong>  Prepare your users for the change and provide adequate training.</li>
 </ul>
 
-<p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfGtd4_uxijHrLSGZvosDfuLsYQQXeVN2iXIpLBHsjIcw82mj6LO4SEDA2-5pmmnAzwuLVjrOtDM6Ag0qBAvLpNXgyNvabHWyAf5M1zUQp7wv-39SpjC8uoz-fTpYgUD-EI34wt?key=1beB9YyK6sUFfwFz2OxSuA" alt="" /></p>
+<p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfGtd4_uxijHrLSGZvosDfuLsYQQXeVN2iXIpLBHsjIcw82mj6LO4SEDA2-5pmmnAzwuLVjrOtDM6Ag0qBAvLpNXgyNvabHWyAf5M1zUQp7wv-39SpjC8uoz-fTpYgUD-EI34wt?key=1beB9YyK6sUFfwFz2OxSuA" alt="" class="img-responsive" /></p>
 
 <p>💡 <strong>Example:</strong>
 Switching from a self-hosted email system to <strong>Microsoft 365</strong> or moving from an in-house CRM to <strong>Salesforce</strong>.</p>
@@ -1503,7 +1503,7 @@ Switching from a self-hosted email system to <strong>Microsoft 365</strong> or m
   <li><strong>Testing and Quality Assurance:</strong> Implement rigorous testing and quality assurance processes throughout the refactoring process.</li>
 </ul>
 
-<p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXc4vxb0Gq2IQ9SV3SmwKv3b9MHq42vHn6tSx9kiA41N0KTDIblvn-osx__tzdLYNX7PcreYbTvqS5o2xDc8VA2eVluUXEyuGPU2F-i-y08BJF1iOqX-loBRibqZ7RKpb4wywQUz4Q?key=1beB9YyK6sUFfwFz2OxSuA" alt="" /><em>**</em></p>
+<p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXc4vxb0Gq2IQ9SV3SmwKv3b9MHq42vHn6tSx9kiA41N0KTDIblvn-osx__tzdLYNX7PcreYbTvqS5o2xDc8VA2eVluUXEyuGPU2F-i-y08BJF1iOqX-loBRibqZ7RKpb4wywQUz4Q?key=1beB9YyK6sUFfwFz2OxSuA" alt="" class="img-responsive" /></p>
 
 <p>💡 <strong>Example:</strong>
 Breaking a <strong>monolithic</strong> application into <strong>microservices</strong> and deploying it on <strong>AWS Lambda, Google Cloud Run, or Kubernetes</strong>.</p>
@@ -1547,7 +1547,7 @@ Breaking a <strong>monolithic</strong> application into <strong>microservices</s
   <li><strong>Edge computing:</strong> When you’re deploying infrastructure closer to the edge of the network.</li>
 </ul>
 
-<p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXc5TKhaRA6HrWCEduqD3dPxOpINMmJCZzgeeW5HJAwlc3p80o2rntKmUiFigG3zVe2J5eiY5uwYdM8IHB2O9tSgAaEilH8eiYZdp5ZpyCXHsm-Ycl56kg-6GnSaljAg3zNLW8MtLg?key=1beB9YyK6sUFfwFz2OxSuA" alt="" /></p>
+<p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXc5TKhaRA6HrWCEduqD3dPxOpINMmJCZzgeeW5HJAwlc3p80o2rntKmUiFigG3zVe2J5eiY5uwYdM8IHB2O9tSgAaEilH8eiYZdp5ZpyCXHsm-Ycl56kg-6GnSaljAg3zNLW8MtLg?key=1beB9YyK6sUFfwFz2OxSuA" alt="" class="img-responsive" /></p>
 
 <p>💡 <strong>Example:</strong>
 Migrating <strong>VMware workloads</strong> from an on-premises data center to <strong>Google Cloud VMware Engine</strong>.</p>
@@ -1614,7 +1614,7 @@ Migrating <strong>VMware workloads</strong> from an on-premises data center to <
 
 <p>“Retire” is about eliminating resources, not migrating them.  It often goes hand-in-hand with the other strategies.  For example, you might refactor some applications, repurchase others, and retire those that are no longer needed.</p>
 
-<p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXeMyiAJLqZeQQ7KUrh24U7PEJ-uJF8cFx3kX8wVaKP9NkLqr0RVjcdXYC1GBcu_2BGx73o_4SXKzh8pjxqvUOp3r9iZRLE_vij28PxXAlCjusX7TGgiXQRGZt4ZhUWMi3GmkaDLUg?key=1beB9YyK6sUFfwFz2OxSuA" alt="" /></p>
+<p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXeMyiAJLqZeQQ7KUrh24U7PEJ-uJF8cFx3kX8wVaKP9NkLqr0RVjcdXYC1GBcu_2BGx73o_4SXKzh8pjxqvUOp3r9iZRLE_vij28PxXAlCjusX7TGgiXQRGZt4ZhUWMi3GmkaDLUg?key=1beB9YyK6sUFfwFz2OxSuA" alt="" class="img-responsive" /></p>
 
 <p>💡 <strong>Example:</strong>
 Shutting down an <strong>old HR management system</strong> after moving to a modern <strong>cloud-based HR platform</strong>.</p>
@@ -1667,7 +1667,7 @@ Shutting down an <strong>old HR management system</strong> after moving to a mod
 
 <p>“Retain” is about <em>not</em> migrating. It’s a valid and often necessary part of a comprehensive cloud strategy. It’s important to make informed decisions about which systems to retain based on a thorough assessment of business requirements, technical considerations, and cost-benefit analysis.  A hybrid approach, where some systems are in the cloud and others are retained on-premises, is a common and often effective strategy.</p>
 
-<p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXem4dlgt_dYZjF7_oNWO5vmq3vDHPyWEn4A5owhTP5t46bY2G8URUpkvKxm0KkOu9irRgz88nboeeHUZeh9aVeDkeLJaspenPvwLstYN2-rSEYQl8izNqqxJQWC0H4OoHgXFgE0?key=1beB9YyK6sUFfwFz2OxSuA" alt="" /></p>
+<p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXem4dlgt_dYZjF7_oNWO5vmq3vDHPyWEn4A5owhTP5t46bY2G8URUpkvKxm0KkOu9irRgz88nboeeHUZeh9aVeDkeLJaspenPvwLstYN2-rSEYQl8izNqqxJQWC0H4OoHgXFgE0?key=1beB9YyK6sUFfwFz2OxSuA" alt="" class="img-responsive" /></p>
 
 <p>💡 <strong>Example:</strong>
 A <strong>high-frequency trading</strong> system that needs ultra-low latency may remain on-premises while other workloads move to the cloud.</p>
