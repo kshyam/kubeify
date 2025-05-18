@@ -5,7 +5,7 @@ description: Accelerate your cloud native transformation and adoption of kuberne
 canonical_url: "https://kubeify.com/blog"
 image: /images/kubeify.png
 ---
-<header class="text-white text-center py-5 pb-5 pt-5 dark-bg">
+<header class="text-white page-bg-header text-center py-5 pb-5 pt-5 dark-bg">
     <h1>Kubeify Blog</h1>
     <div class="row mb-4">
       <div class="col-md-4 col-xs-4 mx-auto p-4">
@@ -20,22 +20,22 @@ image: /images/kubeify.png
   <div class="container">
     <div class="row">
       <!-- LEFT: Articles -->
-      <div class="col-lg-8 bg-white">
+      <div class="col-lg-8 border rounded bg-white">
         <h2 class="mb-4 mt-3" style="font-size: 2rem !important;">Latest Blogs</h2>
 
         <div id="posts-container">
           {% for post in site.posts %}
            <a href="{{ post.url }}" class="text-decoration-none text-dark">
-          <div class="row g-3 mb-4 py-3 border-bottom blog-post">
-            <div class="col-4">
+          <div class="row g-3 py-3 blog-post">
+            <div class="col-6">
               <img src="{{ post.image }}" alt="{{ post.title }}" class="rounded h-100" >
             </div>
-            <div class="col-8">       
+            <div class="col-6">       
               <span class="badge bg-light text-dark border" style="font-size: 12px;">{{ post.category }}</span>
               <h5 class="fw-semibold mt-2 mb-1">
                {{ post.title }}
               </h5>
-              <p class="mb-1 text-muted d-none d-md-block">{{ post.excerpt | strip_html | truncate: 100 }}</p>
+              <p class="text-muted d-none d-md-block">{{ post.excerpt | strip_html | truncate: 100 }}</p>
               <small class="text-muted d-none d-md-block" style="font-size:medium;">{{ post.date | date: "%b %d, %Y" }}</small>
             </div>
           </div>
@@ -53,7 +53,7 @@ image: /images/kubeify.png
       <div class="col-lg-4">
         <div class="mb-4 p-3 border rounded bg-white">
           <h4 class="fw-bold mb-3">Recent Posts</h4>
-          {% for post in site.posts limit: 4 %}
+          {% for post in site.posts limit: 10 %}
           <p class="mb-3" >
             <a href="{{ post.url }}" class="text-decoration-none" style="color: black !important;">{{ post.title }}</a><br>
             <small class="text-muted">{{ post.date | date_to_long_string }}</small>
@@ -68,7 +68,7 @@ image: /images/kubeify.png
 
 
 <script>
-  const postsPerPage = 4;
+  const postsPerPage = 10;
   const posts = document.querySelectorAll('.blog-post');
   const pagination = document.getElementById('pagination-controls');
   const totalPages = Math.ceil(posts.length / postsPerPage);
