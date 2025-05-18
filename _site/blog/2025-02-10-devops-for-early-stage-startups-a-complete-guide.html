@@ -49,20 +49,10 @@
   <link rel="stylesheet" href="/css/fonts.css" />
   <link rel="stylesheet" href="/css/main.css" />
   <link rel="stylesheet" href="/css/blog.css" />
-
-  <!--
-      HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
-    -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 
 <body class="layout-blog">
-  <!-- navbar -->
-  <header class="default-header cm-header">
+  
 <nav class="navbar navbar-expand-lg navbar-light bg-white">
   <div class="container">
     <a class="navbar-brand" href="/"
@@ -279,33 +269,34 @@
 </script>
 
 
-<meta name="google-adsense-account" content="ca-pub-4088406505945385"></header>
-  <div class="content-wraper">
-    <div class="blog-wraper">
-      <div class="container">
-        <div class="row">
-          
-          <div class="col-sm-12">
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb" style="background: transparent;">
-                <li class="breadcrumb-item">
-                  <a href="/blog">Blog</a>
-                </li>
-                <li class="breadcrumb-item active" aria-current="page">
-                  DevOps for Early Stage Startups: A Complete Guide
-                </li>
-              </ol>
-            </nav>
+<meta name="google-adsense-account" content="ca-pub-4088406505945385">
 
-            <div class="blog-post-content">
-              <img src="/images/blog/devops-for-early-stage-startups.webp" alt="DevOps for Early Stage Startups: A Complete Guide" class="card-img-top" title="DevOps for Early Stage Startups: A Complete Guide">
-              <h1 class="mt-4" style="color:black;">DevOps for Early Stage Startups: A Complete Guide</h1>
-              <time>
-                11 Feb 2025 -
-                <small>Shyam Mohan K</small>
-              </time>
-              <div class="px-5">
-              <h2 id="table-of-contents">Table of Contents</h2>
+  <section>
+    <div class="container mb-4">
+      <div class="row">
+
+        <!-- LEFT: Main Blog Content -->
+        <div class="col-lg-8 bg-white p-4 rounded shadow-sm">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb" style="background: transparent;">
+              <li class="breadcrumb-item">
+                <a href="/blog">Blog</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                DevOps for Early Stage Startups: A Complete Guide
+              </li>
+            </ol>
+          </nav>
+
+          <img src="/images/blog/devops-for-early-stage-startups.webp" alt="DevOps for Early Stage Startups: A Complete Guide" class="card-img-top rounded" title="DevOps for Early Stage Startups: A Complete Guide">
+          <h1 class="mt-4" style="color:black;">DevOps for Early Stage Startups: A Complete Guide</h1>
+          <time>
+            11 Feb 2025 -
+            <small>Shyam Mohan K</small>
+          </time>
+
+          <div class="px-2 mt-4">
+            <h2 id="table-of-contents">Table of Contents</h2>
 <ol>
   <li>Introduction</li>
   <li>Why Do Early-Stage Startups Need DevOps?</li>
@@ -497,17 +488,44 @@
 
 <p>If you’re a startup founder or developer, start small with DevOps and gradually scale your processes for maximum efficiency.</p>
 
-              </div>
-            </div>
           </div>
-
         </div>
+
+        <!-- RIGHT: Related Posts -->
+        <div class="col-lg-4 mt-4 mt-lg-0">
+          <div class="p-3 border rounded bg-white shadow-sm">
+            <h4 class="fw-bold mb-3">More in DevOps</h4>
+            
+            
+            
+              <div class="mb-3">
+                <a href="/blog/why-i-decided-to-use-karpenter-for-kubernetes-autoscaling" class="text-decoration-none text-dark fw-semibold d-block">Why I Decided to Use Karpenter for Kubernetes Autoscaling</a>
+                <small class="text-muted">29 January 2025</small>
+              </div>
+            
+              <div class="mb-3">
+                <a href="/blog/2025-01-28-7rs-cloud-migration-strategies-a-comprehensive-guide" class="text-decoration-none text-dark fw-semibold d-block">7Rs Cloud Migration Strategies: A Comprehensive Guide</a>
+                <small class="text-muted">28 January 2025</small>
+              </div>
+            
+              <div class="mb-3">
+                <a href="/blog/2025-01-15-how-to-secure-nginx-with-ssl-using-certbot-on-ubuntu" class="text-decoration-none text-dark fw-semibold d-block">How to Secure Nginx with SSL Using Certbot on Ubuntu</a>
+                <small class="text-muted">15 January 2025</small>
+              </div>
+            
+              <div class="mb-3">
+                <a href="/blog/2025-01-08-getting-started-with-terraform" class="text-decoration-none text-dark fw-semibold d-block">Getting Started with Terraform</a>
+                <small class="text-muted">09 January 2025</small>
+              </div>
+            
+          </div>
+        </div>
+
       </div>
     </div>
-  </div>
-  
-</body>
-<div class="bg-light pt-5 pb-5 work-hero">
+  </section>
+
+  <div class="bg-light pt-5 pb-5 work-hero">
   <div class="container">
     <div class="row">
       <div class="col-md-10 offset-md-1">
@@ -547,7 +565,7 @@
 </section>
 
 
-<div class="footer bg-dark">
+  <div class="footer bg-dark">
   <div class="container">
     <div class="row">
       <div class="col-md-4 footer-item">
@@ -669,6 +687,5 @@
 <!-- Start of HubSpot Embed Code -->
 <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/7280691.js"></script>
 <!-- End of HubSpot Embed Code -->
-
-
+</body>
 </html>
