@@ -10,15 +10,7 @@ body {
   background-color: #fff;
 }
 
-.landing-page{
-  background-color: #031336; /* Background color */
-  background-image: 
-    url('/images/curve1.png'), 
-    url('/images/curve2.png');
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: center 0%, center 25%, center 60%; 
-  background-size: contain, contain, contain; /* Ensure all images scale */
-}
+
 .dark-bg{
   background-color: #031336; /* Background color */
 }
