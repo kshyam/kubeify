@@ -5,47 +5,71 @@ description: Accelerate your cloud native transformation and adoption of kuberne
 canonical_url: "https://kubeify.com/blog"
 image: /images/kubeify.png
 ---
+
 <header class="text-white page-bg-header text-center py-5 pb-5 pt-5 dark-bg">
-    <h1>Kubeify Blog</h1>
-    <div class="row mb-4">
-      <div class="col-md-4 col-xs-4 mx-auto p-4">
-          <form method="get" action="https://www.google.com/search" target="_blank">
-            <input type="hidden" name="sitesearch" value="kubeify.com">
-            <input type="text" name="q" maxlength="255" placeholder="Search Kubeify Website" class="form-control">
-          </form>
-      </div>
+  <h1>Kubeify Blog</h1>
+  <div class="row mb-4">
+    <div class="col-md-4 col-xs-4 mx-auto p-4">
+      <form method="get" action="https://www.google.com/search" target="_blank">
+        <input type="hidden" name="sitesearch" value="kubeify.com" />
+        <input
+          type="text"
+          name="q"
+          maxlength="255"
+          placeholder="Search Kubeify Website"
+          class="form-control"
+        />
+      </form>
     </div>
+  </div>
 </header>
 <section class="py-5 bg-light">
   <div class="container">
     <div class="row">
       <!-- LEFT: Articles -->
       <div class="col-lg-8 border rounded bg-white">
-        <h2 class="mb-4 mt-3" style="font-size: 2rem !important;">Latest Blogs</h2>
+        <h2 class="mb-4 mt-3" style="font-size: 2rem !important">
+          Latest Blogs
+        </h2>
 
         <div id="posts-container">
           {% for post in site.posts %}
-           <a href="{{ post.url }}" class="text-decoration-none text-dark">
-          <div class="row g-3 py-3 blog-post">
-            <div class="col-6">
-              <img src="{{ post.image }}" alt="{{ post.title }}" class="rounded h-100" >
+          <a href="{{ post.url }}" class="text-decoration-none text-dark">
+            <div class="row g-3 py-3 blog-post">
+              <div class="col-6">
+                <img
+                  src="{{ post.image }}"
+                  alt="{{ post.title }}"
+                  class="rounded h-100"
+                />
+              </div>
+              <div class="col-6">
+                <span
+                  class="badge bg-light text-dark border"
+                  style="font-size: 12px"
+                  >{{ post.category }}</span
+                >
+                <h5 class="fw-semibold mt-2 mb-1">{{ post.title }}</h5>
+                <p class="text-muted d-none d-md-block">
+                  {{ post.excerpt | strip_html | truncate: 100 }}
+                </p>
+                <small
+                  class="text-muted d-none d-md-block"
+                  style="font-size: medium"
+                  >{{ post.date | date: "%b %d, %Y" }}</small
+                >
+              </div>
             </div>
-            <div class="col-6">       
-              <span class="badge bg-light text-dark border" style="font-size: 12px;">{{ post.category }}</span>
-              <h5 class="fw-semibold mt-2 mb-1">
-               {{ post.title }}
-              </h5>
-              <p class="text-muted d-none d-md-block">{{ post.excerpt | strip_html | truncate: 100 }}</p>
-              <small class="text-muted d-none d-md-block" style="font-size:medium;">{{ post.date | date: "%b %d, %Y" }}</small>
-            </div>
-          </div>
           </a>
           {% endfor %}
         </div>
 
         <!-- Pagination Controls -->
         <nav class="mt-4">
-          <ul class="pagination justify-content-center" id="pagination-controls"></ul>
+          <ul
+            class="pagination justify-content-center"
+            id="pagination-controls"
+          ></ul>
         </nav>
       </div>
 
@@ -54,11 +78,33 @@ image: /images/kubeify.png
         <div class="mb-4 p-3 border rounded bg-white">
           <h4 class="fw-bold mb-3">Recent Posts</h4>
           {% for post in site.posts limit: 10 %}
-          <p class="mb-3" >
-            <a href="{{ post.url }}" class="text-decoration-none" style="color: black !important;">{{ post.title }}</a><br>
-            <small class="text-muted">{{ post.date | date_to_long_string }}</small>
+          <p class="mb-3">
+            <a
+              href="{{ post.url }}"
+              class="text-decoration-none"
+              style="color: black !important"
+              >{{ post.title }}</a
+            ><br />
+            <small class="text-muted"
+              >{{ post.date | date_to_long_string }}</small
+            >
           </p>
           {% endfor %}
+        </div>
+
+        <!-- Tag/Categories Section -->
+        <div class="mb-4 p-3 border rounded bg-white d-none d-md-block">
+          <h4 class="fw-bold mb-3">Tags</h4>
+          {% assign categories = site.categories | sort %}
+          <div class="list-inline mb-0 d-flex flex-wrap gap-2">
+            {% for category in categories %}
+            <span
+              class="list-inline-item btn rounded-pill btn-sm btn-light px-3 py-2"
+            >
+              {{ category[0] }}
+            </span>
+            {% endfor %}
+          </div>
         </div>
       </div>
     </div>
@@ -66,11 +112,10 @@ image: /images/kubeify.png
 </section>
 {% include cta.html %}
 
-
 <script>
   const postsPerPage = 10;
-  const posts = document.querySelectorAll('.blog-post');
-  const pagination = document.getElementById('pagination-controls');
+  const posts = document.querySelectorAll(".blog-post");
+  const pagination = document.getElementById("pagination-controls");
   const totalPages = Math.ceil(posts.length / postsPerPage);
 
   let currentPage = 1;
@@ -81,20 +126,20 @@ image: /images/kubeify.png
     const end = start + postsPerPage;
 
     posts.forEach((post, index) => {
-      post.style.display = (index >= start && index < end) ? 'flex' : 'none';
+      post.style.display = index >= start && index < end ? "flex" : "none";
     });
 
     renderPagination();
   }
 
   function renderPagination() {
-    pagination.innerHTML = '';
+    pagination.innerHTML = "";
 
     for (let i = 1; i <= totalPages; i++) {
-      const li = document.createElement('li');
-      li.className = `page-item ${i === currentPage ? 'active' : ''}`;
+      const li = document.createElement("li");
+      li.className = `page-item ${i === currentPage ? "active" : ""}`;
       li.innerHTML = `<a class="page-link" href="javascript:void(0);">${i}</a>`;
-      li.addEventListener('click', () => showPage(i));
+      li.addEventListener("click", () => showPage(i));
       pagination.appendChild(li);
     }
   }
