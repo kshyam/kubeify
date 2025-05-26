@@ -112,6 +112,10 @@ h6 {
   font-family: $font-family-primary;
 }
 
+h5{
+  font-size: 1.0rem !important;
+}
+
 p {
   font-size: 18px;
 }
@@ -1045,9 +1049,10 @@ td {
   display: flex;
   flex-direction: column;
   min-width: 0;
+  min-height: 450px;
   word-wrap: break-word;
   background: rgba(67, 83, 99, 0.05);
-  border-radius: 16px;
+  // border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(7.9px);
