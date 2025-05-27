@@ -44,7 +44,13 @@
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/blog.css" />
     <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-y4DUbiLKTZ9v+1AKWqE+buvZX/MLHFLDbK+gJ8ZkY3OhVqAaEKcQ2OqCxykI3dDLH4FZ6zAnGAVrI39kz6j6Wg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-y4DUbiLKTZ9v+1AKWqE+buvZX/MLHFLDbK+gJ8ZkY3OhVqAaEKcQ2OqCxykI3dDLH4FZ6zAnGAVrI39kz6j6Wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!--
       HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
@@ -56,10 +62,11 @@
     <![endif]-->
   </head>
 
-  <body class="layout-blog ">
+  <body
+    class="layout-blog "
+  >
     <!-- navbar -->
-    <header class="default-header cm-header">
-      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <header class="default-header cm-header"><nav class="navbar navbar-expand-lg navbar-light bg-white">
   <div class="container">
     <a class="navbar-brand" href="/"
       ><img src="/images/kubeify-logo.png" alt=""
@@ -297,11 +304,9 @@
 </script>
 
 <meta name="google-adsense-account" content="ca-pub-4088406505945385" />
+</header>
 
-    </header>
-
-    <div class="content-wraper">
-      <h1>OPPS! </h1>
+    <div class="content-wraper"><h1>OPPS! </h1>
 <p class="zoom-area"><b>Sorry</b>, Page not found </p>
 <section class="error-container">
   <span class="four"><span class="screen-reader-text">4</span></span>
@@ -466,8 +471,7 @@ a.more-link {
 }
 
 </style>
-
-    </div>
+</div>
 
     <div class="footer bg-dark">
   <div class="container">
@@ -598,5 +602,62 @@ a.more-link {
 <!-- Start of HubSpot Embed Code -->
 <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/7280691.js"></script>
 <!-- End of HubSpot Embed Code -->
+    <!-- Include Modal Partial -->
+    <div
+  class="modal fade"
+  id="delayedModal"
+  tabindex="-1"
+  aria-labelledby="delayedModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="text-center">
+          <img
+            src="/images/kubernetes-architecture.png"
+            alt="Popup Image"
+            class="img-responsive center-block"
+            style="max-width: 200px; margin-top: 15px; margin-bottom: 15px"
+          />
+        </div>
+
+        <h4 class="fw-bold text-center">AI-Driven Kubernetes Optimization</h4>
+        <p class="fs-5 mb-4 text-center">
+          Max Performance, Min Spend, Any Cloud.
+        </p>
+
+        <div class="d-flex justify-content-center gap-3">
+          <a href="/schedule-meeting" class="btn cta-button btn-rounded"
+            >SCHEDULE MEETING</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ <div id="cookieConsent" style="display: none" class="cookie-box">
+  <button type="button" class="close" id="closeCookieBox" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+        <p class="cookie-message">
+          This website uses cookies to ensure you get the best experience.
+        </p>
+      </div>
+      <div class="col-xs-12 text-right">
+        <button id="acceptCookies" class="btn btn-success btn-sm">
+          Accept
+        </button>
+        <button id="denyCookies" class="btn btn-danger btn-sm">Deny</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script src="/js/cookie-consent.js"></script>
+    <script src="/js/modal.js"></script>
   </body>
 </html>

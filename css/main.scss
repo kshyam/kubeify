@@ -1678,3 +1678,27 @@ a:hover {
   font-size: 1.1em;
   color: #333; /* Dark text for readability */
 }
+
+// COOKIE CONSENT
+.cookie-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #343a40;
+  color: #fff;
+  padding: 20px 20px 15px 20px;
+  border-radius: 5px;
+  z-index: 9999;
+  max-width: 320px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+}
+
+.cookie-box .close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  color: #fff;
+  font-size: 18px;
+  opacity: 0.8;
+}
