@@ -10,10 +10,9 @@
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  // outline: 1px dashed #00d6f7;    //only for development
 }
-
 .landing-page {
-  background-color: #031336; /* Background color */
   background-image: url("/images/kubeify-home-header.webp");
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: center 0%, center 25%, center 60%;

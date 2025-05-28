@@ -1,31 +1,33 @@
-<div class="container mb-4 mt-5 latest-blogs">
-  <h1 class="mb-4 grd-text text-center">Latest Blogs</h1>
-  <div class="row">
-    {% assign classes = "slide-left,slide-up,slide-right" | split: "," %} {% for
-    post in site.posts limit:3 %}
-    <div class="col-md-4 {{ classes[forloop.index0] }}">
-      <a href="{{ post.url }}" title="{{ post.title }}" style="color: unset">
-        <div class="card blog-card p-1 bg-gray-800">
-          <img
-            src="{{ post.image }}"
-            alt="{{ post.title }}"
-            class="card-img-top"
-            title="{{ post.title }}"
-          />
-          <div class="card-body">
-            <span class="time">{{ post.date | date_to_string }}</span>
-            <h5 class="card-title">{{ post.title }}</h5>
-            <p class="card-text">{{ post.description }}</p>
+<section class="dark-bg">
+  <div class="container py-5 latest-blogs">
+    <h1 class="mb-4 grd-text text-center">Latest Blogs</h1>
+    <div class="row">
+      {% assign classes = "slide-left,slide-up,slide-right" | split: "," %} {%
+      for post in site.posts limit:3 %}
+      <div class="col-md-4 {{ classes[forloop.index0] }}">
+        <a href="{{ post.url }}" title="{{ post.title }}" style="color: unset">
+          <div class="card blog-card p-1 bg-gray-800">
+            <img
+              src="{{ post.image }}"
+              alt="{{ post.title }}"
+              class="card-img-top"
+              title="{{ post.title }}"
+            />
+            <div class="card-body">
+              <span class="time">{{ post.date | date_to_string }}</span>
+              <h5 class="card-title">{{ post.title }}</h5>
+              <p class="card-text">{{ post.description }}</p>
+            </div>
           </div>
-        </div>
-      </a>
+        </a>
+      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
-  </div>
 
-  <div class="text-center">
-    <a href="/blog" class="btn schedule-btn mt-4" style="font-size: 18px"
-      >Read More</a
-    >
+    <div class="text-center">
+      <a href="/blog" class="btn schedule-btn mt-4" style="font-size: 18px"
+        >Read More</a
+      >
+    </div>
   </div>
-</div>
+</section>
