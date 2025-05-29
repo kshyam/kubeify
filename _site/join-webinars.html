@@ -92,7 +92,7 @@
           >
             Services
           </a> -->
-          <!-- <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+        <!-- <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
                   <li><a class="dropdown-item" href="services">Service 1</a></li>
                   <li><a class="dropdown-item" href="/service2">Service 2</a></li>
                   <li><a class="dropdown-item" href="/service3">Service 3</a></li>
@@ -183,7 +183,7 @@
         Menu
       </div> -->
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item dropdown">
+        <!--<li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
             href="#"
@@ -194,7 +194,7 @@
           >
             Services
           </a>
-          <!-- <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+           <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
                   <li><a class="dropdown-item" href="/service1">Service 1</a></li>
                   <li><a class="dropdown-item" href="/service2">Service 2</a></li>
                   <li><a class="dropdown-item" href="/service3">Service 3</a></li>
@@ -203,8 +203,8 @@
                   <li><a class="dropdown-item" href="/service3">Service 6</a></li>
                   <li><a class="dropdown-item" href="/service2">Service 7</a></li>
                   <li><a class="dropdown-item" href="/service3">Service 8</a></li>
-              </ul> -->
-        </li>
+              </ul> 
+        </li>-->
 
         <li class="nav-item">
           <a class="nav-link" href="/why-kubernetes">Why Kubernetes</a>
@@ -634,6 +634,7 @@
         </p>
         <a
           href="#"
+          id="show-details"
           data-toggle="modal"
           data-target="#cookieDetailsModal"
           style="color: blue; font-weight: bold"
@@ -709,8 +710,19 @@
         </p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">
-          Close
+        <button
+          id="acceptCookiesmobile"
+          class="btn btn-primary btn-lg btn-block"
+          style="background-color: blue; border-color: blue"
+        >
+          Allow all
+        </button>
+        <button
+          id="denyCookiesmobile"
+          class="btn btn-outline-secondary btn-lg btn-block mt-2"
+          style="border: 1px solid blue; color: #000"
+        >
+          Deny
         </button>
       </div>
     </div>

@@ -10,13 +10,17 @@
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  // outline: 1px dashed #00d6f7;    //only for development
+  outline: 1px dashed #00d6f7; //only for development
 }
-.landing-page {
-  background-image: url("/images/kubeify-home-header.webp");
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: center 0%, center 25%, center 60%;
-  background-size: contain, contain, contain; /* Ensure all images scale */
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+section {
+  height: auto !important;
 }
 
 /* Scroll Animations */
@@ -365,7 +369,6 @@ td {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; /* or 'contain' depending on the effect */
-  height: 300px; /* adjust height as needed */
   color: white; /* optional: for text contrast */
 }
 
@@ -558,10 +561,8 @@ td {
 
 /*----SERVICES PAGE -------*/
 #service-header {
-  height: 60vh;
   background: #031336;
   align-items: center;
-  padding: 20px;
   display: flex;
 }
 
