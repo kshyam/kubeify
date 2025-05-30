@@ -92,7 +92,7 @@
           >
             Services
           </a> -->
-          <!-- <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+        <!-- <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
                   <li><a class="dropdown-item" href="services">Service 1</a></li>
                   <li><a class="dropdown-item" href="/service2">Service 2</a></li>
                   <li><a class="dropdown-item" href="/service3">Service 3</a></li>
@@ -183,7 +183,7 @@
         Menu
       </div> -->
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item dropdown">
+        <!--<li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
             href="#"
@@ -194,7 +194,7 @@
           >
             Services
           </a>
-          <!-- <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+           <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
                   <li><a class="dropdown-item" href="/service1">Service 1</a></li>
                   <li><a class="dropdown-item" href="/service2">Service 2</a></li>
                   <li><a class="dropdown-item" href="/service3">Service 3</a></li>
@@ -203,8 +203,8 @@
                   <li><a class="dropdown-item" href="/service3">Service 6</a></li>
                   <li><a class="dropdown-item" href="/service2">Service 7</a></li>
                   <li><a class="dropdown-item" href="/service3">Service 8</a></li>
-              </ul> -->
-        </li>
+              </ul> 
+        </li>-->
 
         <li class="nav-item">
           <a class="nav-link" href="/why-kubernetes">Why Kubernetes</a>
@@ -312,9 +312,6 @@
     <p class="lead mt-3">
       We're here to help — reach out and expect a response within 4 hours.
     </p>
-    <a href="#contact-form" class="btn rounded-pill btn-primary mt-4 px-4 py-2"
-      >Contact Us</a
-    >
   </div>
 </section>
 
@@ -412,18 +409,28 @@
 <section class="bg-light py-4">
   <div class="container">
     <div class="looking-details-wraper">
-        <div class="looking-details-content">
-          <h4>Ready to get started?</h4>
-          <p>Let us know what you are working on? <br> We would help you to build a fault tolerant, secure and scalable system over kubernetes.</p>
-          <a class="btn cta-button btn-rounded" href="/schedule-meeting">SCHEDULE A MEETING</a>
-        </div>
-        <div class="looking-details-image">
-          <img src="/images/home-cta2.png" alt="formore-details" data-lazy-src="/images/home-cta2.png" height="350px">
-        </div>
+      <div class="looking-details-content">
+        <h4>Ready to get started?</h4>
+        <p>
+          Let us know what you are working on? <br />
+          We would help you to build a fault tolerant, secure and scalable
+          system over kubernetes.
+        </p>
+        <a class="btn cta-button btn-rounded" href="/schedule-meeting"
+          >Schedule Meeting</a
+        >
       </div>
+      <div class="looking-details-image">
+        <img
+          src="/images/home-cta2.png"
+          alt="formore-details"
+          data-lazy-src="/images/home-cta2.png"
+          height="350px"
+        />
+      </div>
+    </div>
   </div>
 </section>
-
 
 </div>
 
@@ -590,26 +597,169 @@
     </div>
   </div>
 </div>
- <div id="cookieConsent" style="display: none" class="cookie-box">
+ <div id="cookieConsent" class="cookie-consent-banner">
   <button type="button" class="close" id="closeCookieBox" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
+    &times;
   </button>
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-12">
-        <p class="cookie-message">
-          This website uses cookies to ensure you get the best experience.
-        </p>
+    <div class="row align-items-center">
+      <div class="col-sm-2 text-center">
+        <img
+          src="/images/kubeify-logo.png"
+          alt="ScaleOps Logo"
+          style="max-height: 50px"
+        />
       </div>
-      <div class="col-xs-12 text-right">
-        <button id="acceptCookies" class="btn btn-success btn-sm">
-          Accept
+      <div class="col-sm-7">
+        <h4><strong>This website uses cookies</strong></h4>
+        <p>
+          We use cookies to personalise content and ads, to provide social media
+          features and to analyse our traffic. We also share information about
+          your use of our site with our social media, advertising and analytics
+          partners who may combine it with other information that you’ve
+          provided to them or that they’ve collected from your use of their
+          services.
+        </p>
+        <a
+          href="#"
+          id="show-details"
+          data-toggle="modal"
+          data-target="#cookieDetailsModal"
+          style="color: blue; font-weight: bold"
+        >
+          Show details <span>&#x276F;</span>
+        </a>
+      </div>
+      <div class="col-sm-3 text-center">
+        <button
+          id="acceptCookies"
+          class="btn btn-primary btn-lg btn-block"
+          style="background-color: blue; border-color: blue"
+        >
+          Allow all
         </button>
-        <button id="denyCookies" class="btn btn-danger btn-sm">Deny</button>
+        <button
+          id="denyCookies"
+          class="btn btn-outline-secondary btn-lg btn-block mt-2"
+          style="border: 1px solid blue; color: #000"
+        >
+          Deny
+        </button>
       </div>
     </div>
   </div>
 </div>
+
+<div
+  class="modal fade"
+  id="cookieDetailsModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="cookieDetailsLabel"
+  aria-hidden="true"
+>
+  <div
+    class="modal-dialog modal-lg modal-dialog-centered animated fadeInDown"
+    role="document"
+  >
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="cookieDetailsLabel">Cookie Details</h4>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span>&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>
+          <strong>Strictly Necessary Cookies</strong> – These cookies are
+          essential for the website to function.
+        </p>
+        <p>
+          <strong>Performance Cookies</strong> – Used to collect information
+          about how visitors use our site.
+        </p>
+        <p>
+          <strong>Functionality Cookies</strong> – Allow the site to remember
+          user choices to provide enhanced functionality.
+        </p>
+        <p>
+          <strong>Targeting/Advertising Cookies</strong> – These are used to
+          deliver relevant ads and track campaign performance.
+        </p>
+        <hr />
+        <p>
+          You can manage your preferences through browser settings or by
+          contacting our support.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button
+          id="acceptCookiesmobile"
+          class="btn btn-primary btn-lg btn-block"
+          style="background-color: blue; border-color: blue"
+        >
+          Allow all
+        </button>
+        <button
+          id="denyCookiesmobile"
+          class="btn btn-outline-secondary btn-lg btn-block mt-2"
+          style="border: 1px solid blue; color: #000"
+        >
+          Deny
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .cookie-consent-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    color: #000;
+    z-index: 9999;
+    padding: 30px 20px;
+    border-top: 4px solid #6a00ff;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+
+  .cookie-consent-banner .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    color: #000;
+    opacity: 0.5;
+  }
+
+  .cookie-consent-banner .close:hover {
+    opacity: 1;
+  }
+
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animated.fadeInDown {
+    animation: fadeInDown 0.5s ease-out;
+  }
+</style>
 
     <script src="/js/cookie-consent.js"></script>
     <script src="/js/modal.js"></script>
