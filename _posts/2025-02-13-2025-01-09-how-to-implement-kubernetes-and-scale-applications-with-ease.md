@@ -8,7 +8,7 @@ layout: post
 permalink: /blog/:title/
 author: Shyam Mohan
 category: Kubernetes
-date: 2025-01-09T08:42:00.000Z
+date: 2025-03-07T14:12:00.000Z
 ---
 
 Kubernetes has become the gold standard for managing containerized applications at scale, offering unparalleled flexibility and scalability. Whether you're new to Kubernetes or looking to optimize your deployment, this guide will walk you through the key steps to implement Kubernetes and scale your applications efficiently and effortlessly! 
