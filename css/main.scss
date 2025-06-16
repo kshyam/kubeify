@@ -2,8 +2,8 @@
 ---
 
 @import "bootstrap";
-@import "fonts.css";
 @import "common";
+@import "fonts.css";
 
 /*----framework-overrides----*/
 
@@ -12,7 +12,9 @@
   -moz-osx-font-smoothing: grayscale;
   // outline: 1px dashed #00d6f7; //only for development
 }
-
+a {
+  text-decoration: none !important;
+}
 html,
 body {
   max-width: 100%;
@@ -205,8 +207,11 @@ p {
 
 .schedule-btn {
   padding: 0.5rem 1rem !important;
+  padding-bottom: 0.65rem !important;
   border: 1px solid #fff !important;
   color: #fff !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
   border-radius: 20px !important;
   background-color: transparent !important;
 }
@@ -280,6 +285,10 @@ p {
 
 /*-----LATEST BLOGS-----*/
 .latest-blogs {
+  .card {
+    background-color: rgba(67, 83, 99, 0.05) !important;
+    border: 0.3px solid white !important;
+  }
   .time {
     color: Gray;
     text-transform: uppercase;
@@ -892,6 +901,8 @@ td {
   }
 }
 .how_we_work_card {
+  background-color: rgba(67, 83, 99, 0.05) !important;
+  border: 0.3px solid white !important;
   .card__content {
     position: relative;
     padding: 3rem 2rem;
@@ -1046,6 +1057,8 @@ td {
 .border-0 {
   border: 0 !important;
 }
+
+
 
 .card {
   position: relative;
@@ -1680,4 +1693,8 @@ a:hover {
   padding: 10px 0;
   font-size: 1.1em;
   color: #333; /* Dark text for readability */
+}
+
+body .container {
+  max-width:1170px
 }
