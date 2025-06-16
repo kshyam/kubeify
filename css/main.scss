@@ -1,8 +1,8 @@
 ---
 ---
 
-@import "fonts.css";
 @import "bootstrap";
+@import "fonts.css";
 @import "common";
 
 /*----framework-overrides----*/
@@ -82,7 +82,7 @@ h4 {
 }
 
 .cta-button {
-  background: blue;
+  background-color: blue !important;
   font-size: 14px !important;
   color: #fff !important;
   padding-top: 10px !important;
@@ -204,13 +204,16 @@ p {
 }
 
 .schedule-btn {
-  border-color: #fff;
-  color: #fff;
-  border-radius: 20px;
+  padding: 0.5rem 1rem !important;
+  border: 1px solid #fff !important;
+  color: #fff !important;
+  border-radius: 20px !important;
+  background-color: transparent !important;
 }
 
 .schedule-btn:hover {
-  background: #fff;
+  background-color: #fff !important;
+  color: #000 !important;
 }
 /*-------HERO ENDS--------*/
 
