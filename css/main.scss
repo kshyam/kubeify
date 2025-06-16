@@ -2,8 +2,8 @@
 ---
 
 @import "bootstrap";
-@import "fonts.css";
 @import "common";
+@import "fonts.css";
 
 /*----framework-overrides----*/
 
@@ -12,6 +12,8 @@
   -moz-osx-font-smoothing: grayscale;
   // outline: 1px dashed #00d6f7; //only for development
 }
+
+
 
 html,
 body {
@@ -205,8 +207,11 @@ p {
 
 .schedule-btn {
   padding: 0.5rem 1rem !important;
+  padding-bottom: 0.65rem !important;
   border: 1px solid #fff !important;
   color: #fff !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
   border-radius: 20px !important;
   background-color: transparent !important;
 }
