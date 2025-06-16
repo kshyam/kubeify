@@ -12,9 +12,15 @@
   -moz-osx-font-smoothing: grayscale;
   // outline: 1px dashed #00d6f7; //only for development
 }
+<<<<<<< Updated upstream
 
 
 
+=======
+a {
+  text-decoration: none !important;
+}
+>>>>>>> Stashed changes
 html,
 body {
   max-width: 100%;
@@ -285,6 +291,10 @@ p {
 
 /*-----LATEST BLOGS-----*/
 .latest-blogs {
+  .card {
+    background-color: rgba(67, 83, 99, 0.05) !important;
+    border: 0.3px solid white !important;
+  }
   .time {
     color: Gray;
     text-transform: uppercase;
@@ -897,6 +907,8 @@ td {
   }
 }
 .how_we_work_card {
+  background-color: rgba(67, 83, 99, 0.05) !important;
+  border: 0.3px solid white !important;
   .card__content {
     position: relative;
     padding: 3rem 2rem;
@@ -1051,6 +1063,8 @@ td {
 .border-0 {
   border: 0 !important;
 }
+
+
 
 .card {
   position: relative;
@@ -1688,6 +1702,10 @@ a:hover {
 }
 
 body .container {
+<<<<<<< Updated upstream
   padding-left: 5.65rem;
   padding-right: 5.65rem;
+=======
+  max-width:1170px
+>>>>>>> Stashed changes
 }
