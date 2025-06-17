@@ -1,0 +1,1944 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Join Webinars - Managing kubernetes Manifests using Jsonnet &amp; Tanaka 21st Aug, 2020, 9:30 PM – 10:30 PM, IST 9 AM - 10 AM Canada (GMT-7) 11 AM to 12 Noon CST | Kubeify</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Join Webinars - Managing kubernetes Manifests using Jsonnet &amp; Tanaka 21st Aug, 2020, 9:30 PM – 10:30 PM, IST 9 AM - 10 AM Canada (GMT-7) 11 AM to 12 Noon CST" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Kubeify partners with DevOps leaders to provide you with the most valuable content. Check out our upcoming online webinars, meet us in person at event or Meetup, or watch one of our on-demand videos." />
+<meta property="og:description" content="Kubeify partners with DevOps leaders to provide you with the most valuable content. Check out our upcoming online webinars, meet us in person at event or Meetup, or watch one of our on-demand videos." />
+<link rel="canonical" href="https://kubeify.com/landing-page" />
+<meta property="og:url" content="https://kubeify.com/landing-page" />
+<meta property="og:site_name" content="Kubeify" />
+<meta property="og:image" content="http://localhost:4000/images/webinars/managing-kubernetes-manifests-using-jsonnet-tanaka.jpg" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/images/webinars/managing-kubernetes-manifests-using-jsonnet-tanaka.jpg" />
+<meta property="twitter:title" content="Join Webinars - Managing kubernetes Manifests using Jsonnet &amp; Tanaka 21st Aug, 2020, 9:30 PM – 10:30 PM, IST 9 AM - 10 AM Canada (GMT-7) 11 AM to 12 Noon CST" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Kubeify partners with DevOps leaders to provide you with the most valuable content. Check out our upcoming online webinars, meet us in person at event or Meetup, or watch one of our on-demand videos.","headline":"Join Webinars - Managing kubernetes Manifests using Jsonnet &amp; Tanaka 21st Aug, 2020, 9:30 PM – 10:30 PM, IST 9 AM - 10 AM Canada (GMT-7) 11 AM to 12 Noon CST","image":"http://localhost:4000/images/webinars/managing-kubernetes-manifests-using-jsonnet-tanaka.jpg","url":"https://kubeify.com/landing-page"}</script>
+<!-- End Jekyll SEO tag -->
+ <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5a50d614079115001207f66b&product=inline-share-buttons' async='async'></script>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/blog.css" />
+    <link rel='stylesheet' href="/css/bootstrap.min.css" />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-y4DUbiLKTZ9v+1AKWqE+buvZX/MLHFLDbK+gJ8ZkY3OhVqAaEKcQ2OqCxykI3dDLH4FZ6zAnGAVrI39kz6j6Wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--
+      HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+    -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body
+    class="layout-blog "
+  >
+    <!-- navbar -->
+    <header class="default-header cm-header"><nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <div class="container">
+    <a class="navbar-brand" href="/"
+      ><img src="/images/kubeify-logo.png" alt=""
+    /></a>
+
+    <button class="navbar-toggler" type="button" id="sidebarCollapse">
+      <!-- <span class="navbar-toggler-icon"></span> -->
+      <span class="icon"></span>
+      <span class="icon"></span>
+      <span class="icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <!-- <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="/services"
+            id="servicesDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Services
+          </a> -->
+        <!-- <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                  <li><a class="dropdown-item" href="services">Service 1</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 2</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 3</a></li>
+                  <li><a class="dropdown-item" href="/service1">Service 4</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 5</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 6</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 7</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 8</a></li>
+
+              </ul> -->
+        <!-- </li> -->
+
+        <li class="nav-item">
+          <a class="nav-link" href="/why-kubernetes">Why Kubernetes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blog">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/webinars">Webinars</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link btn cta-button btn-rounded"
+            href="/schedule-meeting"
+            style="margin-left: 10px"
+            >&nbsp; Schedule Meeting &nbsp;
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="sidebar__wrapper">
+  <!-- Sidebar -->
+  <nav id="sidebar">
+    <div class="sideBar__content">
+      <div id="dismiss">
+        <!-- <i class="fas fa-arrow-left"></i> -->
+        <span class="modal-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="24"
+            height="24"
+            viewBox="0 0 172 172"
+            style="fill: #000000"
+          >
+            <g
+              fill="none"
+              fill-rule="nonzero"
+              stroke="none"
+              stroke-width="1"
+              stroke-linecap="butt"
+              stroke-linejoin="miter"
+              stroke-miterlimit="10"
+              stroke-dasharray=""
+              stroke-dashoffset="0"
+              font-family="none"
+              font-weight="none"
+              font-size="none"
+              text-anchor="none"
+              style="mix-blend-mode: normal"
+            >
+              <path d="M0,172v-172h172v172z" fill="none"></path>
+              <g fill="#000">
+                <path
+                  d="M33.73372,23.59961l-10.13411,10.13411l52.26628,52.26628l-52.26628,52.26628l10.13411,10.13411l52.26628,-52.26628l52.26628,52.26628l10.13411,-10.13411l-52.26628,-52.26628l52.26628,-52.26628l-10.13411,-10.13411l-52.26628,52.26628z"
+                ></path>
+              </g>
+            </g>
+          </svg>
+        </span>
+      </div>
+
+      <!-- <div class="sidebar-header">
+        <h3>Bootstrap Sidebar</h3>
+      </div> -->
+      <!-- <div class="nav__title">
+        Menu
+      </div> -->
+      <ul class="navbar-nav ml-auto">
+        <!--<li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="servicesDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Services
+          </a>
+           <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                  <li><a class="dropdown-item" href="/service1">Service 1</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 2</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 3</a></li>
+                  <li><a class="dropdown-item" href="/service1">Service 4</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 5</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 6</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 7</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 8</a></li>
+              </ul> 
+        </li>-->
+
+        <li class="nav-item">
+          <a class="nav-link" href="/why-kubernetes">Why Kubernetes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blog">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/webinars">Webinars</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link btn cta-button btn-rounded"
+            href="/schedule-meeting"
+            >&nbsp;&nbsp;Schedule Meeting&nbsp;&nbsp;</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <!-- <div id="content">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <button type="button" id="sidebarCollapse" class="btn btn-info">
+          <i class="fas fa-align-left"></i>
+          <span>Toggle Sidebar</span>
+        </button>
+      </div>
+    </nav>
+  </div> -->
+  <!-- Dark Overlay element -->
+  <div class="overlay"></div>
+</div>
+<script src="/js/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    // $("#sidebar").mCustomScrollbar({
+    //   theme: "minimal",
+    // });
+
+    $("#dismiss, .overlay").on("click", function () {
+      $("#sidebar").removeClass("active");
+      $(".overlay").removeClass("active");
+    });
+
+    $("#sidebarCollapse").on("click", function () {
+      $("#sidebar").addClass("active");
+      $(".overlay").addClass("active");
+      // $(".collapse.in").toggleClass("in");
+      // $("a[aria-expanded=true]").attr("aria-expanded", "false");
+    });
+
+    // $(window).scroll(function () {
+    //   if ($(document).scrollTop() > $(".navbar").height()) {
+    //     $("header").addClass("sticky_header");
+    //     $(".navbar").addClass("navbar-light bg-white");
+    //   } else {
+    //     $("header").removeClass("sticky_header");
+    //     $(".navbar").removeClass("navbar-light bg-white");
+    //   }
+    // });
+
+    // $(".list-unstyled li.active").removeClass("active");
+    // console.log(
+    //   $("a[href*='" + location.pathname + "']")
+    //     .parent()
+    //     .addClass("active")
+    // );
+    $(".list-unstyled li.active").removeClass("active");
+
+    $(".list-unstyled li a").each(function (i, obj) {
+      console.log(obj.classList.contains("btn"));
+      if (
+        obj.pathname === location.pathname &&
+        !obj.classList.contains("btn")
+      ) {
+        $(".list-unstyled li.active").removeClass("active");
+
+        console.log($(obj).parent().addClass("active"));
+      }
+    });
+
+    // let $parent = $(this).parent();
+    // $parent.addClass("active");
+    // window.location.assign($(this).attr("href"));
+    // e.preventDefault();
+  });
+</script>
+
+<meta name="google-adsense-account" content="ca-pub-4088406505945385" />
+</header>
+
+    <div class="content-wraper"><main class="landing-page">
+  <section class="py-5 bg-light">
+    <div class="container py-5">
+      <div
+        class="row align-items-center"
+        style="justify-content: space-between"
+      >
+        <!-- Text Column -->
+        <div class="col-lg-7">
+          <h1>
+            <strong>Optimize your</strong>
+            <span class="text-primary">Google Workspace</span><br />Experience
+            with <span class="text-danger">CloudNow</span>, Your Premier Google
+            Partner!
+          </h1>
+          <p class="mt-3 text-muted">
+            As one of the top-rated Google partners in India, CloudNow helps you
+            maximize value from Google products and services.
+          </p>
+
+          <!-- Features -->
+          <div class="row mt-4">
+            <div class="col-12 col-md-6 mb-3">
+              <span>📞 24×7 support</span>
+            </div>
+            <div class="col-12 col-md-6 mb-3">
+              <span>💡 Consultancy and optimization</span>
+            </div>
+            <div class="col-12 col-md-6 mb-3">
+              <span>🎓 Free product training</span>
+            </div>
+            <div class="col-12 col-md-6 mb-3">
+              <span>⚙️ Deep technical expertise</span>
+            </div>
+          </div>
+
+          <!-- Mobile Only Button -->
+          <div class="d-lg-none text-center mt-4">
+            <button
+              class="btn btn-primary w-75"
+              data-bs-toggle="modal"
+              data-bs-target="#mobileFormModal"
+            >
+              Get Started
+            </button>
+          </div>
+        </div>
+
+        <!-- Desktop Form Column -->
+        <div class="col-lg-4 d-none d-lg-block">
+          <div class="card shadow-sm p-4">
+            <h4 class="mb-3">
+              Just a few clicks away from your own Workspace...
+            </h4>
+            <form style="font-size: 14px">
+              <div class="mb-3">
+                <label for="name" class="form-label"
+                  >Name<span class="required-symbol">*</span></label
+                >
+                <input type="text" class="form-control" id="name" required />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label"
+                  >Work Email<span class="required-symbol">*</span></label
+                >
+                <input type="email" class="form-control" id="email" required />
+              </div>
+              <div class="mb-3">
+                <label class="form-label"
+                  >Mobile Number<span class="required-symbol">*</span></label
+                >
+                <div class="input-group">
+                  <select class="form-select" style="max-width: 120px">
+                    <option selected>India</option>
+                    <option>US</option>
+                  </select>
+                  <input type="tel" class="form-control" required />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="licenses" class="form-label"
+                  >No. of Licenses*</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="licenses"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn btn-primary w-100">
+                Get Started
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Modal Form -->
+    <div
+      class="modal fade"
+      id="mobileFormModal"
+      tabindex="-1"
+      aria-labelledby="mobileFormModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-bottom-sheet">
+        <div class="modal-content p-3 rounded-top">
+          <div class="modal-header border-0">
+            <h3 class="modal-title fw-bold" id="mobileFormModalLabel">
+              Start Your Workspace Journey
+            </h3>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- Form (Same as Desktop) -->
+            <form style="font-size: 14px">
+              <div class="mb-3">
+                <label for="nameMobile" class="form-label"
+                  >Name<span class="required-symbol">*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nameMobile"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="emailMobile" class="form-label"
+                  >Work Email<span class="required-symbol">*</span></label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="emailMobile"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label class="form-label"
+                  >Mobile Number<span class="required-symbol">*</span></label
+                >
+                <div class="input-group">
+                  <select class="form-select">
+                    <option selected>India</option>
+                    <option>US</option>
+                  </select>
+                  <input type="tel" class="form-control" required />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="licensesMobile" class="form-label"
+                  >No. of Licenses<span class="required-symbol">*</span></label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="licensesMobile"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn btn-primary w-100">
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Why Google Workspace Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center">
+        <h1 class="mb-4 wow fadeInUp">Why Google Workspace?</h1>
+        <p class="col-lg-8 mx-auto work mb-5 wow fadeInUp">
+          Google Workspace is the ultimate solution for modern businesses,
+          offering a suite of powerful tools designed to enhance collaboration,
+          boost productivity, and streamline workflows. Here's why Google
+          Workspace is the right choice for your organization.
+        </p>
+      </div>
+
+      <div class="row">
+        <!-- 1 -->
+        <div class="col-lg-4 mb-4 wow fadeInUp">
+          <div class="m-origin text-center">
+            <div class="img-cri">
+              <img
+                src="https://storage.googleapis.com/content-website/cloudnow/gsw/v1.png"
+                class="img-fluid"
+              />
+            </div>
+            <h3 class="mt-3">Secure Data Management</h3>
+            <p>
+              Your business's data is precious, and Google Workspace ensures it
+              stays safe and accessible at all times. Rest easy knowing your
+              files are protected against loss or theft, with robust security
+              features keeping your data secure.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="col-lg-4 mb-4 wow fadeInUp">
+          <div class="m-origin text-center">
+            <div class="img-cri">
+              <img
+                src="https://storage.googleapis.com/content-website/cloudnow/gsw/v2.png"
+                class="img-fluid"
+              />
+            </div>
+            <h3 class="mt-3">Affordable Plans</h3>
+            <p>
+              Running a business can be expensive, but Google Workspace offers
+              cost-effective plans to fit businesses of all sizes. Benefit from
+              features like eDiscovery capabilities, pay-as-you-go options, and
+              unlimited data storage, without breaking the bank.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="col-lg-4 mb-4 wow fadeInUp">
+          <div class="m-origin text-center">
+            <div class="img-cri">
+              <img
+                src="https://storage.googleapis.com/content-website/cloudnow/gsw/v3.png"
+                class="img-fluid"
+              />
+            </div>
+            <h3 class="mt-3">Professional Email Addresses</h3>
+            <p>
+              Make a lasting impression with custom email addresses at your
+              domain. With Google Workspace, you can create personalized email
+              addresses like name@yourcompany.com, giving your business a
+              professional edge in every communication.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <!-- 4 -->
+        <div class="col-lg-4 mb-4 wow fadeInUp">
+          <div class="m-origin text-center">
+            <div class="img-cri">
+              <img
+                src="https://storage.googleapis.com/content-website/cloudnow/gsw/v4.png"
+                class="img-fluid"
+              />
+            </div>
+            <h3 class="mt-3">Effortless Collaboration</h3>
+            <p>
+              Work seamlessly with your team members and external partners, no
+              matter where they are. Share documents and data files
+              effortlessly, with control over who can access them. Collaborate
+              in real-time and keep your projects moving forward smoothly.
+            </p>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="col-lg-4 mb-4 wow fadeInUp">
+          <div class="m-origin text-center">
+            <div class="img-cri">
+              <img
+                src="https://storage.googleapis.com/content-website/cloudnow/gsw/v5.png"
+                class="img-fluid"
+              />
+            </div>
+            <h3 class="mt-3">Ample Storage Space</h3>
+            <p>
+              Forget about running out of space for your important files. With
+              unlimited storage, Google Workspace provides you with all the room
+              you need for your applications, data, files, and media. Focus on
+              your work without worrying about storage limitations.
+            </p>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="col-lg-4 mb-4 wow fadeInUp">
+          <div class="m-origin text-center">
+            <div class="img-cri">
+              <img
+                src="https://storage.googleapis.com/content-website/cloudnow/gsw/v6.png"
+                class="img-fluid"
+              />
+            </div>
+            <h3 class="mt-3">Seamless CRM Integrations</h3>
+            <p>
+              Keep track of your leads, prospects, and customer interactions
+              effortlessly with Google Workspace's seamless CRM integrations.
+              Improve your sales process and customer management with tools that
+              work seamlessly together.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container text-center mb-5 pb-3">
+      <h4 class="text-primary mb-3">
+        Get even more out of your Google Workspace Services
+      </h4>
+      <h2 class="display-5 fw-bold mb-3">
+        When You Subscribe Through CloudNow!
+      </h2>
+      <p class="lead mx-auto" style="max-width: 600px">
+        CloudNow's team of experts are your ideal partners on your Google
+        Workspace journey.
+      </p>
+    </div>
+
+    <!-- Desktop Layout -->
+    <div class="container px-0 features-circle-wrapper d-none d-md-block mb-4">
+      <div
+        class="central-offer d-flex flex-column justify-content-center align-items-center"
+      >
+        <img
+          src="https://storage.googleapis.com/content-website/cloudnow/gsw/lock.png"
+          alt="Lock"
+          class="mb-3"
+        />
+        <h5>Free SSO Solution for 3 Months</h5>
+        <p class="text-muted small">
+          Custom login, device restrictions, and user management with Akku IAM
+          tool.
+        </p>
+      </div>
+
+      <!-- F1: Top -->
+      <div class="circle-feature f1 column-layout">
+        <img
+          src="https://storage.googleapis.com/content-website/cloudnow/gsw/c1.png"
+          alt="Icon 1"
+        />
+        <h6>24×7×365 DEDICATED SUPPORT</h6>
+        <p>
+          Our experts are with you when you need us, with a 96% SLA record on
+          tickets.
+        </p>
+      </div>
+
+      <!-- F2: Row layout -->
+      <div class="circle-feature f2">
+        <div class="row align-items-center text-center text-md-start g-3">
+          <div class="col-md-4 d-flex justify-content-center">
+            <img
+              src="https://storage.googleapis.com/content-website/cloudnow/gsw/c2.png"
+              alt="Icon 2"
+              class="img-fluid"
+              style="max-width: 100px"
+            />
+          </div>
+          <div class="col-md-8">
+            <h6>ANNUAL TRAINING</h6>
+            <p>
+              No-cost training for your team to ensure you make the most of
+              Google Workspace.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- F3: Row layout -->
+      <div class="circle-feature f3">
+        <div class="row align-items-center text-center text-md-start g-3">
+          <div class="col-md-4 d-flex justify-content-center">
+            <img
+              src="https://storage.googleapis.com/content-website/cloudnow/gsw/c6.png"
+              alt="Icon 3"
+              class="img-fluid"
+              style="max-width: 100px"
+            />
+          </div>
+          <div class="col-md-8">
+            <h6>CUSTOM AUTOMATION</h6>
+            <p>
+              Reporting, backups, provisioning, deprovisioning, reminders and
+              more.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- F4 -->
+      <div class="circle-feature f4 column-layout">
+        <img
+          src="https://storage.googleapis.com/content-website/cloudnow/gsw/c5.png"
+          alt="Icon 4"
+        />
+        <h6>MAPS INTEGRATION</h6>
+        <p>
+          Harness the power of Google Maps for location-based business apps.
+        </p>
+      </div>
+
+      <!-- F5 -->
+      <div class="circle-feature f5 row-layout">
+        <div class="row">
+          <div class="col-md-8 text-end">
+            <h6>ACCOUNT MANAGER</h6>
+            <p>
+              A dedicated point of contact to support and guide you on Google
+              Workspace.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <img
+              src="https://storage.googleapis.com/content-website/cloudnow/gsw/c3.png"
+              alt="Icon 5"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- F6 -->
+      <div class="circle-feature f6 row-layout">
+        <div class="row">
+          <div class="col-md-8 text-end">
+            <h6>QUARTERLY AUDIT</h6>
+            <p>
+              No-cost audits of your usage patterns for further optimization.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <img
+              src="https://storage.googleapis.com/content-website/cloudnow/gsw/c4.png"
+              alt="Icon 6"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Layout -->
+    <div class="container mobile-features d-md-none">
+      <div class="mobile-center-offer">
+        <img
+          src="https://storage.googleapis.com/content-website/cloudnow/gsw/lock.png"
+          alt="Lock"
+        />
+        <h5>Free SSO Solution for 3 Months</h5>
+        <p class="text-muted">
+          Custom login, device restrictions, and user management with Akku IAM
+          tool.
+        </p>
+      </div>
+
+      <div class="mobile-feature-card text-center">
+        <img
+          src="https://storage.googleapis.com/content-website/cloudnow/gsw/c1.png"
+          alt="Icon 1"
+        />
+        <h6>24×7×365 DEDICATED SUPPORT</h6>
+        <p>
+          Our experts are with you when you need us, with a 96% SLA record on
+          tickets.
+        </p>
+      </div>
+
+      <div class="mobile-feature-card text-center">
+        <img
+          src="https://storage.googleapis.com/content-website/cloudnow/gsw/c2.png"
+          alt="Icon 2"
+        />
+        <h6>ANNUAL TRAINING</h6>
+        <p>
+          No-cost training for your team to ensure you make the most of Google
+          Workspace.
+        </p>
+      </div>
+
+      <div class="mobile-feature-card text-center">
+        <img
+          src="https://storage.googleapis.com/content-website/cloudnow/gsw/c6.png"
+          alt="Icon 3"
+        />
+        <h6>CUSTOM AUTOMATION</h6>
+        <p>
+          Reporting, backups, provisioning, deprovisioning, reminders and more.
+        </p>
+      </div>
+
+      <div class="mobile-feature-card text-center">
+        <img
+          src="https://storage.googleapis.com/content-website/cloudnow/gsw/c5.png"
+          alt="Icon 4"
+        />
+        <h6>MAPS INTEGRATION</h6>
+        <p>
+          Harness the power of Google Maps for location-based business apps.
+        </p>
+      </div>
+
+      <div class="mobile-feature-card text-center">
+        <img
+          src="https://storage.googleapis.com/content-website/cloudnow/gsw/c3.png"
+          alt="Icon 5"
+        />
+        <h6>ACCOUNT MANAGER</h6>
+        <p>
+          A dedicated point of contact to support and guide you on Google
+          Workspace.
+        </p>
+      </div>
+
+      <div class="mobile-feature-card text-center">
+        <img
+          src="https://storage.googleapis.com/content-website/cloudnow/gsw/c4.png"
+          alt="Icon 6"
+        />
+        <h6>QUARTERLY AUDIT</h6>
+        <p>No-cost audits of your usage patterns for further optimization.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-lg-5">
+          <h3>Expert</h3>
+          <h1>DevOps Services</h1>
+          <p>
+            We understand DevOps in the context of your business and help you
+            leverage this approach for optimal results with single-click
+            deployment, continuous integration, automated security alerts, easy
+            code management and review, and on-premise, public, or hybrid cloud
+            deployment.
+          </p>
+        </div>
+        <div class="col-lg-7">
+          <div class="row align-items-center">
+            <div
+              class="col-md-6 text-center wow fadeInUp"
+              style="visibility: visible; animation-name: fadeInUp"
+            >
+              <div>
+                <div class="">
+                  <img
+                    class="m-auto"
+                    src="https://storage.googleapis.com/content-website/cloudnow/gsw/s1.png"
+                  />
+                </div>
+
+                <h3 class="mt-2 text-center">Security &amp; Compliance</h3>
+                <p class="mt-2 mb-3">
+                  Specialized DevSecOps approach to cultivate a security-centric
+                  development culture
+                </p>
+              </div>
+            </div>
+            <div
+              class="col-md-6 text-center wow fadeInUp"
+              style="visibility: visible; animation-name: fadeInUp"
+            >
+              <div>
+                <div class="">
+                  <img
+                    class="m-auto"
+                    src="https://storage.googleapis.com/content-website/cloudnow/gsw/s2.png"
+                  />
+                </div>
+
+                <h3 class="mt-3 text-center">
+                  Continuous Integration &amp; Deployment
+                </h3>
+                <p class="mt-2 mb-3">
+                  Cutting-edge tools and practices to streamline CI/CD for
+                  enhanced quality and efficiency
+                </p>
+              </div>
+            </div>
+            <div
+              class="col-md-6 text-center wow fadeInUp"
+              style="visibility: visible; animation-name: fadeInUp"
+            >
+              <div class="m-origin">
+                <img
+                  class="m-auto"
+                  src="https://storage.googleapis.com/content-website/cloudnow/gsw/s3.png"
+                />
+                <h3 class="mt-2 text-center">Monitoring</h3>
+                <p class="mt-2 mb-3">
+                  Efficient management and monitoring of infrastructure for
+                  optimal operations at all times
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 text-center">
+              <div class="m-origin">
+                <img
+                  class="m-auto"
+                  src="https://storage.googleapis.com/content-website/cloudnow/gsw/s4.png"
+                />
+                <h3 class="mt-2 text-center">Automation</h3>
+                <p class="mt-2 mb-3">
+                  Advanced solutions to reduce manual intervention, minimize
+                  errors, and streamline processes
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background-color: black">
+    <div class="container">
+      <img
+        class="mt-4"
+        src="./images/kubeify-logo.png"
+        alt="logo"
+        width="200"
+      />
+      <div class="row akku gmt">
+        <div class="col-lg-7">
+          <h3>Enhance Your Organization’s Security With Akku!</h3>
+          <h2 class="mt-3 mb-3">One Click Access. One Point Control.</h2>
+          <h4 class="power">Powerful IAM your admins and users will love</h4>
+          <div class="para">
+            <p class="mt-4 mb-3">
+              Cloud Security has always been a major area of focus at CloudNow,
+              and this has translated into the development of our proprietary
+              Identity &amp; Access Management (IAM) solution, Akku.
+            </p>
+            <p class="mt-3 mb-4">
+              Akku combines robust, flexible identity and access management
+              (IAM) with powerful
+              <br />
+              security and analytics.
+            </p>
+            <p class="mt-4 mb-5">
+              What this means for your business is secure and seamless
+              management of every stage of the user lifecycle, even while
+              improving data security, standards compliance, efficiency, and
+              productivity.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="row m-origin">
+            <div class="col-6 col-md-6">
+              <div class="m-origin">
+                <img
+                  class="w-100"
+                  src="https://storage.googleapis.com/content-website/cloudnow/gsw/i.png"
+                />
+              </div>
+            </div>
+            <div class="col-6 col-md-6">
+              <div class="m-origin">
+                <img
+                  class="w-100"
+                  src="https://storage.googleapis.com/content-website/cloudnow/gsw/i2.png"
+                />
+              </div>
+            </div>
+            <div class="col-6 col-md-6 mt-4">
+              <div class="m-origin">
+                <img
+                  class="w-100"
+                  src="https://storage.googleapis.com/content-website/cloudnow/gsw/i3.png"
+                />
+              </div>
+            </div>
+            <div class="col-6 col-md-6 mt-4">
+              <div class="m-origin">
+                <img
+                  class="w-100"
+                  src="https://storage.googleapis.com/content-website/cloudnow/gsw/i4.png"
+                />
+              </div>
+            </div>
+            <div class="col-6 col-md-6 mt-4">
+              <div class="m-origin">
+                <img
+                  class="w-100"
+                  src="https://storage.googleapis.com/content-website/cloudnow/gsw/i5.png"
+                />
+              </div>
+            </div>
+            <div class="col-6 col-md-6 mt-4 text-center">
+              <div class="m-origin">
+                <img
+                  class="w-100"
+                  src="https://storage.googleapis.com/content-website/cloudnow/gsw/i6.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container py-5">
+      <div class="row align-items-center flex-column-reverse flex-sm-row">
+        <div
+          class="col-lg-6 wow fadeInUp"
+          style="visibility: visible; animation-name: fadeInUp"
+        >
+          <h2 class="text-black" style="color: #000">
+            Get Started with Google Workspace in
+            <span class="api">Just a Few Clicks! </span>
+          </h2>
+          <p
+            class="mt-3 mb-5 wow fadeInUp para1 cld"
+            style="visibility: visible; animation-name: fadeInUp"
+          >
+            Experience the power of Google Workspace with CloudNow. Streamline
+            your workflows, enhance collaboration, and boost productivity in a
+            matter of minutes
+          </p>
+          <a
+            href="#"
+            class="col-lg-5 d-none d-md-block"
+            style="padding: 31px 17px; border-radius: 40px"
+            >Get Started Now</a
+          >
+          <div class="d-lg-none text-center mt-4">
+            <button
+              class="btn btn-primary w-75"
+              data-bs-toggle="modal"
+              data-bs-target="#mobileFormModal"
+            >
+              Get Started
+            </button>
+          </div>
+        </div>
+        <div
+          class="col-lg-6 wow fadeInUp"
+          style="visibility: visible; animation-name: fadeInUp"
+        >
+          <img
+            src="https://storage.googleapis.com/content-website/cloudnow/apps.png"
+            class="w-100"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-lg-6">
+          <img
+            class="w-100"
+            src="https://storage.googleapis.com/content-website/cloudnow/gsw/map.png"
+            alt=""
+          />
+        </div>
+        <div
+          class="col-lg-6 wow fadeInUp"
+          style="visibility: visible; animation-name: fadeInUp"
+        >
+          <h2 class="mb-4 pwa">
+            Harness The <span class="api"> GOOGLE MAPS API </span> Platform For
+            Your <span class="api">LOCATION-BASED APPS</span> With Cloudnow By
+            Your Side.
+          </h2>
+          <p class="cld">
+            CloudNow is a leading Google Maps Reseller in India, and can help
+            you build better map-based solutions faster.
+          </p>
+          <div class="row mt-5 listk" style="margin-left: -40px">
+            <div
+              class="col-md-6 wow fadeInUp"
+              style="visibility: visible; animation-name: fadeInUp"
+            >
+              <div class="m-origin d-flex align-items-center">
+                <img
+                  class="cri"
+                  src="https://storage.googleapis.com/content-website/cloudnow/gsw/ses.png"
+                />
+                <h3 class="deep">Deep technical expertise</h3>
+              </div>
+            </div>
+            <div
+              class="col-md-6 wow fadeInUp"
+              style="visibility: visible; animation-name: fadeInUp"
+            >
+              <div class="m-origin d-flex align-items-center">
+                <img
+                  class="cri"
+                  src="https://storage.googleapis.com/content-website/cloudnow/gsw/ses1.png"
+                />
+                <h3 class="deep">Custom development</h3>
+              </div>
+            </div>
+            <div
+              class="col-md-6 mt-3 wow fadeInUp"
+              style="visibility: visible; animation-name: fadeInUp"
+            >
+              <div class="m-origin d-flex align-items-center">
+                <img
+                  class="cri"
+                  src="https://storage.googleapis.com/content-website/cloudnow/gsw/ses2.png"
+                />
+                <h3 class="deep">Maps API integration</h3>
+              </div>
+            </div>
+            <div
+              class="col-md-6 mt-3 wow fadeInUp"
+              style="visibility: visible; animation-name: fadeInUp"
+            >
+              <div class="m-origin d-flex align-items-center">
+                <img
+                  class="cri"
+                  src="https://storage.googleapis.com/content-website/cloudnow/gsw/ses3.png"
+                />
+                <h3 class="deep">Consultancy and optimization</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonial-section py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left Text Column -->
+        <div class="col-md-6 text-md-start text-center mb-4 mb-md-0">
+          <h1 class="fw-bold display-5">
+            What Our <span class="text-highlight">Clients Say</span><br />About
+            Us
+          </h1>
+          <p class="text-muted mt-3 fs-5">
+            Read firsthand experiences from our clients about<br />
+            the value we bring to their businesses.
+          </p>
+        </div>
+
+        <!-- Right Carousel -->
+        <div class="col-md-6">
+          <div
+            id="testimonialCarousel"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <!-- Testimonial 1 -->
+              <div class="carousel-item active">
+                <div
+                  class="bg-white p-4 rounded-4 shadow-lg position-relative h-100 d-flex flex-column justify-content-between"
+                  style="min-height: 340px"
+                >
+                  <!-- Logo at Top Right -->
+                  <div class="d-flex justify-content-end mb-3">
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/1/13/Posidex_Logo.png/220px-Posidex_Logo.png"
+                      alt="Posidex Logo"
+                      class="img-fluid"
+                      style="max-height: 40px"
+                    />
+                  </div>
+
+                  <!-- Testimonial Content -->
+                  <div>
+                    <div class="fs-1 mb-3">❝</div>
+                    <p class="fst-italic text-muted">
+                      For six years, our team at Posidex has been using Google
+                      Workspace by CloudNowTech, transforming our productivity
+                      and collaboration. The suite, including Gmail, Calendar,
+                      Drive, and Meet, is invaluable. CloudNowTech’s exceptional
+                      customer service and expertise have supported us
+                      throughout. For enhanced business operations and teamwork,
+                      CloudNowTech is the ideal choice.
+                    </p>
+                    <div class="mt-4">
+                      <h6 class="fw-bold mb-0">Anil Kumar</h6>
+                      <small class="fst-italic text-muted"
+                        >Solution Architect,<br />Posidex Technologies Pvt
+                        Ltd</small
+                      >
+                    </div>
+                  </div>
+
+                  <!-- Arrows at Bottom Right -->
+                  <div class="d-flex justify-content-end gap-2 mt-4 pt-3">
+                    <button
+                      class="btn btn-light rounded-circle shadow-sm"
+                      type="button"
+                      data-bs-target="#testimonialCarousel"
+                      data-bs-slide="prev"
+                    >
+                      <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <button
+                      class="btn btn-light rounded-circle shadow-sm"
+                      type="button"
+                      data-bs-target="#testimonialCarousel"
+                      data-bs-slide="next"
+                    >
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Testimonial 2 (Sample) -->
+              <div class="carousel-item">
+                <div
+                  class="bg-white p-4 rounded-4 shadow-lg position-relative h-100 d-flex flex-column justify-content-between"
+                  style="min-height: 340px"
+                >
+                  <div class="d-flex justify-content-end mb-3">
+                    <img
+                      src="https://via.placeholder.com/100x40?text=NextGen"
+                      alt="Logo"
+                      class="img-fluid"
+                      style="max-height: 40px"
+                    />
+                  </div>
+
+                  <div>
+                    <div class="fs-1 mb-3">❝</div>
+                    <p class="fst-italic text-muted">
+                      CloudNowTech streamlined our internal communication using
+                      Google Workspace. Their support team is prompt and
+                      knowledgeable, and we’ve seen a measurable increase in
+                      productivity.
+                    </p>
+                    <div class="mt-4">
+                      <h6 class="fw-bold mb-0">Ravi Sharma</h6>
+                      <small class="fst-italic text-muted"
+                        >IT Head,<br />NextGen Solutions</small
+                      >
+                    </div>
+                  </div>
+
+                  <div class="d-flex justify-content-end gap-2 mt-4 pt-3">
+                    <button
+                      class="btn btn-light rounded-circle shadow-sm"
+                      type="button"
+                      data-bs-target="#testimonialCarousel"
+                      data-bs-slide="prev"
+                    >
+                      <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <button
+                      class="btn btn-light rounded-circle shadow-sm"
+                      type="button"
+                      data-bs-target="#testimonialCarousel"
+                      data-bs-slide="next"
+                    >
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold">Frequently Asked Questions</h2>
+        <p class="lead text-muted">Have questions? We've got answers.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-10 col-md-12">
+          <div class="accordion accordion-flush" id="faqAccordion">
+            <!-- FAQ Item Template -->
+            <!-- Repeat this block for each FAQ -->
+            <div class="accordion-item border rounded shadow-sm mb-3">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  What are the distinctions among the editions of Google
+                  Workspace?
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Google Workspace has four editions: Business Starter, Business
+                  Standard, Business Plus and Enterprise. You can compare Google
+                  Workspace's
+                  <a
+                    href="https://workspace.google.com/pricing?hl=en_in"
+                    class="text-decoration-none"
+                    >editions</a
+                  >
+                  for more information.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border rounded shadow-sm mb-3">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  What are the distinctions among the editions of Google
+                  Workspace?
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Google Workspace has four editions: Business Starter, Business
+                  Standard, Business Plus and Enterprise. You can compare Google
+                  Workspace's
+                  <a
+                    href="https://workspace.google.com/pricing?hl=en_in"
+                    class="text-decoration-none"
+                    >editions</a
+                  >
+                  for more information.
+                </div>
+              </div>
+            </div>
+
+            <!-- Additional FAQ Items -->
+            <!-- Paste the rest of the accordion-items here and keep their structure clean, readable and styled like the first item -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<style>
+  .landing-page {
+    .testimonial-section {
+      background: linear-gradient(90deg, #dff1ff, #f9ccff);
+    }
+
+    .text-highlight {
+      color: #ff0080;
+    }
+
+    .rounded-4 {
+      border-radius: 1.25rem;
+    }
+    .features-circle-wrapper {
+      position: relative;
+      width: 100%;
+      height: 900px;
+      margin: 0 auto;
+    }
+
+    .central-offer {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 300px;
+      height: 300px;
+      background: white;
+      border: 5px solid #9333ea;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 0 40px rgba(147, 51, 234, 0.3);
+      z-index: 2;
+    }
+
+    .circle-feature {
+      position: absolute;
+      width: 260px;
+      text-align: center;
+    }
+
+    .circle-feature img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+    }
+
+    .circle-feature h6 {
+      font-weight: bold;
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+
+    .circle-feature p {
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .f1 {
+      top: 5%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .f2 {
+      top: 25%;
+      left: 85%;
+      transform: translate(-50%, -50%);
+    }
+    .f3 {
+      top: 70%;
+      left: 85%;
+      transform: translate(-50%, -50%);
+    }
+    .f4 {
+      top: 95%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .f5 {
+      top: 70%;
+      left: 15%;
+      transform: translate(-50%, -50%);
+    }
+    .f6 {
+      top: 25%;
+      left: 15%;
+      transform: translate(-50%, -50%);
+    }
+
+    .column-layout img {
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .features-circle-wrapper {
+        display: none;
+      }
+
+      .mobile-features {
+        display: block;
+      }
+
+      .mobile-feature-card {
+        border: 1px solid #eee;
+        border-radius: 12px;
+        background-color: #f9f9f9;
+        padding: 15px;
+        margin-bottom: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      }
+
+      .mobile-feature-card img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+        margin-bottom: 10px;
+      }
+
+      .mobile-feature-card h6 {
+        font-weight: bold;
+        font-size: 1rem;
+      }
+
+      .mobile-feature-card p {
+        font-size: 0.9rem;
+        margin: 0;
+      }
+
+      .mobile-center-offer {
+        border: 5px solid #9333ea;
+        border-radius: 20px;
+        padding: 20px;
+        background: #fff;
+        margin-bottom: 30px;
+        text-align: center;
+        box-shadow: 0 0 40px rgba(147, 51, 234, 0.2);
+      }
+
+      .mobile-center-offer img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 15px;
+      }
+    }
+    /* Custom Control Positioning */
+    .custom-control {
+      /* background: #ffffff; */
+      /* border-radius: 50%; */
+      padding: 6px 12px;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+      font-size: 1.25rem;
+      color: #333;
+    }
+
+    .custom-control:hover {
+      background: #f8f9fa;
+      color: #000;
+    }
+
+    @media (max-width: 767.98px) {
+      .custom-control {
+        font-size: 1rem;
+        padding: 5px 10px;
+      }
+    }
+
+    .min-vh-50 {
+      min-height: 35vh;
+    }
+    @media (min-width: 640px) {
+      .\!container {
+        max-width: 640px !important;
+      }
+      .container {
+        max-width: 640px;
+      }
+    }
+    @media (min-width: 768px) {
+      .\!container {
+        max-width: 768px !important;
+      }
+      .container {
+        max-width: 768px;
+      }
+    }
+    @media (min-width: 1024px) {
+      .\!container {
+        max-width: 1024px !important;
+      }
+      .container {
+        max-width: 1024px;
+      }
+    }
+    @media (min-width: 1280px) {
+      .\!container {
+        max-width: 1280px !important;
+      }
+      .container {
+        max-width: 1280px;
+      }
+    }
+    @media (min-width: 1536px) {
+      .\!container {
+        max-width: 1536px !important;
+      }
+      .container {
+        max-width: 1536px;
+      }
+    }
+    .required-symbol {
+      color: red;
+    }
+    .m-origin {
+      margin: 24px;
+    }
+    .cri {
+      width: 60px;
+    }
+    .deep {
+      font-size: 14px;
+    }
+    /* Bottom Sheet Style for Mobile Modal */
+    @media (max-width: 992px) {
+      .modal.modal-bottom-sheet .modal-dialog {
+        position: fixed;
+        bottom: 0;
+        margin: 0;
+        width: 100%;
+        height: auto;
+      }
+
+      .modal.modal-bottom-sheet .modal-content {
+        border-radius: 1rem 1rem 0 0;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+</style>
+</div>
+
+    <div class="footer bg-dark">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 footer-item">
+        <div class="brand-text">Kubeify</div>
+        <p>
+          Accelerate your cloud native transformation, adoption of kubernetes
+          with Kubeify's team of experts.
+        </p>
+        
+
+        </p>
+      </div>
+      <div class="col-md-8 mt-4 mt-md-0">
+        <div class="d-flex justify-content-between">
+          <div class="footer-item">
+            <h4 class="cta__title">Company</h4>
+            <ul class="footer-nav">
+              <li><a href="/about" title="About">About Us</a></li>
+              <li><a href="/contact" title="Contact Us">Contact Us</a></li>
+              <li>
+                <a href="/join-our-team" title="Join our team">Join our team</a>
+              </li>
+              <li>
+                <a href="/schedule-meeting" title="Schedule a meeting">Schedule a Meeting</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-item">
+            <h4 class="cta__title">Services</h4>
+            <ul class="footer-nav">
+              <li><a href="/services">Services Offered</a></li>
+              <li><a href="/why-kubernetes">Why Kubernetes</a></li>
+              <li><a href="/customers" title="Customers">Customers</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-item">
+            <h4 class="cta__title">Resources</h4>
+            <ul class="footer-nav">
+              <li><a href="/blog">Blog</a></li>
+              <li><a href="/webinars">Webinars</a></li>
+              <li><a href="/join-webinars">Join Webinars</a></li>
+              <li><a href="https://www.cncf.io/newsroom/case-studies/" target="_blank">Case Studies</a></li>
+              <!-- <li><a href="/learn-kubernetes" target="_blank">Learn Kubernetes</a></li> -->
+            </ul>
+          </div>
+
+          <div class="footer-item">
+            <h4 class="cta__title">Social</h4>
+            <ul class="footer-nav">
+              <li><a href="https://www.linkedin.com/company/kubeify" title="linkedin" target="_blank">LinkedIn</a></li>
+              <li><a href="https://twitter.com/kubeify" target="_blank">Twitter</a></li>
+              <li><a href="https://www.youtube.com/@kubeifyk8s45/videos" target="_blank">YouTube</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <br />
+ 
+</div>
+
+ <div class="lower-footer text-center py-2">
+    <span class="d-inline-block copyright">
+      Copyright &copy; <span id="year"></span> Kubeify, All Rights
+      Reserved.&nbsp;
+    </span>
+  </div>
+
+<!-- <style type="text/css">
+  .feedbackbox {
+    position: fixed;
+    top: 90vh;
+    left: 1%;
+    bottom: 0%;
+    width: 420px;
+    text-align: left;
+    z-index: 9999;
+    margin-top: -60px;
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+  }
+</style>
+
+<div
+  class="feedbackbox alert alert-warning alert-dismissible fade show"
+  role="alert"
+>
+  <strong>Don't Miss Out!</strong>
+  <a href="/join-webinars"
+    >Managing kubernetes Manifests using Jsonnet & Tanaka</a
+  >
+  | 1st Aug, 2020, 9:30 PM – 10:30 PM, IST &nbsp;
+  <b><a href="/join-webinars">Join us !</a></b>
+</div>
+ -->
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/app.js"></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $("#year").html(new Date().getFullYear());
+  });
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142118821-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "UA-142118821-1");
+</script>
+
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/7280691.js"></script>
+<!-- End of HubSpot Embed Code -->
+    <!-- Include Modal Partial -->
+    <div
+  class="modal fade"
+  id="delayedModal"
+  tabindex="-1"
+  aria-labelledby="delayedModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="text-center">
+          <img
+            src="/images/kubernetes-architecture.png"
+            alt="Popup Image"
+            class="img-responsive center-block"
+            style="max-width: 200px; margin-top: 15px; margin-bottom: 15px"
+          />
+        </div>
+
+        <h4 class="fw-bold text-center">AI-Driven Kubernetes Optimization</h4>
+        <p class="fs-5 mb-4 text-center">
+          Max Performance, Min Spend, Any Cloud.
+        </p>
+
+        <div class="d-flex justify-content-center gap-3">
+          <a href="/schedule-meeting" class="btn cta-button btn-rounded"
+            >SCHEDULE MEETING</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ <div id="cookieConsent" class="cookie-consent-banner">
+  <button type="button" class="close" id="closeCookieBox" aria-label="Close">
+    &times;
+  </button>
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-sm-2 text-center">
+        <img
+          src="/images/kubeify-logo.png"
+          alt="ScaleOps Logo"
+          style="max-height: 50px"
+        />
+      </div>
+      <div class="col-sm-7">
+        <h4><strong>This website uses cookies</strong></h4>
+        <p>
+          We use cookies to personalise content and ads, to provide social media
+          features and to analyse our traffic. We also share information about
+          your use of our site with our social media, advertising and analytics
+          partners who may combine it with other information that you’ve
+          provided to them or that they’ve collected from your use of their
+          services.
+        </p>
+        <a
+          href="#"
+          id="show-details"
+          data-toggle="modal"
+          data-target="#cookieDetailsModal"
+          style="color: blue; font-weight: bold"
+        >
+          Show details <span>&#x276F;</span>
+        </a>
+      </div>
+      <div class="col-sm-3 text-center">
+        <button
+          id="acceptCookies"
+          class="btn btn-primary btn-lg btn-block"
+          style="background-color: blue; border-color: blue"
+        >
+          Allow all
+        </button>
+        <button
+          id="denyCookies"
+          class="btn btn-outline-secondary btn-lg btn-block mt-2"
+          style="border: 1px solid blue; color: #000"
+        >
+          Deny
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="cookieDetailsModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="cookieDetailsLabel"
+  aria-hidden="true"
+>
+  <div
+    class="modal-dialog modal-lg modal-dialog-centered animated fadeInDown"
+    role="document"
+  >
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="cookieDetailsLabel">Cookie Details</h4>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span>&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>
+          <strong>Strictly Necessary Cookies</strong> – These cookies are
+          essential for the website to function.
+        </p>
+        <p>
+          <strong>Performance Cookies</strong> – Used to collect information
+          about how visitors use our site.
+        </p>
+        <p>
+          <strong>Functionality Cookies</strong> – Allow the site to remember
+          user choices to provide enhanced functionality.
+        </p>
+        <p>
+          <strong>Targeting/Advertising Cookies</strong> – These are used to
+          deliver relevant ads and track campaign performance.
+        </p>
+        <hr />
+        <p>
+          You can manage your preferences through browser settings or by
+          contacting our support.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button
+          id="acceptCookiesmobile"
+          class="btn btn-primary btn-lg btn-block"
+          style="background-color: blue; border-color: blue"
+        >
+          Allow all
+        </button>
+        <button
+          id="denyCookiesmobile"
+          class="btn btn-outline-secondary btn-lg btn-block mt-2"
+          style="border: 1px solid blue; color: #000"
+        >
+          Deny
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .cookie-consent-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    color: #000;
+    z-index: 9999;
+    padding: 30px 20px;
+    border-top: 4px solid #6a00ff;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+
+  .cookie-consent-banner .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    color: #000;
+    opacity: 0.5;
+  }
+
+  .cookie-consent-banner .close:hover {
+    opacity: 1;
+  }
+
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animated.fadeInDown {
+    animation: fadeInDown 0.5s ease-out;
+  }
+</style>
+
+    <script src="/js/cookie-consent.js"></script>
+    <script src="/js/modal.js"></script>
+  </body>
+</html>

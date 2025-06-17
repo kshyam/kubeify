@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Getting Started with Terraform | Kubeify</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Getting Started with Terraform" />
+<meta name="author" content="Shyam Mohan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Terraform is an Infrastructure as Code (IaC) tool that allows you to define and provision cloud resources in a declarative way. It supports AWS, Azure, Google Cloud, DigitalOcean, Kubernetes, and many more." />
+<meta property="og:description" content="Terraform is an Infrastructure as Code (IaC) tool that allows you to define and provision cloud resources in a declarative way. It supports AWS, Azure, Google Cloud, DigitalOcean, Kubernetes, and many more." />
+<link rel="canonical" href="http://localhost:4000/blog/2025-01-08-getting-started-with-terraform" />
+<meta property="og:url" content="http://localhost:4000/blog/2025-01-08-getting-started-with-terraform" />
+<meta property="og:site_name" content="Kubeify" />
+<meta property="og:image" content="http://localhost:4000/images/blog/getting-started-with-terraform.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-01-09T01:24:00+05:30" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/images/blog/getting-started-with-terraform.webp" />
+<meta property="twitter:title" content="Getting Started with Terraform" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Shyam Mohan"},"dateModified":"2025-01-09T01:24:00+05:30","datePublished":"2025-01-09T01:24:00+05:30","description":"Terraform is an Infrastructure as Code (IaC) tool that allows you to define and provision cloud resources in a declarative way. It supports AWS, Azure, Google Cloud, DigitalOcean, Kubernetes, and many more.","headline":"Getting Started with Terraform","image":"http://localhost:4000/images/blog/getting-started-with-terraform.webp","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2025-01-08-getting-started-with-terraform"},"url":"http://localhost:4000/blog/2025-01-08-getting-started-with-terraform"}</script>
+<!-- End Jekyll SEO tag -->
+ <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5a50d614079115001207f66b&product=inline-share-buttons' async='async'></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/blog.css" />
+  </head>
+
+  <body class="layout-blog">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <div class="container">
+    <a class="navbar-brand" href="/"
+      ><img src="/images/kubeify-logo.png" alt=""
+    /></a>
+
+    <button class="navbar-toggler" type="button" id="sidebarCollapse">
+      <!-- <span class="navbar-toggler-icon"></span> -->
+      <span class="icon"></span>
+      <span class="icon"></span>
+      <span class="icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <!-- <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="/services"
+            id="servicesDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Services
+          </a> -->
+        <!-- <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                  <li><a class="dropdown-item" href="services">Service 1</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 2</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 3</a></li>
+                  <li><a class="dropdown-item" href="/service1">Service 4</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 5</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 6</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 7</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 8</a></li>
+
+              </ul> -->
+        <!-- </li> -->
+
+        <li class="nav-item">
+          <a class="nav-link" href="/why-kubernetes">Why Kubernetes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blog">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/webinars">Webinars</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link btn cta-button btn-rounded"
+            href="/schedule-meeting"
+            style="margin-left: 10px"
+            >&nbsp; Schedule Meeting &nbsp;
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="sidebar__wrapper">
+  <!-- Sidebar -->
+  <nav id="sidebar">
+    <div class="sideBar__content">
+      <div id="dismiss">
+        <!-- <i class="fas fa-arrow-left"></i> -->
+        <span class="modal-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="24"
+            height="24"
+            viewBox="0 0 172 172"
+            style="fill: #000000"
+          >
+            <g
+              fill="none"
+              fill-rule="nonzero"
+              stroke="none"
+              stroke-width="1"
+              stroke-linecap="butt"
+              stroke-linejoin="miter"
+              stroke-miterlimit="10"
+              stroke-dasharray=""
+              stroke-dashoffset="0"
+              font-family="none"
+              font-weight="none"
+              font-size="none"
+              text-anchor="none"
+              style="mix-blend-mode: normal"
+            >
+              <path d="M0,172v-172h172v172z" fill="none"></path>
+              <g fill="#000">
+                <path
+                  d="M33.73372,23.59961l-10.13411,10.13411l52.26628,52.26628l-52.26628,52.26628l10.13411,10.13411l52.26628,-52.26628l52.26628,52.26628l10.13411,-10.13411l-52.26628,-52.26628l52.26628,-52.26628l-10.13411,-10.13411l-52.26628,52.26628z"
+                ></path>
+              </g>
+            </g>
+          </svg>
+        </span>
+      </div>
+
+      <!-- <div class="sidebar-header">
+        <h3>Bootstrap Sidebar</h3>
+      </div> -->
+      <!-- <div class="nav__title">
+        Menu
+      </div> -->
+      <ul class="navbar-nav ml-auto">
+        <!--<li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="servicesDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Services
+          </a>
+           <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                  <li><a class="dropdown-item" href="/service1">Service 1</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 2</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 3</a></li>
+                  <li><a class="dropdown-item" href="/service1">Service 4</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 5</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 6</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 7</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 8</a></li>
+              </ul> 
+        </li>-->
+
+        <li class="nav-item">
+          <a class="nav-link" href="/why-kubernetes">Why Kubernetes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blog">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/webinars">Webinars</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link btn cta-button btn-rounded"
+            href="/schedule-meeting"
+            >&nbsp;&nbsp;Schedule Meeting&nbsp;&nbsp;</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <!-- <div id="content">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <button type="button" id="sidebarCollapse" class="btn btn-info">
+          <i class="fas fa-align-left"></i>
+          <span>Toggle Sidebar</span>
+        </button>
+      </div>
+    </nav>
+  </div> -->
+  <!-- Dark Overlay element -->
+  <div class="overlay"></div>
+</div>
+<script src="/js/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    // $("#sidebar").mCustomScrollbar({
+    //   theme: "minimal",
+    // });
+
+    $("#dismiss, .overlay").on("click", function () {
+      $("#sidebar").removeClass("active");
+      $(".overlay").removeClass("active");
+    });
+
+    $("#sidebarCollapse").on("click", function () {
+      $("#sidebar").addClass("active");
+      $(".overlay").addClass("active");
+      // $(".collapse.in").toggleClass("in");
+      // $("a[aria-expanded=true]").attr("aria-expanded", "false");
+    });
+
+    // $(window).scroll(function () {
+    //   if ($(document).scrollTop() > $(".navbar").height()) {
+    //     $("header").addClass("sticky_header");
+    //     $(".navbar").addClass("navbar-light bg-white");
+    //   } else {
+    //     $("header").removeClass("sticky_header");
+    //     $(".navbar").removeClass("navbar-light bg-white");
+    //   }
+    // });
+
+    // $(".list-unstyled li.active").removeClass("active");
+    // console.log(
+    //   $("a[href*='" + location.pathname + "']")
+    //     .parent()
+    //     .addClass("active")
+    // );
+    $(".list-unstyled li.active").removeClass("active");
+
+    $(".list-unstyled li a").each(function (i, obj) {
+      console.log(obj.classList.contains("btn"));
+      if (
+        obj.pathname === location.pathname &&
+        !obj.classList.contains("btn")
+      ) {
+        $(".list-unstyled li.active").removeClass("active");
+
+        console.log($(obj).parent().addClass("active"));
+      }
+    });
+
+    // let $parent = $(this).parent();
+    // $parent.addClass("active");
+    // window.location.assign($(this).attr("href"));
+    // e.preventDefault();
+  });
+</script>
+
+<meta name="google-adsense-account" content="ca-pub-4088406505945385" />
+
+
+    <section>
+      <div class="container mb-4">
+        <div class="row">
+          <!-- LEFT: Main Blog Content -->
+          <div class="col-lg-8 bg-white p-4 border rounded shadow-sm">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb" style="background: transparent">
+                <li class="breadcrumb-item">
+                  <a href="/blog">Blog</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Getting Started with Terraform
+                </li>
+              </ol>
+            </nav>
+
+            <img
+              src="/images/blog/getting-started-with-terraform.webp"
+              alt="Getting Started with Terraform"
+              class="card-img-top rounded"
+              title="Getting Started with Terraform"
+            />
+            <h1 class="mt-4" style="color: black">Getting Started with Terraform</h1>
+            <time>
+              09 Jan 2025 -
+              <small>Shyam Mohan</small>
+            </time>
+
+            <div class="px-2 mt-4"><p>Terraform is an <strong>Infrastructure as Code (IaC)</strong> tool that allows you to define and provision cloud resources in a <strong>declarative</strong> way. It supports <strong>AWS, Azure, Google Cloud, DigitalOcean, Kubernetes</strong>, and many more.</p>
+
+<hr />
+
+<h2 id="step-1-install-terraform"><strong>Step 1: Install Terraform</strong></h2>
+<p>Follow the <a href="https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli">installation guide</a> based on your OS:</p>
+
+<ul>
+  <li><strong>Ubuntu/Debian</strong>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt update <span class="o">&amp;&amp;</span> <span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> terraform
+</code></pre></div>    </div>
+  </li>
+  <li><strong>MacOS</strong>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>terraform
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Windows</strong> (via Chocolatey)
+    <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">choco</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nx">terraform</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>Verify the installation:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>terraform version
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="step-2-create-a-terraform-project"><strong>Step 2: Create a Terraform Project</strong></h2>
+<ol>
+  <li><strong>Create a new directory for your Terraform configuration</strong>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir </span>terraform-project <span class="o">&amp;&amp;</span> <span class="nb">cd </span>terraform-project
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Create a Terraform configuration file</strong>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">touch </span>main.tf
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="step-3-write-your-first-terraform-configuration"><strong>Step 3: Write Your First Terraform Configuration</strong></h2>
+<p>Open <code class="language-plaintext highlighter-rouge">main.tf</code> and define a basic DigitalOcean Kubernetes cluster:</p>
+
+<div class="language-hcl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">provider</span> <span class="s2">"digitalocean"</span> <span class="p">{</span>
+  <span class="nx">token</span> <span class="o">=</span> <span class="nx">var</span><span class="p">.</span><span class="nx">do_token</span>
+<span class="p">}</span>
+
+<span class="nx">variable</span> <span class="s2">"do_token"</span> <span class="p">{}</span>
+
+<span class="nx">resource</span> <span class="s2">"digitalocean_kubernetes_cluster"</span> <span class="s2">"my_cluster"</span> <span class="p">{</span>
+  <span class="nx">name</span>   <span class="o">=</span> <span class="s2">"my-k8s-cluster"</span>
+  <span class="nx">region</span> <span class="o">=</span> <span class="s2">"nyc3"</span>
+  <span class="nx">version</span> <span class="o">=</span> <span class="s2">"1.29.0-do.0"</span>
+
+  <span class="nx">node_pool</span> <span class="p">{</span>
+    <span class="nx">name</span>       <span class="o">=</span> <span class="s2">"worker-pool"</span>
+    <span class="nx">size</span>       <span class="o">=</span> <span class="s2">"s-2vcpu-4gb"</span>
+    <span class="nx">node_count</span> <span class="o">=</span> <span class="mi">2</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="step-4-initialize-terraform"><strong>Step 4: Initialize Terraform</strong></h2>
+<p>Run the following command:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>terraform init
+</code></pre></div></div>
+<p>This downloads the required Terraform provider plugins.</p>
+
+<hr />
+
+<h2 id="step-5-preview-the-changes"><strong>Step 5: Preview the Changes</strong></h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>terraform plan
+</code></pre></div></div>
+<p>This will <strong>show the resources Terraform will create</strong>.</p>
+
+<hr />
+
+<h2 id="step-6-apply-the-changes"><strong>Step 6: Apply the Changes</strong></h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>terraform apply
+</code></pre></div></div>
+<p>Terraform will ask for confirmation. Type <strong>“yes”</strong> to proceed.</p>
+
+<p>Once completed, you will have a <strong>Kubernetes cluster running on DigitalOcean</strong>! 🎉</p>
+
+<hr />
+
+<h2 id="step-7-destroy-the-infrastructure-optional"><strong>Step 7: Destroy the Infrastructure (Optional)</strong></h2>
+<p>If you want to delete everything created by Terraform, run:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>terraform destroy
+</code></pre></div></div>
+
+<hr />
+
+<p>If you’re getting the error <strong>“Unable to locate package terraform”</strong>, it means that Terraform is either not available in your package repositories or your package list is outdated. Follow these steps to install Terraform properly based on your OS:</p>
+
+<hr />
+
+<h2 id="ubuntudebian-installation"><strong>Ubuntu/Debian Installation</strong></h2>
+<h3 id="step-1-update-package-list"><strong>Step 1: Update Package List</strong></h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt update <span class="o">&amp;&amp;</span> <span class="nb">sudo </span>apt upgrade <span class="nt">-y</span>
+</code></pre></div></div>
+
+<h3 id="step-2-install-required-packages"><strong>Step 2: Install Required Packages</strong></h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> gnupg software-properties-common
+</code></pre></div></div>
+
+<h3 id="step-3-add-hashicorp-repository"><strong>Step 3: Add HashiCorp Repository</strong></h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget <span class="nt">-O-</span> https://apt.releases.hashicorp.com/gpg | <span class="nb">sudo </span>gpg <span class="nt">--dearmor</span> <span class="nt">-o</span> /usr/share/keyrings/hashicorp-archive-keyring.gpg
+<span class="nb">echo</span> <span class="s2">"deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com </span><span class="si">$(</span>lsb_release <span class="nt">-cs</span><span class="si">)</span><span class="s2"> main"</span> | <span class="nb">sudo tee</span> /etc/apt/sources.list.d/hashicorp.list
+</code></pre></div></div>
+
+<h3 id="step-4-install-terraform"><strong>Step 4: Install Terraform</strong></h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt update
+<span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> terraform
+</code></pre></div></div>
+
+<h3 id="step-5-verify-installation"><strong>Step 5: Verify Installation</strong></h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>terraform version
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="centosrhel-installation"><strong>CentOS/RHEL Installation</strong></h2>
+<h3 id="step-1-install-yum-utilities"><strong>Step 1: Install Yum Utilities</strong></h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>yum <span class="nb">install</span> <span class="nt">-y</span> yum-utils
+</code></pre></div></div>
+
+<h3 id="step-2-add-hashicorp-repository"><strong>Step 2: Add HashiCorp Repository</strong></h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>yum-config-manager <span class="nt">--add-repo</span> https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+</code></pre></div></div>
+
+<h3 id="step-3-install-terraform"><strong>Step 3: Install Terraform</strong></h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>yum <span class="nb">install</span> <span class="nt">-y</span> terraform
+</code></pre></div></div>
+
+<h3 id="step-4-verify-installation"><strong>Step 4: Verify Installation</strong></h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>terraform version
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="macos-installation"><strong>MacOS Installation</strong></h2>
+<p>Use Homebrew:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew tap hashicorp/tap
+brew <span class="nb">install </span>hashicorp/tap/terraform
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="windows-installation"><strong>Windows Installation</strong></h2>
+<ol>
+  <li>Download the latest Terraform binary from <a href="https://developer.hashicorp.com/terraform/downloads">Terraform Downloads</a>.</li>
+  <li>Extract it and add the Terraform executable to your <strong>system PATH</strong>.</li>
+</ol>
+
+<hr />
+
+<p>After installation, retry:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>terraform init
+terraform apply
+</code></pre></div></div>
+
+<p>Let me know if you need more help! 🚀</p>
+</div>
+          </div>
+
+          <!-- RIGHT: Related Posts -->
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="p-3 mb-4 border rounded bg-white shadow-sm">
+              <h4 class="fw-bold mb-3">More in DevOps</h4>
+                
+              <div class="mb-3">
+                <a
+                  href="/blog/why-i-decided-to-use-karpenter-for-kubernetes-autoscaling"
+                  class="text-decoration-none text-dark fw-semibold d-block"
+                  >Why I Decided to Use Karpenter for Kubernetes Autoscaling</a
+                >
+                <small class="text-muted"
+                  >02 May 2025</small
+                >
+              </div>
+              
+              <div class="mb-3">
+                <a
+                  href="/blog/2025-02-10-devops-for-early-stage-startups-a-complete-guide"
+                  class="text-decoration-none text-dark fw-semibold d-block"
+                  >DevOps for Early Stage Startups: A Complete Guide</a
+                >
+                <small class="text-muted"
+                  >11 February 2025</small
+                >
+              </div>
+              
+              <div class="mb-3">
+                <a
+                  href="/blog/2025-01-28-7rs-cloud-migration-strategies-a-comprehensive-guide"
+                  class="text-decoration-none text-dark fw-semibold d-block"
+                  >7Rs Cloud Migration Strategies: A Comprehensive Guide</a
+                >
+                <small class="text-muted"
+                  >28 January 2025</small
+                >
+              </div>
+              
+              <div class="mb-3">
+                <a
+                  href="/blog/2025-01-15-how-to-secure-nginx-with-ssl-using-certbot-on-ubuntu"
+                  class="text-decoration-none text-dark fw-semibold d-block"
+                  >How to Secure Nginx with SSL Using Certbot on Ubuntu</a
+                >
+                <small class="text-muted"
+                  >15 January 2025</small
+                >
+              </div>
+              
+            </div>
+
+            <!-- Tag/Categories Section -->
+            <div class="mb-4 p-3 border rounded bg-white d-none d-md-block">
+              <h4 class="fw-bold mb-3">Tags</h4>
+              
+              <div class="list-inline mb-0 d-flex flex-wrap gap-2">
+                
+                <span
+                  class="list-inline-item btn rounded-pill btn-light px-3 py-2"
+                  style="font-size: 1.5rem"
+                >
+                  AWS Cost
+                </span>
+                
+                <span
+                  class="list-inline-item btn rounded-pill btn-light px-3 py-2"
+                  style="font-size: 1.5rem"
+                >
+                  DevOps
+                </span>
+                
+                <span
+                  class="list-inline-item btn rounded-pill btn-light px-3 py-2"
+                  style="font-size: 1.5rem"
+                >
+                  Kubernetes
+                </span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="bg-light pt-5 pb-5 work-hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <div class="media">
+          <img
+            src="/images/clients/yaron-oren.jpeg"
+            class="mr-4 rounded-circle"
+            width="120"
+            alt="yaron-oren"
+          />
+          <div class="align-self-center msg-txt-18 font-italic mt-4 mt-md-0">
+            Kubeify's team <b>decrease the time</b> it takes to adopt open
+            source technology while enabling consistent application environments
+            across deployments...letting our developers focus on application
+            code while improving speed and quality of our releases.<br />
+            <b>- Yaron Oren, Founder Maverick.ai (acquired by OutboundWorks)</b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="bg-light py-4">
+  <div class="container">
+    <div class="looking-details-wraper">
+      <div class="looking-details-content">
+        <h4>Ready to get started?</h4>
+        <p>
+          Let us know what you are working on? <br />
+          We would help you to build a fault tolerant, secure and scalable
+          system over kubernetes.
+        </p>
+        <a class="btn cta-button btn-rounded" href="/schedule-meeting"
+          >Schedule Meeting</a
+        >
+      </div>
+      <div class="looking-details-image">
+        <img
+          src="/images/home-cta2.png"
+          alt="formore-details"
+          data-lazy-src="/images/home-cta2.png"
+          height="350px"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+ <div class="footer bg-dark">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 footer-item">
+        <div class="brand-text">Kubeify</div>
+        <p>
+          Accelerate your cloud native transformation, adoption of kubernetes
+          with Kubeify's team of experts.
+        </p>
+        
+
+        </p>
+      </div>
+      <div class="col-md-8 mt-4 mt-md-0">
+        <div class="d-flex justify-content-between">
+          <div class="footer-item">
+            <h4 class="cta__title">Company</h4>
+            <ul class="footer-nav">
+              <li><a href="/about" title="About">About Us</a></li>
+              <li><a href="/contact" title="Contact Us">Contact Us</a></li>
+              <li>
+                <a href="/join-our-team" title="Join our team">Join our team</a>
+              </li>
+              <li>
+                <a href="/schedule-meeting" title="Schedule a meeting">Schedule a Meeting</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-item">
+            <h4 class="cta__title">Services</h4>
+            <ul class="footer-nav">
+              <li><a href="/services">Services Offered</a></li>
+              <li><a href="/why-kubernetes">Why Kubernetes</a></li>
+              <li><a href="/customers" title="Customers">Customers</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-item">
+            <h4 class="cta__title">Resources</h4>
+            <ul class="footer-nav">
+              <li><a href="/blog">Blog</a></li>
+              <li><a href="/webinars">Webinars</a></li>
+              <li><a href="/join-webinars">Join Webinars</a></li>
+              <li><a href="https://www.cncf.io/newsroom/case-studies/" target="_blank">Case Studies</a></li>
+              <!-- <li><a href="/learn-kubernetes" target="_blank">Learn Kubernetes</a></li> -->
+            </ul>
+          </div>
+
+          <div class="footer-item">
+            <h4 class="cta__title">Social</h4>
+            <ul class="footer-nav">
+              <li><a href="https://www.linkedin.com/company/kubeify" title="linkedin" target="_blank">LinkedIn</a></li>
+              <li><a href="https://twitter.com/kubeify" target="_blank">Twitter</a></li>
+              <li><a href="https://www.youtube.com/@kubeifyk8s45/videos" target="_blank">YouTube</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <br />
+ 
+</div>
+
+ <div class="lower-footer text-center py-2">
+    <span class="d-inline-block copyright">
+      Copyright &copy; <span id="year"></span> Kubeify, All Rights
+      Reserved.&nbsp;
+    </span>
+  </div>
+
+<!-- <style type="text/css">
+  .feedbackbox {
+    position: fixed;
+    top: 90vh;
+    left: 1%;
+    bottom: 0%;
+    width: 420px;
+    text-align: left;
+    z-index: 9999;
+    margin-top: -60px;
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+  }
+</style>
+
+<div
+  class="feedbackbox alert alert-warning alert-dismissible fade show"
+  role="alert"
+>
+  <strong>Don't Miss Out!</strong>
+  <a href="/join-webinars"
+    >Managing kubernetes Manifests using Jsonnet & Tanaka</a
+  >
+  | 1st Aug, 2020, 9:30 PM – 10:30 PM, IST &nbsp;
+  <b><a href="/join-webinars">Join us !</a></b>
+</div>
+ -->
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/app.js"></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $("#year").html(new Date().getFullYear());
+  });
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142118821-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "UA-142118821-1");
+</script>
+
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/7280691.js"></script>
+<!-- End of HubSpot Embed Code -->
+  </body>
+</html>

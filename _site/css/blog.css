@@ -1,0 +1,244 @@
+
+body {
+  margin: 0;
+  font-family: "Open Sans";
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+
+
+.dark-bg{
+  background-color: #031336; /* Background color */
+}
+
+
+.feature-img {
+  width: 30%;
+  height: 30%;
+}
+
+.scroll{
+  max-height: 900px;
+  overflow-y: scroll;
+}
+
+.blog-wraper {
+  min-height: calc(100vh - 80px);
+  padding-bottom: 40px;
+}
+
+.blog-menu {
+  list-style: none;
+  padding: 0 0 0 10px;
+  margin: 0;
+}
+.blog-menu > li {
+  position: relative;
+  display: block;
+  margin-bottom: 8px;
+  padding-left: 10px;
+}
+.blog-menu > li::before {
+  content: "";
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  width: 0;
+  height: 0;
+  border-left: 5px solid #2017af;
+  position: absolute;
+  left: -10px;
+  top: 6px;
+}
+.blog-menu > li > a {
+  color: #2017af;
+  font-weight: 400;
+  font-size: 16px;
+}
+.blog-menu > li > a b {
+  font-weight: 400;
+}
+
+.blog-post {
+  background-color: #fff;
+}
+
+.blog-post img {
+  top: 50%;
+  left: 50%;
+  max-width: 100%;
+  border: 1px solid #EEE;
+  box-shadow: 0 0 1px 0 rgba(18, 32, 73, 0.08),
+    0 8px 32px 0 rgba(55, 92, 192, 0.08);
+}
+
+
+.blog-content{
+  border: 1px solid #EEE;
+  box-shadow: 0 0 1px 0 rgba(18, 32, 73, 0.08),
+    0 8px 32px 0 rgba(55, 92, 192, 0.08);
+  min-height: 415px !important;
+
+}
+
+.blog-body{
+  padding: 10px;
+}
+
+.blog-post-content a {
+  color: blue;
+}
+
+.post-box{
+  /*border: 1px solid red;*/
+  margin-bottom: 10px;
+  min-height: 450px !important;
+}
+
+.images-list{
+  margin-bottom: 0px !important;
+}
+
+.blog-post h1 {
+  margin-top: 5px;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+
+.blog-post a {
+  color: #242424;
+  text-decoration: none;
+  transition: color 0.1s ease-in-out 0s;
+}
+
+
+.blog-post h1 a:hover,
+.blog-post h1 a:focus {
+  color: #2017af;
+}
+
+
+.span4 img {
+    margin-right: 10px;
+}
+.span4 .img-left {
+    float: left;
+}
+.span4 .img-right {
+    float: right;
+}
+
+.blog-read-more {
+  display: inline-block;
+  height: 32px;
+  padding: 0 15px;
+  border-radius: 16px;
+  text-align: center;
+  text-decoration: none;
+  outline: 0;
+  border: 1px solid #ddd;
+  color: #2017af;
+  line-height: 30px;
+}
+.blog-read-more:hover,
+.blog-read-more:focus {
+  text-decoration: none;
+  background-color: #2017af;
+  color: #fff;
+  border-color: #2017af;
+}
+.blog-post-content,
+.docs-content {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 1px 0 rgba(18, 32, 73, 0.08),
+    0 8px 32px 0 rgba(55, 92, 192, 0.08);
+}
+
+.blog-catgory{
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 0 1px 0 rgba(18, 32, 73, 0.08),
+    0 8px 32px 0 rgba(55, 92, 192, 0.08);
+}
+
+.blog-catgory_ul{
+  margin-left: -40px;
+  list-style-type:none;
+  font-size: 16px !important;
+}
+
+.blog-catgory_li{
+  margin-left: -22px;
+  font-size: 15px !important;
+
+}
+
+.blog-post-content h1 {
+  font-size: 2em;
+}
+.blog-post-content time {
+  display: block;
+  margin-bottom: 20px;
+}
+.blog-post-content img {
+  display: block;
+  margin: 0 auto 15px;
+  max-width: 100%;
+  height: auto;
+}
+.blog-post-content p {
+  font-size: 16px !important;
+  line-height: 28px;
+}
+
+.blog-post time {
+  display: block;
+  color: #787878;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.latest-heading {
+  margin-top: 0;
+  font-size: 24px;
+}
+.blog-post-body {
+  max-width: 750px;
+}
+.doc-body iframe {
+  width: 100%;
+  height: 600px;
+}
+.docs-content h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.btn-danger {
+ color: #FFF !important;
+}
+
+.btn-success {
+ color: #FFF !important;
+}
+
+.btn-primary {
+ color: #FFF !important;
+}
+
+.breadcrumb-item {
+  white-space: nowrap;       /* Prevents text from wrapping */
+  overflow: hidden;          /* Hides overflowing text */
+  text-overflow: ellipsis;   /* Displays "..." for overflowed content */
+  }
+
+/* Responsive adjustment for smaller devices */
+@media (max-width: 768px) {
+  .breadcrumb-item {
+    max-width: 80%; /* Decrease max-width on smaller screens */
+  }
+}
