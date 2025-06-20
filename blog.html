@@ -6,10 +6,10 @@ canonical_url: "https://kubeify.com/blog"
 image: /images/kubeify.png
 ---
 
-<header class="text-white page-bg-header text-center py-5 pb-5 pt-5 dark-bg">
+<header class="text-white page-bg-header text-center py-5 dark-bg">
   <h1>Kubeify Blog</h1>
   <div class="row mb-4">
-    <div class="col-md-4 col-xs-4 mx-auto p-4">
+    <div class="col-4 mx-auto p-4">
       <form method="get" action="https://www.google.com/search" target="_blank">
         <input type="hidden" name="sitesearch" value="kubeify.com" />
         <input
@@ -54,8 +54,8 @@ image: /images/kubeify.png
                   {{ post.excerpt | strip_html | truncate: 100 }}
                 </p>
                 <small
-                  class="text-muted d-none d-md-block"
-                  style="font-size: medium"
+                  class="text-muted d-none d-md-block fs-4"
+                  
                   >{{ post.date | date: "%b %d, %Y" }}</small
                 >
               </div>
