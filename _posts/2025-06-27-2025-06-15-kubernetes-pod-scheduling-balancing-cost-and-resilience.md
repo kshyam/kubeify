@@ -1,5 +1,5 @@
 ---
-title: 2025-06-15 Kubernetes Pod Scheduling Balancing Cost and Resilience
+title: Kubernetes Pod Scheduling Balancing Cost and Resilience
 description: "Kubernetes has become the go-to container orchestration platform
   for deploying and managing cloud-native applications. "
 image: /images/blog/kubernetes-pod-scheduling-balancing-cost-and-resilience.webp
