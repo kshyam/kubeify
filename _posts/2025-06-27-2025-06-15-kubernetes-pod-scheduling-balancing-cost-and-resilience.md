@@ -32,7 +32,7 @@ Kubernetes has become the go-to container orchestration platform for deploying a
 -   Priority and Preemption
     
 
-5.  Strategies for Cost-Effective Scheduling
+5. Strategies for Cost-Effective Scheduling
     
 
 -   Right-Sizing Resources
@@ -44,7 +44,7 @@ Kubernetes has become the go-to container orchestration platform for deploying a
 -   Scheduling on Cost-Aware Node Pools
     
 
-6.  Strategies for High Resilience Scheduling
+6. Strategies for High Resilience Scheduling
     
 
 -   High Availability Through Spread Constraints
@@ -56,9 +56,9 @@ Kubernetes has become the go-to container orchestration platform for deploying a
 -   Node and Zone Affinity for Redundancy
     
 
-7.  Combining Cost and Resilience: Best Practices
+7. Combining Cost and Resilience: Best Practices
     
-8.  Advanced Scheduling Tools and Plugins
+8. Advanced Scheduling Tools and Plugins
     
 
 -   KubeScheduler Plugins
@@ -68,11 +68,11 @@ Kubernetes has become the go-to container orchestration platform for deploying a
 -   Third-party Tools
     
 
-9.  Real-World Use Cases and Case Studies
+9. Real-World Use Cases and Case Studies
     
-10.  Conclusion
+10. Conclusion
     
-11.  FAQs
+11. FAQs
     
 
 ## 1. Introduction
