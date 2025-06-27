@@ -162,6 +162,7 @@ Optimizing Kubernetes resource requests and limits is critical for cluster stabi
 - **Automate rightsizing**: Use tools like Vertical Pod Autoscaler (VPA) or Goldilocks to adjust requests/limits based on usage trends.  
 
 ### Stability Optimization Checklist  
+
 | **Strategy**               | **Impact on Stability**                          |  
 |----------------------------|--------------------------------------------------|  
 | Memory requests = limits   | Prevents OOM kills                               |  
