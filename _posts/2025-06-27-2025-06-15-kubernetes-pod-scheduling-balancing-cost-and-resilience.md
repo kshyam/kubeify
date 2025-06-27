@@ -9,6 +9,7 @@ author: Shyam Mohan
 category: Kubernetes
 date: 2025-06-15T20:06:00.000Z
 ---
+Kubernetes has become the go-to container orchestration platform for deploying and managing cloud-native applications. One of its core responsibilities is pod scheduling, the process of placing pods onto nodes in a cluster. 
 
 ## Table of Contents
 
