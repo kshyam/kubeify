@@ -12,7 +12,6 @@ date: 2025-06-15T20:06:00.000Z
 Kubernetes has become the go-to container orchestration platform for deploying and managing cloud-native applications. One of its core responsibilities is pod scheduling, the process of placing pods onto nodes in a cluster. 
 
 ## Table of Contents
-
 1.  Introduction
     
 2.  Understanding Kubernetes Pod Scheduling
@@ -33,7 +32,7 @@ Kubernetes has become the go-to container orchestration platform for deploying a
 -   Priority and Preemption
     
 
-6.  Strategies for Cost-Effective Scheduling
+5.  Strategies for Cost-Effective Scheduling
     
 
 -   Right-Sizing Resources
@@ -45,7 +44,7 @@ Kubernetes has become the go-to container orchestration platform for deploying a
 -   Scheduling on Cost-Aware Node Pools
     
 
-8.  Strategies for High Resilience Scheduling
+6.  Strategies for High Resilience Scheduling
     
 
 -   High Availability Through Spread Constraints
@@ -57,9 +56,9 @@ Kubernetes has become the go-to container orchestration platform for deploying a
 -   Node and Zone Affinity for Redundancy
     
 
-10.  Combining Cost and Resilience: Best Practices
+7.  Combining Cost and Resilience: Best Practices
     
-11.  Advanced Scheduling Tools and Plugins
+8.  Advanced Scheduling Tools and Plugins
     
 
 -   KubeScheduler Plugins
@@ -69,11 +68,11 @@ Kubernetes has become the go-to container orchestration platform for deploying a
 -   Third-party Tools
     
 
-13.  Real-World Use Cases and Case Studies
+9.  Real-World Use Cases and Case Studies
     
-14.  Conclusion
+10.  Conclusion
     
-15.  FAQs
+11.  FAQs
     
 
 ## 1. Introduction
