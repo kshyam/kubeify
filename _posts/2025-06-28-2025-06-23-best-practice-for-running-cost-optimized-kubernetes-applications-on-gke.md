@@ -1,6 +1,5 @@
 ---
-title: 2025-06-23 Best practice for Running  Cost Optimized Kubernetes
-  Applications on GKE
+title: Best practice for Running  Cost Optimized Kubernetes Applications on GKE
 description: "Kubernetes has transformed the way applications are deployed and
   managed at scale. But as organizations embrace Kubernetes, particularly
   through managed services like Google Kubernetes Engine (GKE), they face a
