@@ -32,33 +32,33 @@ Kubernetes has become the go-to container orchestration platform for deploying a
     
 5. Strategies for Cost-Effective Scheduling
     
--   Right-Sizing Resources
+   Right-Sizing Resources
     
--   Leveraging Spot and Preemptible Nodes
+   Leveraging Spot and Preemptible Nodes
     
--   Autoscaling Clusters Smartly
+   Autoscaling Clusters Smartly
     
--   Scheduling on Cost-Aware Node Pools
+   Scheduling on Cost-Aware Node Pools
     
 6. Strategies for High Resilience Scheduling
     
--   High Availability Through Spread Constraints
+   High Availability Through Spread Constraints
     
--   Avoiding Single Points of Failure
+   Avoiding Single Points of Failure
     
--   Using Pod Disruption Budgets (PDBs)
+   Using Pod Disruption Budgets (PDBs)
     
--   Node and Zone Affinity for Redundancy
+   Node and Zone Affinity for Redundancy
     
 7. Combining Cost and Resilience: Best Practices
     
 8. Advanced Scheduling Tools and Plugins
     
--   KubeScheduler Plugins
+   KubeScheduler Plugins
     
--   Descheduler
+   Descheduler
     
--   Third-party Tools
+   Third-party Tools
     
 9. Real-World Use Cases and Case Studies
     
