@@ -2,7 +2,7 @@
 title: Kubernetes Pod Scheduling Balancing Cost and Resilience
 description: "Kubernetes has become the go-to container orchestration platform
   for deploying and managing cloud-native applications. "
-image: /images/blog/kubernetes-pod-scheduling-balancing-cost-and-resilience.webp
+image: /images/blog/kubernetes-pod-scheduling-balancing-cost-and-resilience-2-.webp
 layout: post
 permalink: /blog/:title
 author: Shyam Mohan
@@ -20,15 +20,15 @@ Kubernetes has become the go-to container orchestration platform for deploying a
     
 4.  Key Factors Influencing Pod Scheduling
     
--   Resource Requests and Limits
+    Resource Requests and Limits
     
--   Node Affinity and Anti-Affinity
+    Node Affinity and Anti-Affinity
     
--   Taints and Tolerations
+    Taints and Tolerations
     
--   Topology Spread Constraints
+    Topology Spread Constraints
     
--   Priority and Preemption
+    Priority and Preemption
     
 5. Strategies for Cost-Effective Scheduling
     
