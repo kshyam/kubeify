@@ -75,6 +75,8 @@ Organizations today aim to reduce infrastructure costs without compromising on p
 
   
 
+
+
 ## 2. Understanding Kubernetes Pod Scheduling
 
 Pod scheduling is handled by the Kube-scheduler, a component of the Kubernetes control plane. It evaluates a set of scheduling policies and constraints before deciding which node a pod should run on. The process includes:
@@ -88,7 +90,7 @@ Pod scheduling is handled by the Kube-scheduler, a component of the Kubernetes c
 
 The scheduler ensures optimal placement for load balancing, node health, and performance—but it needs configuration and tuning to account for business goals like cost minimization and application resilience.
 
-  
+
 
 ## 3. The Trade-Off: Cost vs Resilience
 
@@ -97,6 +99,7 @@ Cost optimization often involves consolidating workloads on fewer or cheaper nod
 The challenge is to find a middle ground—using scheduling techniques and policies to optimize both dimensions without sacrificing the other.
 
   
+
 
 ## 4. Key Factors Influencing Pod Scheduling
 
@@ -127,6 +130,8 @@ Used to evenly distribute pods across different topology domains (zones, nodes, 
 
 Pods can be assigned priorities. In resource-constrained environments, lower-priority pods can be evicted to make room for critical ones. This ensures uptime for essential workloads.
 
+
+
 ## 5. Strategies for Cost-Effective Scheduling
 
 ### 5.1 Right-Sizing Resources
@@ -144,6 +149,8 @@ Use Cluster Autoscaler to add/remove nodes based on pending pods and utilization
 ### 5.4 Scheduling on Cost-Aware Node Pools
 
 Use labels to separate nodes by cost category (e.g., cost-tier=low). Schedule non-critical pods on low-tier nodes using affinity.
+
+
 
 ## 6. Strategies for High Resilience Scheduling
 
@@ -163,6 +170,8 @@ PDBs ensure a minimum number of pods remain available during voluntary disruptio
 
 Pin critical pods to nodes with better reliability SLAs or across multiple zones for regional redundancy.
 
+
+
 ## 7. Combining Cost and Resilience: Best Practices
 
 -   Mix spot and on-demand instances using separate node pools
@@ -175,6 +184,7 @@ Pin critical pods to nodes with better reliability SLAs or across multiple zones
     
 -   Continuously monitor and refine pod distribution with tools like KubeCost and Lens
     
+
 
   
 
@@ -197,6 +207,8 @@ The Descheduler rebalances pods after cluster changes. For example, it can evict
 -   OpenCost: CNCF sandbox project for cost observability in Kubernetes
     
 
+
+
 ## 9. Real-World Use Cases and Case Studies
 
 ### Case 1: E-commerce Platform
@@ -209,9 +221,13 @@ A SaaS company uses topology spread constraints to distribute pods across 3 zone
 
   
 
+
+
 ## 10. Conclusion
 
 Balancing cost and resilience in Kubernetes pod scheduling is an ongoing process. It demands a deep understanding of workload requirements, strategic use of Kubernetes primitives, and observability tools. By using the right combination of affinities, constraints, autoscalers, and node configurations, you can run cost-efficient yet highly available Kubernetes workloads.
+
+
 
 ## 11. Frequently Asked Questions (FAQs)
 
