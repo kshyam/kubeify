@@ -293,6 +293,16 @@ p {
   }
 }
 
+.blog-card {
+  border-radius: 16px;
+  padding: unset !important;
+
+  img {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+}
+
 .blog-post:hover {
   background: #f3f6f4;
 }
@@ -1055,7 +1065,7 @@ td {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(7.9px);
-  border: 0.3px solid white;
+  border: 0.2px solid #7a7a7a;
 }
 
 /* ---------------------------------------------------
