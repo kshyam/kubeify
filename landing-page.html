@@ -8,7 +8,7 @@ image: /images/webinars/managing-kubernetes-manifests-using-jsonnet-tanaka.jpg
 ---
 
 <main class="landing-page">
-  <section class="py-5 bg-light">
+  <section class="py-5 gradient">
     <div class="container py-5">
       <div
         class="row align-items-center"
@@ -186,7 +186,7 @@ image: /images/webinars/managing-kubernetes-manifests-using-jsonnet-tanaka.jpg
     </div>
   </section>
   <!-- Why Google Workspace Section -->
-  <section class="py-5">
+  <section class="py-5 bg-light">
     <div class="container">
       <div class="text-center">
         <h1 class="mb-4 wow fadeInUp">
@@ -643,7 +643,7 @@ image: /images/webinars/managing-kubernetes-manifests-using-jsonnet-tanaka.jpg
     </div>
   </section>
 
-  <section style="background-color: #000; color: #fff">
+  <section class="gradient">
     <div class="container">
       <img
         class="mt-4"
@@ -749,9 +749,13 @@ image: /images/webinars/managing-kubernetes-manifests-using-jsonnet-tanaka.jpg
         <!-- Text Column -->
         <div
           class="col-lg-6 wow fadeInUp"
-          style="visibility: visible; animation-name: fadeInUp"
+          style="
+            visibility: visible;
+            animation-name: fadeInUp;
+            align-content: center;
+          "
         >
-          <h2 class="text-black" style="color: #000">
+          <h2>
             Start Optimizing Your GKE Costs in
             <span class="api">Just a Few Clicks! </span>
           </h2>
@@ -786,7 +790,7 @@ image: /images/webinars/managing-kubernetes-manifests-using-jsonnet-tanaka.jpg
 
         <!-- Image Column -->
         <div
-          class="col-lg-6 wow fadeInUp"
+          class="col-lg-6 p-5 wow fadeInUp"
           style="visibility: visible; animation-name: fadeInUp"
         >
           <img
@@ -803,7 +807,7 @@ image: /images/webinars/managing-kubernetes-manifests-using-jsonnet-tanaka.jpg
     <div class="container py-5">
       <div class="row">
         <!-- Image Column -->
-        <div class="col-lg-6">
+        <div class="col-lg-6 p-5">
           <img
             class="w-100 rounded-4"
             src="./images/kubeify-copilot-illustration.png"
@@ -814,7 +818,11 @@ image: /images/webinars/managing-kubernetes-manifests-using-jsonnet-tanaka.jpg
         <!-- Text Content -->
         <div
           class="col-lg-6 wow fadeInUp"
-          style="visibility: visible; animation-name: fadeInUp"
+          style="
+            visibility: visible;
+            animation-name: fadeInUp;
+            align-content: center;
+          "
         >
           <h2 class="mb-4 pwa">
             Meet <span class="api">Your Kubernetes Copilot</span> for Smarter
@@ -874,7 +882,7 @@ image: /images/webinars/managing-kubernetes-manifests-using-jsonnet-tanaka.jpg
     </div>
   </section>
 
-  <section class="testimonial-section py-5">
+  <section class="py-5 gradient">
     <div class="container">
       <div class="row align-items-center">
         <!-- Left Text Column -->
@@ -1205,6 +1213,15 @@ image: /images/webinars/managing-kubernetes-manifests-using-jsonnet-tanaka.jpg
       background: linear-gradient(90deg, #dff1ff, #f9ccff);
     }
 
+    .gradient {
+      background: linear-gradient(
+        0deg,
+        hsla(220, 79%, 96%, 1) 55%,
+        hsla(221, 96%, 90%, 1) 77%,
+        hsla(221, 59%, 82%, 1) 89%
+      );
+    }
+
     .text-highlight {
       color: #ff0080;
     }
@@ -1385,9 +1402,13 @@ image: /images/webinars/managing-kubernetes-manifests-using-jsonnet-tanaka.jpg
         max-width: 1024px;
       }
       .centered-bg {
-        background-image: url(./images/bg.png);
+        background-image: url(./images/bg1.png);
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover; /* ✅ fill the entire section */
+        background-position: center; /* ✅ keep image centered */
+        background-attachment: scroll; /* or fixed, if you want parallax effect */
+        width: 100%;
+        height: 100vh; /* ✅ full screen height */
       }
     }
     @media (min-width: 1280px) {

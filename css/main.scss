@@ -135,7 +135,6 @@ p {
   }
 }
 
-
 // .btn {
 //   font-family: $font-family-primary;
 //   font-weight: 500;
@@ -279,7 +278,6 @@ p {
   }
 }
 
-
 /*-----Call to Action end-------*/
 
 .nav-item.dropdown:hover .dropdown-menu {
@@ -290,7 +288,13 @@ p {
 .latest-blogs {
   .card {
     background-color: rgba(67, 83, 99, 0.05) !important;
-    border: 0.3px solid white !important;
+    border: 0.3px solid #7a7a7a !important;
+    border-radius: 16px;
+
+    img {
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+    }
   }
   .time {
     color: Gray;
@@ -305,6 +309,15 @@ p {
   }
   .row {
     row-gap: 20px;
+  }
+}
+
+.blog-card {
+  border-radius: 16px !important;
+
+  img {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
   }
 }
 
@@ -385,6 +398,7 @@ td {
   background-position: center;
   background-size: cover; /* or 'contain' depending on the effect */
   color: white; /* optional: for text contrast */
+  padding: 96px 15px !important;
 }
 
 /*---home-page----*/
@@ -558,13 +572,6 @@ td {
 
 .work-ul {
   font-size: 18px;
-}
-
-/*----SERVICES PAGE -------*/
-#service-header {
-  background: #031336;
-  align-items: center;
-  display: flex;
 }
 
 // Contact page
@@ -742,7 +749,6 @@ td {
     color: #fff !important;
   }
 }
-
 
 .column__wrapper {
   a {
@@ -1391,15 +1397,14 @@ td {
 // style in navbar
 .navbar-toggler {
   // color: rgba(0,0,0,0.5);
-  border-color: #3c58cd;
+
   /* flex-direction: column; */
   /* align-items: center; */
   /* justify-content: center; */
-  background-color: #3c58cd;
   padding: 10px 14px;
   outline: none !important;
   & .icon {
-    background-color: #fff;
+    background-color: #031336;
     display: block;
     width: 22px;
     height: 2px;

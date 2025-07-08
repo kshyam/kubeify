@@ -6,7 +6,7 @@
       for post in site.posts limit:3 %}
       <div class="col-md-4 {{ classes[forloop.index0] }}">
         <a href="{{ post.url }}" title="{{ post.title }}" style="color: unset">
-          <div class="card blog-card p-1 bg-gray-800">
+          <div class="card blog-card bg-gray-800">
             <img
               src="{{ post.image }}"
               alt="{{ post.title }}"

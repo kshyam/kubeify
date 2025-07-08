@@ -311,7 +311,7 @@
     <div class="content-wraper"><header class="text-white page-bg-header text-center dark-bg">
   <h1>Kubeify Blog</h1>
   <div class="row mb-4">
-    <div class="col-md-4 mx-auto p-4">
+    <div class="col-4 mx-auto p-4">
       <form method="get" action="https://www.google.com/search" target="_blank">
         <input type="hidden" name="sitesearch" value="kubeify.com" />
         <input
@@ -327,439 +327,636 @@
 </header>
 <section class="py-5 bg-light">
   <div class="container">
-    <h3 class="mb-4 text-center fw-bold">Latest Blogs</h3>
-    <div class="row g-4">
-      
-      <div class="col-md-4">
-        <a href="/blog/2025-01-05-kubernetes-cost-management-best-practices-for-efficient-scaling/" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 blog-card">
-            <img
-              src="/images/blog/kubernetes-cost-management-best-practices-for-efficient-scaling-1-.webp"
-              class="card-img-top"
-              alt="Kubernetes Cost Management Best Practices for Efficient Scaling"
-              style="object-fit: cover"
-            />
-            <div class="card-body">
-              <span class="badge bg-secondary mb-1">Kubernetes</span
-              ><br />
-              <small class="text-muted"
-                >Jun 06, 2025</small
-              >
-              <h5 class="card-title mt-2">Kubernetes Cost Management Best Practices for Efficient Scaling</h5>
-              <p class="card-text text-muted">
-                As more organizations adopt Kubernetes for container orchestration, it becomes increasingly cruci...
-              </p>
+    <div class="row">
+      <!-- LEFT: Articles -->
+      <div class="col-lg-8 border rounded bg-white">
+        <h2 class="mb-4 mt-3" style="font-size: 2rem !important">
+          Latest Blogs
+        </h2>
+
+        <div id="posts-container">
+          
+          <a href="/blog/2025-01-05-kubernetes-cost-management-best-practices-for-efficient-scaling/" class="text-decoration-none text-dark">
+            <div class="row g-3 py-3 blog-post">
+              <div class="col-6">
+                <img
+                  src="/images/blog/kubernetes-cost-management-best-practices-for-efficient-scaling-1-.webp"
+                  alt="Kubernetes Cost Management Best Practices for Efficient Scaling"
+                  class="rounded h-100"
+                />
+              </div>
+              <div class="col-6">
+                <span
+                  class="badge bg-light text-dark border"
+                  style="font-size: 12px"
+                  >Kubernetes</span
+                >
+                <h5 class="fw-semibold mt-2 mb-1">Kubernetes Cost Management Best Practices for Efficient Scaling</h5>
+                <p class="text-muted d-none d-md-block">
+                  As more organizations adopt Kubernetes for container orchestration, it becomes increasingly cruci...
+                </p>
+                <small class="text-muted d-none d-md-block fs-4"
+                  >Jun 06, 2025</small
+                >
+              </div>
             </div>
-          </div>
-        </a>
-      </div>
-      
-      <div class="col-md-4">
-        <a href="/blog/why-i-decided-to-use-karpenter-for-kubernetes-autoscaling" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 blog-card">
-            <img
-              src="/images/blog/karpenter-the-ultimate-solution-for-kubernetes-autoscaling.webp"
-              class="card-img-top"
-              alt="Why I Decided to Use Karpenter for Kubernetes Autoscaling"
-              style="object-fit: cover"
-            />
-            <div class="card-body">
-              <span class="badge bg-secondary mb-1">DevOps</span
-              ><br />
-              <small class="text-muted"
-                >May 02, 2025</small
-              >
-              <h5 class="card-title mt-2">Why I Decided to Use Karpenter for Kubernetes Autoscaling</h5>
-              <p class="card-text text-muted">
-                Kubernetes has become the de facto standard for container orchestration, offering unmatched scala...
-              </p>
+          </a>
+          
+          <a href="/blog/why-i-decided-to-use-karpenter-for-kubernetes-autoscaling" class="text-decoration-none text-dark">
+            <div class="row g-3 py-3 blog-post">
+              <div class="col-6">
+                <img
+                  src="/images/blog/karpenter-the-ultimate-solution-for-kubernetes-autoscaling.webp"
+                  alt="Why I Decided to Use Karpenter for Kubernetes Autoscaling"
+                  class="rounded h-100"
+                />
+              </div>
+              <div class="col-6">
+                <span
+                  class="badge bg-light text-dark border"
+                  style="font-size: 12px"
+                  >DevOps</span
+                >
+                <h5 class="fw-semibold mt-2 mb-1">Why I Decided to Use Karpenter for Kubernetes Autoscaling</h5>
+                <p class="text-muted d-none d-md-block">
+                  Kubernetes has become the de facto standard for container orchestration, offering unmatched scala...
+                </p>
+                <small class="text-muted d-none d-md-block fs-4"
+                  >May 02, 2025</small
+                >
+              </div>
             </div>
-          </div>
-        </a>
-      </div>
-      
-      <div class="col-md-4">
-        <a href="/blog/2025-02-04-best-practices-for-efficient-kubernetes-deployment-and-cost-reduction/" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 blog-card">
-            <img
-              src="/images/blog/best-practices-for-efficient-kubernetes-deployment-and-cost-reduction.webp"
-              class="card-img-top"
-              alt="Best Practices for Efficient Kubernetes Deployment and Cost Reduction	"
-              style="object-fit: cover"
-            />
-            <div class="card-body">
-              <span class="badge bg-secondary mb-1">Kubernetes</span
-              ><br />
-              <small class="text-muted"
-                >Apr 04, 2025</small
-              >
-              <h5 class="card-title mt-2">Best Practices for Efficient Kubernetes Deployment and Cost Reduction	</h5>
-              <p class="card-text text-muted">
-                Kubernetes has become the de facto standard for container orchestration, enabling organizations t...
-              </p>
+          </a>
+          
+          <a href="/blog/2025-02-04-best-practices-for-efficient-kubernetes-deployment-and-cost-reduction/" class="text-decoration-none text-dark">
+            <div class="row g-3 py-3 blog-post">
+              <div class="col-6">
+                <img
+                  src="/images/blog/best-practices-for-efficient-kubernetes-deployment-and-cost-reduction.webp"
+                  alt="Best Practices for Efficient Kubernetes Deployment and Cost Reduction	"
+                  class="rounded h-100"
+                />
+              </div>
+              <div class="col-6">
+                <span
+                  class="badge bg-light text-dark border"
+                  style="font-size: 12px"
+                  >Kubernetes</span
+                >
+                <h5 class="fw-semibold mt-2 mb-1">Best Practices for Efficient Kubernetes Deployment and Cost Reduction	</h5>
+                <p class="text-muted d-none d-md-block">
+                  Kubernetes has become the de facto standard for container orchestration, enabling organizations t...
+                </p>
+                <small class="text-muted d-none d-md-block fs-4"
+                  >Apr 04, 2025</small
+                >
+              </div>
             </div>
-          </div>
-        </a>
-      </div>
-      
-      <div class="col-md-4">
-        <a href="/blog/2025-01-09-how-to-implement-kubernetes-and-scale-applications-with-ease/" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 blog-card">
-            <img
-              src="/images/blog/how-to-implement-kubernetes-and-scale-applications-with-ease-1-.webp"
-              class="card-img-top"
-              alt="How to Implement Kubernetes and Scale Applications with Ease"
-              style="object-fit: cover"
-            />
-            <div class="card-body">
-              <span class="badge bg-secondary mb-1">Kubernetes</span
-              ><br />
-              <small class="text-muted"
-                >Mar 07, 2025</small
-              >
-              <h5 class="card-title mt-2">How to Implement Kubernetes and Scale Applications with Ease</h5>
-              <p class="card-text text-muted">
-                Kubernetes has become the gold standard for managing containerized applications at scale, offerin...
-              </p>
+          </a>
+          
+          <a href="/blog/2025-01-09-how-to-implement-kubernetes-and-scale-applications-with-ease/" class="text-decoration-none text-dark">
+            <div class="row g-3 py-3 blog-post">
+              <div class="col-6">
+                <img
+                  src="/images/blog/how-to-implement-kubernetes-and-scale-applications-with-ease-1-.webp"
+                  alt="How to Implement Kubernetes and Scale Applications with Ease"
+                  class="rounded h-100"
+                />
+              </div>
+              <div class="col-6">
+                <span
+                  class="badge bg-light text-dark border"
+                  style="font-size: 12px"
+                  >Kubernetes</span
+                >
+                <h5 class="fw-semibold mt-2 mb-1">How to Implement Kubernetes and Scale Applications with Ease</h5>
+                <p class="text-muted d-none d-md-block">
+                  Kubernetes has become the gold standard for managing containerized applications at scale, offerin...
+                </p>
+                <small class="text-muted d-none d-md-block fs-4"
+                  >Mar 07, 2025</small
+                >
+              </div>
             </div>
-          </div>
-        </a>
-      </div>
-      
-      <div class="col-md-4">
-        <a href="/blog/2025-02-10-devops-for-early-stage-startups-a-complete-guide" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 blog-card">
-            <img
-              src="/images/blog/devops-for-early-stage-startups.webp"
-              class="card-img-top"
-              alt="DevOps for Early Stage Startups: A Complete Guide"
-              style="object-fit: cover"
-            />
-            <div class="card-body">
-              <span class="badge bg-secondary mb-1">DevOps</span
-              ><br />
-              <small class="text-muted"
-                >Feb 11, 2025</small
-              >
-              <h5 class="card-title mt-2">DevOps for Early Stage Startups: A Complete Guide</h5>
-              <p class="card-text text-muted">
-                Table of Contents
+          </a>
+          
+          <a href="/blog/2025-02-10-devops-for-early-stage-startups-a-complete-guide" class="text-decoration-none text-dark">
+            <div class="row g-3 py-3 blog-post">
+              <div class="col-6">
+                <img
+                  src="/images/blog/devops-for-early-stage-startups.webp"
+                  alt="DevOps for Early Stage Startups: A Complete Guide"
+                  class="rounded h-100"
+                />
+              </div>
+              <div class="col-6">
+                <span
+                  class="badge bg-light text-dark border"
+                  style="font-size: 12px"
+                  >DevOps</span
+                >
+                <h5 class="fw-semibold mt-2 mb-1">DevOps for Early Stage Startups: A Complete Guide</h5>
+                <p class="text-muted d-none d-md-block">
+                  Table of Contents
 
   Introduction
   Why Do Early-Stage Startups Need DevOps?
   Is It Worth Having...
-              </p>
+                </p>
+                <small class="text-muted d-none d-md-block fs-4"
+                  >Feb 11, 2025</small
+                >
+              </div>
             </div>
-          </div>
-        </a>
-      </div>
-      
-      <div class="col-md-4">
-        <a href="/blog/2025-02-05-how-to-implement-kubernetes-for-high-availability-and-disaster-recovery/" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 blog-card">
-            <img
-              src="/images/blog/how-to-implement-kubernetes-for-high-availability-and-disaster-recovery.webp"
-              class="card-img-top"
-              alt="How to Implement Kubernetes for High Availability and Disaster Recovery"
-              style="object-fit: cover"
-            />
-            <div class="card-body">
-              <span class="badge bg-secondary mb-1">Kubernetes</span
-              ><br />
-              <small class="text-muted"
-                >Feb 05, 2025</small
-              >
-              <h5 class="card-title mt-2">How to Implement Kubernetes for High Availability and Disaster Recovery</h5>
-              <p class="card-text text-muted">
-                Introduction
+          </a>
+          
+          <a href="/blog/2025-02-05-how-to-implement-kubernetes-for-high-availability-and-disaster-recovery/" class="text-decoration-none text-dark">
+            <div class="row g-3 py-3 blog-post">
+              <div class="col-6">
+                <img
+                  src="/images/blog/how-to-implement-kubernetes-for-high-availability-and-disaster-recovery.webp"
+                  alt="How to Implement Kubernetes for High Availability and Disaster Recovery"
+                  class="rounded h-100"
+                />
+              </div>
+              <div class="col-6">
+                <span
+                  class="badge bg-light text-dark border"
+                  style="font-size: 12px"
+                  >Kubernetes</span
+                >
+                <h5 class="fw-semibold mt-2 mb-1">How to Implement Kubernetes for High Availability and Disaster Recovery</h5>
+                <p class="text-muted d-none d-md-block">
+                  Introduction
 
-              </p>
+                </p>
+                <small class="text-muted d-none d-md-block fs-4"
+                  >Feb 05, 2025</small
+                >
+              </div>
             </div>
-          </div>
-        </a>
-      </div>
-      
-      <div class="col-md-4">
-        <a href="/blog/2025-02-03-kubernetes-cost-optimization-tips-and-best-practices/" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 blog-card">
-            <img
-              src="/images/blog/kubernetes-cost-optimization-tips-and-best-practises.webp"
-              class="card-img-top"
-              alt="Kubernetes Cost Optimization Tips and Best Practices"
-              style="object-fit: cover"
-            />
-            <div class="card-body">
-              <span class="badge bg-secondary mb-1">Kubernetes</span
-              ><br />
-              <small class="text-muted"
-                >Feb 03, 2025</small
-              >
-              <h5 class="card-title mt-2">Kubernetes Cost Optimization Tips and Best Practices</h5>
-              <p class="card-text text-muted">
-                Introduction
+          </a>
+          
+          <a href="/blog/2025-02-03-kubernetes-cost-optimization-tips-and-best-practices/" class="text-decoration-none text-dark">
+            <div class="row g-3 py-3 blog-post">
+              <div class="col-6">
+                <img
+                  src="/images/blog/kubernetes-cost-optimization-tips-and-best-practises.webp"
+                  alt="Kubernetes Cost Optimization Tips and Best Practices"
+                  class="rounded h-100"
+                />
+              </div>
+              <div class="col-6">
+                <span
+                  class="badge bg-light text-dark border"
+                  style="font-size: 12px"
+                  >Kubernetes</span
+                >
+                <h5 class="fw-semibold mt-2 mb-1">Kubernetes Cost Optimization Tips and Best Practices</h5>
+                <p class="text-muted d-none d-md-block">
+                  Introduction
 
-              </p>
+                </p>
+                <small class="text-muted d-none d-md-block fs-4"
+                  >Feb 03, 2025</small
+                >
+              </div>
             </div>
-          </div>
-        </a>
-      </div>
-      
-      <div class="col-md-4">
-        <a href="/blog/2025-02-02-kubernetes-implementation-for-real-time-applications-what-you-need-to-know/" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 blog-card">
-            <img
-              src="/images/blog/kubernetes-implementation-for-real-time-applications-what-you-need-to-know.webp"
-              class="card-img-top"
-              alt="Kubernetes Implementation for Real-Time Applications What You Need to Know"
-              style="object-fit: cover"
-            />
-            <div class="card-body">
-              <span class="badge bg-secondary mb-1">Kubernetes</span
-              ><br />
-              <small class="text-muted"
-                >Feb 02, 2025</small
-              >
-              <h5 class="card-title mt-2">Kubernetes Implementation for Real-Time Applications What You Need to Know</h5>
-              <p class="card-text text-muted">
-                These applications require low latency, high availability, and dynamic scalability. Kubernetes, t...
-              </p>
+          </a>
+          
+          <a href="/blog/2025-02-02-kubernetes-implementation-for-real-time-applications-what-you-need-to-know/" class="text-decoration-none text-dark">
+            <div class="row g-3 py-3 blog-post">
+              <div class="col-6">
+                <img
+                  src="/images/blog/kubernetes-implementation-for-real-time-applications-what-you-need-to-know.webp"
+                  alt="Kubernetes Implementation for Real-Time Applications What You Need to Know"
+                  class="rounded h-100"
+                />
+              </div>
+              <div class="col-6">
+                <span
+                  class="badge bg-light text-dark border"
+                  style="font-size: 12px"
+                  >Kubernetes</span
+                >
+                <h5 class="fw-semibold mt-2 mb-1">Kubernetes Implementation for Real-Time Applications What You Need to Know</h5>
+                <p class="text-muted d-none d-md-block">
+                  These applications require low latency, high availability, and dynamic scalability. Kubernetes, t...
+                </p>
+                <small class="text-muted d-none d-md-block fs-4"
+                  >Feb 02, 2025</small
+                >
+              </div>
             </div>
-          </div>
-        </a>
-      </div>
-      
-      <div class="col-md-4">
-        <a href="/blog/2025-02-01-kubernetes-cluster-deployment-best-practices-for-a-smooth-implementation/" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 blog-card">
-            <img
-              src="/images/blog/kubernetes-cluster-deployment-best-practices-for-a-smooth-implementation.webp"
-              class="card-img-top"
-              alt="Kubernetes Cluster Deployment Best Practices for a Smooth Implementation"
-              style="object-fit: cover"
-            />
-            <div class="card-body">
-              <span class="badge bg-secondary mb-1">Kubernetes</span
-              ><br />
-              <small class="text-muted"
-                >Feb 01, 2025</small
-              >
-              <h5 class="card-title mt-2">Kubernetes Cluster Deployment Best Practices for a Smooth Implementation</h5>
-              <p class="card-text text-muted">
-                Kubernetes has become the de facto standard for container orchestration, enabling organizations t...
-              </p>
+          </a>
+          
+          <a href="/blog/2025-02-01-kubernetes-cluster-deployment-best-practices-for-a-smooth-implementation/" class="text-decoration-none text-dark">
+            <div class="row g-3 py-3 blog-post">
+              <div class="col-6">
+                <img
+                  src="/images/blog/kubernetes-cluster-deployment-best-practices-for-a-smooth-implementation.webp"
+                  alt="Kubernetes Cluster Deployment Best Practices for a Smooth Implementation"
+                  class="rounded h-100"
+                />
+              </div>
+              <div class="col-6">
+                <span
+                  class="badge bg-light text-dark border"
+                  style="font-size: 12px"
+                  >Kubernetes</span
+                >
+                <h5 class="fw-semibold mt-2 mb-1">Kubernetes Cluster Deployment Best Practices for a Smooth Implementation</h5>
+                <p class="text-muted d-none d-md-block">
+                  Kubernetes has become the de facto standard for container orchestration, enabling organizations t...
+                </p>
+                <small class="text-muted d-none d-md-block fs-4"
+                  >Feb 01, 2025</small
+                >
+              </div>
             </div>
-          </div>
-        </a>
-      </div>
-      
-      <div class="col-md-4">
-        <a href="/blog/2025-01-31-optimizing-kubernetes-implementations-for-cost-efficiency/" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 blog-card">
-            <img
-              src="/images/blog/optimizing-kubernetes-implementations-for-cost-efficiency.webp"
-              class="card-img-top"
-              alt="Optimizing Kubernetes Implementations for Cost Efficiency"
-              style="object-fit: cover"
-            />
-            <div class="card-body">
-              <span class="badge bg-secondary mb-1">Kubernetes</span
-              ><br />
-              <small class="text-muted"
-                >Jan 31, 2025</small
-              >
-              <h5 class="card-title mt-2">Optimizing Kubernetes Implementations for Cost Efficiency</h5>
-              <p class="card-text text-muted">
-                Kubernetes has become the de facto standard for container orchestration, offering scalability, fl...
-              </p>
+          </a>
+          
+          <a href="/blog/2025-01-31-optimizing-kubernetes-implementations-for-cost-efficiency/" class="text-decoration-none text-dark">
+            <div class="row g-3 py-3 blog-post">
+              <div class="col-6">
+                <img
+                  src="/images/blog/optimizing-kubernetes-implementations-for-cost-efficiency.webp"
+                  alt="Optimizing Kubernetes Implementations for Cost Efficiency"
+                  class="rounded h-100"
+                />
+              </div>
+              <div class="col-6">
+                <span
+                  class="badge bg-light text-dark border"
+                  style="font-size: 12px"
+                  >Kubernetes</span
+                >
+                <h5 class="fw-semibold mt-2 mb-1">Optimizing Kubernetes Implementations for Cost Efficiency</h5>
+                <p class="text-muted d-none d-md-block">
+                  Kubernetes has become the de facto standard for container orchestration, offering scalability, fl...
+                </p>
+                <small class="text-muted d-none d-md-block fs-4"
+                  >Jan 31, 2025</small
+                >
+              </div>
             </div>
-          </div>
-        </a>
-      </div>
-      
-      <div class="col-md-4">
-        <a href="/blog/2025-01-30-reducing-kubernetes-costs-with-effective-resource-allocation/" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 blog-card">
-            <img
-              src="/images/blog/reducing-kubernetes-costs-with-effective-resource-allocation.webp"
-              class="card-img-top"
-              alt="Reducing Kubernetes Costs with Effective Resource Allocation"
-              style="object-fit: cover"
-            />
-            <div class="card-body">
-              <span class="badge bg-secondary mb-1">Kubernetes</span
-              ><br />
-              <small class="text-muted"
-                >Jan 30, 2025</small
-              >
-              <h5 class="card-title mt-2">Reducing Kubernetes Costs with Effective Resource Allocation</h5>
-              <p class="card-text text-muted">
-                Kubernetes is a powerful tool for container orchestration, but managing costs can be a challenge ...
-              </p>
+          </a>
+          
+          <a href="/blog/2025-01-30-reducing-kubernetes-costs-with-effective-resource-allocation/" class="text-decoration-none text-dark">
+            <div class="row g-3 py-3 blog-post">
+              <div class="col-6">
+                <img
+                  src="/images/blog/reducing-kubernetes-costs-with-effective-resource-allocation.webp"
+                  alt="Reducing Kubernetes Costs with Effective Resource Allocation"
+                  class="rounded h-100"
+                />
+              </div>
+              <div class="col-6">
+                <span
+                  class="badge bg-light text-dark border"
+                  style="font-size: 12px"
+                  >Kubernetes</span
+                >
+                <h5 class="fw-semibold mt-2 mb-1">Reducing Kubernetes Costs with Effective Resource Allocation</h5>
+                <p class="text-muted d-none d-md-block">
+                  Kubernetes is a powerful tool for container orchestration, but managing costs can be a challenge ...
+                </p>
+                <small class="text-muted d-none d-md-block fs-4"
+                  >Jan 30, 2025</small
+                >
+              </div>
             </div>
-          </div>
-        </a>
-      </div>
-      
-      <div class="col-md-4">
-        <a href="/blog/2025-01-28-7rs-cloud-migration-strategies-a-comprehensive-guide" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 blog-card">
-            <img
-              src="/images/blog/cloud-migration-strategies.jpeg"
-              class="card-img-top"
-              alt="7Rs Cloud Migration Strategies: A Comprehensive Guide"
-              style="object-fit: cover"
-            />
-            <div class="card-body">
-              <span class="badge bg-secondary mb-1">DevOps</span
-              ><br />
-              <small class="text-muted"
-                >Jan 28, 2025</small
-              >
-              <h5 class="card-title mt-2">7Rs Cloud Migration Strategies: A Comprehensive Guide</h5>
-              <p class="card-text text-muted">
-                When most cloud engineers think of migration, the term “Lift and Shift” often dominates the discu...
-              </p>
+          </a>
+          
+          <a href="/blog/2025-01-28-7rs-cloud-migration-strategies-a-comprehensive-guide" class="text-decoration-none text-dark">
+            <div class="row g-3 py-3 blog-post">
+              <div class="col-6">
+                <img
+                  src="/images/blog/cloud-migration-strategies.jpeg"
+                  alt="7Rs Cloud Migration Strategies: A Comprehensive Guide"
+                  class="rounded h-100"
+                />
+              </div>
+              <div class="col-6">
+                <span
+                  class="badge bg-light text-dark border"
+                  style="font-size: 12px"
+                  >DevOps</span
+                >
+                <h5 class="fw-semibold mt-2 mb-1">7Rs Cloud Migration Strategies: A Comprehensive Guide</h5>
+                <p class="text-muted d-none d-md-block">
+                  When most cloud engineers think of migration, the term “Lift and Shift” often dominates the discu...
+                </p>
+                <small class="text-muted d-none d-md-block fs-4"
+                  >Jan 28, 2025</small
+                >
+              </div>
             </div>
-          </div>
-        </a>
-      </div>
-      
-      <div class="col-md-4">
-        <a href="/blog/2025-01-15-how-to-secure-nginx-with-ssl-using-certbot-on-ubuntu" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 blog-card">
-            <img
-              src="/images/blog/how-to-secure-nginx-with-ssl-using-certbot-on-ubuntu.webp"
-              class="card-img-top"
-              alt="How to Secure Nginx with SSL Using Certbot on Ubuntu"
-              style="object-fit: cover"
-            />
-            <div class="card-body">
-              <span class="badge bg-secondary mb-1">DevOps</span
-              ><br />
-              <small class="text-muted"
-                >Jan 15, 2025</small
-              >
-              <h5 class="card-title mt-2">How to Secure Nginx with SSL Using Certbot on Ubuntu</h5>
-              <p class="card-text text-muted">
-                Introduction
+          </a>
+          
+          <a href="/blog/2025-01-15-how-to-secure-nginx-with-ssl-using-certbot-on-ubuntu" class="text-decoration-none text-dark">
+            <div class="row g-3 py-3 blog-post">
+              <div class="col-6">
+                <img
+                  src="/images/blog/how-to-secure-nginx-with-ssl-using-certbot-on-ubuntu.webp"
+                  alt="How to Secure Nginx with SSL Using Certbot on Ubuntu"
+                  class="rounded h-100"
+                />
+              </div>
+              <div class="col-6">
+                <span
+                  class="badge bg-light text-dark border"
+                  style="font-size: 12px"
+                  >DevOps</span
+                >
+                <h5 class="fw-semibold mt-2 mb-1">How to Secure Nginx with SSL Using Certbot on Ubuntu</h5>
+                <p class="text-muted d-none d-md-block">
+                  Introduction
 Securing your website with SSL (Secure Sockets Layer) is crucial for encrypting data...
-              </p>
+                </p>
+                <small class="text-muted d-none d-md-block fs-4"
+                  >Jan 15, 2025</small
+                >
+              </div>
             </div>
-          </div>
-        </a>
-      </div>
-      
-      <div class="col-md-4">
-        <a href="/blog/2025-01-08-getting-started-with-terraform" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 blog-card">
-            <img
-              src="/images/blog/getting-started-with-terraform.webp"
-              class="card-img-top"
-              alt="Getting Started with Terraform"
-              style="object-fit: cover"
-            />
-            <div class="card-body">
-              <span class="badge bg-secondary mb-1">DevOps</span
-              ><br />
-              <small class="text-muted"
-                >Jan 09, 2025</small
-              >
-              <h5 class="card-title mt-2">Getting Started with Terraform</h5>
-              <p class="card-text text-muted">
-                Terraform is an Infrastructure as Code (IaC) tool that allows you to define and provision cloud r...
-              </p>
+          </a>
+          
+          <a href="/blog/2025-01-08-getting-started-with-terraform" class="text-decoration-none text-dark">
+            <div class="row g-3 py-3 blog-post">
+              <div class="col-6">
+                <img
+                  src="/images/blog/getting-started-with-terraform.webp"
+                  alt="Getting Started with Terraform"
+                  class="rounded h-100"
+                />
+              </div>
+              <div class="col-6">
+                <span
+                  class="badge bg-light text-dark border"
+                  style="font-size: 12px"
+                  >DevOps</span
+                >
+                <h5 class="fw-semibold mt-2 mb-1">Getting Started with Terraform</h5>
+                <p class="text-muted d-none d-md-block">
+                  Terraform is an Infrastructure as Code (IaC) tool that allows you to define and provision cloud r...
+                </p>
+                <small class="text-muted d-none d-md-block fs-4"
+                  >Jan 09, 2025</small
+                >
+              </div>
             </div>
-          </div>
-        </a>
-      </div>
-      
-      <div class="col-md-4">
-        <a href="/blog/2025-01-07-secrets-to-kubernetes-cost-control-implementing-efficient-clusters/" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 blog-card">
-            <img
-              src="/images/blog/secrets-to-kubernetes-cost-control-implementing-efficient-clusters.webp"
-              class="card-img-top"
-              alt="Secrets to Kubernetes Cost Control Implementing Efficient Clusters"
-              style="object-fit: cover"
-            />
-            <div class="card-body">
-              <span class="badge bg-secondary mb-1">Kubernetes</span
-              ><br />
-              <small class="text-muted"
-                >Jan 07, 2025</small
-              >
-              <h5 class="card-title mt-2">Secrets to Kubernetes Cost Control Implementing Efficient Clusters</h5>
-              <p class="card-text text-muted">
-                Kubernetes is a powerful tool for managing containerized applications at scale, but without the p...
-              </p>
+          </a>
+          
+          <a href="/blog/2025-01-07-secrets-to-kubernetes-cost-control-implementing-efficient-clusters/" class="text-decoration-none text-dark">
+            <div class="row g-3 py-3 blog-post">
+              <div class="col-6">
+                <img
+                  src="/images/blog/secrets-to-kubernetes-cost-control-implementing-efficient-clusters.webp"
+                  alt="Secrets to Kubernetes Cost Control Implementing Efficient Clusters"
+                  class="rounded h-100"
+                />
+              </div>
+              <div class="col-6">
+                <span
+                  class="badge bg-light text-dark border"
+                  style="font-size: 12px"
+                  >Kubernetes</span
+                >
+                <h5 class="fw-semibold mt-2 mb-1">Secrets to Kubernetes Cost Control Implementing Efficient Clusters</h5>
+                <p class="text-muted d-none d-md-block">
+                  Kubernetes is a powerful tool for managing containerized applications at scale, but without the p...
+                </p>
+                <small class="text-muted d-none d-md-block fs-4"
+                  >Jan 07, 2025</small
+                >
+              </div>
             </div>
-          </div>
-        </a>
-      </div>
-      
-      <div class="col-md-4">
-        <a href="/blog/2025-01-06-mastering-kubernetes-implementation-a-step-by-step-guide/" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 blog-card">
-            <img
-              src="/images/blog/mastering-kubernetes-implementation-a-step-by-step-guide-1-.webp"
-              class="card-img-top"
-              alt="Mastering Kubernetes Implementation A Step-by-Step Guide"
-              style="object-fit: cover"
-            />
-            <div class="card-body">
-              <span class="badge bg-secondary mb-1">Kubernetes</span
-              ><br />
-              <small class="text-muted"
-                >Jan 06, 2025</small
-              >
-              <h5 class="card-title mt-2">Mastering Kubernetes Implementation A Step-by-Step Guide</h5>
-              <p class="card-text text-muted">
-                Kubernetes has become the go-to solution for managing containerized applications in production at...
-              </p>
+          </a>
+          
+          <a href="/blog/2025-01-06-mastering-kubernetes-implementation-a-step-by-step-guide/" class="text-decoration-none text-dark">
+            <div class="row g-3 py-3 blog-post">
+              <div class="col-6">
+                <img
+                  src="/images/blog/mastering-kubernetes-implementation-a-step-by-step-guide-1-.webp"
+                  alt="Mastering Kubernetes Implementation A Step-by-Step Guide"
+                  class="rounded h-100"
+                />
+              </div>
+              <div class="col-6">
+                <span
+                  class="badge bg-light text-dark border"
+                  style="font-size: 12px"
+                  >Kubernetes</span
+                >
+                <h5 class="fw-semibold mt-2 mb-1">Mastering Kubernetes Implementation A Step-by-Step Guide</h5>
+                <p class="text-muted d-none d-md-block">
+                  Kubernetes has become the go-to solution for managing containerized applications in production at...
+                </p>
+                <small class="text-muted d-none d-md-block fs-4"
+                  >Jan 06, 2025</small
+                >
+              </div>
             </div>
-          </div>
-        </a>
-      </div>
-      
-      <div class="col-md-4">
-        <a href="/blog/2024-03-01-how-to-optimize-aws-cloud-cost-with-best-practices" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 blog-card">
-            <img
-              src="/images/blog/how-to-optimize-aws-cloud-cost-with-best-practices.webp"
-              class="card-img-top"
-              alt="How to Optimize AWS Cloud Cost with Best Practices"
-              style="object-fit: cover"
-            />
-            <div class="card-body">
-              <span class="badge bg-secondary mb-1">AWS Cost</span
-              ><br />
-              <small class="text-muted"
-                >Mar 02, 2024</small
-              >
-              <h5 class="card-title mt-2">How to Optimize AWS Cloud Cost with Best Practices</h5>
-              <p class="card-text text-muted">
-                Table of Contents
+          </a>
+          
+          <a href="/blog/2024-03-01-how-to-optimize-aws-cloud-cost-with-best-practices" class="text-decoration-none text-dark">
+            <div class="row g-3 py-3 blog-post">
+              <div class="col-6">
+                <img
+                  src="/images/blog/how-to-optimize-aws-cloud-cost-with-best-practices.webp"
+                  alt="How to Optimize AWS Cloud Cost with Best Practices"
+                  class="rounded h-100"
+                />
+              </div>
+              <div class="col-6">
+                <span
+                  class="badge bg-light text-dark border"
+                  style="font-size: 12px"
+                  >AWS Cost</span
+                >
+                <h5 class="fw-semibold mt-2 mb-1">How to Optimize AWS Cloud Cost with Best Practices</h5>
+                <p class="text-muted d-none d-md-block">
+                  Table of Contents
 
   Introduction to AWS Cost Optimization
   Why AWS Cost Optimization Matters
   ...
-              </p>
+                </p>
+                <small class="text-muted d-none d-md-block fs-4"
+                  >Mar 02, 2024</small
+                >
+              </div>
             </div>
-          </div>
-        </a>
-      </div>
-      
-    </div>
+          </a>
+          
+        </div>
 
-    <!-- Pagination (Optional) -->
-    <nav class="mt-5">
-      <ul class="pagination justify-content-center" id="pagination-controls">
-        <!-- Your pagination logic -->
-      </ul>
-    </nav>
+        <!-- Pagination Controls -->
+        <nav class="mt-4">
+          <ul
+            class="pagination justify-content-center"
+            id="pagination-controls"
+          ></ul>
+        </nav>
+      </div>
+
+      <!-- RIGHT SIDEBAR -->
+      <div class="col-lg-4">
+        <div class="mb-4 p-3 border rounded bg-white">
+          <h4 class="fw-bold mb-3">Recent Posts</h4>
+          
+          <p class="mb-3">
+            <a
+              href="/blog/2025-01-05-kubernetes-cost-management-best-practices-for-efficient-scaling/"
+              class="text-decoration-none"
+              style="color: black !important"
+              >Kubernetes Cost Management Best Practices for Efficient Scaling</a
+            ><br />
+            <small class="text-muted"
+              >06 June 2025</small
+            >
+          </p>
+          
+          <p class="mb-3">
+            <a
+              href="/blog/why-i-decided-to-use-karpenter-for-kubernetes-autoscaling"
+              class="text-decoration-none"
+              style="color: black !important"
+              >Why I Decided to Use Karpenter for Kubernetes Autoscaling</a
+            ><br />
+            <small class="text-muted"
+              >02 May 2025</small
+            >
+          </p>
+          
+          <p class="mb-3">
+            <a
+              href="/blog/2025-02-04-best-practices-for-efficient-kubernetes-deployment-and-cost-reduction/"
+              class="text-decoration-none"
+              style="color: black !important"
+              >Best Practices for Efficient Kubernetes Deployment and Cost Reduction	</a
+            ><br />
+            <small class="text-muted"
+              >04 April 2025</small
+            >
+          </p>
+          
+          <p class="mb-3">
+            <a
+              href="/blog/2025-01-09-how-to-implement-kubernetes-and-scale-applications-with-ease/"
+              class="text-decoration-none"
+              style="color: black !important"
+              >How to Implement Kubernetes and Scale Applications with Ease</a
+            ><br />
+            <small class="text-muted"
+              >07 March 2025</small
+            >
+          </p>
+          
+          <p class="mb-3">
+            <a
+              href="/blog/2025-02-10-devops-for-early-stage-startups-a-complete-guide"
+              class="text-decoration-none"
+              style="color: black !important"
+              >DevOps for Early Stage Startups: A Complete Guide</a
+            ><br />
+            <small class="text-muted"
+              >11 February 2025</small
+            >
+          </p>
+          
+          <p class="mb-3">
+            <a
+              href="/blog/2025-02-05-how-to-implement-kubernetes-for-high-availability-and-disaster-recovery/"
+              class="text-decoration-none"
+              style="color: black !important"
+              >How to Implement Kubernetes for High Availability and Disaster Recovery</a
+            ><br />
+            <small class="text-muted"
+              >05 February 2025</small
+            >
+          </p>
+          
+          <p class="mb-3">
+            <a
+              href="/blog/2025-02-03-kubernetes-cost-optimization-tips-and-best-practices/"
+              class="text-decoration-none"
+              style="color: black !important"
+              >Kubernetes Cost Optimization Tips and Best Practices</a
+            ><br />
+            <small class="text-muted"
+              >03 February 2025</small
+            >
+          </p>
+          
+          <p class="mb-3">
+            <a
+              href="/blog/2025-02-02-kubernetes-implementation-for-real-time-applications-what-you-need-to-know/"
+              class="text-decoration-none"
+              style="color: black !important"
+              >Kubernetes Implementation for Real-Time Applications What You Need to Know</a
+            ><br />
+            <small class="text-muted"
+              >02 February 2025</small
+            >
+          </p>
+          
+          <p class="mb-3">
+            <a
+              href="/blog/2025-02-01-kubernetes-cluster-deployment-best-practices-for-a-smooth-implementation/"
+              class="text-decoration-none"
+              style="color: black !important"
+              >Kubernetes Cluster Deployment Best Practices for a Smooth Implementation</a
+            ><br />
+            <small class="text-muted"
+              >01 February 2025</small
+            >
+          </p>
+          
+          <p class="mb-3">
+            <a
+              href="/blog/2025-01-31-optimizing-kubernetes-implementations-for-cost-efficiency/"
+              class="text-decoration-none"
+              style="color: black !important"
+              >Optimizing Kubernetes Implementations for Cost Efficiency</a
+            ><br />
+            <small class="text-muted"
+              >31 January 2025</small
+            >
+          </p>
+          
+        </div>
+
+        <!-- Tag/Categories Section -->
+        <div class="mb-4 p-3 border rounded bg-white d-none d-md-block">
+          <h4 class="fw-bold mb-3">Tags</h4>
+          
+          <div class="list-inline mb-0 d-flex flex-wrap gap-2">
+            
+            <span
+              class="list-inline-item btn rounded-pill btn-sm btn-light px-3 py-2"
+            >
+              AWS Cost
+            </span>
+            
+            <span
+              class="list-inline-item btn rounded-pill btn-sm btn-light px-3 py-2"
+            >
+              DevOps
+            </span>
+            
+            <span
+              class="list-inline-item btn rounded-pill btn-sm btn-light px-3 py-2"
+            >
+              Kubernetes
+            </span>
+            
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
-
 <!-- <div class="bg-light pt-5 pb-5 work-hero">
   <div class="container">
     <div class="row">

@@ -14,15 +14,15 @@
 <link rel="canonical" href="https://kubeify.com/" />
 <meta property="og:url" content="https://kubeify.com/" />
 <meta property="og:site_name" content="Kubeify" />
-<meta property="og:image" content="http://localhost:4000/images/kubeify.png" />
+<meta property="og:image" content="http://0.0.0.0:4000/images/kubeify.png" />
 <meta property="og:type" content="website" />
-<link rel="prev" href="http://localhost:4000/page5" />
-<link rel="next" href="http://localhost:4000/page7" />
+<link rel="prev" href="http://0.0.0.0:4000/page5" />
+<link rel="next" href="http://0.0.0.0:4000/page7" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="http://localhost:4000/images/kubeify.png" />
+<meta property="twitter:image" content="http://0.0.0.0:4000/images/kubeify.png" />
 <meta property="twitter:title" content="Get Enterprise Kubernetes support for multi cloud environments" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Accelerate your cloud native transformation and adoption of kubernetes with Kubeify’s team of experts.","headline":"Get Enterprise Kubernetes support for multi cloud environments","image":"http://localhost:4000/images/kubeify.png","url":"https://kubeify.com/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Accelerate your cloud native transformation and adoption of kubernetes with Kubeify’s team of experts.","headline":"Get Enterprise Kubernetes support for multi cloud environments","image":"http://0.0.0.0:4000/images/kubeify.png","url":"https://kubeify.com/"}</script>
 <!-- End Jekyll SEO tag -->
  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
@@ -313,7 +313,7 @@
     <div class="content-wraper"><!-- Hero Section -->
 <section class="hero partners-kube dark-bg py-5">
   <div class="container">
-    <div class="row">
+    <div class="row g-3">
       <div class="col-sm-6 hero-left-side">
         <div class="badge-with-arrow">
           <div style="color: #000;">☸︎ Top Kubernetes experts</div>
@@ -1704,7 +1704,7 @@
        
       <div class="col-md-4 slide-left">
         <a href="/blog/2025-01-05-kubernetes-cost-management-best-practices-for-efficient-scaling/" title="Kubernetes Cost Management Best Practices for Efficient Scaling" style="color: unset">
-          <div class="card blog-card p-1 bg-gray-800">
+          <div class="card blog-card bg-gray-800">
             <img
               src="/images/blog/kubernetes-cost-management-best-practices-for-efficient-scaling-1-.webp"
               alt="Kubernetes Cost Management Best Practices for Efficient Scaling"
@@ -1722,7 +1722,7 @@
       
       <div class="col-md-4 slide-up">
         <a href="/blog/why-i-decided-to-use-karpenter-for-kubernetes-autoscaling" title="Why I Decided to Use Karpenter for Kubernetes Autoscaling" style="color: unset">
-          <div class="card blog-card p-1 bg-gray-800">
+          <div class="card blog-card bg-gray-800">
             <img
               src="/images/blog/karpenter-the-ultimate-solution-for-kubernetes-autoscaling.webp"
               alt="Why I Decided to Use Karpenter for Kubernetes Autoscaling"
@@ -1740,7 +1740,7 @@
       
       <div class="col-md-4 slide-right">
         <a href="/blog/2025-02-04-best-practices-for-efficient-kubernetes-deployment-and-cost-reduction/" title="Best Practices for Efficient Kubernetes Deployment and Cost Reduction	" style="color: unset">
-          <div class="card blog-card p-1 bg-gray-800">
+          <div class="card blog-card bg-gray-800">
             <img
               src="/images/blog/best-practices-for-efficient-kubernetes-deployment-and-cost-reduction.webp"
               alt="Best Practices for Efficient Kubernetes Deployment and Cost Reduction	"
@@ -1948,10 +1948,14 @@
     </div>
   </div>
 </div>
- <div id="cookieConsent" class="cookie-consent-banner">
-  <button type="button" class="close" id="closeCookieBox" aria-label="Close">
-    &times;
-  </button>
+ <!-- COOKIE BANNER -->
+<div id="cookieConsent" class="cookie-consent-banner">
+  <button
+    type="button"
+    class="btn-close"
+    id="closeCookieBox"
+    aria-label="Close"
+  ></button>
   <div class="container-fluid">
     <div class="row align-items-center">
       <div class="col-sm-2 text-center">
@@ -1971,28 +1975,17 @@
           provided to them or that they’ve collected from your use of their
           services.
         </p>
-        <a
-          href="#"
-          id="show-details"
-          data-toggle="modal"
-          data-target="#cookieDetailsModal"
-          style="color: blue; font-weight: bold"
-        >
+        <a href="#" id="show-details" style="color: blue; font-weight: bold">
           Show details <span>&#x276F;</span>
         </a>
       </div>
       <div class="col-sm-3 text-center">
-        <button
-          id="acceptCookies"
-          class="btn btn-primary btn-lg btn-block"
-          style="background-color: blue; border-color: blue"
-        >
+        <button id="acceptCookies" class="btn btn-primary btn-lg w-100">
           Allow all
         </button>
         <button
           id="denyCookies"
-          class="btn btn-outline-secondary btn-lg btn-block mt-2"
-          style="border: 1px solid blue; color: #000"
+          class="btn btn-outline-secondary btn-lg w-100 mt-2"
         >
           Deny
         </button>
@@ -2001,46 +1994,41 @@
   </div>
 </div>
 
+<!-- COOKIE DETAILS MODAL -->
 <div
   class="modal fade"
   id="cookieDetailsModal"
   tabindex="-1"
-  role="dialog"
   aria-labelledby="cookieDetailsLabel"
   aria-hidden="true"
 >
-  <div
-    class="modal-dialog modal-lg modal-dialog-centered animated fadeInDown"
-    role="document"
-  >
+  <div class="modal-dialog modal-lg modal-dialog-centered animated fadeInDown">
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title" id="cookieDetailsLabel">Cookie Details</h4>
         <button
           type="button"
-          class="close"
-          data-dismiss="modal"
+          class="btn-close"
+          data-bs-dismiss="modal"
           aria-label="Close"
-        >
-          <span>&times;</span>
-        </button>
+        ></button>
       </div>
       <div class="modal-body">
         <p>
-          <strong>Strictly Necessary Cookies</strong> – These cookies are
-          essential for the website to function.
+          <strong>Strictly Necessary Cookies</strong> – Essential for the
+          website to function.
         </p>
         <p>
-          <strong>Performance Cookies</strong> – Used to collect information
-          about how visitors use our site.
+          <strong>Performance Cookies</strong> – Collect info about how visitors
+          use our site.
         </p>
         <p>
-          <strong>Functionality Cookies</strong> – Allow the site to remember
-          user choices to provide enhanced functionality.
+          <strong>Functionality Cookies</strong> – Remember user choices for
+          enhanced functionality.
         </p>
         <p>
-          <strong>Targeting/Advertising Cookies</strong> – These are used to
-          deliver relevant ads and track campaign performance.
+          <strong>Targeting/Advertising Cookies</strong> – Deliver relevant ads
+          and track performance.
         </p>
         <hr />
         <p>
@@ -2049,17 +2037,12 @@
         </p>
       </div>
       <div class="modal-footer">
-        <button
-          id="acceptCookiesmobile"
-          class="btn btn-primary btn-lg btn-block"
-          style="background-color: blue; border-color: blue"
-        >
+        <button id="acceptCookiesmobile" class="btn btn-primary btn-lg w-100">
           Allow all
         </button>
         <button
           id="denyCookiesmobile"
-          class="btn btn-outline-secondary btn-lg btn-block mt-2"
-          style="border: 1px solid blue; color: #000"
+          class="btn btn-outline-secondary btn-lg w-100 mt-2"
         >
           Deny
         </button>
@@ -2068,32 +2051,19 @@
   </div>
 </div>
 
+<!-- STYLES -->
 <style>
   .cookie-consent-banner {
+    display: none;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     background-color: #fff;
     color: #000;
-    z-index: 9999;
+    z-index: 1055;
     padding: 30px 20px;
-    border-top: 4px solid #6a00ff;
     box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
-    display: none;
-  }
-
-  .cookie-consent-banner .close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 24px;
-    color: #000;
-    opacity: 0.5;
-  }
-
-  .cookie-consent-banner .close:hover {
-    opacity: 1;
   }
 
   @keyframes fadeInDown {
