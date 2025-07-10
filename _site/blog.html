@@ -14,13 +14,13 @@
 <link rel="canonical" href="https://kubeify.com/blog" />
 <meta property="og:url" content="https://kubeify.com/blog" />
 <meta property="og:site_name" content="Kubeify" />
-<meta property="og:image" content="http://0.0.0.0:4000/images/kubeify.png" />
+<meta property="og:image" content="http://localhost:4000/images/kubeify.png" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="http://0.0.0.0:4000/images/kubeify.png" />
+<meta property="twitter:image" content="http://localhost:4000/images/kubeify.png" />
 <meta property="twitter:title" content="Get Enterprise Kubernetes support for multi cloud environments" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Accelerate your cloud native transformation and adoption of kubernetes with Kubeify’s team of experts.","headline":"Get Enterprise Kubernetes support for multi cloud environments","image":"http://0.0.0.0:4000/images/kubeify.png","url":"https://kubeify.com/blog"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Accelerate your cloud native transformation and adoption of kubernetes with Kubeify’s team of experts.","headline":"Get Enterprise Kubernetes support for multi cloud environments","image":"http://localhost:4000/images/kubeify.png","url":"https://kubeify.com/blog"}</script>
 <!-- End Jekyll SEO tag -->
  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
@@ -43,17 +43,13 @@
 <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5a50d614079115001207f66b&product=inline-share-buttons' async='async'></script>
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/blog.css" />
-    <link rel='stylesheet' href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
 
     <!-- Font Awesome CDN -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-y4DUbiLKTZ9v+1AKWqE+buvZX/MLHFLDbK+gJ8ZkY3OhVqAaEKcQ2OqCxykI3dDLH4FZ6zAnGAVrI39kz6j6Wg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-
     <!--
       HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
     -->
@@ -332,23 +328,37 @@
       
       <div class="col-md-4">
         <a href="/blog/2025-01-05-kubernetes-cost-management-best-practices-for-efficient-scaling/" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 blog-card">
+          <div
+            class="card h-100 shadow-sm border-0 blog-card hover-animate-card"
+          >
             <img
               src="/images/blog/kubernetes-cost-management-best-practices-for-efficient-scaling-1-.webp"
               class="card-img-top"
               alt="Kubernetes Cost Management Best Practices for Efficient Scaling"
               style="object-fit: cover"
             />
-            <div class="card-body">
-              <span class="badge bg-secondary mb-1">Kubernetes</span
-              ><br />
-              <small class="text-muted"
-                >Jun 06, 2025</small
+            <div class="card-body d-flex flex-column">
+              <span class="badge bg-secondary mb-1 w-auto align-self-start"
+                >Kubernetes</span
               >
               <h5 class="card-title mt-2">Kubernetes Cost Management Best Practices for Efficient Scaling</h5>
               <p class="card-text text-muted">
                 As more organizations adopt Kubernetes for container orchestration, it becomes increasingly cruci...
               </p>
+               
+              <div
+                class="mt-auto d-flex align-items-center gap-3 text-muted small"
+              >
+                <span>
+                  <i class="fa-solid fa-calendar text-custom-blue me-1"></i>
+
+                  Jun 06, 2025
+                </span>
+                <span>
+                  <i class="fa-brands fa-readme text-custom-blue me-1"></i>
+                  7 mins
+                </span>
+              </div>
             </div>
           </div>
         </a>
@@ -356,23 +366,37 @@
       
       <div class="col-md-4">
         <a href="/blog/why-i-decided-to-use-karpenter-for-kubernetes-autoscaling" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 blog-card">
+          <div
+            class="card h-100 shadow-sm border-0 blog-card hover-animate-card"
+          >
             <img
               src="/images/blog/karpenter-the-ultimate-solution-for-kubernetes-autoscaling.webp"
               class="card-img-top"
               alt="Why I Decided to Use Karpenter for Kubernetes Autoscaling"
               style="object-fit: cover"
             />
-            <div class="card-body">
-              <span class="badge bg-secondary mb-1">DevOps</span
-              ><br />
-              <small class="text-muted"
-                >May 02, 2025</small
+            <div class="card-body d-flex flex-column">
+              <span class="badge bg-secondary mb-1 w-auto align-self-start"
+                >DevOps</span
               >
               <h5 class="card-title mt-2">Why I Decided to Use Karpenter for Kubernetes Autoscaling</h5>
               <p class="card-text text-muted">
                 Kubernetes has become the de facto standard for container orchestration, offering unmatched scala...
               </p>
+               
+              <div
+                class="mt-auto d-flex align-items-center gap-3 text-muted small"
+              >
+                <span>
+                  <i class="fa-solid fa-calendar text-custom-blue me-1"></i>
+
+                  May 02, 2025
+                </span>
+                <span>
+                  <i class="fa-brands fa-readme text-custom-blue me-1"></i>
+                  7 mins
+                </span>
+              </div>
             </div>
           </div>
         </a>
@@ -380,23 +404,37 @@
       
       <div class="col-md-4">
         <a href="/blog/2025-02-04-best-practices-for-efficient-kubernetes-deployment-and-cost-reduction/" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 blog-card">
+          <div
+            class="card h-100 shadow-sm border-0 blog-card hover-animate-card"
+          >
             <img
               src="/images/blog/best-practices-for-efficient-kubernetes-deployment-and-cost-reduction.webp"
               class="card-img-top"
               alt="Best Practices for Efficient Kubernetes Deployment and Cost Reduction	"
               style="object-fit: cover"
             />
-            <div class="card-body">
-              <span class="badge bg-secondary mb-1">Kubernetes</span
-              ><br />
-              <small class="text-muted"
-                >Apr 04, 2025</small
+            <div class="card-body d-flex flex-column">
+              <span class="badge bg-secondary mb-1 w-auto align-self-start"
+                >Kubernetes</span
               >
               <h5 class="card-title mt-2">Best Practices for Efficient Kubernetes Deployment and Cost Reduction	</h5>
               <p class="card-text text-muted">
                 Kubernetes has become the de facto standard for container orchestration, enabling organizations t...
               </p>
+               
+              <div
+                class="mt-auto d-flex align-items-center gap-3 text-muted small"
+              >
+                <span>
+                  <i class="fa-solid fa-calendar text-custom-blue me-1"></i>
+
+                  Apr 04, 2025
+                </span>
+                <span>
+                  <i class="fa-brands fa-readme text-custom-blue me-1"></i>
+                  7 mins
+                </span>
+              </div>
             </div>
           </div>
         </a>
@@ -404,23 +442,37 @@
       
       <div class="col-md-4">
         <a href="/blog/2025-01-09-how-to-implement-kubernetes-and-scale-applications-with-ease/" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 blog-card">
+          <div
+            class="card h-100 shadow-sm border-0 blog-card hover-animate-card"
+          >
             <img
               src="/images/blog/how-to-implement-kubernetes-and-scale-applications-with-ease-1-.webp"
               class="card-img-top"
               alt="How to Implement Kubernetes and Scale Applications with Ease"
               style="object-fit: cover"
             />
-            <div class="card-body">
-              <span class="badge bg-secondary mb-1">Kubernetes</span
-              ><br />
-              <small class="text-muted"
-                >Mar 07, 2025</small
+            <div class="card-body d-flex flex-column">
+              <span class="badge bg-secondary mb-1 w-auto align-self-start"
+                >Kubernetes</span
               >
               <h5 class="card-title mt-2">How to Implement Kubernetes and Scale Applications with Ease</h5>
               <p class="card-text text-muted">
                 Kubernetes has become the gold standard for managing containerized applications at scale, offerin...
               </p>
+               
+              <div
+                class="mt-auto d-flex align-items-center gap-3 text-muted small"
+              >
+                <span>
+                  <i class="fa-solid fa-calendar text-custom-blue me-1"></i>
+
+                  Mar 07, 2025
+                </span>
+                <span>
+                  <i class="fa-brands fa-readme text-custom-blue me-1"></i>
+                  4 mins
+                </span>
+              </div>
             </div>
           </div>
         </a>
@@ -428,18 +480,18 @@
       
       <div class="col-md-4">
         <a href="/blog/2025-02-10-devops-for-early-stage-startups-a-complete-guide" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 blog-card">
+          <div
+            class="card h-100 shadow-sm border-0 blog-card hover-animate-card"
+          >
             <img
               src="/images/blog/devops-for-early-stage-startups.webp"
               class="card-img-top"
               alt="DevOps for Early Stage Startups: A Complete Guide"
               style="object-fit: cover"
             />
-            <div class="card-body">
-              <span class="badge bg-secondary mb-1">DevOps</span
-              ><br />
-              <small class="text-muted"
-                >Feb 11, 2025</small
+            <div class="card-body d-flex flex-column">
+              <span class="badge bg-secondary mb-1 w-auto align-self-start"
+                >DevOps</span
               >
               <h5 class="card-title mt-2">DevOps for Early Stage Startups: A Complete Guide</h5>
               <p class="card-text text-muted">
@@ -449,6 +501,20 @@
   Why Do Early-Stage Startups Need DevOps?
   Is It Worth Having...
               </p>
+               
+              <div
+                class="mt-auto d-flex align-items-center gap-3 text-muted small"
+              >
+                <span>
+                  <i class="fa-solid fa-calendar text-custom-blue me-1"></i>
+
+                  Feb 11, 2025
+                </span>
+                <span>
+                  <i class="fa-brands fa-readme text-custom-blue me-1"></i>
+                  9 mins
+                </span>
+              </div>
             </div>
           </div>
         </a>
@@ -456,24 +522,38 @@
       
       <div class="col-md-4">
         <a href="/blog/2025-02-05-how-to-implement-kubernetes-for-high-availability-and-disaster-recovery/" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 blog-card">
+          <div
+            class="card h-100 shadow-sm border-0 blog-card hover-animate-card"
+          >
             <img
               src="/images/blog/how-to-implement-kubernetes-for-high-availability-and-disaster-recovery.webp"
               class="card-img-top"
               alt="How to Implement Kubernetes for High Availability and Disaster Recovery"
               style="object-fit: cover"
             />
-            <div class="card-body">
-              <span class="badge bg-secondary mb-1">Kubernetes</span
-              ><br />
-              <small class="text-muted"
-                >Feb 05, 2025</small
+            <div class="card-body d-flex flex-column">
+              <span class="badge bg-secondary mb-1 w-auto align-self-start"
+                >Kubernetes</span
               >
               <h5 class="card-title mt-2">How to Implement Kubernetes for High Availability and Disaster Recovery</h5>
               <p class="card-text text-muted">
                 Introduction
 
               </p>
+               
+              <div
+                class="mt-auto d-flex align-items-center gap-3 text-muted small"
+              >
+                <span>
+                  <i class="fa-solid fa-calendar text-custom-blue me-1"></i>
+
+                  Feb 05, 2025
+                </span>
+                <span>
+                  <i class="fa-brands fa-readme text-custom-blue me-1"></i>
+                  9 mins
+                </span>
+              </div>
             </div>
           </div>
         </a>
@@ -481,24 +561,38 @@
       
       <div class="col-md-4">
         <a href="/blog/2025-02-03-kubernetes-cost-optimization-tips-and-best-practices/" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 blog-card">
+          <div
+            class="card h-100 shadow-sm border-0 blog-card hover-animate-card"
+          >
             <img
               src="/images/blog/kubernetes-cost-optimization-tips-and-best-practises.webp"
               class="card-img-top"
               alt="Kubernetes Cost Optimization Tips and Best Practices"
               style="object-fit: cover"
             />
-            <div class="card-body">
-              <span class="badge bg-secondary mb-1">Kubernetes</span
-              ><br />
-              <small class="text-muted"
-                >Feb 03, 2025</small
+            <div class="card-body d-flex flex-column">
+              <span class="badge bg-secondary mb-1 w-auto align-self-start"
+                >Kubernetes</span
               >
               <h5 class="card-title mt-2">Kubernetes Cost Optimization Tips and Best Practices</h5>
               <p class="card-text text-muted">
                 Introduction
 
               </p>
+               
+              <div
+                class="mt-auto d-flex align-items-center gap-3 text-muted small"
+              >
+                <span>
+                  <i class="fa-solid fa-calendar text-custom-blue me-1"></i>
+
+                  Feb 03, 2025
+                </span>
+                <span>
+                  <i class="fa-brands fa-readme text-custom-blue me-1"></i>
+                  8 mins
+                </span>
+              </div>
             </div>
           </div>
         </a>
@@ -506,23 +600,37 @@
       
       <div class="col-md-4">
         <a href="/blog/2025-02-02-kubernetes-implementation-for-real-time-applications-what-you-need-to-know/" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 blog-card">
+          <div
+            class="card h-100 shadow-sm border-0 blog-card hover-animate-card"
+          >
             <img
               src="/images/blog/kubernetes-implementation-for-real-time-applications-what-you-need-to-know.webp"
               class="card-img-top"
               alt="Kubernetes Implementation for Real-Time Applications What You Need to Know"
               style="object-fit: cover"
             />
-            <div class="card-body">
-              <span class="badge bg-secondary mb-1">Kubernetes</span
-              ><br />
-              <small class="text-muted"
-                >Feb 02, 2025</small
+            <div class="card-body d-flex flex-column">
+              <span class="badge bg-secondary mb-1 w-auto align-self-start"
+                >Kubernetes</span
               >
               <h5 class="card-title mt-2">Kubernetes Implementation for Real-Time Applications What You Need to Know</h5>
               <p class="card-text text-muted">
                 These applications require low latency, high availability, and dynamic scalability. Kubernetes, t...
               </p>
+               
+              <div
+                class="mt-auto d-flex align-items-center gap-3 text-muted small"
+              >
+                <span>
+                  <i class="fa-solid fa-calendar text-custom-blue me-1"></i>
+
+                  Feb 02, 2025
+                </span>
+                <span>
+                  <i class="fa-brands fa-readme text-custom-blue me-1"></i>
+                  6 mins
+                </span>
+              </div>
             </div>
           </div>
         </a>
@@ -530,23 +638,37 @@
       
       <div class="col-md-4">
         <a href="/blog/2025-02-01-kubernetes-cluster-deployment-best-practices-for-a-smooth-implementation/" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 blog-card">
+          <div
+            class="card h-100 shadow-sm border-0 blog-card hover-animate-card"
+          >
             <img
               src="/images/blog/kubernetes-cluster-deployment-best-practices-for-a-smooth-implementation.webp"
               class="card-img-top"
               alt="Kubernetes Cluster Deployment Best Practices for a Smooth Implementation"
               style="object-fit: cover"
             />
-            <div class="card-body">
-              <span class="badge bg-secondary mb-1">Kubernetes</span
-              ><br />
-              <small class="text-muted"
-                >Feb 01, 2025</small
+            <div class="card-body d-flex flex-column">
+              <span class="badge bg-secondary mb-1 w-auto align-self-start"
+                >Kubernetes</span
               >
               <h5 class="card-title mt-2">Kubernetes Cluster Deployment Best Practices for a Smooth Implementation</h5>
               <p class="card-text text-muted">
                 Kubernetes has become the de facto standard for container orchestration, enabling organizations t...
               </p>
+               
+              <div
+                class="mt-auto d-flex align-items-center gap-3 text-muted small"
+              >
+                <span>
+                  <i class="fa-solid fa-calendar text-custom-blue me-1"></i>
+
+                  Feb 01, 2025
+                </span>
+                <span>
+                  <i class="fa-brands fa-readme text-custom-blue me-1"></i>
+                  4 mins
+                </span>
+              </div>
             </div>
           </div>
         </a>
@@ -554,23 +676,37 @@
       
       <div class="col-md-4">
         <a href="/blog/2025-01-31-optimizing-kubernetes-implementations-for-cost-efficiency/" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 blog-card">
+          <div
+            class="card h-100 shadow-sm border-0 blog-card hover-animate-card"
+          >
             <img
               src="/images/blog/optimizing-kubernetes-implementations-for-cost-efficiency.webp"
               class="card-img-top"
               alt="Optimizing Kubernetes Implementations for Cost Efficiency"
               style="object-fit: cover"
             />
-            <div class="card-body">
-              <span class="badge bg-secondary mb-1">Kubernetes</span
-              ><br />
-              <small class="text-muted"
-                >Jan 31, 2025</small
+            <div class="card-body d-flex flex-column">
+              <span class="badge bg-secondary mb-1 w-auto align-self-start"
+                >Kubernetes</span
               >
               <h5 class="card-title mt-2">Optimizing Kubernetes Implementations for Cost Efficiency</h5>
               <p class="card-text text-muted">
                 Kubernetes has become the de facto standard for container orchestration, offering scalability, fl...
               </p>
+               
+              <div
+                class="mt-auto d-flex align-items-center gap-3 text-muted small"
+              >
+                <span>
+                  <i class="fa-solid fa-calendar text-custom-blue me-1"></i>
+
+                  Jan 31, 2025
+                </span>
+                <span>
+                  <i class="fa-brands fa-readme text-custom-blue me-1"></i>
+                  7 mins
+                </span>
+              </div>
             </div>
           </div>
         </a>
@@ -578,23 +714,37 @@
       
       <div class="col-md-4">
         <a href="/blog/2025-01-30-reducing-kubernetes-costs-with-effective-resource-allocation/" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 blog-card">
+          <div
+            class="card h-100 shadow-sm border-0 blog-card hover-animate-card"
+          >
             <img
               src="/images/blog/reducing-kubernetes-costs-with-effective-resource-allocation.webp"
               class="card-img-top"
               alt="Reducing Kubernetes Costs with Effective Resource Allocation"
               style="object-fit: cover"
             />
-            <div class="card-body">
-              <span class="badge bg-secondary mb-1">Kubernetes</span
-              ><br />
-              <small class="text-muted"
-                >Jan 30, 2025</small
+            <div class="card-body d-flex flex-column">
+              <span class="badge bg-secondary mb-1 w-auto align-self-start"
+                >Kubernetes</span
               >
               <h5 class="card-title mt-2">Reducing Kubernetes Costs with Effective Resource Allocation</h5>
               <p class="card-text text-muted">
                 Kubernetes is a powerful tool for container orchestration, but managing costs can be a challenge ...
               </p>
+               
+              <div
+                class="mt-auto d-flex align-items-center gap-3 text-muted small"
+              >
+                <span>
+                  <i class="fa-solid fa-calendar text-custom-blue me-1"></i>
+
+                  Jan 30, 2025
+                </span>
+                <span>
+                  <i class="fa-brands fa-readme text-custom-blue me-1"></i>
+                  4 mins
+                </span>
+              </div>
             </div>
           </div>
         </a>
@@ -602,23 +752,37 @@
       
       <div class="col-md-4">
         <a href="/blog/2025-01-28-7rs-cloud-migration-strategies-a-comprehensive-guide" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 blog-card">
+          <div
+            class="card h-100 shadow-sm border-0 blog-card hover-animate-card"
+          >
             <img
               src="/images/blog/cloud-migration-strategies.jpeg"
               class="card-img-top"
               alt="7Rs Cloud Migration Strategies: A Comprehensive Guide"
               style="object-fit: cover"
             />
-            <div class="card-body">
-              <span class="badge bg-secondary mb-1">DevOps</span
-              ><br />
-              <small class="text-muted"
-                >Jan 28, 2025</small
+            <div class="card-body d-flex flex-column">
+              <span class="badge bg-secondary mb-1 w-auto align-self-start"
+                >DevOps</span
               >
               <h5 class="card-title mt-2">7Rs Cloud Migration Strategies: A Comprehensive Guide</h5>
               <p class="card-text text-muted">
                 When most cloud engineers think of migration, the term “Lift and Shift” often dominates the discu...
               </p>
+               
+              <div
+                class="mt-auto d-flex align-items-center gap-3 text-muted small"
+              >
+                <span>
+                  <i class="fa-solid fa-calendar text-custom-blue me-1"></i>
+
+                  Jan 28, 2025
+                </span>
+                <span>
+                  <i class="fa-brands fa-readme text-custom-blue me-1"></i>
+                  7 mins
+                </span>
+              </div>
             </div>
           </div>
         </a>
@@ -626,24 +790,38 @@
       
       <div class="col-md-4">
         <a href="/blog/2025-01-15-how-to-secure-nginx-with-ssl-using-certbot-on-ubuntu" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 blog-card">
+          <div
+            class="card h-100 shadow-sm border-0 blog-card hover-animate-card"
+          >
             <img
               src="/images/blog/how-to-secure-nginx-with-ssl-using-certbot-on-ubuntu.webp"
               class="card-img-top"
               alt="How to Secure Nginx with SSL Using Certbot on Ubuntu"
               style="object-fit: cover"
             />
-            <div class="card-body">
-              <span class="badge bg-secondary mb-1">DevOps</span
-              ><br />
-              <small class="text-muted"
-                >Jan 15, 2025</small
+            <div class="card-body d-flex flex-column">
+              <span class="badge bg-secondary mb-1 w-auto align-self-start"
+                >DevOps</span
               >
               <h5 class="card-title mt-2">How to Secure Nginx with SSL Using Certbot on Ubuntu</h5>
               <p class="card-text text-muted">
                 Introduction
 Securing your website with SSL (Secure Sockets Layer) is crucial for encrypting data...
               </p>
+               
+              <div
+                class="mt-auto d-flex align-items-center gap-3 text-muted small"
+              >
+                <span>
+                  <i class="fa-solid fa-calendar text-custom-blue me-1"></i>
+
+                  Jan 15, 2025
+                </span>
+                <span>
+                  <i class="fa-brands fa-readme text-custom-blue me-1"></i>
+                  7 mins
+                </span>
+              </div>
             </div>
           </div>
         </a>
@@ -651,23 +829,37 @@ Securing your website with SSL (Secure Sockets Layer) is crucial for encrypting 
       
       <div class="col-md-4">
         <a href="/blog/2025-01-08-getting-started-with-terraform" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 blog-card">
+          <div
+            class="card h-100 shadow-sm border-0 blog-card hover-animate-card"
+          >
             <img
               src="/images/blog/getting-started-with-terraform.webp"
               class="card-img-top"
               alt="Getting Started with Terraform"
               style="object-fit: cover"
             />
-            <div class="card-body">
-              <span class="badge bg-secondary mb-1">DevOps</span
-              ><br />
-              <small class="text-muted"
-                >Jan 09, 2025</small
+            <div class="card-body d-flex flex-column">
+              <span class="badge bg-secondary mb-1 w-auto align-self-start"
+                >DevOps</span
               >
               <h5 class="card-title mt-2">Getting Started with Terraform</h5>
               <p class="card-text text-muted">
                 Terraform is an Infrastructure as Code (IaC) tool that allows you to define and provision cloud r...
               </p>
+               
+              <div
+                class="mt-auto d-flex align-items-center gap-3 text-muted small"
+              >
+                <span>
+                  <i class="fa-solid fa-calendar text-custom-blue me-1"></i>
+
+                  Jan 09, 2025
+                </span>
+                <span>
+                  <i class="fa-brands fa-readme text-custom-blue me-1"></i>
+                  9 mins
+                </span>
+              </div>
             </div>
           </div>
         </a>
@@ -675,23 +867,37 @@ Securing your website with SSL (Secure Sockets Layer) is crucial for encrypting 
       
       <div class="col-md-4">
         <a href="/blog/2025-01-07-secrets-to-kubernetes-cost-control-implementing-efficient-clusters/" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 blog-card">
+          <div
+            class="card h-100 shadow-sm border-0 blog-card hover-animate-card"
+          >
             <img
               src="/images/blog/secrets-to-kubernetes-cost-control-implementing-efficient-clusters.webp"
               class="card-img-top"
               alt="Secrets to Kubernetes Cost Control Implementing Efficient Clusters"
               style="object-fit: cover"
             />
-            <div class="card-body">
-              <span class="badge bg-secondary mb-1">Kubernetes</span
-              ><br />
-              <small class="text-muted"
-                >Jan 07, 2025</small
+            <div class="card-body d-flex flex-column">
+              <span class="badge bg-secondary mb-1 w-auto align-self-start"
+                >Kubernetes</span
               >
               <h5 class="card-title mt-2">Secrets to Kubernetes Cost Control Implementing Efficient Clusters</h5>
               <p class="card-text text-muted">
                 Kubernetes is a powerful tool for managing containerized applications at scale, but without the p...
               </p>
+               
+              <div
+                class="mt-auto d-flex align-items-center gap-3 text-muted small"
+              >
+                <span>
+                  <i class="fa-solid fa-calendar text-custom-blue me-1"></i>
+
+                  Jan 07, 2025
+                </span>
+                <span>
+                  <i class="fa-brands fa-readme text-custom-blue me-1"></i>
+                  4 mins
+                </span>
+              </div>
             </div>
           </div>
         </a>
@@ -699,23 +905,37 @@ Securing your website with SSL (Secure Sockets Layer) is crucial for encrypting 
       
       <div class="col-md-4">
         <a href="/blog/2025-01-06-mastering-kubernetes-implementation-a-step-by-step-guide/" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 blog-card">
+          <div
+            class="card h-100 shadow-sm border-0 blog-card hover-animate-card"
+          >
             <img
               src="/images/blog/mastering-kubernetes-implementation-a-step-by-step-guide-1-.webp"
               class="card-img-top"
               alt="Mastering Kubernetes Implementation A Step-by-Step Guide"
               style="object-fit: cover"
             />
-            <div class="card-body">
-              <span class="badge bg-secondary mb-1">Kubernetes</span
-              ><br />
-              <small class="text-muted"
-                >Jan 06, 2025</small
+            <div class="card-body d-flex flex-column">
+              <span class="badge bg-secondary mb-1 w-auto align-self-start"
+                >Kubernetes</span
               >
               <h5 class="card-title mt-2">Mastering Kubernetes Implementation A Step-by-Step Guide</h5>
               <p class="card-text text-muted">
                 Kubernetes has become the go-to solution for managing containerized applications in production at...
               </p>
+               
+              <div
+                class="mt-auto d-flex align-items-center gap-3 text-muted small"
+              >
+                <span>
+                  <i class="fa-solid fa-calendar text-custom-blue me-1"></i>
+
+                  Jan 06, 2025
+                </span>
+                <span>
+                  <i class="fa-brands fa-readme text-custom-blue me-1"></i>
+                  6 mins
+                </span>
+              </div>
             </div>
           </div>
         </a>
@@ -723,18 +943,18 @@ Securing your website with SSL (Secure Sockets Layer) is crucial for encrypting 
       
       <div class="col-md-4">
         <a href="/blog/2024-03-01-how-to-optimize-aws-cloud-cost-with-best-practices" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 blog-card">
+          <div
+            class="card h-100 shadow-sm border-0 blog-card hover-animate-card"
+          >
             <img
               src="/images/blog/how-to-optimize-aws-cloud-cost-with-best-practices.webp"
               class="card-img-top"
               alt="How to Optimize AWS Cloud Cost with Best Practices"
               style="object-fit: cover"
             />
-            <div class="card-body">
-              <span class="badge bg-secondary mb-1">AWS Cost</span
-              ><br />
-              <small class="text-muted"
-                >Mar 02, 2024</small
+            <div class="card-body d-flex flex-column">
+              <span class="badge bg-secondary mb-1 w-auto align-self-start"
+                >AWS Cost</span
               >
               <h5 class="card-title mt-2">How to Optimize AWS Cloud Cost with Best Practices</h5>
               <p class="card-text text-muted">
@@ -744,6 +964,20 @@ Securing your website with SSL (Secure Sockets Layer) is crucial for encrypting 
   Why AWS Cost Optimization Matters
   ...
               </p>
+               
+              <div
+                class="mt-auto d-flex align-items-center gap-3 text-muted small"
+              >
+                <span>
+                  <i class="fa-solid fa-calendar text-custom-blue me-1"></i>
+
+                  Mar 02, 2024
+                </span>
+                <span>
+                  <i class="fa-brands fa-readme text-custom-blue me-1"></i>
+                  5 mins
+                </span>
+              </div>
             </div>
           </div>
         </a>
@@ -876,135 +1110,194 @@ Securing your website with SSL (Secure Sockets Layer) is crucial for encrypting 
 </script>
 </div>
 
+    
     <div class="footer bg-dark">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 footer-item">
-        <div class="brand-text">Kubeify</div>
-        <p>
-          Accelerate your cloud native transformation, adoption of kubernetes
-          with Kubeify's team of experts.
-        </p>
-        
+      <div class="container py-5">
+        <div class="footer-top">
+          <div class="footer-logo-section">
+            <div class="brand-text">Kubeify</div>
+            <div class="footer-description py-2">
+              We unleash growth by helping companies adopt cloud native
+              technologies with our products and services!
+            </div>
+            <div class="footer-social-icons d-flex py-2">
+              <a href="#" class="footer-social-icon"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="#" class="footer-social-icon"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#" class="footer-social-icon"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#" class="footer-social-icon"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="footer-badges">
+            <img src="../images/badge1.svg" alt="Badge 1" class="footer-badge" />
+            <img src="../images/badge2.svg" alt="Badge 2" class="footer-badge" />
+            <img src="../images/badge3.svg" alt="Badge 3" class="footer-badge" />
+            <img src="../images/badge4.svg" alt="Badge 4" class="footer-badge" />
+            <img src="../images/badge3.svg" alt="Badge 5" class="footer-badge" />
+            <img src="../images/badge4.svg" alt="Badge 6" class="footer-badge" />
+          </div>
+        </div>
 
-        </p>
-      </div>
-      <div class="col-md-8 mt-4 mt-md-0">
-        <div class="d-flex justify-content-between">
+        <div class="footer-main-content">
           <div class="footer-item">
-            <h4 class="cta__title">Company</h4>
+            <h4>AI Cloud</h4>
             <ul class="footer-nav">
-              <li><a href="/about" title="About">About Us</a></li>
-              <li><a href="/contact" title="Contact Us">Contact Us</a></li>
-              <li>
-                <a href="/join-our-team" title="Join our team">Join our team</a>
-              </li>
-              <li>
-                <a href="/schedule-meeting" title="Schedule a meeting">Schedule a Meeting</a>
-              </li>
+              <li><a href="#">Cloud Native Product Development</a></li>
+              <li><a href="#">Cloud Native FaaS</a></li>
+              <li><a href="#">Monolith to Microservices</a></li>
+              <li><a href="#">DevSec as a Service</a></li>
+              <li><a href="#">Extending Kubernetes Whitepaper</a></li>
+              <li><a href="#">Kubernetes Zero Downtime Upgrades eBook</a></li>
+            </ul>
+            <h4 class="mt-2 pt-3">Product Engineering</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Platform Engineering Consulting</a></li>
+              <li><a href="#">Platform Engineering eBook</a></li>
+              <li><a href="#">Backstage Consulting</a></li>
+              <li><a href="#">Port Consulting</a></li>
+              <li><a href="#">Crossplane Consulting</a></li>
+              <li><a href="#">Progressive Delivery</a></li>
+              <li><a href="#">CI/CD & Dev Experience</a></li>
+              <li><a href="#">Bare Metal Provisioning Consulting</a></li>
             </ul>
           </div>
 
           <div class="footer-item">
-            <h4 class="cta__title">Services</h4>
+            <h4>Application Modernization</h4>
             <ul class="footer-nav">
-              <li><a href="/services">Services Offered</a></li>
-              <li><a href="/why-kubernetes">Why Kubernetes</a></li>
-              <li><a href="/customers" title="Customers">Customers</a></li>
+              <li><a href="#">Monolith to Microservices</a></li>
+              <li><a href="#">Kubernetes Consulting Services</a></li>
+              <li><a href="#">GitOps Consulting</a></li>
+              <li><a href="#">CI/CD & Dev Experience</a></li>
+              <li><a href="#">DevOps Toolchain</a></li>
+              <li><a href="#">ArgoCD Consulting</a></li>
+              <li><a href="#">Jenkins Consulting</a></li>
+              <li><a href="#">Cloud Migration Consulting</a></li>
+              <li><a href="#">FinOps Consulting</a></li>
+              <li><a href="#">vCluster Consulting</a></li>
+            </ul>
+            <h4 class="mt-2 pt-3">Observability & DevSecOps</h4>
+            <ul class="footer-nav">
+              <li><a href="#">DevSecOps Consulting</a></li>
+              <li><a href="#">Observability Consulting</a></li>
+              <li><a href="#">Grafana Consulting</a></li>
+              <li><a href="#">Prometheus Consulting</a></li>
             </ul>
           </div>
 
           <div class="footer-item">
-            <h4 class="cta__title">Resources</h4>
+            <h4>Site Reliability Engineering</h4>
             <ul class="footer-nav">
-              <li><a href="/blog">Blog</a></li>
-              <li><a href="/webinars">Webinars</a></li>
-              <li><a href="/join-webinars">Join Webinars</a></li>
-              <li><a href="https://www.cncf.io/newsroom/case-studies/" target="_blank">Case Studies</a></li>
-              <!-- <li><a href="/learn-kubernetes" target="_blank">Learn Kubernetes</a></li> -->
+              <li><a href="#">SRE Consulting</a></li>
+              <li><a href="#">Service Mesh Consulting</a></li>
+              <li><a href="#">Cloud Native Networking</a></li>
+              <li><a href="#">Istio Consulting</a></li>
+              <li><a href="#">Linkerd Consulting</a></li>
+              <li><a href="#">Tetratom Consulting</a></li>
+              <li><a href="#">Backup & Disaster Recovery</a></li>
+              <li><a href="#">Bare Metal Provisioning Consulting</a></li>
+              <li><a href="#">Kyverno Consulting</a></li>
+            </ul>
+            <h4 class="mt-2 pt-3">Consulting Partners</h4>
+            <ul class="footer-nav">
+              <li><a href="#">GitLab Partner</a></li>
+              <li><a href="#">SUSE Rancher Partner</a></li>
+              <li><a href="#">Tigera Partner</a></li>
+              <li><a href="#">Solo Partner</a></li>
+              <li><a href="#">Akamai Partner</a></li>
             </ul>
           </div>
 
           <div class="footer-item">
-            <h4 class="cta__title">Social</h4>
+            <h4>Industries</h4>
             <ul class="footer-nav">
-              <li><a href="https://www.linkedin.com/company/kubeify" title="linkedin" target="_blank">LinkedIn</a></li>
-              <li><a href="https://twitter.com/kubeify" target="_blank">Twitter</a></li>
-              <li><a href="https://www.youtube.com/@kubeifyk8s45/videos" target="_blank">YouTube</a></li>
+              <li><a href="#">Banking and Finance</a></li>
+              <li><a href="#">Automotive</a></li>
+            </ul>
+            <h4 class="mt-2 pt-3">Enterprise Support</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Linkerd Support</a></li>
+              <li><a href="#">Istio Support</a></li>
+              <li><a href="#">Argo CD Support</a></li>
+              <li><a href="#">Prometheus Support</a></li>
+              <li><a href="#">Kasten K10 Support</a></li>
+              <li><a href="#">Thanos Support</a></li>
+            </ul>
+            <h4 class="mt-2 pt-3">Solutions</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Fusion Enterprise</a></li>
+              <li><a href="#">Bottlekube Enterprise</a></li>
+              <li><a href="#">Managed Services for Kubernetes</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-item">
+            <h4>Resources</h4>
+            <ul class="footer-nav">
+              <li><a href="#">OSE Contributions</a></li>
+              <li><a href="#">Blogs</a></li>
+              <li><a href="#">Cloud Native & AI Talks</a></li>
+              <li><a href="#">Webinars</a></li>
+              <li><a href="#">Customers Stories</a></li>
+              <li><a href="#">Spelling Bee</a></li>
+              <li><a href="#">CNCF Landscape Navigator</a></li>
+              <li><a href="#">Skill Rubrics</a></li>
+              <li><a href="#">Poppy Comic</a></li>
+            </ul>
+            <h4 class="mt-2 pt-3">Company</h4>
+            <ul class="footer-nav">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">The InfraCloud Way</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Mentoring Sessions</a></li>
+              <li><a href="#">Newsroom</a></li>
+              <li><a href="#">Contact Us</a></li>
             </ul>
           </div>
         </div>
 
+        
       </div>
     </div>
-  </div>
-  <br />
- 
-</div>
-
- <div class="lower-footer text-center py-2">
+    <div class="lower-footer text-center py-2">
     <span class="d-inline-block copyright">
-      Copyright &copy; <span id="year"></span> Kubeify, All Rights
-      Reserved.&nbsp;
+      Copyright © <span id="year">2025</span> Kubeify (A CodeCrux Company). All Rights Reserved.
     </span>
   </div>
+    <!-- Year Updater -->
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 
-<!-- <style type="text/css">
-  .feedbackbox {
-    position: fixed;
-    top: 90vh;
-    left: 1%;
-    bottom: 0%;
-    width: 420px;
-    text-align: left;
-    z-index: 9999;
-    margin-top: -60px;
-    margin-bottom: 15px;
-    border: 1px solid #eee;
-    border-radius: 4px;
-    padding: 10px;
-    font-size: 16px;
-  }
-</style>
+    <!-- jQuery + Bootstrap (if not already included) -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/app.js"></script>
 
-<div
-  class="feedbackbox alert alert-warning alert-dismissible fade show"
-  role="alert"
->
-  <strong>Don't Miss Out!</strong>
-  <a href="/join-webinars"
-    >Managing kubernetes Manifests using Jsonnet & Tanaka</a
-  >
-  | 1st Aug, 2020, 9:30 PM – 10:30 PM, IST &nbsp;
-  <b><a href="/join-webinars">Join us !</a></b>
-</div>
- -->
+    <!-- Google Analytics (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-142118821-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-142118821-1");
+    </script>
 
+    <!-- HubSpot Embed Code -->
+    <script
+      type="text/javascript"
+      id="hs-script-loader"
+      async
+      defer
+      src="//js.hs-scripts.com/7280691.js"
+    ></script>
+  </body>
+</html>
 
-<script src="/js/jquery.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/app.js"></script>
-<script type="text/javascript">
-  $(document).ready(function () {
-    $("#year").html(new Date().getFullYear());
-  });
-</script>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142118821-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag("js", new Date());
-
-  gtag("config", "UA-142118821-1");
-</script>
-
-<!-- Start of HubSpot Embed Code -->
-<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/7280691.js"></script>
-<!-- End of HubSpot Embed Code -->
     <!-- Include Modal Partial -->
     <div
   class="modal fade"

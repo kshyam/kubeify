@@ -324,8 +324,112 @@ p {
 .blog-post:hover {
   background: #f3f6f4;
 }
+.hover-animate-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+
+  img {
+    transition: transform 0.4s ease;
+  }
+}
+
+.hover-animate-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+
+  img {
+    transform: scale(1.05);
+  }
+}
 
 /*----footer----*/
+.footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.footer-description {
+  font-size: 14px;
+  max-width: 300px;
+}
+
+.footer-social-icons {
+  gap: 15px;
+}
+.footer-social-icon {
+  width: 40px;
+  height: 40px;
+  /* Placeholder for actual social icons */
+  background-color: #ccc;
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+.footer-badges {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap; /* Allow wrapping */
+  justify-content: flex-end; /* Align to the right */
+  flex: 1; /* Allow it to take available space */
+  min-width: 300px; /* Ensure it doesn't get too small */
+}
+
+.footer-badge {
+  max-height: 60px; /* Adjust as needed */
+  width: auto;
+}
+
+.footer-main-content {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(180px, 1fr)
+  ); /* Responsive columns */
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-badges {
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+
+  .footer-main-content {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
 .brand-text {
   font-size: 22px;
   font-weight: 900;
@@ -333,7 +437,6 @@ p {
 .footer {
   padding: 3rem 0 0 0;
   color: #fff;
-  height: 400px;
 }
 .lower-footer {
   background-color: #2b2b2b;
