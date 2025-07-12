@@ -1,5 +1,5 @@
 ---
-title: 2025-07-06 Resource Management for Pods and Containers in Kubernetes
+title: Resource Management for Pods and Containers in Kubernetes
 description: "Resource management in Kubernetes plays a crucial role in ensuring
   your applications run efficiently, stably, and cost-effectively. "
 image: /images/blog/resource-management-for-pods-and-containers-in-kubernetes.gif
