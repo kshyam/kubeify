@@ -1,5 +1,5 @@
 ---
-title: 2025-07-02 Kubernetes Best Practices for Resource Requests and Limits
+title: Kubernetes Best Practices for Resource Requests and Limits
 description: Kubernetes simplifies application deployment and scaling—but
   without properly setting resource requests and limits, you risk overloading
   nodes, wasting cloud budget, or causing unpredictable pod evictions.
@@ -10,6 +10,7 @@ author: Shyam Mohan
 category: Kubernetes
 date: 2025-07-02T08:23:00.000Z
 ---
+Kubernetes simplifies application deployment and scaling—but without properly setting resource requests and limits, you risk overloading nodes, wasting cloud budget, or causing unpredictable pod evictions.
 
 ## Table of Contents
 
