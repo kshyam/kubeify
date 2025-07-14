@@ -102,7 +102,7 @@ Setting accurate requests and limits helps you:
 -   ✅ Avoid overprovisioning (wasting resources)  
       
     
--   ✅ Prevent underprovisioning (causing instability or OOM errors)  
+-   ✅ Prevent under provisioning (causing instability or OOM errors)  
       
     
 -   ✅ Ensure fair scheduling across pods  
@@ -174,6 +174,7 @@ Set requests around the 90th percentile of average usage to balance stability an
 
 Generic values like 100m for all pods is bad practice. Customize per application.
 
+
 ## 7. Best Practices for Setting Resource Limits
 
 ### 🔹 Set Limits Slightly Higher than Requests
@@ -184,9 +185,11 @@ Example: If your request is 500Mi, set the limit to 800Mi–1Gi to allow for spi
 
 Without limits, a single rogue pod can starve others.
 
+
 ### 🔹 Be Careful With CPU Limits
 
 CPU throttling can cause latency and jitter—test your services under limit constraints.
+
 
 ## 8. Right-Sizing Strategies: CPU vs Memory
 
