@@ -76,6 +76,7 @@ In Kubernetes, each container can be assigned two main resource parameters:
 
 These are typically defined in the container spec:
 
+``
 resources:
 
 requests:
@@ -90,7 +91,7 @@ memory: "1Gi"
 
 cpu: "1000m"
 
-  
+``
 
 CPU is measured in millicores (500m = 0.5 core), and memory in bytes (e.g., Mi, Gi).
 
