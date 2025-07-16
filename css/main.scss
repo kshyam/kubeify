@@ -436,7 +436,7 @@ p {
 }
 .footer {
   padding: 3rem 0 0 0;
-  color: #fff;
+  color: #ffffff;
 }
 .lower-footer {
   background-color: #2b2b2b;
@@ -458,7 +458,6 @@ p {
 .footer-item h4 {
   font-size: 18px;
 
-  color: theme-color("primary");
   font-weight: 600;
   @media (max-width: 400px) {
     font-size: 13px;
@@ -478,7 +477,7 @@ p {
 }
 .footer-nav > li > a {
   display: block;
-  color: #fff;
+  color: #9b9b9b;
 }
 
 table {
