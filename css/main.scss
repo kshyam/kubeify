@@ -227,13 +227,8 @@ p {
 .looking-details-wraper {
   display: flex;
   flex-wrap: wrap;
-  background-color: #3c58cd;
-  background-image: radial-gradient(
-    circle,
-    #338cf1 30%,
-    #3c58cd 60%,
-    #3c58cd 20%
-  );
+  background: #e56700;
+  background: linear-gradient(135deg, #e56700, #fce6c4);
   border-radius: 16px;
   padding: 0px 50px;
   align-items: flex-end;
