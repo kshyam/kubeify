@@ -5,24 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Best practice for Running Cost Optimized Kubernetes Applications on GKE | Kubeify</title>
+<title>Kubernetes Best Practices for Resource Requests and Limits | Kubeify</title>
 <meta name="generator" content="Jekyll v4.4.1" />
-<meta property="og:title" content="Best practice for Running Cost Optimized Kubernetes Applications on GKE" />
+<meta property="og:title" content="Kubernetes Best Practices for Resource Requests and Limits" />
 <meta name="author" content="Shyam Mohan" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Kubernetes has transformed the way applications are deployed and managed at scale. But as organizations embrace Kubernetes, particularly through managed services like Google Kubernetes Engine (GKE), they face a common challenge: rising cloud costs." />
-<meta property="og:description" content="Kubernetes has transformed the way applications are deployed and managed at scale. But as organizations embrace Kubernetes, particularly through managed services like Google Kubernetes Engine (GKE), they face a common challenge: rising cloud costs." />
-<link rel="canonical" href="http://localhost:4000/blog/2025-06-23-best-practice-for-running-cost-optimized-kubernetes-applications-on-gke/" />
-<meta property="og:url" content="http://localhost:4000/blog/2025-06-23-best-practice-for-running-cost-optimized-kubernetes-applications-on-gke/" />
+<meta name="description" content="Kubernetes simplifies application deployment and scaling—but without properly setting resource requests and limits, you risk overloading nodes, wasting cloud budget, or causing unpredictable pod evictions." />
+<meta property="og:description" content="Kubernetes simplifies application deployment and scaling—but without properly setting resource requests and limits, you risk overloading nodes, wasting cloud budget, or causing unpredictable pod evictions." />
+<link rel="canonical" href="http://localhost:4000/blog/2025-07-02-kubernetes-best-practices-for-resource-requests-and-limits" />
+<meta property="og:url" content="http://localhost:4000/blog/2025-07-02-kubernetes-best-practices-for-resource-requests-and-limits" />
 <meta property="og:site_name" content="Kubeify" />
-<meta property="og:image" content="http://localhost:4000/images/blog/best-practice-for-running-cost-optimized-kubernetes-applications-on-gke.webp" />
+<meta property="og:image" content="http://localhost:4000/images/blog/kubernetes-best-practices-for-resource-requests-and-limits.webp" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-06-23T12:55:00+05:30" />
+<meta property="article:published_time" content="2025-07-02T13:53:00+05:30" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="http://localhost:4000/images/blog/best-practice-for-running-cost-optimized-kubernetes-applications-on-gke.webp" />
-<meta property="twitter:title" content="Best practice for Running Cost Optimized Kubernetes Applications on GKE" />
+<meta property="twitter:image" content="http://localhost:4000/images/blog/kubernetes-best-practices-for-resource-requests-and-limits.webp" />
+<meta property="twitter:title" content="Kubernetes Best Practices for Resource Requests and Limits" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Shyam Mohan"},"dateModified":"2025-06-23T12:55:00+05:30","datePublished":"2025-06-23T12:55:00+05:30","description":"Kubernetes has transformed the way applications are deployed and managed at scale. But as organizations embrace Kubernetes, particularly through managed services like Google Kubernetes Engine (GKE), they face a common challenge: rising cloud costs.","headline":"Best practice for Running Cost Optimized Kubernetes Applications on GKE","image":"http://localhost:4000/images/blog/best-practice-for-running-cost-optimized-kubernetes-applications-on-gke.webp","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2025-06-23-best-practice-for-running-cost-optimized-kubernetes-applications-on-gke/"},"url":"http://localhost:4000/blog/2025-06-23-best-practice-for-running-cost-optimized-kubernetes-applications-on-gke/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Shyam Mohan"},"dateModified":"2025-07-02T13:53:00+05:30","datePublished":"2025-07-02T13:53:00+05:30","description":"Kubernetes simplifies application deployment and scaling—but without properly setting resource requests and limits, you risk overloading nodes, wasting cloud budget, or causing unpredictable pod evictions.","headline":"Kubernetes Best Practices for Resource Requests and Limits","image":"http://localhost:4000/images/blog/kubernetes-best-practices-for-resource-requests-and-limits.webp","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2025-07-02-kubernetes-best-practices-for-resource-requests-and-limits"},"url":"http://localhost:4000/blog/2025-07-02-kubernetes-best-practices-for-resource-requests-and-limits"}</script>
 <!-- End Jekyll SEO tag -->
  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
@@ -291,24 +291,24 @@
                   <a href="/blog">Blog</a>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">
-                  Best practice for Running  Cost Optimized Kubernetes Applications on GKE
+                  Kubernetes Best Practices for Resource Requests and Limits
                 </li>
               </ol>
             </nav>
 
             <img
-              src="/images/blog/best-practice-for-running-cost-optimized-kubernetes-applications-on-gke.webp"
-              alt="Best practice for Running  Cost Optimized Kubernetes Applications on GKE"
+              src="/images/blog/kubernetes-best-practices-for-resource-requests-and-limits.webp"
+              alt="Kubernetes Best Practices for Resource Requests and Limits"
               class="card-img-top rounded"
-              title="Best practice for Running  Cost Optimized Kubernetes Applications on GKE"
+              title="Kubernetes Best Practices for Resource Requests and Limits"
             />
-            <h1 class="mt-4" style="color: black">Best practice for Running  Cost Optimized Kubernetes Applications on GKE</h1>
+            <h1 class="mt-4" style="color: black">Kubernetes Best Practices for Resource Requests and Limits</h1>
             <time>
-              23 Jun 2025 -
+              02 Jul 2025 -
               <small>Shyam Mohan</small>
             </time>
 
-            <div class="px-2 mt-4"><p>Kubernetes has transformed the way applications are deployed and managed at scale. But as organizations embrace Kubernetes, particularly through managed services like Google Kubernetes Engine (GKE), they face a common challenge: rising cloud costs.</p>
+            <div class="px-2 mt-4"><p>Kubernetes simplifies application deployment and scaling—but without properly setting resource requests and limits, you risk overloading nodes, wasting cloud budget, or causing unpredictable pod evictions.</p>
 
 <h2 id="table-of-contents">Table of Contents</h2>
 
@@ -317,42 +317,37 @@
     <p>Introduction</p>
   </li>
   <li>
-    <p>Why Cost Optimization Matters on GKE</p>
+    <p>What Are Resource Requests and Limits in Kubernetes?</p>
   </li>
   <li>
-    <p>Core Cost Drivers in Kubernetes on GKE</p>
+    <p>Why Are Resource Requests and Limits Important?</p>
   </li>
   <li>
-    <p>Best Practices for GKE Cost Optimization</p>
-
-    <p>Right-Sizing Workloads</p>
-
-    <p>Autoscaling (Cluster &amp; Pod)</p>
-
-    <p>Choosing the Right Machine Types</p>
-
-    <p>Preemptible VMs and Autopilot Mode</p>
-
-    <p>Resource Requests and Limits</p>
-
-    <p>Efficient Use of Persistent Storage</p>
-
-    <p>Namespace and Labeling Strategy</p>
-
-    <p>Idle Resource Management</p>
-
-    <p>Cost-Aware CI/CD Pipeline</p>
-
-    <p>Monitoring and Cost Visibility Tools</p>
+    <p>The Risks of Not Setting Requests and Limits</p>
   </li>
   <li>
-    <p>Budgeting and Alerts with GCP</p>
+    <p>How Kubernetes Uses Requests and Limits</p>
   </li>
   <li>
-    <p>Real-World Case Study: How a SaaS Team Cut Costs by 40%</p>
+    <p>Best Practices for Setting Resource Requests</p>
   </li>
   <li>
-    <p>Future Trends: FinOps in Kubernetes</p>
+    <p>Best Practices for Setting Resource Limits</p>
+  </li>
+  <li>
+    <p>Right-Sizing Strategies: CPU vs Memory</p>
+  </li>
+  <li>
+    <p>Tools for Monitoring and Optimization</p>
+  </li>
+  <li>
+    <p>Real-World Example: Preventing Node Overload</p>
+  </li>
+  <li>
+    <p>CI/CD Considerations for Resource Management</p>
+  </li>
+  <li>
+    <p>Mistakes to Avoid</p>
   </li>
   <li>
     <p>Conclusion</p>
@@ -364,257 +359,282 @@
 
 <h2 id="1-introduction">1. Introduction</h2>
 
-<p>Kubernetes has transformed the way applications are deployed and managed at scale. But as organizations embrace Kubernetes, particularly through managed services like Google Kubernetes Engine (GKE), they face a common challenge: rising cloud costs.</p>
+<p>Kubernetes simplifies application deployment and scaling—but without properly setting resource requests and limits, you risk overloading nodes, wasting cloud budget, or causing unpredictable pod evictions.</p>
 
-<p>This guide walks you through Kubernetes cost optimization on GKE, providing actionable strategies to reduce your spend without sacrificing performance or scalability.</p>
+<p>This guide dives deep into the best practices for configuring resource requests and limits in Kubernetes to ensure high performance, stability, and cost efficiency—especially in production environments.</p>
 
-<h2 id="2-why-cost-optimization-matters-on-gke">2. Why Cost Optimization Matters on GKE</h2>
+<h2 id="2-what-are-resource-requests-and-limits-in-kubernetes">2. What Are Resource Requests and Limits in Kubernetes?</h2>
 
-<p>Google Kubernetes Engine (GKE) offers flexibility and scalability but comes at a price. Without careful planning, costs can quickly spiral out of control due to underutilized resources, poor workload planning, or misconfigured clusters.</p>
-
-<p>Key reasons to optimize:</p>
+<p>In Kubernetes, each container can be assigned two main resource parameters:</p>
 
 <ul>
   <li>
-    <p>Prevent budget overruns</p>
+    <p>Resource Requests: The minimum amount of CPU/memory Kubernetes guarantees a container will get.</p>
   </li>
   <li>
-    <p>Improve resource utilization</p>
-  </li>
-  <li>
-    <p>Increase ROI on your cloud investment</p>
-  </li>
-  <li>
-    <p>Build sustainable and scalable infrastructure</p>
+    <p>Resource Limits: The maximum amount a container can use before being throttled or terminated.</p>
   </li>
 </ul>
 
-<h2 id="3-core-cost-drivers-in-kubernetes-on-gke">3. Core Cost Drivers in Kubernetes on GKE</h2>
+<p>These are typically defined in the container spec:</p>
 
-<p>Before diving into solutions, let’s understand the primary cost drivers:</p>
+<p>``
+resources:</p>
+
+<p>requests:</p>
+
+<p>memory: “512Mi”</p>
+
+<p>cpu: “500m”</p>
+
+<p>limits:</p>
+
+<p>memory: “1Gi”</p>
+
+<p>cpu: “1000m”</p>
+
+<p>``</p>
+
+<p>CPU is measured in millicores (500m = 0.5 core), and memory in bytes (e.g., Mi, Gi).</p>
+
+<h2 id="3-why-are-resource-requests-and-limits-important">3. Why Are Resource Requests and Limits Important?</h2>
+
+<p>Setting accurate requests and limits helps you:</p>
 
 <ul>
   <li>
-    <p>Node usage (vCPUs, memory, GPU)</p>
+    <p>✅ Avoid overprovisioning (wasting resources)</p>
   </li>
   <li>
-    <p>Persistent volumes</p>
+    <p>✅ Prevent under provisioning (causing instability or OOM errors)</p>
   </li>
   <li>
-    <p>Load balancers and ingress controllers</p>
+    <p>✅ Ensure fair scheduling across pods</p>
   </li>
   <li>
-    <p>Networking egress charges</p>
+    <p>✅ Enable autoscaling to function properly</p>
   </li>
   <li>
-    <p>Autoscaling misconfigurations</p>
+    <p>✅ Maintain cluster health and predictability</p>
+  </li>
+  <li>
+    <p>✅ Optimize cost, especially in managed services like GKE, EKS, or AKS</p>
   </li>
 </ul>
 
-<h2 id="4-best-practices-for-gke-cost-optimization">4. Best Practices for GKE Cost Optimization</h2>
+<h2 id="4-the-risks-of-not-setting-requests-and-limits">4. The Risks of Not Setting Requests and Limits</h2>
 
-<h3 id="-right-sizing-workloads">🔹 Right-Sizing Workloads</h3>
-
-<p>Over-provisioning is one of the biggest cost culprits. Use real-time monitoring tools to analyze actual CPU and memory usage, then adjust requests and limits accordingly.</p>
-
-<p>Tools: Prometheus, GKE Metrics Server, Goldilocks</p>
-
-<h3 id="-enable-autoscaling">🔹 Enable Autoscaling</h3>
+<p>Failing to define proper values leads to:</p>
 
 <ul>
   <li>
-    <p>Cluster Autoscaler: Automatically adjusts the number of nodes.</p>
+    <p>❌ Pod eviction under memory pressure</p>
   </li>
   <li>
-    <p>Horizontal Pod Autoscaler (HPA): Scales pods based on CPU/memory.</p>
+    <p>❌ Unfair scheduling by kube-scheduler</p>
   </li>
   <li>
-    <p>Vertical Pod Autoscaler (VPA): Adjusts container resource limits dynamically.</p>
+    <p>❌ Throttling of CPU-bound apps</p>
+  </li>
+  <li>
+    <p>❌ Unpredictable performance</p>
+  </li>
+  <li>
+    <p>❌ Cluster-wide resource imbalance</p>
+  </li>
+  <li>
+    <p>❌ Higher cloud bills due to oversized nodes</p>
   </li>
 </ul>
 
-<p>Tip: Combine HPA + VPA + Cluster Autoscaler for intelligent scaling.</p>
-
-<h3 id="-choose-the-right-machine-type">🔹 Choose the Right Machine Type</h3>
-
-<p>Use custom machine types to avoid overpaying for generic resources. If workloads are memory-intensive but not CPU-bound, configure VM shapes accordingly.</p>
-
-<p>Tip: Use cost-effective E2 instances for test/staging clusters.</p>
-
-<h3 id="-use-preemptible-vms-or-autopilot-mode">🔹 Use Preemptible VMs or Autopilot Mode</h3>
+<h2 id="5-how-kubernetes-uses-requests-and-limits">5. How Kubernetes Uses Requests and Limits</h2>
 
 <ul>
   <li>
-    <p>Preemptible VMs are 80% cheaper but short-lived. Ideal for stateless, fault-tolerant workloads.</p>
+    <p>Scheduler Behavior: The scheduler places pods based on requests, not limits.</p>
   </li>
   <li>
-    <p>GKE Autopilot abstracts away node management and charges per pod, reducing idle costs.</p>
+    <p>Kubelet Behavior: Enforces limits at runtime using cgroups.</p>
+  </li>
+  <li>
+    <p>OOM Killer: If a pod exceeds its memory limit, it will be terminated with an “OOMKilled” status.</p>
+  </li>
+  <li>
+    <p>CPU Throttling: CPU limits aren’t fatal but can reduce performance as containers get throttled.</p>
   </li>
 </ul>
 
-<h3 id="-set-proper-resource-requests-and-limits">🔹 Set Proper Resource Requests and Limits</h3>
+<h2 id="6-best-practices-for-setting-resource-requests">6. Best Practices for Setting Resource Requests</h2>
 
-<p>Avoid default settings. Set requests based on average usage and limits to cap unexpected spikes.</p>
+<h3 id="-use-monitoring-tools">🔹 Use Monitoring Tools</h3>
 
-<p>Bad practice: Setting both too high wastes resources. Too low can lead to pod eviction.</p>
+<p>Gather metrics from Prometheus, Metrics Server, or Datadog to observe real usage patterns.</p>
 
-<h3 id="-efficient-use-of-persistent-storage">🔹 Efficient Use of Persistent Storage</h3>
+<h3 id="-start-with-observed-baselines">🔹 Start With Observed Baselines</h3>
+
+<p>Don’t guess—analyze CPU &amp; memory usage during load testing or production hours.</p>
+
+<h3 id="-use-the-90th-percentile">🔹 Use the 90th Percentile</h3>
+
+<p>Set requests around the 90th percentile of average usage to balance stability and cost.</p>
+
+<h3 id="-avoid-defaults-or-copy-paste">🔹 Avoid Defaults or Copy-Paste</h3>
+
+<p>Generic values like 100m for all pods is bad practice. Customize per application.</p>
+
+<h2 id="7-best-practices-for-setting-resource-limits">7. Best Practices for Setting Resource Limits</h2>
+
+<h3 id="-set-limits-slightly-higher-than-requests">🔹 Set Limits Slightly Higher than Requests</h3>
+
+<p>Example: If your request is 500Mi, set the limit to 800Mi–1Gi to allow for spikes without risking OOM kills.</p>
+
+<h3 id="-do-not-omit-limits-in-multi-tenant-environments">🔹 Do Not Omit Limits in Multi-Tenant Environments</h3>
+
+<p>Without limits, a single rogue pod can starve others.</p>
+
+<h3 id="-be-careful-with-cpu-limits">🔹 Be Careful With CPU Limits</h3>
+
+<p>CPU throttling can cause latency and jitter—test your services under limit constraints.</p>
+
+<h2 id="8-right-sizing-strategies-cpu-vs-memory">8. Right-Sizing Strategies: CPU vs Memory</h2>
+
+<h3 id="memory">Memory:</h3>
 
 <ul>
   <li>
-    <p>Use SSD only when necessary (e.g., low-latency DBs)</p>
+    <p>Memory usage is sticky—once allocated, it’s rarely released.</p>
   </li>
   <li>
-    <p>Regularly clean up unused Persistent Volume Claims (PVCs)</p>
-  </li>
-  <li>
-    <p>Use filestore for shared workloads instead of duplicating volumes</p>
+    <p>Right-size by measuring working set size, not peak.</p>
   </li>
 </ul>
 
-<h3 id="-implement-namespace-and-labeling-strategy">🔹 Implement Namespace and Labeling Strategy</h3>
-
-<p>Namespaces and labels make it easier to allocate and analyze cost per team, environment, or service.</p>
-
-<p>Use tools like Kubecost or GCP Cost Allocation to link costs with labels.</p>
-
-<h3 id="-detect-and-manage-idle-resources">🔹 Detect and Manage Idle Resources</h3>
-
-<p>Stale pods, services, and namespaces accumulate cost over time. Schedule regular cleanups.</p>
-
-<p>Use: kubectl top pods, kubectl get all –all-namespaces + custom scripts.</p>
-
-<h3 id="-cost-aware-cicd-pipelines">🔹 Cost-Aware CI/CD Pipelines</h3>
+<h3 id="cpu">CPU:</h3>
 
 <ul>
   <li>
-    <p>Run build/test jobs on preemptible nodes</p>
+    <p>CPU is burstable and shared.</p>
   </li>
   <li>
-    <p>Use Ephemeral environments that auto-shutdown after PR testing</p>
-  </li>
-  <li>
-    <p>Avoid keeping preview apps running indefinitely</p>
+    <p>Set CPU requests based on steady-state needs; allow limits to absorb burst load.</p>
   </li>
 </ul>
 
-<h3 id="-use-monitoring-and-visibility-tools">🔹 Use Monitoring and Visibility Tools</h3>
+<h2 id="9-tools-for-monitoring-and-optimization">9. Tools for Monitoring and Optimization</h2>
+
+<p>Tool</p>
+
+<p>Purpose</p>
+
+<p>Goldilocks</p>
+
+<p>Recommends optimal CPU/memory settings</p>
+
+<p>Prometheus + Grafana</p>
+
+<p>Visualize container resource usage</p>
+
+<p>Kube Metrics Server</p>
+
+<p>Lightweight metrics collection</p>
+
+<p>Kubecost</p>
+
+<p>Cost analysis based on resource usage</p>
+
+<p>Vertical Pod Autoscaler (VPA)</p>
+
+<p>Suggests/request/limit values automatically</p>
+
+<h2 id="10-real-world-example-preventing-node-overload">10. Real-World Example: Preventing Node Overload</h2>
+
+<p>A dev team deployed a microservice-heavy workload without proper limits. Over time, one pod consumed 90% of node memory due to a memory leak, leading to eviction of critical services.</p>
+
+<p>Fix:</p>
 
 <ul>
   <li>
-    <p>GCP Cloud Monitoring for node/pod metrics</p>
+    <p>Set requests.memory: 300Mi</p>
   </li>
   <li>
-    <p>Kubecost for workload-level cost visibility</p>
+    <p>Set limits.memory: 600Mi</p>
   </li>
   <li>
-    <p>GKE Usage Metering to see which workloads consume most resources</p>
+    <p>Monitored usage via Grafana dashboards</p>
   </li>
 </ul>
 
-<h2 id="5-budgeting-and-alerts-with-gcp">5. Budgeting and Alerts with GCP</h2>
+<p>Result: No more OOM kills, and cost savings through right-sized nodes.</p>
 
-<p>GCP offers powerful tools for setting budgets and monitoring cost thresholds:</p>
+<h2 id="11-cicd-considerations-for-resource-management">11. CI/CD Considerations for Resource Management</h2>
 
 <ul>
   <li>
-    <p>Set budgets per project or per label</p>
+    <p>Use static analysis or OPA Gatekeeper to enforce resource fields in manifests.</p>
   </li>
   <li>
-    <p>Enable alerting on budget thresholds</p>
+    <p>Validate YAML in pull requests to check for missing or oversized values.</p>
   </li>
   <li>
-    <p>Use Billing Exports + BigQuery for custom reports</p>
+    <p>Introduce canary deployments to validate performance under set limits.</p>
   </li>
 </ul>
 
-<h2 id="6-real-world-case-study-cutting-costs-by-40">6. Real-World Case Study: Cutting Costs by 40%</h2>
+<h2 id="12-mistakes-to-avoid">12. Mistakes to Avoid</h2>
 
-<p>A mid-size SaaS company running a multitenant B2B app on GKE optimized their clusters by:</p>
+<p>🚫 Setting requests too low → Unstable performance<br />
+🚫 Setting limits too tight → Frequent throttling/OOM<br />
+🚫 Skipping requests → Scheduler can’t place pod properly<br />
+🚫 Uniform values for all pods → Wasted resources<br />
+🚫 Ignoring autoscaling → Missed optimization potential</p>
 
-<ul>
-  <li>
-    <p>Switching dev/staging workloads to preemptible nodes</p>
-  </li>
-  <li>
-    <p>Reducing CPU requests by 30% using Goldilocks recommendations</p>
-  </li>
-  <li>
-    <p>Removing stale PVCs (~200GB)</p>
-  </li>
-  <li>
-    <p>Moving from N1 to E2 machine types</p>
-  </li>
-  <li>
-    <p>Implementing HPA across all microservices</p>
-  </li>
-</ul>
+<h2 id="13-conclusion">13. Conclusion</h2>
 
-<p>Result: Cloud spend dropped by 40% over 2 months without user impact.</p>
+<p>Properly configuring resource requests and limits is one of the most powerful, yet often overlooked, practices in Kubernetes optimization. It affects not only the reliability of your services but also your bottom line—especially in cloud environments.</p>
 
-<h2 id="7-future-trends-finops-for-kubernetes">7. Future Trends: FinOps for Kubernetes</h2>
+<p>Start small. Measure. Adjust. Automate. Over time, you’ll gain a more efficient, stable, and scalable Kubernetes infrastructure.</p>
 
-<p>As cloud-native adoption grows, so doe s the need for FinOps — financial operations for engineering. GKE-native FinOps will:</p>
+<h2 id="14-faqs">14. FAQs</h2>
 
-<ul>
-  <li>
-    <p>Integrate cost metrics into CI/CD workflows</p>
-  </li>
-  <li>
-    <p>Influence design-time decisions for engineers</p>
-  </li>
-  <li>
-    <p>Automate cost guardrails based on GitOps policies</p>
-  </li>
-</ul>
+<h3 id="1-what-happens-if-i-dont-set-requests-and-limits-in-kubernetes">1. What happens if I don’t set requests and limits in Kubernetes?</h3>
 
-<h2 id="8-conclusion">8. Conclusion</h2>
+<p>Kubernetes may schedule pods inefficiently, and they can be evicted or throttled during resource contention.</p>
 
-<p>Optimizing Kubernetes costs on GKE is not a one-time task — it’s a continuous process of monitoring, right-sizing, and aligning infrastructure with application needs.</p>
+<h3 id="2-should-i-set-cpu-limits-in-kubernetes">2. Should I set CPU limits in Kubernetes?</h3>
 
-<p>By adopting these best practices and tools, your team can achieve greater performance at lower costs and build a culture of cost-conscious engineering.</p>
+<p>Yes, but cautiously. CPU limits can throttle apps. For latency-sensitive apps, test performance under constrained conditions.</p>
 
-<h2 id="9-faqs">9. FAQs</h2>
+<h3 id="3-is-memory-limit-mandatory-in-production">3. Is memory limit mandatory in production?</h3>
 
-<h3 id="1-how-can-i-monitor-costs-in-gke">1. How can I monitor costs in GKE?</h3>
+<p>Highly recommended. Without it, a memory leak can crash the node.</p>
 
-<p>Use GKE Usage Metering, Kubecost, or GCP Billing exports for workload-level insights.</p>
+<h3 id="4-can-i-use-autoscaling-without-setting-requests">4. Can I use autoscaling without setting requests?</h3>
 
-<h3 id="2-whats-the-difference-between-autopilot-and-standard-gke">2. What’s the difference between Autopilot and Standard GKE?</h3>
+<p>No. HPA (Horizontal Pod Autoscaler) relies on resource requests to calculate thresholds.</p>
 
-<p>Autopilot manages infrastructure and charges per pod, while Standard GKE gives full control over nodes.</p>
+<h3 id="5-how-do-i-know-what-values-to-set-for-requests">5. How do I know what values to set for requests?</h3>
 
-<h3 id="3-can-i-use-spot-instances-in-gke">3. Can I use spot instances in GKE?</h3>
+<p>Use metrics from tools like Prometheus or Goldilocks based on actual usage.</p>
 
-<p>Yes, preemptible VMs (GCP’s version of spot) work well for stateless workloads.</p>
+<h3 id="6-whats-the-difference-between-requests-and-limits">6. What’s the difference between requests and limits?</h3>
 
-<h3 id="4-whats-the-best-way-to-avoid-over-provisioning">4. What’s the best way to avoid over-provisioning?</h3>
+<p>Requests are guaranteed minimums; limits are enforced maximums.</p>
 
-<p>Use tools like Goldilocks and VPA to analyze and right-size requests/limits.</p>
+<h3 id="7-does-kubernetes-kill-a-pod-when-it-hits-its-cpu-limit">7. Does Kubernetes kill a pod when it hits its CPU limit?</h3>
 
-<h3 id="5-are-there-cost-implications-for-load-balancers-in-gke">5. Are there cost implications for Load Balancers in GKE?</h3>
+<p>No. CPU is throttled, not terminated. Memory overuse results in termination.</p>
 
-<p>Yes, especially with Ingress and NodePorts. Use internal LBs or shared services if possible.</p>
+<h3 id="8-should-i-use-the-same-values-for-requests-and-limits">8. Should I use the same values for requests and limits?</h3>
 
-<h3 id="6-how-does-gke-autoscaling-work">6. How does GKE autoscaling work?</h3>
+<p>Not always. It’s better to give room for spikes with higher limits.</p>
 
-<p>Cluster Autoscaler adjusts node count; HPA scales pods based on metrics; VPA adjusts pod resource settings.</p>
+<h3 id="9-are-there-tools-that-auto-tune-requests-and-limits">9. Are there tools that auto-tune requests and limits?</h3>
 
-<h3 id="7-should-i-set-resource-limits-for-every-pod">7. Should I set resource limits for every pod?</h3>
+<p>Yes. Tools like Goldilocks, VPA, and Kubecost help automate right-sizing.</p>
 
-<p>Yes. Without limits, a rogue pod can exhaust node resources and trigger eviction.</p>
+<h3 id="10-how-often-should-i-update-requests-and-limits">10. How often should I update requests and limits?</h3>
 
-<h3 id="8-is-autopilot-mode-cheaper-than-standard">8. Is Autopilot mode cheaper than Standard?</h3>
-
-<p>Depends. For small, bursty workloads, Autopilot is often cheaper due to per-pod billing.</p>
-
-<h3 id="9-how-do-i-find-unused-kubernetes-resources">9. How do I find unused Kubernetes resources?</h3>
-
-<p>Use CLI commands and tools like K9s, Lens, or custom scripts to detect idle pods/services.</p>
-
-<h3 id="10-what-tools-help-with-kubernetes-cost-visibility">10. What tools help with Kubernetes cost visibility?</h3>
-
-<p>Kubecost, GCP Billing Export + BigQuery, and GKE Usage Metering are most effective.</p>
+<p>Regularly—especially after updates, usage changes, or performance issues.</p>
 </div>
           </div>
 
@@ -636,23 +656,23 @@
               
               <div class="mb-3">
                 <a
-                  href="/blog/2025-07-02-kubernetes-best-practices-for-resource-requests-and-limits"
-                  class="text-decoration-none text-dark fw-semibold d-block"
-                  >Kubernetes Best Practices for Resource Requests and Limits</a
-                >
-                <small class="text-muted"
-                  >02 July 2025</small
-                >
-              </div>
-              
-              <div class="mb-3">
-                <a
                   href="/blog/how-to-optimize-kubernetes-for-performance-and-reduce-cost/"
                   class="text-decoration-none text-dark fw-semibold d-block"
                   >how to optimize kubernetes for performance and reduce cost</a
                 >
                 <small class="text-muted"
                   >27 June 2025</small
+                >
+              </div>
+              
+              <div class="mb-3">
+                <a
+                  href="/blog/2025-06-23-best-practice-for-running-cost-optimized-kubernetes-applications-on-gke/"
+                  class="text-decoration-none text-dark fw-semibold d-block"
+                  >Best practice for Running  Cost Optimized Kubernetes Applications on GKE</a
+                >
+                <small class="text-muted"
+                  >23 June 2025</small
                 >
               </div>
               
