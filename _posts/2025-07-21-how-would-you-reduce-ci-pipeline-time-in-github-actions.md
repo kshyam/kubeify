@@ -418,16 +418,7 @@ Set the following in your GitHub repository secrets:
 * `GITHUB_TOKEN`
 * Optional: `ARGOCD_TOKEN`, `ARGOCD_SERVER` for ArgoCD CLI integration
 
----
 
-## 📈 Bonus: Deployment Observability
-
-You can integrate:
-
-* **Slack Notification** on success/failure
-* **Prometheus + Grafana** for live rollout metrics
-* **Sentry, Datadog, or Rollbar** to track regressions post-deploy
-* **GitHub Deployment API** for visual deploy status in PRs
 
 
 
