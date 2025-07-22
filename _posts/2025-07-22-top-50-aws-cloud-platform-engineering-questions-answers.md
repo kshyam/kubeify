@@ -7,7 +7,7 @@ layout: post
 permalink: blog/:title
 author: Shyam Mohan K
 category: AWS
-date: 2025-07-28T10:56:00.000+05:30
+date: 2025-07-21T10:56:00.000+05:30
 ---
 # Top 50 AWS Cloud Platform Engineering Questions & Answers  
 *Focused on Docker, Kubernetes, GitOps, ArgoCD, Terraform, Ansible, Prometheus, Grafana, Elasticsearch, and related cloud-native tools.*
