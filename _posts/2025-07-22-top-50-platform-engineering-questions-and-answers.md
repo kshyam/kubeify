@@ -10,7 +10,8 @@ author: Shyam Mohan K
 category: platform engineering
 date: 2025-07-12T10:41:00.000+05:30
 ---
-# Top 50 Platform Engineering & Cloud Infrastructure at Scale: Questions & Answers
+
+
 
 ## System Design & Architecture
 
