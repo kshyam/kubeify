@@ -135,30 +135,6 @@ p {
   }
 }
 
-// .btn {
-//   font-family: $font-family-primary;
-//   font-weight: 500;
-//   letter-spacing: 0.8px;
-//   font-size: 0.9rem;
-//   line-height: 1.6;
-// }
-// .btn-white {
-//   color: theme-color("primary");
-//   &:hover,
-//   :focus {
-//     color: theme-color("primary");
-//   }
-// }
-// .btn-call-action {
-//   width: 240px;
-//   padding: 0.69rem 0.75rem;
-//   border-radius: 24px;
-// }
-// .btn-rounded {
-//   border-radius: 1.875rem !important;
-// }
-/*----end-----*/
-
 /* Target the hero section */
 .hero {
   height: 80vh;
@@ -742,54 +718,6 @@ td {
   }
 }
 
-/*----end----*/
-/*-----why-kubernetes-----*/
-// .kubernetes-info-wrapper {
-//   position: relative;
-//   overflow: hidden;
-//   isolation: isolate;
-// }
-
-// .kubernetes-info-wrapper::before,
-// .kubernetes-info-wrapper::after {
-//   content: "";
-//   position: absolute;
-//   top: 0;
-//   bottom: 0;
-//   width: 100%;
-//   z-index: 0;
-// }
-
-// .kubernetes-info-wrapper::before {
-//   left: 0;
-//   width: 50%;
-//   background-color: #343a40;
-// }
-
-// .kubernetes-info-wrapper::after {
-//   left: 50%;
-//   width: 50%;
-//   background-color: #27c1a5;
-// }
-
-// .kubernetes-top-block,
-// .kubernetes-bottom-block {
-//   position: relative;
-//   z-index: 1;
-// }
-
-// @media (max-width: 767.98px) {
-//   .kubernetes-info-wrapper::before,
-//   .kubernetes-info-wrapper::after {
-//     width: 100%;
-//   }
-//   .kubernetes-info-wrapper::after {
-//     top: 50%;
-//     left: 0;
-//     height: 50%;
-//     width: 100%;
-//   }
-// }
 .kubernetes-info-wrapper {
   position: relative;
   overflow: hidden;
@@ -852,9 +780,7 @@ td {
     text-decoration: none !important;
     color: #3e92d9 !important;
   }
-  // .col-md-2 {
-  //   position: relative;
-  // }
+
   .col-xs-12 {
     width: 33%;
   }
@@ -1168,7 +1094,7 @@ td {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(7.9px);
-  border: 0.3px solid white;
+  border: 0.2px solid #7a7a7a;
 }
 
 /* ---------------------------------------------------
@@ -1388,9 +1314,7 @@ td {
   width: 100%;
   z-index: 5;
 }
-// .content-wraper {
-//   margin-top: 122px;
-// }
+
 .cm-top-nav {
   margin-bottom: 0;
 }
@@ -1431,9 +1355,7 @@ td {
     opacity: 0.5;
   }
 }
-.content-wraper {
-  margin: 0;
-}
+
 .carousel-inner {
   position: relative;
   width: 100%;

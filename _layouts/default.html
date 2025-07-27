@@ -24,13 +24,9 @@
     <![endif]-->
   </head>
 
-  <body
-    class="layout-blog {% if page.body_class %}{{ page.body_class }}{% endif %}"
-  >
-    <!-- navbar -->
+  <body class="{% if page.body_class %}{{ page.body_class }}{% endif %}">
     <header class="default-header cm-header">{% include header.html %}</header>
-
-    <div class="content-wraper">{{ content }}</div>
+    <div class="mt-5">{{ content }}</div>
 
     {% include footer.html %}
     <!-- Include Modal Partial -->

@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Kubernetes Pod Scheduling Balancing Cost and Resilience | Kubeify</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Kubernetes Pod Scheduling Balancing Cost and Resilience" />
+<meta name="author" content="Shyam Mohan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Kubernetes has become the go-to container orchestration platform for deploying and managing cloud-native applications." />
+<meta property="og:description" content="Kubernetes has become the go-to container orchestration platform for deploying and managing cloud-native applications." />
+<link rel="canonical" href="http://localhost:4000/blog/2025-06-15-kubernetes-pod-scheduling-balancing-cost-and-resilience" />
+<meta property="og:url" content="http://localhost:4000/blog/2025-06-15-kubernetes-pod-scheduling-balancing-cost-and-resilience" />
+<meta property="og:site_name" content="Kubeify" />
+<meta property="og:image" content="http://localhost:4000/images/blog/kubernetes-pod-scheduling-balancing-cost-and-resilience-2-.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-06-16T01:36:00+05:30" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/images/blog/kubernetes-pod-scheduling-balancing-cost-and-resilience-2-.webp" />
+<meta property="twitter:title" content="Kubernetes Pod Scheduling Balancing Cost and Resilience" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Shyam Mohan"},"dateModified":"2025-06-16T01:36:00+05:30","datePublished":"2025-06-16T01:36:00+05:30","description":"Kubernetes has become the go-to container orchestration platform for deploying and managing cloud-native applications.","headline":"Kubernetes Pod Scheduling Balancing Cost and Resilience","image":"http://localhost:4000/images/blog/kubernetes-pod-scheduling-balancing-cost-and-resilience-2-.webp","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2025-06-15-kubernetes-pod-scheduling-balancing-cost-and-resilience"},"url":"http://localhost:4000/blog/2025-06-15-kubernetes-pod-scheduling-balancing-cost-and-resilience"}</script>
+<!-- End Jekyll SEO tag -->
+ <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5a50d614079115001207f66b&product=inline-share-buttons' async='async'></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/blog.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white  fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="/"><img src="/images/kubeify-logo.png" alt=""/ height="44px;"></a>
+    <button class="navbar-toggler" type="button" id="sidebarCollapse">
+      <!-- <span class="navbar-toggler-icon"></span> -->
+      <span class="icon"></span>
+      <span class="icon"></span>
+      <span class="icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="servicesDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Services
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="/why-kubernetes">Why Kubernetes</a></li>
+              <li><a class="dropdown-item" href="/kubernetes-cost-optimization">kubernetes cost optimization</a></li>
+          </ul>
+        </li>
+
+       
+        <li class="nav-item">
+          <a class="nav-link" href="/blog">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/webinars">Webinars</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link btn cta-button btn-rounded"
+            href="/schedule-meeting"
+            style="margin-left: 10px"
+            >&nbsp; Schedule Meeting &nbsp;
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="sidebar__wrapper">
+  <!-- Sidebar -->
+  <nav id="sidebar">
+    <div class="sideBar__content">
+      <div id="dismiss">
+        <!-- <i class="fas fa-arrow-left"></i> -->
+        <span class="modal-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="24"
+            height="24"
+            viewBox="0 0 172 172"
+            style="fill: #000000"
+          >
+            <g
+              fill="none"
+              fill-rule="nonzero"
+              stroke="none"
+              stroke-width="1"
+              stroke-linecap="butt"
+              stroke-linejoin="miter"
+              stroke-miterlimit="10"
+              stroke-dasharray=""
+              stroke-dashoffset="0"
+              font-family="none"
+              font-weight="none"
+              font-size="none"
+              text-anchor="none"
+              style="mix-blend-mode: normal"
+            >
+              <path d="M0,172v-172h172v172z" fill="none"></path>
+              <g fill="#000">
+                <path
+                  d="M33.73372,23.59961l-10.13411,10.13411l52.26628,52.26628l-52.26628,52.26628l10.13411,10.13411l52.26628,-52.26628l52.26628,52.26628l10.13411,-10.13411l-52.26628,-52.26628l52.26628,-52.26628l-10.13411,-10.13411l-52.26628,52.26628z"
+                ></path>
+              </g>
+            </g>
+          </svg>
+        </span>
+      </div>
+
+      <!-- <div class="sidebar-header">
+        <h3>Bootstrap Sidebar</h3>
+      </div> -->
+      <!-- <div class="nav__title">
+        Menu
+      </div> -->
+      <ul class="navbar-nav ml-auto">
+        <!--<li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="servicesDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Services
+          </a>
+           <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                  <li><a class="dropdown-item" href="/service1">Service 1</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 2</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 3</a></li>
+                  <li><a class="dropdown-item" href="/service1">Service 4</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 5</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 6</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 7</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 8</a></li>
+              </ul> 
+        </li>-->
+
+        <li class="nav-item">
+          <a class="nav-link" href="/why-kubernetes">Why Kubernetes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blog">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/webinars">Webinars</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link btn cta-button btn-rounded"
+            href="/schedule-meeting"
+            >&nbsp;&nbsp;Schedule Meeting&nbsp;&nbsp;</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <!-- <div id="content">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <button type="button" id="sidebarCollapse" class="btn btn-info">
+          <i class="fas fa-align-left"></i>
+          <span>Toggle Sidebar</span>
+        </button>
+      </div>
+    </nav>
+  </div> -->
+  <!-- Dark Overlay element -->
+  <div class="overlay"></div>
+</div>
+<script src="/js/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    // $("#sidebar").mCustomScrollbar({
+    //   theme: "minimal",
+    // });
+
+    $("#dismiss, .overlay").on("click", function () {
+      $("#sidebar").removeClass("active");
+      $(".overlay").removeClass("active");
+    });
+
+    $("#sidebarCollapse").on("click", function () {
+      $("#sidebar").addClass("active");
+      $(".overlay").addClass("active");
+      // $(".collapse.in").toggleClass("in");
+      // $("a[aria-expanded=true]").attr("aria-expanded", "false");
+    });
+
+    // $(window).scroll(function () {
+    //   if ($(document).scrollTop() > $(".navbar").height()) {
+    //     $("header").addClass("sticky_header");
+    //     $(".navbar").addClass("navbar-light bg-white");
+    //   } else {
+    //     $("header").removeClass("sticky_header");
+    //     $(".navbar").removeClass("navbar-light bg-white");
+    //   }
+    // });
+
+    // $(".list-unstyled li.active").removeClass("active");
+    // console.log(
+    //   $("a[href*='" + location.pathname + "']")
+    //     .parent()
+    //     .addClass("active")
+    // );
+    $(".list-unstyled li.active").removeClass("active");
+
+    $(".list-unstyled li a").each(function (i, obj) {
+      console.log(obj.classList.contains("btn"));
+      if (
+        obj.pathname === location.pathname &&
+        !obj.classList.contains("btn")
+      ) {
+        $(".list-unstyled li.active").removeClass("active");
+
+        console.log($(obj).parent().addClass("active"));
+      }
+    });
+
+    // let $parent = $(this).parent();
+    // $parent.addClass("active");
+    // window.location.assign($(this).attr("href"));
+    // e.preventDefault();
+  });
+</script>
+
+<meta name="google-adsense-account" content="ca-pub-4088406505945385" />
+
+
+      <div class="container mt-5">
+        <div class="row mt-5">
+          <div class="col-lg-8 bg-white p-2 border rounded shadow-sm mt-5 mb-5">
+            <img
+              src="/images/blog/kubernetes-pod-scheduling-balancing-cost-and-resilience-2-.webp"
+              alt="Kubernetes Pod Scheduling Balancing Cost and Resilience"
+              class="card-img-top rounded"
+              title="Kubernetes Pod Scheduling Balancing Cost and Resilience"
+            />
+            <h1 class="mt-4" style="color: black">Kubernetes Pod Scheduling Balancing Cost and Resilience</h1>
+            <time>
+              16 Jun 2025 -
+              <small>Shyam Mohan</small>
+            </time>
+            <div class="px-2 mt-4"><p>Kubernetes has become the go-to container orchestration platform for deploying and managing cloud-native applications. One of its core responsibilities is pod scheduling, the process of placing pods onto nodes in a cluster.</p>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+  <li>
+    <p>Introduction</p>
+  </li>
+  <li>
+    <p>Understanding Kubernetes Pod Scheduling</p>
+  </li>
+  <li>
+    <p>The Trade-Off: Cost vs Resilience</p>
+  </li>
+  <li>
+    <p>Key Factors Influencing Pod Scheduling</p>
+
+    <p>Resource Requests and Limits</p>
+
+    <p>Node Affinity and Anti-Affinity</p>
+
+    <p>Taints and Tolerations</p>
+
+    <p>Topology Spread Constraints</p>
+
+    <p>Priority and Preemption</p>
+  </li>
+  <li>
+    <p>Strategies for Cost-Effective Scheduling</p>
+
+    <p>Right-Sizing Resources</p>
+
+    <p>Leveraging Spot and Preemptible Nodes</p>
+
+    <p>Autoscaling Clusters Smartly</p>
+
+    <p>Scheduling on Cost-Aware Node Pools</p>
+  </li>
+  <li>
+    <p>Strategies for High Resilience Scheduling</p>
+
+    <p>High Availability Through Spread Constraints</p>
+
+    <p>Avoiding Single Points of Failure</p>
+
+    <p>Using Pod Disruption Budgets (PDBs)</p>
+
+    <p>Node and Zone Affinity for Redundancy</p>
+  </li>
+  <li>
+    <p>Combining Cost and Resilience: Best Practices</p>
+  </li>
+  <li>
+    <p>Advanced Scheduling Tools and Plugins</p>
+
+    <p>KubeScheduler Plugins</p>
+
+    <p>Descheduler</p>
+
+    <p>Third-party Tools</p>
+  </li>
+  <li>
+    <p>Real-World Use Cases and Case Studies</p>
+  </li>
+  <li>
+    <p>Conclusion</p>
+  </li>
+  <li>
+    <p>FAQs</p>
+  </li>
+</ol>
+
+<h2 id="1-introduction">1. Introduction</h2>
+
+<p>Kubernetes has become the go-to container orchestration platform for deploying and managing cloud-native applications. One of its core responsibilities is pod scheduling, the process of placing pods onto nodes in a cluster. While Kubernetes does a great job out-of-the-box, striking the right balance between cost efficiency and resilience requires a thoughtful, strategic approach.</p>
+
+<p>Organizations today aim to reduce infrastructure costs without compromising on performance or availability. This article explores how Kubernetes pod scheduling works, the key features available to control scheduling behavior, and how to optimize your strategy for both cost and resilience.</p>
+
+<h2 id="2-understanding-kubernetes-pod-scheduling">2. Understanding Kubernetes Pod Scheduling</h2>
+
+<p>Pod scheduling is handled by the Kube-scheduler, a component of the Kubernetes control plane. It evaluates a set of scheduling policies and constraints before deciding which node a pod should run on. The process includes:</p>
+
+<ul>
+  <li>
+    <p>Filtering: Identifying nodes that meet the basic requirements (CPU, memory, affinity rules).</p>
+  </li>
+  <li>
+    <p>Scoring: Ranking nodes based on defined preferences (resource usage, spread policies).</p>
+  </li>
+  <li>
+    <p>Binding: Assigning the pod to the selected node.</p>
+  </li>
+</ul>
+
+<p>The scheduler ensures optimal placement for load balancing, node health, and performance—but it needs configuration and tuning to account for business goals like cost minimization and application resilience.</p>
+
+<h2 id="3-the-trade-off-cost-vs-resilience">3. The Trade-Off: Cost vs Resilience</h2>
+
+<p>Cost optimization often involves consolidating workloads on fewer or cheaper nodes (like spot instances), which can risk availability. On the other hand, resilience demands spreading workloads across availability zones, reserving spare capacity, and using more stable (but costlier) compute types.</p>
+
+<p>The challenge is to find a middle ground—using scheduling techniques and policies to optimize both dimensions without sacrificing the other.</p>
+
+<h2 id="4-key-factors-influencing-pod-scheduling">4. Key Factors Influencing Pod Scheduling</h2>
+
+<h3 id="41-resource-requests-and-limits">4.1 Resource Requests and Limits</h3>
+
+<p>Setting appropriate CPU and memory requests/limits helps the scheduler make efficient decisions. Over-provisioning wastes resources; under-provisioning can lead to throttling or eviction.</p>
+
+<h3 id="42-node-affinity-and-anti-affinity">4.2 Node Affinity and Anti-Affinity</h3>
+
+<p>Node affinity lets you define soft or hard rules for where pods should or shouldn’t run based on node labels (e.g., instance type, region, GPU availability).</p>
+
+<ul>
+  <li>
+    <p>preferredDuringSchedulingIgnoredDuringExecution (soft)</p>
+  </li>
+  <li>
+    <p>requiredDuringSchedulingIgnoredDuringExecution (hard)</p>
+  </li>
+</ul>
+
+<p>Anti-affinity helps avoid placing similar pods on the same node.</p>
+
+<h3 id="43-taints-and-tolerations">4.3 Taints and Tolerations</h3>
+
+<p>Taints mark nodes to repel certain pods. Tolerations allow pods to bypass taints. This helps segregate workloads—for instance, isolating high-priority services from batch jobs.</p>
+
+<h3 id="44-topology-spread-constraints">4.4 Topology Spread Constraints</h3>
+
+<p>Used to evenly distribute pods across different topology domains (zones, nodes, racks). This is key for availability and fault tolerance.</p>
+
+<h3 id="45-priority-and-preemption">4.5 Priority and Preemption</h3>
+
+<p>Pods can be assigned priorities. In resource-constrained environments, lower-priority pods can be evicted to make room for critical ones. This ensures uptime for essential workloads.</p>
+
+<h2 id="5-strategies-for-cost-effective-scheduling">5. Strategies for Cost-Effective Scheduling</h2>
+
+<h3 id="51-right-sizing-resources">5.1 Right-Sizing Resources</h3>
+
+<p>Conduct regular audits of pod resource requests. Use tools like Goldilocks or VPA (Vertical Pod Autoscaler) to fine-tune requests and avoid resource bloat.</p>
+
+<h3 id="52-leveraging-spot-and-preemptible-nodes">5.2 Leveraging Spot and Preemptible Nodes</h3>
+
+<p>Schedule stateless, fault-tolerant workloads on cheaper spot/preemptible instances. Use node affinity rules to isolate them from critical services.</p>
+
+<h3 id="53-autoscaling-clusters-smartly">5.3 Autoscaling Clusters Smartly</h3>
+
+<p>Use Cluster Autoscaler to add/remove nodes based on pending pods and utilization. Combine with HPA (Horizontal Pod Autoscaler) for dynamic right-sizing.</p>
+
+<h3 id="54-scheduling-on-cost-aware-node-pools">5.4 Scheduling on Cost-Aware Node Pools</h3>
+
+<p>Use labels to separate nodes by cost category (e.g., cost-tier=low). Schedule non-critical pods on low-tier nodes using affinity.</p>
+
+<h2 id="6-strategies-for-high-resilience-scheduling">6. Strategies for High Resilience Scheduling</h2>
+
+<h3 id="61-high-availability-through-spread-constraints">6.1 High Availability Through Spread Constraints</h3>
+
+<p>Use topologySpreadConstraints to spread pods across failure domains. This protects against zone or node-level failures.</p>
+
+<h3 id="62-avoiding-single-points-of-failure">6.2 Avoiding Single Points of Failure</h3>
+
+<p>Ensure multiple replicas of a pod aren’t scheduled on the same node or zone. Combine anti-affinity with spread constraints for maximum impact.</p>
+
+<h3 id="63-using-pod-disruption-budgets-pdbs">6.3 Using Pod Disruption Budgets (PDBs)</h3>
+
+<p>PDBs ensure a minimum number of pods remain available during voluntary disruptions (like node drain or upgrade), preventing accidental downtime.</p>
+
+<h3 id="64-node-and-zone-affinity-for-redundancy">6.4 Node and Zone Affinity for Redundancy</h3>
+
+<p>Pin critical pods to nodes with better reliability SLAs or across multiple zones for regional redundancy.</p>
+
+<h2 id="7-combining-cost-and-resilience-best-practices">7. Combining Cost and Resilience: Best Practices</h2>
+
+<ul>
+  <li>
+    <p>Mix spot and on-demand instances using separate node pools</p>
+  </li>
+  <li>
+    <p>Use priority classes to safeguard critical workloads</p>
+  </li>
+  <li>
+    <p>Implement chaos testing to simulate node failures and improve pod rescheduling</p>
+  </li>
+  <li>
+    <p>Adopt multi-zone clusters with zone-aware scheduling</p>
+  </li>
+  <li>
+    <p>Continuously monitor and refine pod distribution with tools like KubeCost and Lens</p>
+  </li>
+</ul>
+
+<h2 id="8-advanced-scheduling-tools-and-plugins">8. Advanced Scheduling Tools and Plugins</h2>
+
+<h3 id="81-kubescheduler-plugins">8.1 KubeScheduler Plugins</h3>
+
+<p>Plugins allow custom logic for scoring/filtering nodes. For instance, CapacityScheduling or Cost-aware Scheduling plugins.</p>
+
+<h3 id="82-descheduler">8.2 Descheduler</h3>
+
+<p>The Descheduler rebalances pods after cluster changes. For example, it can evict pods from overused nodes to optimize cost/resilience.</p>
+
+<h3 id="83-third-party-tools">8.3 Third-party Tools</h3>
+
+<ul>
+  <li>
+    <p>Karpenter by AWS: Automatically provisions right-sized nodes</p>
+  </li>
+  <li>
+    <p>KubeCost: Provides insights into resource usage and cost</p>
+  </li>
+  <li>
+    <p>OpenCost: CNCF sandbox project for cost observability in Kubernetes</p>
+  </li>
+</ul>
+
+<h2 id="9-real-world-use-cases-and-case-studies">9. Real-World Use Cases and Case Studies</h2>
+
+<h3 id="case-1-e-commerce-platform">Case 1: E-commerce Platform</h3>
+
+<p>An online store uses priority classes to run payment services on on-demand nodes, and background sync jobs on spot nodes. Result: 35% cost savings without downtime.</p>
+
+<h3 id="case-2-saas-provider">Case 2: SaaS Provider</h3>
+
+<p>A SaaS company uses topology spread constraints to distribute pods across 3 zones. When one zone failed, only 1/3 of pods were affected, reducing impact significantly.</p>
+
+<h2 id="10-conclusion">10. Conclusion</h2>
+
+<p>Balancing cost and resilience in Kubernetes pod scheduling is an ongoing process. It demands a deep understanding of workload requirements, strategic use of Kubernetes primitives, and observability tools. By using the right combination of affinities, constraints, autoscalers, and node configurations, you can run cost-efficient yet highly available Kubernetes workloads.</p>
+
+<h2 id="11-frequently-asked-questions-faqs">11. Frequently Asked Questions (FAQs)</h2>
+
+<h3 id="q1-what-is-the-kubernetes-scheduler">Q1. What is the Kubernetes scheduler?</h3>
+
+<p>The Kubernetes scheduler is a control plane component responsible for assigning newly created pods to suitable nodes in the cluster.</p>
+
+<h3 id="q2-how-do-topology-spread-constraints-improve-resilience">Q2. How do topology spread constraints improve resilience?</h3>
+
+<p>They ensure pods are evenly distributed across zones/nodes, preventing service disruption during localized failures.</p>
+
+<h3 id="q3-can-i-schedule-pods-based-on-node-cost">Q3. Can I schedule pods based on node cost?</h3>
+
+<p>Yes, by labeling nodes with cost indicators and using node affinity rules, you can schedule pods on cost-effective nodes.</p>
+
+<h3 id="q4-how-do-spot-instances-affect-pod-scheduling">Q4. How do spot instances affect pod scheduling?</h3>
+
+<p>Pods running on spot instances are cheaper but risk termination. Use them for fault-tolerant, stateless workloads.</p>
+
+<h3 id="q5-what-is-a-pod-disruption-budget-pdb">Q5. What is a Pod Disruption Budget (PDB)?</h3>
+
+<p>A PDB sets the minimum number of available pods during disruptions to maintain service availability.</p>
+
+<h3 id="q6-what-tools-help-with-kubernetes-cost-optimization">Q6. What tools help with Kubernetes cost optimization?</h3>
+
+<p>KubeCost, OpenCost, and Cluster Autoscaler help monitor and manage resource costs in Kubernetes.</p>
+
+<h3 id="q7-is-it-possible-to-use-custom-scheduling-logic">Q7. Is it possible to use custom scheduling logic?</h3>
+
+<p>Yes, using scheduler plugins or third-party schedulers, you can implement cost-aware or custom affinity-based scheduling.</p>
+
+<h3 id="q8-whats-the-role-of-descheduler-in-kubernetes">Q8. What’s the role of descheduler in Kubernetes?</h3>
+
+<p>The descheduler rebalances pods after initial scheduling, especially useful for correcting skew or inefficiencies.</p>
+
+<h3 id="q9-how-does-node-affinity-differ-from-taints-and-tolerations">Q9. How does node affinity differ from taints and tolerations?</h3>
+
+<p>Node affinity pulls pods toward nodes; taints repel pods unless they have matching tolerations.</p>
+
+<h3 id="q10-can-i-mix-spot-and-on-demand-nodes-in-one-cluster">Q10. Can I mix spot and on-demand nodes in one cluster?</h3>
+
+<p>Yes, it’s a common strategy to save costs while maintaining resilience for critical workloads.</p>
+</div>
+          </div>
+
+          <!-- RIGHT: Related Posts -->
+          <div class="col-lg-4 mt-5">
+
+             <!-- Tag/Categories Section -->
+            <div class="mb-4 p-3 border rounded bg-white d-none d-md-block">
+              <h4 class="fw-bold mb-3">Tags</h4>
+              
+              <div class="list-inline mb-0 d-flex flex-wrap gap-2">
+                
+                <span class="badge bg-secondary mb-1 w-auto align-self-start">
+                  AWS Cost
+                </span>
+                
+                <span class="badge bg-secondary mb-1 w-auto align-self-start">
+                  CICD
+                </span>
+                
+                <span class="badge bg-secondary mb-1 w-auto align-self-start">
+                  DevOps
+                </span>
+                
+                <span class="badge bg-secondary mb-1 w-auto align-self-start">
+                  Kubernetes
+                </span>
+                
+                <span class="badge bg-secondary mb-1 w-auto align-self-start">
+                  platform engineering
+                </span>
+                
+              </div>
+            </div>
+
+            <div class="p-3 mb-4 border rounded bg-white shadow-sm">
+              <h4 class="fw-bold mb-3">More in Kubernetes</h4>
+                
+              <div class="mb-3">
+                <a
+                  href="/blog/2025-07-06-resource-management-for-pods-and-containers-in-kubernetes/"
+                  class="text-decoration-none text-dark fw-semibold d-block"
+                  >Resource Management for Pods and Containers in Kubernetes</a
+                >
+                <small class="text-muted"
+                  >06 July 2025</small
+                >
+              </div>
+              
+              <div class="mb-3">
+                <a
+                  href="/blog/2025-07-02-kubernetes-best-practices-for-resource-requests-and-limits"
+                  class="text-decoration-none text-dark fw-semibold d-block"
+                  >Kubernetes Best Practices for Resource Requests and Limits</a
+                >
+                <small class="text-muted"
+                  >02 July 2025</small
+                >
+              </div>
+              
+              <div class="mb-3">
+                <a
+                  href="/blog/how-to-optimize-kubernetes-for-performance-and-reduce-cost/"
+                  class="text-decoration-none text-dark fw-semibold d-block"
+                  >how to optimize kubernetes for performance and reduce cost</a
+                >
+                <small class="text-muted"
+                  >27 June 2025</small
+                >
+              </div>
+              
+              <div class="mb-3">
+                <a
+                  href="/blog/2025-06-23-best-practice-for-running-cost-optimized-kubernetes-applications-on-gke/"
+                  class="text-decoration-none text-dark fw-semibold d-block"
+                  >Best practice for Running  Cost Optimized Kubernetes Applications on GKE</a
+                >
+                <small class="text-muted"
+                  >23 June 2025</small
+                >
+              </div>
+              
+            </div>
+
+           
+          </div>
+        </div>
+      </div>
+
+    <!-- <div class="bg-light pt-5 pb-5 work-hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <div class="media">
+          <img
+            src="/images/clients/yaron-oren.jpeg"
+            class="mr-4 rounded-circle"
+            width="120"
+            alt="yaron-oren"
+          />
+          <div class="align-self-center msg-txt-18 font-italic mt-4 mt-md-0">
+            Kubeify's team <b>decrease the time</b> it takes to adopt open
+            source technology while enabling consistent application environments
+            across deployments...letting our developers focus on application
+            code while improving speed and quality of our releases.<br />
+            <b>- Yaron Oren, Founder Maverick.ai (acquired by OutboundWorks)</b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<section class="bg-light py-5 work-hero">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="d-flex flex-column flex-md-row align-items-center gap-4">
+          <!-- Client Image -->
+          <img
+            src="/images/clients/yaron-oren.jpeg"
+            alt="Yaron Oren"
+            class="rounded-circle"
+            width="120"
+            height="120"
+          />
+          <!-- Testimonial Text -->
+          <div class="fst-italic">
+            <p class="mb-2 fs-5">
+              Kubeify's team <strong>decrease the time</strong> it takes to
+              adopt open source technology while enabling consistent application
+              environments across deployments... letting our developers focus on
+              application code while improving speed and quality of our
+              releases.
+            </p>
+            <p class="mb-0 fw-semibold">
+              – Yaron Oren, Founder Maverick.ai (acquired by OutboundWorks)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-light py-4">
+  <div class="container">
+    <div class="looking-details-wraper">
+      <div class="looking-details-content">
+        <h4>Ready to get started?</h4>
+        <p>
+          Let us know what you are working on? <br />
+          We would help you to build a
+          <b>fault tolerant, secure and scalable system</b> over kubernetes.
+        </p>
+        <a class="btn schedule-btn" href="/schedule-meeting"
+          >Schedule Meeting</a
+        >
+      </div>
+      <div class="looking-details-image">
+        <img
+          src="/images/home-cta2.png"
+          alt="formore-details"
+          data-lazy-src="/images/home-cta2.png"
+          height="350px"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+ 
+    <div class="footer bg-dark">
+      <div class="container py-5">
+        <div class="footer-top">
+          <div class="footer-logo-section">
+            <div class="brand-text">Kubeify</div>
+            <div class="footer-description py-2">
+              We unleash growth by helping companies adopt cloud native
+              technologies with our products and services!
+            </div>
+            <div class="footer-social-icons d-flex py-2">
+              <a href="https://www.linkedin.com/company/kubeify" target="_blank" class="footer-social-icon"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://x.com/kubeify" target="_blank" class="footer-social-icon"><i class="fa-brands fa-twitter"></i></a>
+              <a href="https://www.youtube.com/@kubeifyk8s45/videos" class="footer-social-icon" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="footer-badges">
+            <img src="../images/badge1.svg" alt="Badge 1" class="footer-badge" />
+            <img src="../images/badge2.svg" alt="Badge 2" class="footer-badge" />
+            <img src="../images/badge3.svg" alt="Badge 3" class="footer-badge" />
+            <img src="../images/badge4.svg" alt="Badge 4" class="footer-badge" />
+            <img src="../images/badge3.svg" alt="Badge 5" class="footer-badge" />
+            <img src="../images/badge4.svg" alt="Badge 6" class="footer-badge" />
+          </div>
+        </div>
+
+        <div class="footer-main-content">
+          <div class="footer-item">
+            <h4>AI Cloud</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Cloud Native Product Development</a></li>
+              <li><a href="#">Cloud Native FaaS</a></li>
+              <li><a href="#">Monolith to Microservices</a></li>
+              <li><a href="#">DevSecOps as a Service</a></li>
+              <!-- <li><a href="#">Extending Kubernetes Whitepaper</a></li> -->
+              <li><a href="#">Kubernetes Zero Downtime Upgrades</a></li>
+            </ul>
+            <h4 class="mt-2 pt-3">Product Engineering</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Platform Engineering Consulting</a></li>
+              <li><a href="#">Platform Engineering eBook</a></li>
+              <li><a href="#">Backstage Consulting</a></li>
+              <li><a href="#">Port Consulting</a></li>
+              <li><a href="#">Crossplane Consulting</a></li>
+              <li><a href="#">Progressive Delivery</a></li>
+              <li><a href="#">CI/CD & Dev Experience</a></li>
+              <li><a href="#">Bare Metal Provisioning Consulting</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-item">
+            <h4>Application Modernization</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Monolith to Microservices</a></li>
+              <li><a href="#">Kubernetes Consulting Services</a></li>
+              <li><a href="#">GitOps Consulting</a></li>
+              <li><a href="#">CI/CD & Dev Experience</a></li>
+              <li><a href="#">DevOps Toolchain</a></li>
+              <li><a href="#">ArgoCD Consulting</a></li>
+              <li><a href="#">Jenkins Consulting</a></li>
+              <li><a href="#">Cloud Migration Consulting</a></li>
+              <li><a href="#">FinOps Consulting</a></li>
+              <li><a href="#">vCluster Consulting</a></li>
+            </ul>
+            <h4 class="mt-2 pt-3">Observability & DevSecOps</h4>
+            <ul class="footer-nav">
+              <li><a href="#">DevSecOps Consulting</a></li>
+              <li><a href="#">Observability Consulting</a></li>
+              <li><a href="#">Grafana Consulting</a></li>
+              <li><a href="#">Prometheus Consulting</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-item">
+            <h4>Site Reliability Engineering</h4>
+            <ul class="footer-nav">
+              <li><a href="#">SRE Consulting</a></li>
+              <li><a href="#">Service Mesh Consulting</a></li>
+              <li><a href="#">Cloud Native Networking</a></li>
+              <li><a href="#">Istio Consulting</a></li>
+              <li><a href="#">Linkerd Consulting</a></li>
+              <li><a href="#">Tetratom Consulting</a></li>
+              <li><a href="#">Backup & Disaster Recovery</a></li>
+              <li><a href="#">Bare Metal Provisioning Consulting</a></li>
+              <li><a href="#">Kyverno Consulting</a></li>
+            </ul>
+            <h4 class="mt-2 pt-3">Consulting Partners</h4>
+            <ul class="footer-nav">
+              <li><a href="#">GitLab Partner</a></li>
+              <li><a href="#">SUSE Rancher Partner</a></li>
+              <li><a href="#">Tigera Partner</a></li>
+              <li><a href="#">Solo Partner</a></li>
+              <li><a href="#">Akamai Partner</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-item">
+            <h4>Industries</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Banking and Finance</a></li>
+              <li><a href="#">Automotive</a></li>
+            </ul>
+            <h4 class="mt-2 pt-3">Enterprise Support</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Linkerd Support</a></li>
+              <li><a href="#">Istio Support</a></li>
+              <li><a href="#">Argo CD Support</a></li>
+              <li><a href="#">Prometheus Support</a></li>
+              <li><a href="#">Kasten K10 Support</a></li>
+              <li><a href="#">Thanos Support</a></li>
+            </ul>
+            <h4 class="mt-2 pt-3">Solutions</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Fusion Enterprise</a></li>
+              <li><a href="#">Bottlekube Enterprise</a></li>
+              <li><a href="#">Managed Services for Kubernetes</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-item">
+            <h4>Resources</h4>
+            <ul class="footer-nav">
+              <li><a href="#">OSE Contributions</a></li>
+              <li><a href="#">Blogs</a></li>
+              <li><a href="#">Cloud Native & AI Talks</a></li>
+              <li><a href="#">Webinars</a></li>
+              <li><a href="#">Customers Stories</a></li>
+              <li><a href="#">Spelling Bee</a></li>
+              <li><a href="#">CNCF Landscape Navigator</a></li>
+              <li><a href="#">Skill Rubrics</a></li>
+              <li><a href="#">Poppy Comic</a></li>
+            </ul>
+            <h4 class="mt-2 pt-3">Company</h4>
+            <ul class="footer-nav">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">The InfraCloud Way</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Mentoring Sessions</a></li>
+              <li><a href="#">Newsroom</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+    <div class="lower-footer text-center py-2">
+    <span class="d-inline-block copyright">
+      Copyright © <span id="year">2025</span> Kubeify (A CodeCrux Company). All Rights Reserved.
+    </span>
+  </div>
+    <!-- Year Updater -->
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <!-- jQuery + Bootstrap (if not already included) -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/app.js"></script>
+
+    <!-- Google Analytics (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-142118821-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-142118821-1");
+    </script>
+
+    <!-- HubSpot Embed Code -->
+    <script
+      type="text/javascript"
+      id="hs-script-loader"
+      async
+      defer
+      src="//js.hs-scripts.com/7280691.js"
+    ></script>
+  </body>
+</html>
+
+  </body>
+</html>

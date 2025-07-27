@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>How would you reduce CI pipeline time in GitHub Actions? | Kubeify</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="How would you reduce CI pipeline time in GitHub Actions?" />
+<meta name="author" content="Shyam Mohan K" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Reducing CI pipeline time in GitHub Actions is essential for maintaining high developer velocity, improving feedback loops, and cutting down cloud resource costs." />
+<meta property="og:description" content="Reducing CI pipeline time in GitHub Actions is essential for maintaining high developer velocity, improving feedback loops, and cutting down cloud resource costs." />
+<link rel="canonical" href="http://localhost:4000/blog/how-would-you-reduce-ci-pipeline-time-in-github-actions" />
+<meta property="og:url" content="http://localhost:4000/blog/how-would-you-reduce-ci-pipeline-time-in-github-actions" />
+<meta property="og:site_name" content="Kubeify" />
+<meta property="og:image" content="http://localhost:4000/images/blog/github-actions.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-07-19T14:18:00+05:30" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/images/blog/github-actions.png" />
+<meta property="twitter:title" content="How would you reduce CI pipeline time in GitHub Actions?" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Shyam Mohan K"},"dateModified":"2025-07-19T14:18:00+05:30","datePublished":"2025-07-19T14:18:00+05:30","description":"Reducing CI pipeline time in GitHub Actions is essential for maintaining high developer velocity, improving feedback loops, and cutting down cloud resource costs.","headline":"How would you reduce CI pipeline time in GitHub Actions?","image":"http://localhost:4000/images/blog/github-actions.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/how-would-you-reduce-ci-pipeline-time-in-github-actions"},"url":"http://localhost:4000/blog/how-would-you-reduce-ci-pipeline-time-in-github-actions"}</script>
+<!-- End Jekyll SEO tag -->
+ <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5a50d614079115001207f66b&product=inline-share-buttons' async='async'></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/blog.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white  fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="/"><img src="/images/kubeify-logo.png" alt=""/ height="44px;"></a>
+    <button class="navbar-toggler" type="button" id="sidebarCollapse">
+      <!-- <span class="navbar-toggler-icon"></span> -->
+      <span class="icon"></span>
+      <span class="icon"></span>
+      <span class="icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="servicesDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Services
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="/why-kubernetes">Why Kubernetes</a></li>
+              <li><a class="dropdown-item" href="/kubernetes-cost-optimization">kubernetes cost optimization</a></li>
+          </ul>
+        </li>
+
+       
+        <li class="nav-item">
+          <a class="nav-link" href="/blog">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/webinars">Webinars</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link btn cta-button btn-rounded"
+            href="/schedule-meeting"
+            style="margin-left: 10px"
+            >&nbsp; Schedule Meeting &nbsp;
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="sidebar__wrapper">
+  <!-- Sidebar -->
+  <nav id="sidebar">
+    <div class="sideBar__content">
+      <div id="dismiss">
+        <!-- <i class="fas fa-arrow-left"></i> -->
+        <span class="modal-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="24"
+            height="24"
+            viewBox="0 0 172 172"
+            style="fill: #000000"
+          >
+            <g
+              fill="none"
+              fill-rule="nonzero"
+              stroke="none"
+              stroke-width="1"
+              stroke-linecap="butt"
+              stroke-linejoin="miter"
+              stroke-miterlimit="10"
+              stroke-dasharray=""
+              stroke-dashoffset="0"
+              font-family="none"
+              font-weight="none"
+              font-size="none"
+              text-anchor="none"
+              style="mix-blend-mode: normal"
+            >
+              <path d="M0,172v-172h172v172z" fill="none"></path>
+              <g fill="#000">
+                <path
+                  d="M33.73372,23.59961l-10.13411,10.13411l52.26628,52.26628l-52.26628,52.26628l10.13411,10.13411l52.26628,-52.26628l52.26628,52.26628l10.13411,-10.13411l-52.26628,-52.26628l52.26628,-52.26628l-10.13411,-10.13411l-52.26628,52.26628z"
+                ></path>
+              </g>
+            </g>
+          </svg>
+        </span>
+      </div>
+
+      <!-- <div class="sidebar-header">
+        <h3>Bootstrap Sidebar</h3>
+      </div> -->
+      <!-- <div class="nav__title">
+        Menu
+      </div> -->
+      <ul class="navbar-nav ml-auto">
+        <!--<li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="servicesDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Services
+          </a>
+           <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                  <li><a class="dropdown-item" href="/service1">Service 1</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 2</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 3</a></li>
+                  <li><a class="dropdown-item" href="/service1">Service 4</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 5</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 6</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 7</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 8</a></li>
+              </ul> 
+        </li>-->
+
+        <li class="nav-item">
+          <a class="nav-link" href="/why-kubernetes">Why Kubernetes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blog">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/webinars">Webinars</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link btn cta-button btn-rounded"
+            href="/schedule-meeting"
+            >&nbsp;&nbsp;Schedule Meeting&nbsp;&nbsp;</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <!-- <div id="content">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <button type="button" id="sidebarCollapse" class="btn btn-info">
+          <i class="fas fa-align-left"></i>
+          <span>Toggle Sidebar</span>
+        </button>
+      </div>
+    </nav>
+  </div> -->
+  <!-- Dark Overlay element -->
+  <div class="overlay"></div>
+</div>
+<script src="/js/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    // $("#sidebar").mCustomScrollbar({
+    //   theme: "minimal",
+    // });
+
+    $("#dismiss, .overlay").on("click", function () {
+      $("#sidebar").removeClass("active");
+      $(".overlay").removeClass("active");
+    });
+
+    $("#sidebarCollapse").on("click", function () {
+      $("#sidebar").addClass("active");
+      $(".overlay").addClass("active");
+      // $(".collapse.in").toggleClass("in");
+      // $("a[aria-expanded=true]").attr("aria-expanded", "false");
+    });
+
+    // $(window).scroll(function () {
+    //   if ($(document).scrollTop() > $(".navbar").height()) {
+    //     $("header").addClass("sticky_header");
+    //     $(".navbar").addClass("navbar-light bg-white");
+    //   } else {
+    //     $("header").removeClass("sticky_header");
+    //     $(".navbar").removeClass("navbar-light bg-white");
+    //   }
+    // });
+
+    // $(".list-unstyled li.active").removeClass("active");
+    // console.log(
+    //   $("a[href*='" + location.pathname + "']")
+    //     .parent()
+    //     .addClass("active")
+    // );
+    $(".list-unstyled li.active").removeClass("active");
+
+    $(".list-unstyled li a").each(function (i, obj) {
+      console.log(obj.classList.contains("btn"));
+      if (
+        obj.pathname === location.pathname &&
+        !obj.classList.contains("btn")
+      ) {
+        $(".list-unstyled li.active").removeClass("active");
+
+        console.log($(obj).parent().addClass("active"));
+      }
+    });
+
+    // let $parent = $(this).parent();
+    // $parent.addClass("active");
+    // window.location.assign($(this).attr("href"));
+    // e.preventDefault();
+  });
+</script>
+
+<meta name="google-adsense-account" content="ca-pub-4088406505945385" />
+
+
+      <div class="container mt-5">
+        <div class="row mt-5">
+          <div class="col-lg-8 bg-white p-2 border rounded shadow-sm mt-5 mb-5">
+            <img
+              src="/images/blog/github-actions.png"
+              alt="How would you reduce CI pipeline time in GitHub Actions?"
+              class="card-img-top rounded"
+              title="How would you reduce CI pipeline time in GitHub Actions?"
+            />
+            <h1 class="mt-4" style="color: black">How would you reduce CI pipeline time in GitHub Actions?</h1>
+            <time>
+              19 Jul 2025 -
+              <small>Shyam Mohan K</small>
+            </time>
+            <div class="px-2 mt-4"><p>Reducing CI pipeline time in <strong>GitHub Actions</strong> is essential for maintaining <strong>high developer velocity</strong>, improving feedback loops, and cutting down cloud resource costs. Here’s a detailed approach with <strong>strategies and best practices</strong>:</p>
+
+<hr />
+
+<h2 id="-strategies-to-reduce-ci-pipeline-time-in-github-actions">✅ Strategies to Reduce CI Pipeline Time in GitHub Actions</h2>
+
+<h3 id="1-parallelize-jobs">1. <strong>Parallelize Jobs</strong></h3>
+
+<ul>
+  <li>Use <strong>job-level parallelism</strong> to run tests, builds, and linters simultaneously.</li>
+</ul>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">lint</span><span class="pi">:</span>
+    <span class="s">...</span>
+  <span class="na">test</span><span class="pi">:</span>
+    <span class="s">...</span>
+  <span class="na">build</span><span class="pi">:</span>
+    <span class="s">...</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Use <strong>matrix builds</strong> for parallel execution across versions/platforms.</li>
+</ul>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">strategy</span><span class="pi">:</span>
+  <span class="na">matrix</span><span class="pi">:</span>
+    <span class="na">node</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">16</span><span class="pi">,</span> <span class="nv">18</span><span class="pi">,</span> <span class="nv">20</span><span class="pi">]</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="2-use-caching-effectively">2. <strong>Use Caching Effectively</strong></h3>
+
+<ul>
+  <li>Cache dependencies (npm, Maven, Bundler, pip) to avoid re-downloading them every run.</li>
+</ul>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/cache@v4</span>
+  <span class="na">with</span><span class="pi">:</span>
+    <span class="na">path</span><span class="pi">:</span> <span class="s">~/.npm</span>
+    <span class="na">key</span><span class="pi">:</span> <span class="s">$-node-$</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Cache build artifacts if reused between jobs.</li>
+</ul>
+
+<hr />
+
+<h3 id="3-avoid-unnecessary-job-execution">3. <strong>Avoid Unnecessary Job Execution</strong></h3>
+
+<ul>
+  <li>Use <code class="language-plaintext highlighter-rouge">paths</code>, <code class="language-plaintext highlighter-rouge">paths-ignore</code>, or <code class="language-plaintext highlighter-rouge">if:</code> conditionals to skip workflows on unrelated changes.</li>
+</ul>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">on</span><span class="pi">:</span>
+  <span class="na">push</span><span class="pi">:</span>
+    <span class="na">paths</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s1">'</span><span class="s">src/**'</span>
+      <span class="pi">-</span> <span class="s1">'</span><span class="s">.github/workflows/**'</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Add job-level condition checks:</li>
+</ul>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">if</span><span class="pi">:</span> <span class="s">github.event_name == 'push' &amp;&amp; github.ref == 'refs/heads/main'</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="4-split-ci-and-cd-pipelines">4. <strong>Split CI and CD Pipelines</strong></h3>
+
+<ul>
+  <li>
+    <p>Separate CI (build, test) from CD (deploy) workflows.</p>
+
+    <ul>
+      <li>CI can run on every PR.</li>
+      <li>CD only runs on merge to <code class="language-plaintext highlighter-rouge">main</code> or manual dispatch.</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h3 id="5-fail-fast--early">5. <strong>Fail Fast &amp; Early</strong></h3>
+
+<ul>
+  <li>Use <code class="language-plaintext highlighter-rouge">continue-on-error: false</code> (default) to halt jobs when a failure occurs.</li>
+  <li>Run <strong>lint and unit tests first</strong>, so failures prevent unnecessary steps.</li>
+</ul>
+
+<hr />
+
+<h3 id="6-use-lightweight-runners">6. <strong>Use Lightweight Runners</strong></h3>
+
+<ul>
+  <li>Self-hosted runners can reduce cold start time.</li>
+  <li>Use runners with pre-installed dependencies/tools for faster job bootstrapping.</li>
+</ul>
+
+<hr />
+
+<h3 id="7-use-reusable-workflows-and-composite-actions">7. <strong>Use Reusable Workflows and Composite Actions</strong></h3>
+
+<ul>
+  <li>Reuse workflows instead of duplicating logic across multiple projects.</li>
+  <li>Composite actions reduce code duplication and streamline logic, making workflows faster and easier to maintain.</li>
+</ul>
+
+<hr />
+
+<h3 id="8-use-artifact-uploads-and-downloads">8. <strong>Use Artifact Uploads and Downloads</strong></h3>
+
+<p>If build artifacts are required in later jobs (e.g., Docker images or binaries), upload them instead of rebuilding.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/upload-artifact@v4</span>
+<span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/download-artifact@v4</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="9-optimize-test-strategy">9. <strong>Optimize Test Strategy</strong></h3>
+
+<ul>
+  <li>Use test splitting or test parallelism tools (e.g., <code class="language-plaintext highlighter-rouge">pytest-xdist</code>, <code class="language-plaintext highlighter-rouge">jest --runInBand</code>).</li>
+  <li>Run only affected tests using tools like <a href="https://knapsackpro.com/">knapsack-pro</a>, <a href="https://learn.microsoft.com/en-us/azure/devops/pipelines/test/test-impact-analysis">test impact analysis</a>, or custom logic.</li>
+</ul>
+
+<hr />
+
+<h3 id="10-reduce-docker-layer-rebuilds">10. <strong>Reduce Docker Layer Rebuilds</strong></h3>
+
+<ul>
+  <li>
+    <p>In Docker-based workflows, optimize <code class="language-plaintext highlighter-rouge">Dockerfile</code> with:</p>
+
+    <ul>
+      <li>Layer caching</li>
+      <li>Multi-stage builds</li>
+      <li><code class="language-plaintext highlighter-rouge">.dockerignore</code> to limit context size</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h3 id="-bonus-tips">🚀 Bonus Tips</h3>
+
+<ul>
+  <li>Use <strong>scheduled workflows</strong> (nightly builds) for heavy e2e tests instead of on every PR.</li>
+  <li><strong>Use <code class="language-plaintext highlighter-rouge">workflow_dispatch</code> or <code class="language-plaintext highlighter-rouge">repository_dispatch</code></strong> for manually triggered or conditional long-running jobs.</li>
+  <li><strong>Avoid too many nested steps</strong>; prefer small, quick tasks.</li>
+</ul>
+
+<hr />
+
+<h2 id="-real-world-impact">🔥 Real-World Impact</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Optimization</th>
+      <th>Time Saved</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Caching npm deps</td>
+      <td>~30-90 seconds</td>
+    </tr>
+    <tr>
+      <td>Skipping jobs using <code class="language-plaintext highlighter-rouge">paths</code></td>
+      <td>Up to 100%</td>
+    </tr>
+    <tr>
+      <td>Parallel matrix testing</td>
+      <td>~50-70% reduction</td>
+    </tr>
+    <tr>
+      <td>Using self-hosted runners</td>
+      <td>~10-30 seconds per job</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="-sample-github-actions-workflow-optimized-for-speed">✅ Sample GitHub Actions Workflow (Optimized for Speed)</h2>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># File: .github/workflows/ci.yaml</span>
+<span class="na">name</span><span class="pi">:</span> <span class="s">CI Pipeline</span>
+
+<span class="na">on</span><span class="pi">:</span>
+  <span class="na">push</span><span class="pi">:</span>
+    <span class="na">branches</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">main</span><span class="pi">]</span>
+    <span class="na">paths</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s1">'</span><span class="s">src/**'</span>
+      <span class="pi">-</span> <span class="s1">'</span><span class="s">.github/workflows/**'</span>
+  <span class="na">pull_request</span><span class="pi">:</span>
+    <span class="na">paths</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s1">'</span><span class="s">src/**'</span>
+      <span class="pi">-</span> <span class="s1">'</span><span class="s">.github/workflows/**'</span>
+  <span class="na">workflow_dispatch</span><span class="pi">:</span>
+
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">lint</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">Lint Code</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v4</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Run Linter</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="s">npm run lint</span>
+
+  <span class="na">test</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">Run Unit Tests</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">strategy</span><span class="pi">:</span>
+      <span class="na">matrix</span><span class="pi">:</span>
+        <span class="na">node</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">18</span><span class="pi">,</span> <span class="nv">20</span><span class="pi">]</span>
+        <span class="na">os</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">ubuntu-latest</span><span class="pi">]</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v4</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Use Node.js $</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/setup-node@v4</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">node-version</span><span class="pi">:</span> <span class="s">$</span>
+          <span class="na">cache</span><span class="pi">:</span> <span class="s1">'</span><span class="s">npm'</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Install dependencies</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="s">npm ci</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Run Tests</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="s">npm test</span>
+
+  <span class="na">build</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">Build Application</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">needs</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">test</span><span class="pi">]</span>
+    <span class="na">if</span><span class="pi">:</span> <span class="s">github.ref == 'refs/heads/main'</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v4</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Set up Node.js</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/setup-node@v4</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">node-version</span><span class="pi">:</span> <span class="m">20</span>
+          <span class="na">cache</span><span class="pi">:</span> <span class="s1">'</span><span class="s">npm'</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Cache Build Artifacts</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/cache@v4</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">path</span><span class="pi">:</span> <span class="s">.next/cache</span>
+          <span class="na">key</span><span class="pi">:</span> <span class="s">$-next-$</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Build App</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="s">npm run build</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Upload Build Artifacts</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/upload-artifact@v4</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">name</span><span class="pi">:</span> <span class="s">app-build</span>
+          <span class="na">path</span><span class="pi">:</span> <span class="s">.next/</span>
+
+  <span class="na">notify</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">Slack Notification</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">if</span><span class="pi">:</span> <span class="s">failure()</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Send Slack Alert</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s">curl -X POST -H 'Content-type: application/json' \</span>
+          <span class="s">--data '{"text":"🚨 CI failed for $ on $"}' \</span>
+          <span class="s">$</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-ci-pipeline-benchmarking-template">📊 CI Pipeline Benchmarking Template</h2>
+
+<p>Use this to measure and track improvements as you optimize.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Job Name</th>
+      <th>Time Before</th>
+      <th>Time After</th>
+      <th>% Improvement</th>
+      <th>Optimization Applied</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">checkout</code></td>
+      <td>15s</td>
+      <td>15s</td>
+      <td>0%</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">lint</code></td>
+      <td>30s</td>
+      <td>20s</td>
+      <td>33%</td>
+      <td>Fast-fail, fewer files</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">test</code></td>
+      <td>180s</td>
+      <td>80s</td>
+      <td>55%</td>
+      <td>Matrix, cache</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">build</code></td>
+      <td>150s</td>
+      <td>100s</td>
+      <td>33%</td>
+      <td>Dependency &amp; layer cache</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">notify</code></td>
+      <td>10s</td>
+      <td>10s</td>
+      <td>0%</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td><strong>Total Time</strong></td>
+      <td>~385s</td>
+      <td>~225s</td>
+      <td>~42%</td>
+      <td>Multiple improvements</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="-folder-structure-monorepo-friendly">📁 Folder Structure (Monorepo-Friendly)</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.github/
+└── workflows/
+    └── ci.yaml
+src/
+  ├── service-a/
+  ├── service-b/
+  └── ...
+package-lock.json
+Dockerfile
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-tips-to-track-performance-over-time">✅ Tips to Track Performance Over Time</h2>
+
+<ul>
+  <li>Use GitHub Actions <strong>“Usage” tab</strong> for execution time stats.</li>
+  <li>Integrate with <strong>Datadog, Prometheus, or Honeycomb</strong> for deeper pipeline observability.</li>
+  <li>Use <strong>GitHub Actions API</strong> or tools like <a href="https://github.com/nektos/act">act</a> for local dry runs.</li>
+</ul>
+
+<hr />
+
+<p>Great! Here’s a <strong>GitHub Actions deployment workflow (CD)</strong> that supports:</p>
+
+<ul>
+  <li>Deployment to <strong>Kubernetes</strong> using <strong>Helm</strong></li>
+  <li><strong>Canary rollout</strong> strategy</li>
+  <li>Optional <strong>manual approval for production</strong></li>
+  <li><strong>Rollback</strong> support using ArgoCD or Helm (based on your stack)</li>
+</ul>
+
+<p>This example assumes you’re using <strong>Helm</strong> for deployment and GitHub Actions for automation. ArgoCD integration is included optionally.</p>
+
+<hr />
+
+<h2 id="-github-actions-deployment-workflow-cdyaml">🚀 GitHub Actions Deployment Workflow (<code class="language-plaintext highlighter-rouge">cd.yaml</code>)</h2>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># File: .github/workflows/cd.yaml</span>
+<span class="na">name</span><span class="pi">:</span> <span class="s">Deploy to Kubernetes</span>
+
+<span class="na">on</span><span class="pi">:</span>
+  <span class="na">workflow_dispatch</span><span class="pi">:</span>
+    <span class="na">inputs</span><span class="pi">:</span>
+      <span class="na">environment</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span> <span class="s">choice</span>
+        <span class="na">description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Select</span><span class="nv"> </span><span class="s">environment'</span>
+        <span class="na">required</span><span class="pi">:</span> <span class="kc">true</span>
+        <span class="na">options</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="s">staging</span>
+          <span class="pi">-</span> <span class="s">production</span>
+      <span class="na">version</span><span class="pi">:</span>
+        <span class="na">description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Docker</span><span class="nv"> </span><span class="s">Image</span><span class="nv"> </span><span class="s">Tag</span><span class="nv"> </span><span class="s">(e.g.,</span><span class="nv"> </span><span class="s">v1.2.3)'</span>
+        <span class="na">required</span><span class="pi">:</span> <span class="kc">true</span>
+
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="s">$</span>
+      <span class="na">url</span><span class="pi">:</span> <span class="s">https://your-app.example.com</span>
+
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Checkout Repo</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v4</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Set Context &amp; Variables</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s">echo "ENVIRONMENT=$" &gt;&gt; $GITHUB_ENV</span>
+          <span class="s">echo "VERSION=$" &gt;&gt; $GITHUB_ENV</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Set up kubectl</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">azure/setup-kubectl@v4</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">version</span><span class="pi">:</span> <span class="s1">'</span><span class="s">latest'</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Set up Helm</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">azure/setup-helm@v4</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">version</span><span class="pi">:</span> <span class="s1">'</span><span class="s">v3.13.0'</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Configure Kubeconfig</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s">echo "$" | base64 -d &gt; kubeconfig</span>
+          <span class="s">export KUBECONFIG=$PWD/kubeconfig</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Helm Canary Deployment</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s">helm upgrade --install my-app ./helm-chart \</span>
+            <span class="s">--namespace $ENVIRONMENT \</span>
+            <span class="s">--set image.tag=$VERSION \</span>
+            <span class="s">--set deploymentStrategy=canary</span>
+
+  <span class="na">approval</span><span class="pi">:</span>
+    <span class="na">needs</span><span class="pi">:</span> <span class="s">deploy</span>
+    <span class="na">if</span><span class="pi">:</span> <span class="s">github.event.inputs.environment == 'production'</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="s">production</span>
+      <span class="na">url</span><span class="pi">:</span> <span class="s">https://your-app.example.com</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Manual Approval</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">hmarr/auto-approve-action@v3</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">github-token</span><span class="pi">:</span> <span class="s">$</span>
+
+  <span class="na">rollback</span><span class="pi">:</span>
+    <span class="na">needs</span><span class="pi">:</span> <span class="s">deploy</span>
+    <span class="na">if</span><span class="pi">:</span> <span class="s">failure()</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Rollback via Helm</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s">helm rollback my-app 1 --namespace $ENVIRONMENT</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-notes--best-practices">🧠 Notes &amp; Best Practices</h2>
+
+<h3 id="-helm-based-canary-strategy">✅ Helm-Based Canary Strategy</h3>
+
+<p>Your <code class="language-plaintext highlighter-rouge">values.yaml</code> must support:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">deploymentStrategy</span><span class="pi">:</span> <span class="s2">"</span><span class="s">canary"</span>
+
+<span class="na">canary</span><span class="pi">:</span>
+  <span class="na">enabled</span><span class="pi">:</span> <span class="kc">true</span>
+  <span class="na">weight</span><span class="pi">:</span> <span class="m">10</span>
+</code></pre></div></div>
+
+<p>You can control traffic % using Istio, Linkerd, or nginx annotations if needed.</p>
+
+<hr />
+
+<h3 id="-rollback-strategy">🔄 Rollback Strategy</h3>
+
+<p>You can rollback using:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">helm rollback</code> (as in the example above)</li>
+  <li>Or trigger ArgoCD:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>argocd app rollback my-app <span class="nt">--revision</span> &lt;old-revision&gt;
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-secrets-needed">🔒 Secrets Needed</h3>
+
+<p>Set the following in your GitHub repository secrets:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">KUBECONFIG_BASE64</code> (your base64 encoded kubeconfig)</li>
+  <li><code class="language-plaintext highlighter-rouge">GITHUB_TOKEN</code></li>
+  <li>Optional: <code class="language-plaintext highlighter-rouge">ARGOCD_TOKEN</code>, <code class="language-plaintext highlighter-rouge">ARGOCD_SERVER</code> for ArgoCD CLI integration</li>
+</ul>
+
+</div>
+          </div>
+
+          <!-- RIGHT: Related Posts -->
+          <div class="col-lg-4 mt-5">
+
+             <!-- Tag/Categories Section -->
+            <div class="mb-4 p-3 border rounded bg-white d-none d-md-block">
+              <h4 class="fw-bold mb-3">Tags</h4>
+              
+              <div class="list-inline mb-0 d-flex flex-wrap gap-2">
+                
+                <span class="badge bg-secondary mb-1 w-auto align-self-start">
+                  AWS Cost
+                </span>
+                
+                <span class="badge bg-secondary mb-1 w-auto align-self-start">
+                  CICD
+                </span>
+                
+                <span class="badge bg-secondary mb-1 w-auto align-self-start">
+                  DevOps
+                </span>
+                
+                <span class="badge bg-secondary mb-1 w-auto align-self-start">
+                  Kubernetes
+                </span>
+                
+                <span class="badge bg-secondary mb-1 w-auto align-self-start">
+                  platform engineering
+                </span>
+                
+              </div>
+            </div>
+
+            <div class="p-3 mb-4 border rounded bg-white shadow-sm">
+              <h4 class="fw-bold mb-3">More in CICD</h4>
+                
+            </div>
+
+           
+          </div>
+        </div>
+      </div>
+
+    <!-- <div class="bg-light pt-5 pb-5 work-hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <div class="media">
+          <img
+            src="/images/clients/yaron-oren.jpeg"
+            class="mr-4 rounded-circle"
+            width="120"
+            alt="yaron-oren"
+          />
+          <div class="align-self-center msg-txt-18 font-italic mt-4 mt-md-0">
+            Kubeify's team <b>decrease the time</b> it takes to adopt open
+            source technology while enabling consistent application environments
+            across deployments...letting our developers focus on application
+            code while improving speed and quality of our releases.<br />
+            <b>- Yaron Oren, Founder Maverick.ai (acquired by OutboundWorks)</b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<section class="bg-light py-5 work-hero">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="d-flex flex-column flex-md-row align-items-center gap-4">
+          <!-- Client Image -->
+          <img
+            src="/images/clients/yaron-oren.jpeg"
+            alt="Yaron Oren"
+            class="rounded-circle"
+            width="120"
+            height="120"
+          />
+          <!-- Testimonial Text -->
+          <div class="fst-italic">
+            <p class="mb-2 fs-5">
+              Kubeify's team <strong>decrease the time</strong> it takes to
+              adopt open source technology while enabling consistent application
+              environments across deployments... letting our developers focus on
+              application code while improving speed and quality of our
+              releases.
+            </p>
+            <p class="mb-0 fw-semibold">
+              – Yaron Oren, Founder Maverick.ai (acquired by OutboundWorks)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-light py-4">
+  <div class="container">
+    <div class="looking-details-wraper">
+      <div class="looking-details-content">
+        <h4>Ready to get started?</h4>
+        <p>
+          Let us know what you are working on? <br />
+          We would help you to build a
+          <b>fault tolerant, secure and scalable system</b> over kubernetes.
+        </p>
+        <a class="btn schedule-btn" href="/schedule-meeting"
+          >Schedule Meeting</a
+        >
+      </div>
+      <div class="looking-details-image">
+        <img
+          src="/images/home-cta2.png"
+          alt="formore-details"
+          data-lazy-src="/images/home-cta2.png"
+          height="350px"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+ 
+    <div class="footer bg-dark">
+      <div class="container py-5">
+        <div class="footer-top">
+          <div class="footer-logo-section">
+            <div class="brand-text">Kubeify</div>
+            <div class="footer-description py-2">
+              We unleash growth by helping companies adopt cloud native
+              technologies with our products and services!
+            </div>
+            <div class="footer-social-icons d-flex py-2">
+              <a href="https://www.linkedin.com/company/kubeify" target="_blank" class="footer-social-icon"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://x.com/kubeify" target="_blank" class="footer-social-icon"><i class="fa-brands fa-twitter"></i></a>
+              <a href="https://www.youtube.com/@kubeifyk8s45/videos" class="footer-social-icon" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="footer-badges">
+            <img src="../images/badge1.svg" alt="Badge 1" class="footer-badge" />
+            <img src="../images/badge2.svg" alt="Badge 2" class="footer-badge" />
+            <img src="../images/badge3.svg" alt="Badge 3" class="footer-badge" />
+            <img src="../images/badge4.svg" alt="Badge 4" class="footer-badge" />
+            <img src="../images/badge3.svg" alt="Badge 5" class="footer-badge" />
+            <img src="../images/badge4.svg" alt="Badge 6" class="footer-badge" />
+          </div>
+        </div>
+
+        <div class="footer-main-content">
+          <div class="footer-item">
+            <h4>AI Cloud</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Cloud Native Product Development</a></li>
+              <li><a href="#">Cloud Native FaaS</a></li>
+              <li><a href="#">Monolith to Microservices</a></li>
+              <li><a href="#">DevSecOps as a Service</a></li>
+              <!-- <li><a href="#">Extending Kubernetes Whitepaper</a></li> -->
+              <li><a href="#">Kubernetes Zero Downtime Upgrades</a></li>
+            </ul>
+            <h4 class="mt-2 pt-3">Product Engineering</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Platform Engineering Consulting</a></li>
+              <li><a href="#">Platform Engineering eBook</a></li>
+              <li><a href="#">Backstage Consulting</a></li>
+              <li><a href="#">Port Consulting</a></li>
+              <li><a href="#">Crossplane Consulting</a></li>
+              <li><a href="#">Progressive Delivery</a></li>
+              <li><a href="#">CI/CD & Dev Experience</a></li>
+              <li><a href="#">Bare Metal Provisioning Consulting</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-item">
+            <h4>Application Modernization</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Monolith to Microservices</a></li>
+              <li><a href="#">Kubernetes Consulting Services</a></li>
+              <li><a href="#">GitOps Consulting</a></li>
+              <li><a href="#">CI/CD & Dev Experience</a></li>
+              <li><a href="#">DevOps Toolchain</a></li>
+              <li><a href="#">ArgoCD Consulting</a></li>
+              <li><a href="#">Jenkins Consulting</a></li>
+              <li><a href="#">Cloud Migration Consulting</a></li>
+              <li><a href="#">FinOps Consulting</a></li>
+              <li><a href="#">vCluster Consulting</a></li>
+            </ul>
+            <h4 class="mt-2 pt-3">Observability & DevSecOps</h4>
+            <ul class="footer-nav">
+              <li><a href="#">DevSecOps Consulting</a></li>
+              <li><a href="#">Observability Consulting</a></li>
+              <li><a href="#">Grafana Consulting</a></li>
+              <li><a href="#">Prometheus Consulting</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-item">
+            <h4>Site Reliability Engineering</h4>
+            <ul class="footer-nav">
+              <li><a href="#">SRE Consulting</a></li>
+              <li><a href="#">Service Mesh Consulting</a></li>
+              <li><a href="#">Cloud Native Networking</a></li>
+              <li><a href="#">Istio Consulting</a></li>
+              <li><a href="#">Linkerd Consulting</a></li>
+              <li><a href="#">Tetratom Consulting</a></li>
+              <li><a href="#">Backup & Disaster Recovery</a></li>
+              <li><a href="#">Bare Metal Provisioning Consulting</a></li>
+              <li><a href="#">Kyverno Consulting</a></li>
+            </ul>
+            <h4 class="mt-2 pt-3">Consulting Partners</h4>
+            <ul class="footer-nav">
+              <li><a href="#">GitLab Partner</a></li>
+              <li><a href="#">SUSE Rancher Partner</a></li>
+              <li><a href="#">Tigera Partner</a></li>
+              <li><a href="#">Solo Partner</a></li>
+              <li><a href="#">Akamai Partner</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-item">
+            <h4>Industries</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Banking and Finance</a></li>
+              <li><a href="#">Automotive</a></li>
+            </ul>
+            <h4 class="mt-2 pt-3">Enterprise Support</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Linkerd Support</a></li>
+              <li><a href="#">Istio Support</a></li>
+              <li><a href="#">Argo CD Support</a></li>
+              <li><a href="#">Prometheus Support</a></li>
+              <li><a href="#">Kasten K10 Support</a></li>
+              <li><a href="#">Thanos Support</a></li>
+            </ul>
+            <h4 class="mt-2 pt-3">Solutions</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Fusion Enterprise</a></li>
+              <li><a href="#">Bottlekube Enterprise</a></li>
+              <li><a href="#">Managed Services for Kubernetes</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-item">
+            <h4>Resources</h4>
+            <ul class="footer-nav">
+              <li><a href="#">OSE Contributions</a></li>
+              <li><a href="#">Blogs</a></li>
+              <li><a href="#">Cloud Native & AI Talks</a></li>
+              <li><a href="#">Webinars</a></li>
+              <li><a href="#">Customers Stories</a></li>
+              <li><a href="#">Spelling Bee</a></li>
+              <li><a href="#">CNCF Landscape Navigator</a></li>
+              <li><a href="#">Skill Rubrics</a></li>
+              <li><a href="#">Poppy Comic</a></li>
+            </ul>
+            <h4 class="mt-2 pt-3">Company</h4>
+            <ul class="footer-nav">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">The InfraCloud Way</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Mentoring Sessions</a></li>
+              <li><a href="#">Newsroom</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+    <div class="lower-footer text-center py-2">
+    <span class="d-inline-block copyright">
+      Copyright © <span id="year">2025</span> Kubeify (A CodeCrux Company). All Rights Reserved.
+    </span>
+  </div>
+    <!-- Year Updater -->
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <!-- jQuery + Bootstrap (if not already included) -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/app.js"></script>
+
+    <!-- Google Analytics (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-142118821-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-142118821-1");
+    </script>
+
+    <!-- HubSpot Embed Code -->
+    <script
+      type="text/javascript"
+      id="hs-script-loader"
+      async
+      defer
+      src="//js.hs-scripts.com/7280691.js"
+    ></script>
+  </body>
+</html>
+
+  </body>
+</html>

@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Resource Management for Pods and Containers in Kubernetes | Kubeify</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Resource Management for Pods and Containers in Kubernetes" />
+<meta name="author" content="Shyam Mohan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Resource management in Kubernetes plays a crucial role in ensuring your applications run efficiently, stably, and cost-effectively." />
+<meta property="og:description" content="Resource management in Kubernetes plays a crucial role in ensuring your applications run efficiently, stably, and cost-effectively." />
+<link rel="canonical" href="http://localhost:4000/blog/2025-07-06-resource-management-for-pods-and-containers-in-kubernetes/" />
+<meta property="og:url" content="http://localhost:4000/blog/2025-07-06-resource-management-for-pods-and-containers-in-kubernetes/" />
+<meta property="og:site_name" content="Kubeify" />
+<meta property="og:image" content="http://localhost:4000/images/blog/resource-management-for-pods-and-containers-in-kubernetes.gif" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-07-06T14:06:00+05:30" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/images/blog/resource-management-for-pods-and-containers-in-kubernetes.gif" />
+<meta property="twitter:title" content="Resource Management for Pods and Containers in Kubernetes" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Shyam Mohan"},"dateModified":"2025-07-06T14:06:00+05:30","datePublished":"2025-07-06T14:06:00+05:30","description":"Resource management in Kubernetes plays a crucial role in ensuring your applications run efficiently, stably, and cost-effectively.","headline":"Resource Management for Pods and Containers in Kubernetes","image":"http://localhost:4000/images/blog/resource-management-for-pods-and-containers-in-kubernetes.gif","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2025-07-06-resource-management-for-pods-and-containers-in-kubernetes/"},"url":"http://localhost:4000/blog/2025-07-06-resource-management-for-pods-and-containers-in-kubernetes/"}</script>
+<!-- End Jekyll SEO tag -->
+ <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5a50d614079115001207f66b&product=inline-share-buttons' async='async'></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/blog.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white  fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="/"><img src="/images/kubeify-logo.png" alt=""/ height="44px;"></a>
+    <button class="navbar-toggler" type="button" id="sidebarCollapse">
+      <!-- <span class="navbar-toggler-icon"></span> -->
+      <span class="icon"></span>
+      <span class="icon"></span>
+      <span class="icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="servicesDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Services
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="/why-kubernetes">Why Kubernetes</a></li>
+              <li><a class="dropdown-item" href="/kubernetes-cost-optimization">kubernetes cost optimization</a></li>
+          </ul>
+        </li>
+
+       
+        <li class="nav-item">
+          <a class="nav-link" href="/blog">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/webinars">Webinars</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link btn cta-button btn-rounded"
+            href="/schedule-meeting"
+            style="margin-left: 10px"
+            >&nbsp; Schedule Meeting &nbsp;
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="sidebar__wrapper">
+  <!-- Sidebar -->
+  <nav id="sidebar">
+    <div class="sideBar__content">
+      <div id="dismiss">
+        <!-- <i class="fas fa-arrow-left"></i> -->
+        <span class="modal-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="24"
+            height="24"
+            viewBox="0 0 172 172"
+            style="fill: #000000"
+          >
+            <g
+              fill="none"
+              fill-rule="nonzero"
+              stroke="none"
+              stroke-width="1"
+              stroke-linecap="butt"
+              stroke-linejoin="miter"
+              stroke-miterlimit="10"
+              stroke-dasharray=""
+              stroke-dashoffset="0"
+              font-family="none"
+              font-weight="none"
+              font-size="none"
+              text-anchor="none"
+              style="mix-blend-mode: normal"
+            >
+              <path d="M0,172v-172h172v172z" fill="none"></path>
+              <g fill="#000">
+                <path
+                  d="M33.73372,23.59961l-10.13411,10.13411l52.26628,52.26628l-52.26628,52.26628l10.13411,10.13411l52.26628,-52.26628l52.26628,52.26628l10.13411,-10.13411l-52.26628,-52.26628l52.26628,-52.26628l-10.13411,-10.13411l-52.26628,52.26628z"
+                ></path>
+              </g>
+            </g>
+          </svg>
+        </span>
+      </div>
+
+      <!-- <div class="sidebar-header">
+        <h3>Bootstrap Sidebar</h3>
+      </div> -->
+      <!-- <div class="nav__title">
+        Menu
+      </div> -->
+      <ul class="navbar-nav ml-auto">
+        <!--<li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="servicesDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Services
+          </a>
+           <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                  <li><a class="dropdown-item" href="/service1">Service 1</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 2</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 3</a></li>
+                  <li><a class="dropdown-item" href="/service1">Service 4</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 5</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 6</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 7</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 8</a></li>
+              </ul> 
+        </li>-->
+
+        <li class="nav-item">
+          <a class="nav-link" href="/why-kubernetes">Why Kubernetes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blog">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/webinars">Webinars</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link btn cta-button btn-rounded"
+            href="/schedule-meeting"
+            >&nbsp;&nbsp;Schedule Meeting&nbsp;&nbsp;</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <!-- <div id="content">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <button type="button" id="sidebarCollapse" class="btn btn-info">
+          <i class="fas fa-align-left"></i>
+          <span>Toggle Sidebar</span>
+        </button>
+      </div>
+    </nav>
+  </div> -->
+  <!-- Dark Overlay element -->
+  <div class="overlay"></div>
+</div>
+<script src="/js/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    // $("#sidebar").mCustomScrollbar({
+    //   theme: "minimal",
+    // });
+
+    $("#dismiss, .overlay").on("click", function () {
+      $("#sidebar").removeClass("active");
+      $(".overlay").removeClass("active");
+    });
+
+    $("#sidebarCollapse").on("click", function () {
+      $("#sidebar").addClass("active");
+      $(".overlay").addClass("active");
+      // $(".collapse.in").toggleClass("in");
+      // $("a[aria-expanded=true]").attr("aria-expanded", "false");
+    });
+
+    // $(window).scroll(function () {
+    //   if ($(document).scrollTop() > $(".navbar").height()) {
+    //     $("header").addClass("sticky_header");
+    //     $(".navbar").addClass("navbar-light bg-white");
+    //   } else {
+    //     $("header").removeClass("sticky_header");
+    //     $(".navbar").removeClass("navbar-light bg-white");
+    //   }
+    // });
+
+    // $(".list-unstyled li.active").removeClass("active");
+    // console.log(
+    //   $("a[href*='" + location.pathname + "']")
+    //     .parent()
+    //     .addClass("active")
+    // );
+    $(".list-unstyled li.active").removeClass("active");
+
+    $(".list-unstyled li a").each(function (i, obj) {
+      console.log(obj.classList.contains("btn"));
+      if (
+        obj.pathname === location.pathname &&
+        !obj.classList.contains("btn")
+      ) {
+        $(".list-unstyled li.active").removeClass("active");
+
+        console.log($(obj).parent().addClass("active"));
+      }
+    });
+
+    // let $parent = $(this).parent();
+    // $parent.addClass("active");
+    // window.location.assign($(this).attr("href"));
+    // e.preventDefault();
+  });
+</script>
+
+<meta name="google-adsense-account" content="ca-pub-4088406505945385" />
+
+
+      <div class="container mt-5">
+        <div class="row mt-5">
+          <div class="col-lg-8 bg-white p-2 border rounded shadow-sm mt-5 mb-5">
+            <img
+              src="/images/blog/resource-management-for-pods-and-containers-in-kubernetes.gif"
+              alt="Resource Management for Pods and Containers in Kubernetes"
+              class="card-img-top rounded"
+              title="Resource Management for Pods and Containers in Kubernetes"
+            />
+            <h1 class="mt-4" style="color: black">Resource Management for Pods and Containers in Kubernetes</h1>
+            <time>
+              06 Jul 2025 -
+              <small>Shyam Mohan</small>
+            </time>
+            <div class="px-2 mt-4"><p>Resource management in Kubernetes plays a crucial role in ensuring your applications run efficiently, stably, and cost-effectively. By allocating appropriate CPU and memory resources to containers and pods, you can avoid node overload, application crashes, or wasted infrastructure spend.</p>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ol>
+  <li>
+    <p>Introduction</p>
+  </li>
+  <li>
+    <p>What is Resource Management in Kubernetes?</p>
+  </li>
+  <li>
+    <p>Why Resource Management Matters</p>
+  </li>
+  <li>
+    <p>Kubernetes Resource Types: CPU and Memory</p>
+  </li>
+  <li>
+    <p>Understanding Requests and Limits</p>
+  </li>
+  <li>
+    <p>How the Kubernetes Scheduler Uses Resources</p>
+  </li>
+  <li>
+    <p>Best Practices for Managing Resources in Pods</p>
+  </li>
+  <li>
+    <p>Resource Management for Multi-Container Pods</p>
+  </li>
+  <li>
+    <p>Tools for Resource Monitoring and Optimization</p>
+  </li>
+  <li>
+    <p>Integrating Resource Management into DevOps and CI/CD</p>
+  </li>
+  <li>
+    <p>Common Mistakes and How to Avoid Them</p>
+  </li>
+  <li>
+    <p>Conclusion</p>
+  </li>
+  <li>
+    <p>FAQs</p>
+  </li>
+</ol>
+
+<h2 id="1-introduction">1. Introduction</h2>
+
+<p>Resource management in Kubernetes plays a crucial role in ensuring your applications run efficiently, stably, and cost-effectively. By allocating appropriate CPU and memory resources to containers and pods, you can avoid node overload, application crashes, or wasted infrastructure spend.</p>
+
+<p>In this article, we explore best practices, mechanisms, and real-world strategies for resource management for pods and containers in Kubernetes.</p>
+
+<h2 id="2-what-is-resource-management-in-kubernetes">2. What is Resource Management in Kubernetes?</h2>
+
+<p>Resource management in Kubernetes refers to the process of assigning, monitoring, and optimizing computing resources—like CPU and memory—for your pods and containers.</p>
+
+<p>Kubernetes allows developers to define how much minimum (request) and maximum (limit) resources each container should have. These constraints help maintain balance across a cluster and influence scheduling decisions.</p>
+
+<p>Proper resource management impacts:</p>
+
+<ul>
+  <li>
+    <p>Application performance</p>
+  </li>
+  <li>
+    <p>Cluster efficiency</p>
+  </li>
+  <li>
+    <p>Infrastructure costs</p>
+  </li>
+  <li>
+    <p>System stability</p>
+  </li>
+</ul>
+
+<h2 id="3-why-resource-management-matters">3. Why Resource Management Matters</h2>
+
+<p>Mismanaged resources can lead to several operational issues:</p>
+
+<ul>
+  <li>
+    <p>⚠️ Pod evictions under resource pressure</p>
+  </li>
+  <li>
+    <p>🚫 CPU throttling or memory overconsumption</p>
+  </li>
+  <li>
+    <p>💸 Wasted cloud costs from overprovisioning</p>
+  </li>
+  <li>
+    <p>🔁 Unpredictable autoscaling behavior</p>
+  </li>
+  <li>
+    <p>💥 Node crashes and service disruptions</p>
+  </li>
+</ul>
+
+<p>When configured correctly, resource management ensures reliability, performance, and cost control, particularly in large-scale and cloud-native environments.</p>
+
+<h2 id="4-kubernetes-resource-types-cpu-and-memory">4. Kubernetes Resource Types: CPU and Memory</h2>
+
+<p>Kubernetes supports two primary resource types:</p>
+
+<h3 id="memory-ram">Memory (RAM):</h3>
+
+<ul>
+  <li>
+    <p>Measured in bytes (Mi, Gi)</p>
+  </li>
+  <li>
+    <p>Memory is not compressible. If a container exceeds its limit, it will be terminated.</p>
+  </li>
+</ul>
+
+<h3 id="cpu">CPU:</h3>
+
+<ul>
+  <li>
+    <p>Measured in millicores (e.g., 500m = 0.5 core)</p>
+  </li>
+  <li>
+    <p>Exceeding the CPU limit leads to throttling, not termination.</p>
+  </li>
+</ul>
+
+<p>Kubernetes also supports ephemeral storage, GPUs, and extended resources, but CPU and memory are most commonly managed.</p>
+
+<h2 id="5-understanding-requests-and-limits">5. Understanding Requests and Limits</h2>
+
+<h3 id="-requests">📌 Requests:</h3>
+
+<p>The minimum resources guaranteed for a container. The scheduler uses requests to place the pod.</p>
+
+<h3 id="-limits">🔒 Limits:</h3>
+
+<p>The maximum resources a container is allowed to use.</p>
+
+<p>Example YAML Configuration:</p>
+
+<p>resources:</p>
+
+<p>requests:</p>
+
+<p>cpu: “250m”</p>
+
+<p>memory: “256Mi”</p>
+
+<p>limits:</p>
+
+<p>cpu: “500m”</p>
+
+<p>memory: “512Mi”</p>
+
+<p>If a pod uses more than 512Mi memory, it gets OOMKilled. If it exceeds 500m CPU, it will be throttled.</p>
+
+<h2 id="6-how-the-kubernetes-scheduler-uses-resources">6. How the Kubernetes Scheduler Uses Resources</h2>
+
+<p>The Kubernetes scheduler uses resource requests (not limits) to determine where to place pods. It ensures the node has enough allocatable CPU and memory to fulfill these requests.</p>
+
+<p>At runtime:</p>
+
+<ul>
+  <li>
+    <p>The kubelet enforces limits using cgroups.</p>
+  </li>
+  <li>
+    <p>Exceeding memory limits causes OOMKill.</p>
+  </li>
+  <li>
+    <p>Exceeding CPU limits causes throttling.</p>
+  </li>
+</ul>
+
+<h2 id="7-best-practices-for-managing-resources-in-pods">7. Best Practices for Managing Resources in Pods</h2>
+
+<h3 id="-define-both-requests-and-limits">✅ Define Both Requests and Limits</h3>
+
+<p>Don’t leave them empty. Use observed metrics for better accuracy.</p>
+
+<h3 id="-use-historical-usage-metrics">📉 Use Historical Usage Metrics</h3>
+
+<p>Use tools like Prometheus or GKE Metrics Server to determine real usage patterns.</p>
+
+<h3 id="️-separate-cpu-intensive-and-memory-intensive-workloads">⚖️ Separate CPU-Intensive and Memory-Intensive Workloads</h3>
+
+<p>Match the right VM types and resource plans to your workload nature.</p>
+
+<h3 id="-test-with-load-scenarios">🧪 Test with Load Scenarios</h3>
+
+<p>Stress-test applications in staging with varying resource limits to observe behavior.</p>
+
+<h3 id="-use-vertical-pod-autoscaler-vpa">🔄 Use Vertical Pod Autoscaler (VPA)</h3>
+
+<p>VPA helps adjust requests/limits based on real-time usage.</p>
+
+<h3 id="-combine-with-hpa--cluster-autoscaler">🔁 Combine with HPA + Cluster Autoscaler</h3>
+
+<p>For full flexibility, use all three: HPA, VPA, and Cluster Autoscaler.</p>
+
+<h2 id="8-resource-management-for-multi-container-pods">8. Resource Management for Multi-Container Pods</h2>
+
+<p>Multi-container pods share the same cgroup, which means resource limits apply to all containers collectively, not individually.</p>
+
+<h3 id="strategies">Strategies:</h3>
+
+<ul>
+  <li>
+    <p>Use initContainers for setup logic with separate limits.</p>
+  </li>
+  <li>
+    <p>Define different resource profiles for sidecars (e.g., logging, monitoring)</p>
+  </li>
+  <li>
+    <p>Use QoS classes (Guaranteed, Burstable, BestEffort) to guide eviction priority.</p>
+  </li>
+</ul>
+
+<h2 id="9-tools-for-resource-monitoring-and-optimization">9. Tools for Resource Monitoring and Optimization</h2>
+
+<p>Tool</p>
+
+<p>Purpose</p>
+
+<p>Goldilocks</p>
+
+<p>Recommends optimal request/limit values</p>
+
+<p>Prometheus + Grafana</p>
+
+<p>Visualization and alerting</p>
+
+<p>Kube-state-metrics</p>
+
+<p>Metadata collection</p>
+
+<p>Kubernetes Metrics Server</p>
+
+<p>Lightweight resource usage API</p>
+
+<p>Kubecost</p>
+
+<p>Real-time cost visibility and optimization suggestions</p>
+
+<p>VPA (Vertical Pod Autoscaler)</p>
+
+<p>Dynamic resource adjustment</p>
+
+<h2 id="10-integrating-resource-management-into-devops-and-cicd">10. Integrating Resource Management into DevOps and CI/CD</h2>
+
+<h3 id="-shift-left">🔄 Shift Left</h3>
+
+<p>Validate resource specs during CI with schema checks or OPA/Gatekeeper.</p>
+
+<h3 id="-resource-linting">📊 Resource Linting</h3>
+
+<p>Use custom tools or static analysis to catch missing or excessive specs before merging.</p>
+
+<h3 id="-ephemeral-environments">🧪 Ephemeral Environments</h3>
+
+<p>Create ephemeral test environments with dynamic resource profiles.</p>
+
+<h3 id="-progressive-delivery">🚦 Progressive Delivery</h3>
+
+<p>Combine resource changes with canary deployments to minimize risk.</p>
+
+<h2 id="11-common-mistakes-and-how-to-avoid-them">11. Common Mistakes and How to Avoid Them</h2>
+
+<p>Mistake</p>
+
+<p>Fix</p>
+
+<p>Omitting resource requests</p>
+
+<p>Use monitoring to define safe baselines</p>
+
+<p>Setting equal request and limit</p>
+
+<p>Allow headroom for spikes</p>
+
+<p>Copy-pasting values across pods</p>
+
+<p>Tune for each workload</p>
+
+<p>Not setting memory limits</p>
+
+<p>Risk of OOMKills</p>
+
+<p>Relying solely on HPA</p>
+
+<p>Use in combination with VPA and right-sizing tools</p>
+
+<h2 id="12-conclusion">12. Conclusion</h2>
+
+<p>Effective resource management for pods and containers in Kubernetes is essential for a well-functioning, cost-efficient, and highly available cluster.</p>
+
+<p>By defining accurate resource requests and limits, integrating smart tooling, and avoiding common pitfalls, teams can strike the right balance between performance and resource utilization.</p>
+
+<p>Start small, monitor consistently, and automate intelligently. Resource management is not just a configuration—it’s an engineering mindset.</p>
+
+<h2 id="13-faqs">13. FAQs</h2>
+
+<h3 id="1-what-happens-if-i-dont-set-resource-requests-or-limits">1. What happens if I don’t set resource requests or limits?</h3>
+
+<p>Kubernetes may oversubscribe nodes, leading to eviction, throttling, or unpredictable behavior.</p>
+
+<h3 id="2-what-is-the-difference-between-cpu-request-and-limit">2. What is the difference between CPU request and limit?</h3>
+
+<p>CPU request is the guaranteed amount for scheduling; the limit is the cap enforced at runtime.</p>
+
+<h3 id="3-why-are-memory-limits-important">3. Why are memory limits important?</h3>
+
+<p>Memory overuse results in pod termination. Limits prevent one container from crashing the node.</p>
+
+<h3 id="4-what-is-the-kubernetes-qos-class">4. What is the Kubernetes QoS class?</h3>
+
+<p>QoS classes (Guaranteed, Burstable, BestEffort) determine eviction priority based on resource definitions.</p>
+
+<h3 id="5-can-i-use-vpa-with-hpa">5. Can I use VPA with HPA?</h3>
+
+<p>Yes, but only when HPA uses metrics other than CPU/memory (like custom or external metrics).</p>
+
+<h3 id="6-is-cpu-throttling-bad">6. Is CPU throttling bad?</h3>
+
+<p>For latency-sensitive applications, yes. Throttling can increase response times significantly.</p>
+
+<h3 id="7-how-often-should-i-update-resource-values">7. How often should I update resource values?</h3>
+
+<p>Regularly—especially after code changes, usage spikes, or major deployments.</p>
+
+<h3 id="8-what-tools-help-right-size-resource-values">8. What tools help right-size resource values?</h3>
+
+<p>Goldilocks, VPA, and Kubecost provide resource recommendations based on actual usage.</p>
+
+<h3 id="9-should-initcontainers-have-separate-resource-values">9. Should initContainers have separate resource values?</h3>
+
+<p>Yes. InitContainers run sequentially and should have their own optimized requests/limits.</p>
+
+<h3 id="10-can-setting-resource-limits-reduce-my-cloud-bill">10. Can setting resource limits reduce my cloud bill?</h3>
+
+<p>Absolutely. Proper limits prevent overprovisioning and help reduce cluster node size.</p>
+</div>
+          </div>
+
+          <!-- RIGHT: Related Posts -->
+          <div class="col-lg-4 mt-5">
+
+             <!-- Tag/Categories Section -->
+            <div class="mb-4 p-3 border rounded bg-white d-none d-md-block">
+              <h4 class="fw-bold mb-3">Tags</h4>
+              
+              <div class="list-inline mb-0 d-flex flex-wrap gap-2">
+                
+                <span class="badge bg-secondary mb-1 w-auto align-self-start">
+                  AWS Cost
+                </span>
+                
+                <span class="badge bg-secondary mb-1 w-auto align-self-start">
+                  CICD
+                </span>
+                
+                <span class="badge bg-secondary mb-1 w-auto align-self-start">
+                  DevOps
+                </span>
+                
+                <span class="badge bg-secondary mb-1 w-auto align-self-start">
+                  Kubernetes
+                </span>
+                
+                <span class="badge bg-secondary mb-1 w-auto align-self-start">
+                  platform engineering
+                </span>
+                
+              </div>
+            </div>
+
+            <div class="p-3 mb-4 border rounded bg-white shadow-sm">
+              <h4 class="fw-bold mb-3">More in Kubernetes</h4>
+                
+              <div class="mb-3">
+                <a
+                  href="/blog/2025-07-02-kubernetes-best-practices-for-resource-requests-and-limits"
+                  class="text-decoration-none text-dark fw-semibold d-block"
+                  >Kubernetes Best Practices for Resource Requests and Limits</a
+                >
+                <small class="text-muted"
+                  >02 July 2025</small
+                >
+              </div>
+              
+              <div class="mb-3">
+                <a
+                  href="/blog/how-to-optimize-kubernetes-for-performance-and-reduce-cost/"
+                  class="text-decoration-none text-dark fw-semibold d-block"
+                  >how to optimize kubernetes for performance and reduce cost</a
+                >
+                <small class="text-muted"
+                  >27 June 2025</small
+                >
+              </div>
+              
+              <div class="mb-3">
+                <a
+                  href="/blog/2025-06-23-best-practice-for-running-cost-optimized-kubernetes-applications-on-gke/"
+                  class="text-decoration-none text-dark fw-semibold d-block"
+                  >Best practice for Running  Cost Optimized Kubernetes Applications on GKE</a
+                >
+                <small class="text-muted"
+                  >23 June 2025</small
+                >
+              </div>
+              
+              <div class="mb-3">
+                <a
+                  href="/blog/2025-06-15-kubernetes-pod-scheduling-balancing-cost-and-resilience"
+                  class="text-decoration-none text-dark fw-semibold d-block"
+                  >Kubernetes Pod Scheduling Balancing Cost and Resilience</a
+                >
+                <small class="text-muted"
+                  >16 June 2025</small
+                >
+              </div>
+              
+            </div>
+
+           
+          </div>
+        </div>
+      </div>
+
+    <!-- <div class="bg-light pt-5 pb-5 work-hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <div class="media">
+          <img
+            src="/images/clients/yaron-oren.jpeg"
+            class="mr-4 rounded-circle"
+            width="120"
+            alt="yaron-oren"
+          />
+          <div class="align-self-center msg-txt-18 font-italic mt-4 mt-md-0">
+            Kubeify's team <b>decrease the time</b> it takes to adopt open
+            source technology while enabling consistent application environments
+            across deployments...letting our developers focus on application
+            code while improving speed and quality of our releases.<br />
+            <b>- Yaron Oren, Founder Maverick.ai (acquired by OutboundWorks)</b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<section class="bg-light py-5 work-hero">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="d-flex flex-column flex-md-row align-items-center gap-4">
+          <!-- Client Image -->
+          <img
+            src="/images/clients/yaron-oren.jpeg"
+            alt="Yaron Oren"
+            class="rounded-circle"
+            width="120"
+            height="120"
+          />
+          <!-- Testimonial Text -->
+          <div class="fst-italic">
+            <p class="mb-2 fs-5">
+              Kubeify's team <strong>decrease the time</strong> it takes to
+              adopt open source technology while enabling consistent application
+              environments across deployments... letting our developers focus on
+              application code while improving speed and quality of our
+              releases.
+            </p>
+            <p class="mb-0 fw-semibold">
+              – Yaron Oren, Founder Maverick.ai (acquired by OutboundWorks)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-light py-4">
+  <div class="container">
+    <div class="looking-details-wraper">
+      <div class="looking-details-content">
+        <h4>Ready to get started?</h4>
+        <p>
+          Let us know what you are working on? <br />
+          We would help you to build a
+          <b>fault tolerant, secure and scalable system</b> over kubernetes.
+        </p>
+        <a class="btn schedule-btn" href="/schedule-meeting"
+          >Schedule Meeting</a
+        >
+      </div>
+      <div class="looking-details-image">
+        <img
+          src="/images/home-cta2.png"
+          alt="formore-details"
+          data-lazy-src="/images/home-cta2.png"
+          height="350px"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+ 
+    <div class="footer bg-dark">
+      <div class="container py-5">
+        <div class="footer-top">
+          <div class="footer-logo-section">
+            <div class="brand-text">Kubeify</div>
+            <div class="footer-description py-2">
+              We unleash growth by helping companies adopt cloud native
+              technologies with our products and services!
+            </div>
+            <div class="footer-social-icons d-flex py-2">
+              <a href="https://www.linkedin.com/company/kubeify" target="_blank" class="footer-social-icon"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://x.com/kubeify" target="_blank" class="footer-social-icon"><i class="fa-brands fa-twitter"></i></a>
+              <a href="https://www.youtube.com/@kubeifyk8s45/videos" class="footer-social-icon" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="footer-badges">
+            <img src="../images/badge1.svg" alt="Badge 1" class="footer-badge" />
+            <img src="../images/badge2.svg" alt="Badge 2" class="footer-badge" />
+            <img src="../images/badge3.svg" alt="Badge 3" class="footer-badge" />
+            <img src="../images/badge4.svg" alt="Badge 4" class="footer-badge" />
+            <img src="../images/badge3.svg" alt="Badge 5" class="footer-badge" />
+            <img src="../images/badge4.svg" alt="Badge 6" class="footer-badge" />
+          </div>
+        </div>
+
+        <div class="footer-main-content">
+          <div class="footer-item">
+            <h4>AI Cloud</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Cloud Native Product Development</a></li>
+              <li><a href="#">Cloud Native FaaS</a></li>
+              <li><a href="#">Monolith to Microservices</a></li>
+              <li><a href="#">DevSecOps as a Service</a></li>
+              <!-- <li><a href="#">Extending Kubernetes Whitepaper</a></li> -->
+              <li><a href="#">Kubernetes Zero Downtime Upgrades</a></li>
+            </ul>
+            <h4 class="mt-2 pt-3">Product Engineering</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Platform Engineering Consulting</a></li>
+              <li><a href="#">Platform Engineering eBook</a></li>
+              <li><a href="#">Backstage Consulting</a></li>
+              <li><a href="#">Port Consulting</a></li>
+              <li><a href="#">Crossplane Consulting</a></li>
+              <li><a href="#">Progressive Delivery</a></li>
+              <li><a href="#">CI/CD & Dev Experience</a></li>
+              <li><a href="#">Bare Metal Provisioning Consulting</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-item">
+            <h4>Application Modernization</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Monolith to Microservices</a></li>
+              <li><a href="#">Kubernetes Consulting Services</a></li>
+              <li><a href="#">GitOps Consulting</a></li>
+              <li><a href="#">CI/CD & Dev Experience</a></li>
+              <li><a href="#">DevOps Toolchain</a></li>
+              <li><a href="#">ArgoCD Consulting</a></li>
+              <li><a href="#">Jenkins Consulting</a></li>
+              <li><a href="#">Cloud Migration Consulting</a></li>
+              <li><a href="#">FinOps Consulting</a></li>
+              <li><a href="#">vCluster Consulting</a></li>
+            </ul>
+            <h4 class="mt-2 pt-3">Observability & DevSecOps</h4>
+            <ul class="footer-nav">
+              <li><a href="#">DevSecOps Consulting</a></li>
+              <li><a href="#">Observability Consulting</a></li>
+              <li><a href="#">Grafana Consulting</a></li>
+              <li><a href="#">Prometheus Consulting</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-item">
+            <h4>Site Reliability Engineering</h4>
+            <ul class="footer-nav">
+              <li><a href="#">SRE Consulting</a></li>
+              <li><a href="#">Service Mesh Consulting</a></li>
+              <li><a href="#">Cloud Native Networking</a></li>
+              <li><a href="#">Istio Consulting</a></li>
+              <li><a href="#">Linkerd Consulting</a></li>
+              <li><a href="#">Tetratom Consulting</a></li>
+              <li><a href="#">Backup & Disaster Recovery</a></li>
+              <li><a href="#">Bare Metal Provisioning Consulting</a></li>
+              <li><a href="#">Kyverno Consulting</a></li>
+            </ul>
+            <h4 class="mt-2 pt-3">Consulting Partners</h4>
+            <ul class="footer-nav">
+              <li><a href="#">GitLab Partner</a></li>
+              <li><a href="#">SUSE Rancher Partner</a></li>
+              <li><a href="#">Tigera Partner</a></li>
+              <li><a href="#">Solo Partner</a></li>
+              <li><a href="#">Akamai Partner</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-item">
+            <h4>Industries</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Banking and Finance</a></li>
+              <li><a href="#">Automotive</a></li>
+            </ul>
+            <h4 class="mt-2 pt-3">Enterprise Support</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Linkerd Support</a></li>
+              <li><a href="#">Istio Support</a></li>
+              <li><a href="#">Argo CD Support</a></li>
+              <li><a href="#">Prometheus Support</a></li>
+              <li><a href="#">Kasten K10 Support</a></li>
+              <li><a href="#">Thanos Support</a></li>
+            </ul>
+            <h4 class="mt-2 pt-3">Solutions</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Fusion Enterprise</a></li>
+              <li><a href="#">Bottlekube Enterprise</a></li>
+              <li><a href="#">Managed Services for Kubernetes</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-item">
+            <h4>Resources</h4>
+            <ul class="footer-nav">
+              <li><a href="#">OSE Contributions</a></li>
+              <li><a href="#">Blogs</a></li>
+              <li><a href="#">Cloud Native & AI Talks</a></li>
+              <li><a href="#">Webinars</a></li>
+              <li><a href="#">Customers Stories</a></li>
+              <li><a href="#">Spelling Bee</a></li>
+              <li><a href="#">CNCF Landscape Navigator</a></li>
+              <li><a href="#">Skill Rubrics</a></li>
+              <li><a href="#">Poppy Comic</a></li>
+            </ul>
+            <h4 class="mt-2 pt-3">Company</h4>
+            <ul class="footer-nav">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">The InfraCloud Way</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Mentoring Sessions</a></li>
+              <li><a href="#">Newsroom</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+    <div class="lower-footer text-center py-2">
+    <span class="d-inline-block copyright">
+      Copyright © <span id="year">2025</span> Kubeify (A CodeCrux Company). All Rights Reserved.
+    </span>
+  </div>
+    <!-- Year Updater -->
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <!-- jQuery + Bootstrap (if not already included) -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/app.js"></script>
+
+    <!-- Google Analytics (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-142118821-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-142118821-1");
+    </script>
+
+    <!-- HubSpot Embed Code -->
+    <script
+      type="text/javascript"
+      id="hs-script-loader"
+      async
+      defer
+      src="//js.hs-scripts.com/7280691.js"
+    ></script>
+  </body>
+</html>
+
+  </body>
+</html>

@@ -48,13 +48,10 @@
     <link rel="stylesheet" href="/css/blog.css" />
   </head>
 
-  <body class="layout-blog">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white  fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="/"
-      ><img src="/images/kubeify-logo.png" alt=""
-    /></a>
-
+    <a class="navbar-brand" href="/"><img src="/images/kubeify-logo.png" alt=""/ height="44px;"></a>
     <button class="navbar-toggler" type="button" id="sidebarCollapse">
       <!-- <span class="navbar-toggler-icon"></span> -->
       <span class="icon"></span>
@@ -62,35 +59,26 @@
       <span class="icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" >
       <ul class="navbar-nav ml-auto">
-        <!-- <li class="nav-item dropdown">
+        <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
-            href="/services"
+            href="#"
             id="servicesDropdown"
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
             Services
-          </a> -->
-        <!-- <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                  <li><a class="dropdown-item" href="services">Service 1</a></li>
-                  <li><a class="dropdown-item" href="/service2">Service 2</a></li>
-                  <li><a class="dropdown-item" href="/service3">Service 3</a></li>
-                  <li><a class="dropdown-item" href="/service1">Service 4</a></li>
-                  <li><a class="dropdown-item" href="/service2">Service 5</a></li>
-                  <li><a class="dropdown-item" href="/service3">Service 6</a></li>
-                  <li><a class="dropdown-item" href="/service2">Service 7</a></li>
-                  <li><a class="dropdown-item" href="/service3">Service 8</a></li>
-
-              </ul> -->
-        <!-- </li> -->
-
-        <li class="nav-item">
-          <a class="nav-link" href="/why-kubernetes">Why Kubernetes</a>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="/why-kubernetes">Why Kubernetes</a></li>
+              <li><a class="dropdown-item" href="/kubernetes-cost-optimization">kubernetes cost optimization</a></li>
+          </ul>
         </li>
+
+       
         <li class="nav-item">
           <a class="nav-link" href="/blog">Blog</a>
         </li>
@@ -289,22 +277,9 @@
 <meta name="google-adsense-account" content="ca-pub-4088406505945385" />
 
 
-    <section>
-      <div class="container mb-4">
-        <div class="row">
-          <!-- LEFT: Main Blog Content -->
-          <div class="col-lg-8 bg-white p-4 border rounded shadow-sm">
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb" style="background: transparent">
-                <li class="breadcrumb-item">
-                  <a href="/blog">Blog</a>
-                </li>
-                <li class="breadcrumb-item active" aria-current="page">
-                  Kubernetes Cluster Deployment Best Practices for a Smooth Implementation
-                </li>
-              </ol>
-            </nav>
-
+      <div class="container mt-5">
+        <div class="row mt-5">
+          <div class="col-lg-8 bg-white p-2 border rounded shadow-sm mt-5 mb-5">
             <img
               src="/images/blog/kubernetes-cluster-deployment-best-practices-for-a-smooth-implementation.webp"
               alt="Kubernetes Cluster Deployment Best Practices for a Smooth Implementation"
@@ -316,7 +291,6 @@
               01 Feb 2025 -
               <small>Shyam Mohan</small>
             </time>
-
             <div class="px-2 mt-4"><p>Kubernetes has become the de facto standard for container orchestration, enabling organizations to deploy, manage, and scale containerized applications seamlessly. However, deploying a Kubernetes cluster requires careful planning and adherence to best practices to ensure performance, security, and reliability. This blog will guide you through the best practices for Kubernetes cluster deployment to achieve a smooth and efficient implementation.</p>
 
 <h2 id="1-plan-your-cluster-architecture">1. Plan Your Cluster Architecture</h2>
@@ -472,80 +446,90 @@
           </div>
 
           <!-- RIGHT: Related Posts -->
-          <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="p-3 mb-4 border rounded bg-white shadow-sm">
-              <h4 class="fw-bold mb-3">More in Kubernetes</h4>
-                
-              <div class="mb-3">
-                <a
-                  href="/blog/2025-01-05-kubernetes-cost-management-best-practices-for-efficient-scaling/"
-                  class="text-decoration-none text-dark fw-semibold d-block"
-                  >Kubernetes Cost Management Best Practices for Efficient Scaling</a
-                >
-                <small class="text-muted"
-                  >06 June 2025</small
-                >
-              </div>
-              
-              <div class="mb-3">
-                <a
-                  href="/blog/2025-02-04-best-practices-for-efficient-kubernetes-deployment-and-cost-reduction/"
-                  class="text-decoration-none text-dark fw-semibold d-block"
-                  >Best Practices for Efficient Kubernetes Deployment and Cost Reduction	</a
-                >
-                <small class="text-muted"
-                  >04 April 2025</small
-                >
-              </div>
-              
-              <div class="mb-3">
-                <a
-                  href="/blog/2025-01-09-how-to-implement-kubernetes-and-scale-applications-with-ease/"
-                  class="text-decoration-none text-dark fw-semibold d-block"
-                  >How to Implement Kubernetes and Scale Applications with Ease</a
-                >
-                <small class="text-muted"
-                  >07 March 2025</small
-                >
-              </div>
-              
-              <div class="mb-3">
-                <a
-                  href="/blog/2025-02-05-how-to-implement-kubernetes-for-high-availability-and-disaster-recovery/"
-                  class="text-decoration-none text-dark fw-semibold d-block"
-                  >How to Implement Kubernetes for High Availability and Disaster Recovery</a
-                >
-                <small class="text-muted"
-                  >05 February 2025</small
-                >
-              </div>
-              
-            </div>
+          <div class="col-lg-4 mt-5">
 
-            <!-- Tag/Categories Section -->
+             <!-- Tag/Categories Section -->
             <div class="mb-4 p-3 border rounded bg-white d-none d-md-block">
               <h4 class="fw-bold mb-3">Tags</h4>
               
               <div class="list-inline mb-0 d-flex flex-wrap gap-2">
                 
-                <span class="btn rounded-pill btn-light">
+                <span class="badge bg-secondary mb-1 w-auto align-self-start">
                   AWS Cost
                 </span>
                 
-                <span class="btn rounded-pill btn-light">
+                <span class="badge bg-secondary mb-1 w-auto align-self-start">
+                  CICD
+                </span>
+                
+                <span class="badge bg-secondary mb-1 w-auto align-self-start">
                   DevOps
                 </span>
                 
-                <span class="btn rounded-pill btn-light">
+                <span class="badge bg-secondary mb-1 w-auto align-self-start">
                   Kubernetes
+                </span>
+                
+                <span class="badge bg-secondary mb-1 w-auto align-self-start">
+                  platform engineering
                 </span>
                 
               </div>
             </div>
+
+            <div class="p-3 mb-4 border rounded bg-white shadow-sm">
+              <h4 class="fw-bold mb-3">More in Kubernetes</h4>
+                
+              <div class="mb-3">
+                <a
+                  href="/blog/2025-07-06-resource-management-for-pods-and-containers-in-kubernetes/"
+                  class="text-decoration-none text-dark fw-semibold d-block"
+                  >Resource Management for Pods and Containers in Kubernetes</a
+                >
+                <small class="text-muted"
+                  >06 July 2025</small
+                >
+              </div>
+              
+              <div class="mb-3">
+                <a
+                  href="/blog/2025-07-02-kubernetes-best-practices-for-resource-requests-and-limits"
+                  class="text-decoration-none text-dark fw-semibold d-block"
+                  >Kubernetes Best Practices for Resource Requests and Limits</a
+                >
+                <small class="text-muted"
+                  >02 July 2025</small
+                >
+              </div>
+              
+              <div class="mb-3">
+                <a
+                  href="/blog/how-to-optimize-kubernetes-for-performance-and-reduce-cost/"
+                  class="text-decoration-none text-dark fw-semibold d-block"
+                  >how to optimize kubernetes for performance and reduce cost</a
+                >
+                <small class="text-muted"
+                  >27 June 2025</small
+                >
+              </div>
+              
+              <div class="mb-3">
+                <a
+                  href="/blog/2025-06-23-best-practice-for-running-cost-optimized-kubernetes-applications-on-gke/"
+                  class="text-decoration-none text-dark fw-semibold d-block"
+                  >Best practice for Running  Cost Optimized Kubernetes Applications on GKE</a
+                >
+                <small class="text-muted"
+                  >23 June 2025</small
+                >
+              </div>
+              
+            </div>
+
+           
           </div>
         </div>
       </div>
-    </section>
 
     <!-- <div class="bg-light pt-5 pb-5 work-hero">
   <div class="container">
@@ -639,10 +623,9 @@
               technologies with our products and services!
             </div>
             <div class="footer-social-icons d-flex py-2">
-              <a href="#" class="footer-social-icon"><i class="fa-brands fa-linkedin"></i></a>
-              <a href="#" class="footer-social-icon"><i class="fa-brands fa-twitter"></i></a>
-              <!-- <a href="#" class="footer-social-icon"><i class="fa-brands fa-facebook"></i></a> -->
-              <a href="#" class="footer-social-icon"><i class="fa-brands fa-youtube"></i></a>
+              <a href="https://www.linkedin.com/company/kubeify" target="_blank" class="footer-social-icon"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://x.com/kubeify" target="_blank" class="footer-social-icon"><i class="fa-brands fa-twitter"></i></a>
+              <a href="https://www.youtube.com/@kubeifyk8s45/videos" class="footer-social-icon" target="_blank"><i class="fa-brands fa-youtube"></i></a>
             </div>
           </div>
           <div class="footer-badges">
@@ -662,9 +645,9 @@
               <li><a href="#">Cloud Native Product Development</a></li>
               <li><a href="#">Cloud Native FaaS</a></li>
               <li><a href="#">Monolith to Microservices</a></li>
-              <li><a href="#">DevSec as a Service</a></li>
-              <li><a href="#">Extending Kubernetes Whitepaper</a></li>
-              <li><a href="#">Kubernetes Zero Downtime Upgrades eBook</a></li>
+              <li><a href="#">DevSecOps as a Service</a></li>
+              <!-- <li><a href="#">Extending Kubernetes Whitepaper</a></li> -->
+              <li><a href="#">Kubernetes Zero Downtime Upgrades</a></li>
             </ul>
             <h4 class="mt-2 pt-3">Product Engineering</h4>
             <ul class="footer-nav">

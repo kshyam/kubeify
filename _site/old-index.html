@@ -60,16 +60,10 @@
     <![endif]-->
   </head>
 
-  <body
-    class="layout-blog "
-  >
-    <!-- navbar -->
-    <header class="default-header cm-header"><nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <body class="">
+    <header class="default-header cm-header"><nav class="navbar navbar-expand-lg navbar-light bg-white  fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="/"
-      ><img src="/images/kubeify-logo.png" alt=""
-    /></a>
-
+    <a class="navbar-brand" href="/"><img src="/images/kubeify-logo.png" alt=""/ height="44px;"></a>
     <button class="navbar-toggler" type="button" id="sidebarCollapse">
       <!-- <span class="navbar-toggler-icon"></span> -->
       <span class="icon"></span>
@@ -77,35 +71,26 @@
       <span class="icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" >
       <ul class="navbar-nav ml-auto">
-        <!-- <li class="nav-item dropdown">
+        <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
-            href="/services"
+            href="#"
             id="servicesDropdown"
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
             Services
-          </a> -->
-        <!-- <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                  <li><a class="dropdown-item" href="services">Service 1</a></li>
-                  <li><a class="dropdown-item" href="/service2">Service 2</a></li>
-                  <li><a class="dropdown-item" href="/service3">Service 3</a></li>
-                  <li><a class="dropdown-item" href="/service1">Service 4</a></li>
-                  <li><a class="dropdown-item" href="/service2">Service 5</a></li>
-                  <li><a class="dropdown-item" href="/service3">Service 6</a></li>
-                  <li><a class="dropdown-item" href="/service2">Service 7</a></li>
-                  <li><a class="dropdown-item" href="/service3">Service 8</a></li>
-
-              </ul> -->
-        <!-- </li> -->
-
-        <li class="nav-item">
-          <a class="nav-link" href="/why-kubernetes">Why Kubernetes</a>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="/why-kubernetes">Why Kubernetes</a></li>
+              <li><a class="dropdown-item" href="/kubernetes-cost-optimization">kubernetes cost optimization</a></li>
+          </ul>
         </li>
+
+       
         <li class="nav-item">
           <a class="nav-link" href="/blog">Blog</a>
         </li>
@@ -303,8 +288,7 @@
 
 <meta name="google-adsense-account" content="ca-pub-4088406505945385" />
 </header>
-
-    <div class="content-wraper"><div class="home-banner">
+    <div class="mt-5"><div class="home-banner">
   <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -1651,10 +1635,9 @@
               technologies with our products and services!
             </div>
             <div class="footer-social-icons d-flex py-2">
-              <a href="#" class="footer-social-icon"><i class="fa-brands fa-linkedin"></i></a>
-              <a href="#" class="footer-social-icon"><i class="fa-brands fa-twitter"></i></a>
-              <!-- <a href="#" class="footer-social-icon"><i class="fa-brands fa-facebook"></i></a> -->
-              <a href="#" class="footer-social-icon"><i class="fa-brands fa-youtube"></i></a>
+              <a href="https://www.linkedin.com/company/kubeify" target="_blank" class="footer-social-icon"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://x.com/kubeify" target="_blank" class="footer-social-icon"><i class="fa-brands fa-twitter"></i></a>
+              <a href="https://www.youtube.com/@kubeifyk8s45/videos" class="footer-social-icon" target="_blank"><i class="fa-brands fa-youtube"></i></a>
             </div>
           </div>
           <div class="footer-badges">
@@ -1674,9 +1657,9 @@
               <li><a href="#">Cloud Native Product Development</a></li>
               <li><a href="#">Cloud Native FaaS</a></li>
               <li><a href="#">Monolith to Microservices</a></li>
-              <li><a href="#">DevSec as a Service</a></li>
-              <li><a href="#">Extending Kubernetes Whitepaper</a></li>
-              <li><a href="#">Kubernetes Zero Downtime Upgrades eBook</a></li>
+              <li><a href="#">DevSecOps as a Service</a></li>
+              <!-- <li><a href="#">Extending Kubernetes Whitepaper</a></li> -->
+              <li><a href="#">Kubernetes Zero Downtime Upgrades</a></li>
             </ul>
             <h4 class="mt-2 pt-3">Product Engineering</h4>
             <ul class="footer-nav">
