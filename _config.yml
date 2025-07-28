@@ -1,7 +1,7 @@
 # Site settings
 title: Kubeify
 email: support@kubeify.com
-description: > # thi
+description: >
   Kubeify - a team who helps teams to quick start with Kubernetes & docker based DevOps process.
 
 baseurl: "" # the subpath of your site, e.g. /blog/
