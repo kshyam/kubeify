@@ -43,15 +43,13 @@
 <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5a50d614079115001207f66b&product=inline-share-buttons' async='async'></script>
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/blog.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+
     <!-- Font Awesome CDN -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-y4DUbiLKTZ9v+1AKWqE+buvZX/MLHFLDbK+gJ8ZkY3OhVqAaEKcQ2OqCxykI3dDLH4FZ6zAnGAVrI39kz6j6Wg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-
     <!--
       HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
     -->
@@ -62,16 +60,10 @@
     <![endif]-->
   </head>
 
-  <body
-    class="layout-blog "
-  >
-    <!-- navbar -->
-    <header class="default-header cm-header"><nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <body class="">
+    <header class="default-header cm-header"><nav class="navbar navbar-expand-lg navbar-light bg-white  fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="/"
-      ><img src="/images/kubeify-logo.png" alt=""
-    /></a>
-
+    <a class="navbar-brand" href="/"><img src="/images/kubeify-logo.png" alt=""/ height="44px;"></a>
     <button class="navbar-toggler" type="button" id="sidebarCollapse">
       <!-- <span class="navbar-toggler-icon"></span> -->
       <span class="icon"></span>
@@ -79,7 +71,7 @@
       <span class="icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" >
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown">
           <a
@@ -296,8 +288,7 @@
 
 <meta name="google-adsense-account" content="ca-pub-4088406505945385" />
 </header>
-
-    <div class="content-wraper"><section class="page-bg-header contact-hero py-5 text-white dark-bg">
+    <div class="mt-5"><section class="page-bg-header contact-hero text-white dark-bg">
   <div class="container text-center">
     <h1 class="display-4">Get in Touch with Kubeify</h1>
     <p class="lead mt-3">
@@ -375,7 +366,7 @@
   </div>
 </section>
 
-<div class="col-sm-5 offset-md-2">
+<div class="col-sm-5 mx-md-auto">
   <script
     charset="utf-8"
     type="text/javascript"
@@ -389,7 +380,7 @@
   </script>
 </div>
 
-<div class="bg-light pt-5 pb-5 work-hero">
+<!-- <div class="bg-light pt-5 pb-5 work-hero">
   <div class="container">
     <div class="row">
       <div class="col-md-10 offset-md-1">
@@ -411,7 +402,39 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
+
+<section class="bg-light py-5 work-hero">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="d-flex flex-column flex-md-row align-items-center gap-4">
+          <!-- Client Image -->
+          <img
+            src="/images/clients/yaron-oren.jpeg"
+            alt="Yaron Oren"
+            class="rounded-circle"
+            width="120"
+            height="120"
+          />
+          <!-- Testimonial Text -->
+          <div class="fst-italic">
+            <p class="mb-2 fs-5">
+              Kubeify's team <strong>decrease the time</strong> it takes to
+              adopt open source technology while enabling consistent application
+              environments across deployments... letting our developers focus on
+              application code while improving speed and quality of our
+              releases.
+            </p>
+            <p class="mb-0 fw-semibold">
+              – Yaron Oren, Founder Maverick.ai (acquired by OutboundWorks)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="bg-light py-4">
   <div class="container">
@@ -423,7 +446,7 @@
           We would help you to build a
           <b>fault tolerant, secure and scalable system</b> over kubernetes.
         </p>
-        <a class="btn cta-button btn-rounded" href="/schedule-meeting"
+        <a class="btn schedule-btn" href="/schedule-meeting"
           >Schedule Meeting</a
         >
       </div>
@@ -441,134 +464,176 @@
 
 </div>
 
+    
     <div class="footer bg-dark">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 footer-item">
-        <div class="brand-text">Kubeify</div>
-        <p>
-          Accelerate your cloud native transformation, adoption of kubernetes
-          with Kubeify's team of experts.
-        </p>
-        
-
-        </p>
-      </div>
-      <div class="col-md-8 mt-4 mt-md-0">
-        <div class="d-flex justify-content-between">
-          <div class="footer-item">
-            <h4 class="cta__title">Company</h4>
-            <ul class="footer-nav">
-              <li><a href="/about" title="About">About Us</a></li>
-              <li><a href="/contact" title="Contact Us">Contact Us</a></li>
-              <li>
-                <a href="/join-our-team" title="Join our team">Join our team</a>
-              </li>
-              <li>
-                <a href="/schedule-meeting" title="Schedule a meeting">Schedule a Meeting</a>
-              </li>
-            </ul>
+      <div class="container py-5">
+        <div class="footer-top">
+          <div class="footer-logo-section">
+            <div class="brand-text">Kubeify</div>
+            <div class="footer-description py-2">
+              We unleash growth by helping companies adopt cloud native
+              technologies with our products and services!
+            </div>
+            <div class="footer-social-icons d-flex py-2">
+              <a href="https://www.linkedin.com/company/kubeify" target="_blank" class="footer-social-icon"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://x.com/kubeify" target="_blank" class="footer-social-icon"><i class="fa-brands fa-twitter"></i></a>
+              <a href="https://www.youtube.com/@kubeifyk8s45/videos" class="footer-social-icon" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </div>
           </div>
-
-          <div class="footer-item">
-            <h4 class="cta__title">Services</h4>
-            <ul class="footer-nav">
-              <li><a href="/services">Services Offered</a></li>
-              <li><a href="/why-kubernetes">Why Kubernetes</a></li>
-              <li><a href="/customers" title="Customers">Customers</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-item">
-            <h4 class="cta__title">Resources</h4>
-            <ul class="footer-nav">
-              <li><a href="/blog">Blog</a></li>
-              <li><a href="/webinars">Webinars</a></li>
-              <li><a href="/join-webinars">Join Webinars</a></li>
-              <li><a href="https://www.cncf.io/newsroom/case-studies/" target="_blank">Case Studies</a></li>
-              <!-- <li><a href="/learn-kubernetes" target="_blank">Learn Kubernetes</a></li> -->
-            </ul>
-          </div>
-
-          <div class="footer-item">
-            <h4 class="cta__title">Social</h4>
-            <ul class="footer-nav">
-              <li><a href="https://www.linkedin.com/company/kubeify" title="linkedin" target="_blank">LinkedIn</a></li>
-              <li><a href="https://twitter.com/kubeify" target="_blank">Twitter</a></li>
-              <li><a href="https://www.youtube.com/@kubeifyk8s45/videos" target="_blank">YouTube</a></li>
-            </ul>
+          <div class="footer-badges">
+            <img src="/images/kubernetes-certified-engineers.svg" alt="kubernetes certified engineers" class="footer-badge" />
+            <img src="/images/gcp-cloud-certified-developer.png" alt="gcp cloud certified developer" class="footer-badge" />
+            <img src="/images/aws-certified-cloud-practitioner.png" alt="aws certified cloud practitioner" class="footer-badge" />
+            <img src="/images/partners/digitalocean.png" alt="digital ocean" class="footer-badge" />
+            <img src="/images/partners/docker.png" alt="docker" class="footer-badge" />
           </div>
         </div>
 
+        <div class="footer-main-content">
+          <div class="footer-item">
+            <h4>AI Cloud</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Cloud Native Product Development</a></li>
+              <li><a href="#">Cloud Native FaaS</a></li>
+              <li><a href="#">Monolith to Microservices</a></li>
+              <li><a href="#">DevSecOps as a Service</a></li>
+              <!-- <li><a href="#">Extending Kubernetes Whitepaper</a></li> -->
+              <li><a href="#">Kubernetes Zero Downtime</a></li>
+            </ul>
+            <h4 class="mt-2 pt-3">Product Engineering</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Platform Engineering Consulting</a></li>
+              <li><a href="#">Backstage Consulting</a></li>
+              <li><a href="#">Progressive Delivery</a></li>
+              <li><a href="#">CI/CD & Dev Experience</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-item">
+            <h4>Application Modernization</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Monolith to Microservices</a></li>
+              <li><a href="#">Kubernetes Consulting Services</a></li>
+              <li><a href="#">GitOps Consulting</a></li>
+              <li><a href="#">CI/CD & Dev Experience</a></li>
+              <li><a href="#">DevOps Toolchain</a></li>
+              <li><a href="#">ArgoCD Consulting</a></li>
+              <li><a href="#">Jenkins Consulting</a></li>
+              <li><a href="#">Cloud Migration Consulting</a></li>
+              <li><a href="#">FinOps Consulting</a></li>
+              <li><a href="#">vCluster Consulting</a></li>
+            </ul>
+            
+          </div>
+
+          <div class="footer-item">
+            <h4>Site Reliability Engineering</h4>
+            <ul class="footer-nav">
+              <li><a href="#">SRE Consulting</a></li>
+              <li><a href="#">Service Mesh Consulting</a></li>
+              <li><a href="#">Cloud Native Networking</a></li>
+              <li><a href="#">Istio Consulting</a></li>
+              <li><a href="#">Linkerd Consulting</a></li>
+              <li><a href="#">Tetratom Consulting</a></li>
+              <li><a href="#">Backup & Disaster Recovery</a></li>
+              <li><a href="#">Bare Metal Provisioning Consulting</a></li>
+            </ul>
+            <!-- <h4 class="mt-2 pt-3">Consulting Partners</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Razorops Partner</a></li>
+              <li><a href="#">Digital Ocean Cloud Partner</a></li>
+              <li><a href="#">e2e networks cloud</a></li>
+              <li><a href="#">IBM Cloud Partner</a></li>
+              <li><a href="#">AWS Cloud Partner</a></li>
+              <li><a href="#">GCP Cloud Partner</a></li>
+              <li><a href="#">Azure Cloud Partner</a></li>
+            </ul> -->
+          </div>
+
+          <div class="footer-item">
+            <h4>Enterprise Support</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Linkerd Support</a></li>
+              <li><a href="#">Istio Support</a></li>
+              <li><a href="#">Argo CD Support</a></li>
+              <li><a href="#">Prometheus Support</a></li>
+              <li><a href="#">Kasten K10 Support</a></li>
+            </ul>
+            <h4 class="pt-3">Observability & DevSecOps</h4>
+            <ul class="footer-nav">
+              <li><a href="#">DevSecOps Consulting</a></li>
+              <li><a href="#">Observability Consulting</a></li>
+              <li><a href="#">Grafana Consulting</a></li>
+              <li><a href="#">Prometheus Consulting</a></li>
+            </ul>
+            
+          </div>
+
+          <div class="footer-item">
+            <h4>Company</h4>
+            <ul class="footer-nav">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Mentoring Sessions</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+
+            <h4 class="pt-3">Resources</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Blogs</a></li>
+              <li><a href="#">Webinars</a></li>
+              <li><a href="#">Customers Stories</a></li>
+              <li><a href="#">CNCF Landscape Navigator</a></li>
+              <li><a href="#">Cloud Native & AI Talks</a></li>
+
+            </ul>
+            
+          </div>
+        </div>
+
+        
       </div>
     </div>
-  </div>
-  <br />
- 
-</div>
-
- <div class="lower-footer text-center py-2">
+    <div class="lower-footer text-center py-2">
     <span class="d-inline-block copyright">
-      Copyright &copy; <span id="year"></span> Kubeify (A CodeCrux Company). All Rights Reserved.
+      Copyright © <span id="year">2025</span> Kubeify (A CodeCrux Company). All Rights Reserved.
     </span>
   </div>
+    <!-- Year Updater -->
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 
-<!-- <style type="text/css">
-  .feedbackbox {
-    position: fixed;
-    top: 90vh;
-    left: 1%;
-    bottom: 0%;
-    width: 420px;
-    text-align: left;
-    z-index: 9999;
-    margin-top: -60px;
-    margin-bottom: 15px;
-    border: 1px solid #eee;
-    border-radius: 4px;
-    padding: 10px;
-    font-size: 16px;
-  }
-</style>
+    <!-- jQuery + Bootstrap (if not already included) -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/app.js"></script>
 
-<div
-  class="feedbackbox alert alert-warning alert-dismissible fade show"
-  role="alert"
->
-  <strong>Don't Miss Out!</strong>
-  <a href="/join-webinars"
-    >Managing kubernetes Manifests using Jsonnet & Tanaka</a
-  >
-  | 1st Aug, 2020, 9:30 PM – 10:30 PM, IST &nbsp;
-  <b><a href="/join-webinars">Join us !</a></b>
-</div>
- -->
+    <!-- Google Analytics (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-142118821-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-142118821-1");
+    </script>
 
+    <!-- HubSpot Embed Code -->
+    <script
+      type="text/javascript"
+      id="hs-script-loader"
+      async
+      defer
+      src="//js.hs-scripts.com/7280691.js"
+    ></script>
+  </body>
+</html>
 
-<script src="/js/jquery.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/app.js"></script>
-<script type="text/javascript">
-  $(document).ready(function () {
-    $("#year").html(new Date().getFullYear());
-  });
-</script>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142118821-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag("js", new Date());
-
-  gtag("config", "UA-142118821-1");
-</script>
-
-<!-- Start of HubSpot Embed Code -->
-<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/7280691.js"></script>
-<!-- End of HubSpot Embed Code -->
     <!-- Include Modal Partial -->
     <div
   class="modal fade"
@@ -603,10 +668,14 @@
     </div>
   </div>
 </div>
- <div id="cookieConsent" class="cookie-consent-banner">
-  <button type="button" class="close" id="closeCookieBox" aria-label="Close">
-    &times;
-  </button>
+ <!-- COOKIE BANNER -->
+<div id="cookieConsent" class="cookie-consent-banner">
+  <button
+    type="button"
+    class="btn-close"
+    id="closeCookieBox"
+    aria-label="Close"
+  ></button>
   <div class="container-fluid">
     <div class="row align-items-center">
       <div class="col-sm-2 text-center">
@@ -626,28 +695,17 @@
           provided to them or that they’ve collected from your use of their
           services.
         </p>
-        <a
-          href="#"
-          id="show-details"
-          data-toggle="modal"
-          data-target="#cookieDetailsModal"
-          style="color: blue; font-weight: bold"
-        >
+        <a href="#" id="show-details" style="color: blue; font-weight: bold">
           Show details <span>&#x276F;</span>
         </a>
       </div>
       <div class="col-sm-3 text-center">
-        <button
-          id="acceptCookies"
-          class="btn btn-primary btn-lg btn-block"
-          style="background-color: blue; border-color: blue"
-        >
+        <button id="acceptCookies" class="btn btn-primary btn-lg w-100">
           Allow all
         </button>
         <button
           id="denyCookies"
-          class="btn btn-outline-secondary btn-lg btn-block mt-2"
-          style="border: 1px solid blue; color: #000"
+          class="btn btn-outline-secondary btn-lg w-100 mt-2"
         >
           Deny
         </button>
@@ -656,46 +714,41 @@
   </div>
 </div>
 
+<!-- COOKIE DETAILS MODAL -->
 <div
   class="modal fade"
   id="cookieDetailsModal"
   tabindex="-1"
-  role="dialog"
   aria-labelledby="cookieDetailsLabel"
   aria-hidden="true"
 >
-  <div
-    class="modal-dialog modal-lg modal-dialog-centered animated fadeInDown"
-    role="document"
-  >
+  <div class="modal-dialog modal-lg modal-dialog-centered animated fadeInDown">
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title" id="cookieDetailsLabel">Cookie Details</h4>
         <button
           type="button"
-          class="close"
-          data-dismiss="modal"
+          class="btn-close"
+          data-bs-dismiss="modal"
           aria-label="Close"
-        >
-          <span>&times;</span>
-        </button>
+        ></button>
       </div>
       <div class="modal-body">
         <p>
-          <strong>Strictly Necessary Cookies</strong> – These cookies are
-          essential for the website to function.
+          <strong>Strictly Necessary Cookies</strong> – Essential for the
+          website to function.
         </p>
         <p>
-          <strong>Performance Cookies</strong> – Used to collect information
-          about how visitors use our site.
+          <strong>Performance Cookies</strong> – Collect info about how visitors
+          use our site.
         </p>
         <p>
-          <strong>Functionality Cookies</strong> – Allow the site to remember
-          user choices to provide enhanced functionality.
+          <strong>Functionality Cookies</strong> – Remember user choices for
+          enhanced functionality.
         </p>
         <p>
-          <strong>Targeting/Advertising Cookies</strong> – These are used to
-          deliver relevant ads and track campaign performance.
+          <strong>Targeting/Advertising Cookies</strong> – Deliver relevant ads
+          and track performance.
         </p>
         <hr />
         <p>
@@ -704,17 +757,12 @@
         </p>
       </div>
       <div class="modal-footer">
-        <button
-          id="acceptCookiesmobile"
-          class="btn btn-primary btn-lg btn-block"
-          style="background-color: blue; border-color: blue"
-        >
+        <button id="acceptCookiesmobile" class="btn btn-primary btn-lg w-100">
           Allow all
         </button>
         <button
           id="denyCookiesmobile"
-          class="btn btn-outline-secondary btn-lg btn-block mt-2"
-          style="border: 1px solid blue; color: #000"
+          class="btn btn-outline-secondary btn-lg w-100 mt-2"
         >
           Deny
         </button>
@@ -723,32 +771,19 @@
   </div>
 </div>
 
+<!-- STYLES -->
 <style>
   .cookie-consent-banner {
+    display: none;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     background-color: #fff;
     color: #000;
-    z-index: 9999;
+    z-index: 1055;
     padding: 30px 20px;
-    border-top: 4px solid #6a00ff;
     box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
-    display: none;
-  }
-
-  .cookie-consent-banner .close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 24px;
-    color: #000;
-    opacity: 0.5;
-  }
-
-  .cookie-consent-banner .close:hover {
-    opacity: 1;
   }
 
   @keyframes fadeInDown {

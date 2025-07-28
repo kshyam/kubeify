@@ -1,36 +1,36 @@
-<!-- Kubernetes Implementation Section -->
+
 <section id="kubernetes-implementation" class="bg-light py-5">
-    <div class="container text-center">
-      <h1 class="grd-text">What we do?</h1>
-      <p class="sub-head">
-        We help teams to adopt production ready Kubernetes deployments.
-      </p>
-    </div>
-    <div class="container mt-4">
-        <div class="row g-4">
-            <!-- Repeat this block for 8 items -->
-            <div class="col-sm-6 col-md-3 mb-4 slide-left">
-                <div class="card">
-                    <img src="/images/services/services1.jpg" class="card-img" alt="Before Hover">
-                    <div class="bottom-section">
-                        <h5>Kubernetes Consulting & Strategy</h5>
-                    </div>
-                    <div class="overlay">
-                        <h5>Kubernetes Consulting & Strategy</h5>
-                        <p>
-                          <ul class="list-services">
-                            <li> Architecture design and best practices</li>
-                            <li> Kubernetes adoption roadmap</li>
-                            <li> Platform assessment and optimization</li>
-                          </ul>
-                        </p>
-                        <!-- <a href="#" class="read-more btn btn-rounded">Read more</a> -->
-                    </div>
-                </div>
-            </div>
-  
-            <!-- Repeat till 8 items are filled -->
-            <div class="col-sm-6 col-md-3 mb-4 slide-left">
+  <div class="container text-center">
+    <h1 class="grd-text">What we do?</h1>
+    <p class="sub-head">
+      We help teams to adopt production ready Kubernetes deployments.
+    </p>
+  </div>
+
+  <div class="container mt-4">
+    <div class="row g-4">
+      <!-- 8 Service Cards -->
+      <!-- Example Service Card - Repeat and replace content accordingly -->
+      <div class="col-sm-6 col-md-3 slide-left">
+        <div class="card">
+          <img src="/images/services/services1.jpg" class="card-img" alt="Kubernetes Consulting">
+          <div class="bottom-section">
+            <h5>Kubernetes Consulting & Strategy</h5>
+          </div>
+          <div class="overlay">
+            <h5>Kubernetes Consulting & Strategy</h5>
+            <ul class="list-services">
+              <li>Architecture design and best practices</li>
+              <li>Kubernetes adoption roadmap</li>
+              <li>Platform assessment and optimization</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat with other 7 cards and replace image/src/content appropriately -->
+      <!-- ... all cards included like original input -->
+
+              <div class="col-sm-6 col-md-3 mb-4 slide-left">
                 <div class="card">
                     <img src="/images/services/services2.jpg" class="card-img" alt="Before Hover">
                     <div class="bottom-section">
@@ -49,7 +49,7 @@
                     </div>
                 </div>
             </div>
-  
+
             <div class="col-sm-6 col-md-3 mb-4 slide-right">
                 <div class="card">
                     <img src="/images/services/services3.jpg" class="card-img" alt="Before Hover">
@@ -69,8 +69,7 @@
                     </div>
                 </div>
             </div>
-            
-  
+
             <div class="col-sm-6 col-md-3 mb-4 slide-right">
               <div class="card">
                   <img src="/images/services/services4.jpg" class="card-img" alt="Before Hover">
@@ -90,12 +89,7 @@
                   </div>
               </div>
             </div>
-          
-  
-          
-            <!-- Repeat till 4 items are filled -->
-  
-  
+
             <div class="col-sm-6 col-md-3 mb-4 slide-left">
               <div class="card">
                   <img src="/images/services/services5.jpg" class="card-img" alt="Before Hover">
@@ -174,16 +168,18 @@
                     </div>
                 </div>
             </div>
-        </div>
+
     </div>
+  </div>
 </section>
+
 <script>
   document.addEventListener("scroll", () => {
-      document.querySelectorAll('.fade-in, .scale-up, .slide-left, .slide-right, .slide-up, .blur-in').forEach((element) => {
-          const position = element.getBoundingClientRect().top;
-          if (position < window.innerHeight - 100) {
-              element.classList.add('visible');
-          }
-      });
+    document.querySelectorAll('.fade-in, .scale-up, .slide-left, .slide-right, .slide-up, .blur-in').forEach((element) => {
+      const position = element.getBoundingClientRect().top;
+      if (position < window.innerHeight - 100) {
+        element.classList.add('visible');
+      }
+    });
   });
 </script>

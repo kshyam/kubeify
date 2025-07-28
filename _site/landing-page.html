@@ -43,15 +43,13 @@
 <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5a50d614079115001207f66b&product=inline-share-buttons' async='async'></script>
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/blog.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+
     <!-- Font Awesome CDN -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-y4DUbiLKTZ9v+1AKWqE+buvZX/MLHFLDbK+gJ8ZkY3OhVqAaEKcQ2OqCxykI3dDLH4FZ6zAnGAVrI39kz6j6Wg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-
     <!--
       HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
     -->
@@ -62,16 +60,10 @@
     <![endif]-->
   </head>
 
-  <body
-    class="layout-blog "
-  >
-    <!-- navbar -->
-    <header class="default-header cm-header"><nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <body class="">
+    <header class="default-header cm-header"><nav class="navbar navbar-expand-lg navbar-light bg-white  fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="/"
-      ><img src="/images/kubeify-logo.png" alt=""
-    /></a>
-
+    <a class="navbar-brand" href="/"><img src="/images/kubeify-logo.png" alt=""/ height="44px;"></a>
     <button class="navbar-toggler" type="button" id="sidebarCollapse">
       <!-- <span class="navbar-toggler-icon"></span> -->
       <span class="icon"></span>
@@ -79,7 +71,7 @@
       <span class="icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" >
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown">
           <a
@@ -296,291 +288,1623 @@
 
 <meta name="google-adsense-account" content="ca-pub-4088406505945385" />
 </header>
+    <div class="mt-5"><main class="landing-page">
+  <section class="py-5 gradient">
+    <div class="container py-5">
+      <div
+        class="row align-items-center"
+        style="justify-content: space-between"
+      >
+        <!-- Text Column -->
+        <div class="col-lg-7">
+          <h1>
+            <strong>Optimize your</strong>
+            <span class="text-primary">Google Cloud Kubernetes</span><br />Costs
+            with <span class="text-danger">Kubeify</span>, Your Premier Google
+            Cloud Partner!
+          </h1>
+          <p class="mt-3 text-muted">
+            Kubeify empowers you to reduce GKE costs by automating
+            infrastructure optimization, smart scaling, and workload
+            tuning—while maximizing efficiency and performance.
+          </p>
 
-    <div class="content-wraper"><section class="py-5" style="display: flex; align-items: center; height: 100vh;">
-<div class="container">
-  <div class="position-relative">
-    <img class="form-bg" src="./images/form-background.png">
-  </div>
-    <div class="row g-5 justify-content-between">
-      
-      <!-- Left Section -->
-      <div class="col-lg-7">
-        <h1 class="fw-bold mb-4">Optimize your <span class="highlight">Google Workspace</span> Experience with <span class="highlight">CloudNow</span>, Your Premier Google Partner!</h1>
-        <p class="text-muted mb-4">As one of the top rated Google partners in India, CloudNow helps you maximize value from Google products and services.</p>
+          <!-- Features -->
+          <div class="row mt-4">
+            <div class="col-12 col-md-6 mb-3">
+              <span>📊 Real-time cost visibility by cluster</span>
+            </div>
+            <div class="col-12 col-md-6 mb-3">
+              <span>🔁 Automated rightsizing & autoscaling</span>
+            </div>
+            <div class="col-12 col-md-6 mb-3">
+              <span>💸 Optimize with Spot & preemptible VMs</span>
+            </div>
+            <div class="col-12 col-md-6 mb-3">
+              <span>🧠 Expert GKE & Autopilot consulting</span>
+            </div>
+          </div>
 
-        <div class="row">
-          <div class="col col-md-6 d-flex align-items-center">
-            <img src="https://img.icons8.com/ios-filled/50/headset.png" class="feature-icon" alt="Support">
-            <span>24×7 support</span>
-          </div>
-          <div class="col col-md-6 d-flex align-items-center">
-            <img src="https://img.icons8.com/ios-filled/50/engineering.png" class="feature-icon" alt="Consulting">
-            <span>Consultancy and optimization</span>
-          </div>
-          <div class="col col-md-6 d-flex align-items-center">
-            <img src="https://img.icons8.com/ios-filled/50/training.png" class="feature-icon" alt="Training">
-            <span>Free product training</span>
-          </div>
-          <div class="col col-md-6 d-flex align-items-center">
-            <img src="https://img.icons8.com/ios-filled/50/settings.png" class="feature-icon" alt="Expertise">
-            <span>Deep technical expertise</span>
+          <!-- Mobile Only Button -->
+          <div class="d-lg-none text-center mt-4">
+            <button
+              class="btn btn-primary w-75 rounded-pill"
+              data-bs-toggle="modal"
+              data-bs-target="#mobileFormModal"
+            >
+              Get Started
+            </button>
           </div>
         </div>
-      </div>
 
-      <!-- Right Section -->
-      <div class="col-lg-4">
-        
-        <div class="form-section">
-          <h2 class="mb-4">Just a few clicks away from your own Workspace…</h2>
-          <form>
-            <input type="text" class="form-control" placeholder="Name" required>
-            <input type="email" class="form-control" placeholder="Work Email" required>
-            <div class="row g-2">
-              <div class="col-5">
-                <select class="form-select" required>
-                  <option selected>India (+91)</option>
-                  <option>US (+1)</option>
-                  <option>UK (+44)</option>
-                </select>
+        <!-- Desktop Form Column -->
+        <div class="col-lg-4 d-none d-lg-block">
+          <div class="card shadow-sm p-4">
+            <h4 class="mb-3">
+              Just a few clicks away from cutting your Kubernetes costs...
+            </h4>
+            <form style="font-size: 14px">
+              <div class="mb-3">
+                <label for="name" class="form-label"
+                  >Name<span class="required-symbol">*</span></label
+                >
+                <input type="text" class="form-control" id="name" required />
               </div>
-              <div class="col-7">
-                <input type="tel" class="form-control" placeholder="Mobile number" required>
+              <div class="mb-3">
+                <label for="email" class="form-label"
+                  >Work Email<span class="required-symbol">*</span></label
+                >
+                <input type="email" class="form-control" id="email" required />
               </div>
-            </div>
-            <input type="number" class="form-control" placeholder="No. of Licenses" required>
-            <button type="submit" class="btn btn-primary w-100 mt-2" style="background-color: #c026d3; border: none;">Get Started</button>
-          </form>
+              <div class="mb-3">
+                <label class="form-label"
+                  >Mobile Number<span class="required-symbol">*</span></label
+                >
+                <div class="input-group">
+                  <select class="form-select" style="max-width: 120px">
+                    <option selected>India</option>
+                    <option>US</option>
+                  </select>
+                  <input type="tel" class="form-control" required />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="licenses" class="form-label"
+                  >No. of Licenses*</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="licenses"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn btn-primary w-100 rounded-pill">
+                Get Started
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- SECTION 2 -->
-<section class="py-5 bg-light text-center">
-  <div class="container">
-    <h2 class="fw-bold text-primary mb-3">Why Google Workspace?</h2>
-    <p class="mb-5 text-muted">Google Workspace is the ultimate solution for modern businesses, offering a suite of powerful tools designed to enhance collaboration, boost productivity, and streamline workflows. Here's why Google Workspace is the right choice for your organization.</p>
-    
-    <div class="row g-4">
-      <div class="col col-md-4 mb-4">
-        <div class="p-4 bg-white h-100 shadow-sm rounded">
-          <div class="service-image p-3"><img src="./images/sheild.png" style="width: 100%;">
-            </div>
-          <h5 class="fw-bold">Secure Data Management</h5>
-          <p class="text-muted">Your business’s data is precious, and Google Workspace ensures it stays safe and accessible at all times. Rest easy knowing your files are protected against loss or theft.</p>
-        </div>
-      </div>
-      <div class="col col-md-4">
-        <div class="p-4 bg-white h-100 shadow-sm rounded">
-          <div class="mb-3"><i class="bi bi-currency-dollar fs-1 text-purple"></i></div>
-          <h5 class="fw-bold">Affordable Plans</h5>
-          <p class="text-muted">Google Workspace offers cost-effective plans for all business sizes, with eDiscovery, pay-as-you-go options, and unlimited data storage.</p>
-        </div>
-      </div>
-      <div class="col col-md-4">
-        <div class="p-4 bg-white h-100 shadow-sm rounded">
-          <div class="mb-3"><i class="bi bi-envelope-paper fs-1 text-purple"></i></div>
-          <h5 class="fw-bold">Professional Email Addresses</h5>
-          <p class="text-muted">Create custom email addresses like name@yourcompany.com to give your business a professional edge in every communication.</p>
-        </div>
-      </div>
-      <div class="col col-md-4">
-        <div class="p-4 bg-white h-100 shadow-sm rounded">
-          <div class="mb-3"><i class="bi bi-people fs-1 text-purple"></i></div>
-          <h5 class="fw-bold">Effortless Collaboration</h5>
-          <p class="text-muted">Work seamlessly with team members and partners from anywhere. Share and edit files in real-time with full control over access.</p>
-        </div>
-      </div>
-      <div class="col col-md-4">
-        <div class="p-4 bg-white h-100 shadow-sm rounded">
-          <div class="mb-3"><i class="bi bi-cloud-upload fs-1 text-purple"></i></div>
-          <h5 class="fw-bold">Ample Storage Space</h5>
-          <p class="text-muted">With unlimited storage, Google Workspace ensures you never run out of room for your data, media, and important files.</p>
-        </div>
-      </div>
-      <div class="col col-md-4">
-        <div class="p-4 bg-white h-100 shadow-sm rounded">
-          <div class="mb-3"><i class="bi bi-diagram-3 fs-1 text-purple"></i></div>
-          <h5 class="fw-bold">Seamless CRM Integrations</h5>
-          <p class="text-muted">Track leads and customer interactions with seamless CRM tools that improve your sales and management efficiency.</p>
+    <!-- Mobile Modal Form -->
+    <div
+      class="modal fade"
+      id="mobileFormModal"
+      tabindex="-1"
+      aria-labelledby="mobileFormModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-bottom-sheet">
+        <div class="modal-content p-3 rounded-top">
+          <div class="modal-header border-0">
+            <h3 class="modal-title fw-bold" id="mobileFormModalLabel">
+              Start Your GKE Optimization Journey
+            </h3>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- Form (Same as Desktop) -->
+            <form style="font-size: 14px">
+              <div class="mb-3">
+                <label for="nameMobile" class="form-label"
+                  >Name<span class="required-symbol">*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nameMobile"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="emailMobile" class="form-label"
+                  >Work Email<span class="required-symbol">*</span></label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="emailMobile"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label class="form-label"
+                  >Mobile Number<span class="required-symbol">*</span></label
+                >
+                <div class="input-group">
+                  <select class="form-select">
+                    <option selected>India</option>
+                    <option>US</option>
+                  </select>
+                  <input type="tel" class="form-control" required />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="licensesMobile" class="form-label"
+                  >No. of Licenses<span class="required-symbol">*</span></label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="licensesMobile"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn btn-primary w-100">
+                Submit
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+  <!-- Why Google Workspace Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center">
+        <h1 class="mb-4 wow fadeInUp">
+          Why <span class="text-danger">Kubeify</span> for GKE?
+        </h1>
+        <p class="col-lg-8 mx-auto work mb-5 wow fadeInUp">
+          Kubeify helps you unlock the full potential of Google Kubernetes
+          Engine (GKE) by automating cost reduction, optimizing workloads, and
+          ensuring your infrastructure runs at peak efficiency. Here’s why
+          Kubeify is the right partner for your cloud-native journey.
+        </p>
+      </div>
 
+      <div class="row">
+        <!-- 1 -->
+        <div class="col-md-4 col-6 mb-4">
+          <div class="m-origin text-center border p-2">
+            <div class="img-cri">
+              <img
+                src="./images/icons/smart_cost_optimization.png"
+                class="img-fluid"
+                style="width: 48px"
+              />
+            </div>
+            <h4 class="mt-3">Smart Cost Optimization</h4>
+            <p class="d-none d-md-block f-16">
+              Reduce your GKE expenses by identifying idle resources,
+              rightsizing workloads, and leveraging Spot/preemptible VMs—all
+              managed automatically by Kubeify.
+            </p>
+          </div>
+        </div>
 
+        <!-- 2 -->
+        <div class="col-md-4 col-6 mb-4">
+          <div class="m-origin text-center border p-2">
+            <div class="img-cri">
+              <img
+                src="./images/icons/predictive_autoscaling.png"
+                class="img-fluid"
+                style="width: 48px"
+              />
+            </div>
+            <h4 class="mt-3">Predictive Autoscaling</h4>
+            <p class="d-none d-md-block f-16">
+              Dynamically scale workloads with machine learning-based
+              predictions to handle spikes and save during idle times—without
+              sacrificing performance.
+            </p>
+          </div>
+        </div>
 
+        <!-- 3 -->
+        <div class="col-md-4 col-6 mb-4">
+          <div class="m-origin text-center border p-2">
+            <div class="img-cri">
+              <img
+                src="./images/icons/cluster_visibility.png"
+                class="img-fluid"
+                style="width: 48px"
+              />
+            </div>
+            <h3 class="mt-3">Cluster Visibility</h4>
+            <p class="d-none d-md-block f-16">
+              Get detailed insights into your GKE clusters, nodes, and workloads
+              in real-time. Track cost, usage, and anomalies with an intuitive
+              dashboard.
+            </p>
+          </div>
+        </div>
 
+        <!-- 4 -->
+        <div class="col-md-4 col-6 mb-4">
+          <div class="m-origin text-center border p-2">
+            <div class="img-cri">
+              <img
+                src="./images/icons/security_compliance.png"
+                class="img-fluid"
+                style="width: 48px"
+              />
+            </div>
+            <h4 class="mt-3">Security & Compliance</h4>
+            <p class="d-none d-md-block f-16">
+              Ensure secure, compliant Kubernetes environments with built-in
+              access controls, policy enforcement, and vulnerability scans
+              integrated with GKE.
+            </p>
+          </div>
+        </div>
 
+        <!-- 5 -->
+        <div class="col-md-4 col-6 mb-4">
+          <div class="m-origin text-center border p-2">
+            <div class="img-cri">
+              <img
+                src="./images/icons/multi_cluster_management.png"
+                class="img-fluid"
+                style="width: 48px"
+              />
+            </div>
+            <h4 class="mt-3">Multi-Cluster Management</h4>
+            <p class="d-none d-md-block f-16">
+              Easily manage and monitor workloads across multiple regions and
+              environments from one centralized platform—ideal for growing
+              teams.
+            </p>
+          </div>
+        </div>
 
+        <!-- 6 -->
+        <div class="col-md-4 col-6 mb-4">
+          <div class="m-origin text-center border p-2">
+            <div class="img-cri">
+              <img
+                src="./images/icons/expert_support.png"
+                class="img-fluid"
+                style="width: 48px"
+              />
+            </div>
+            <h4 class="mt-3">Expert Support</h4>
+            <p class="d-none d-md-block f-16">
+              Get direct access to Kubernetes and GKE-certified professionals.
+              From onboarding to advanced debugging, we’ve got you covered—24x7.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <section class="py-5 centered-bg">
+    <div class="container text-center mb-5 pb-3">
+      <h4 class="text-primary mb-3">
+        Unlock the Full Potential of Your GKE Environment
+      </h4>
+      <h2 class="display-5 fw-bold mb-3">
+        When You Subscribe Through Kubeify!
+      </h2>
+      <p class="lead mx-auto" style="max-width: 600px">
+        Kubeify helps you reduce GKE costs, automate operations, and improve
+        performance with expert support and intelligent tooling.
+      </p>
+    </div>
 
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-    .highlight {
-      color: #EC008C;
-    }
-    .form-section {
-      background: #f8f1fa;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    }
-    .form-control, .form-select {
-      margin-bottom: 15px;
-    }
-    .feature-icon {
-      width: 24px;
-      height: 24px;
-      margin-right: 10px;
-    }
-    .form-bg{
-      position: absolute;
-      top: -34px;
-      right: -96px;
-      z-index: -1;
-      width: 47%;
-    }
-    .service-image{
-      height: 80px;
-      width: 80px;
-    }
-  </style></div>
+    <!-- Desktop Layout -->
+    <div class="container px-0 features-circle-wrapper d-none d-md-block mb-4">
+      <div
+        class="central-offer d-flex flex-column justify-content-center align-items-center text-center rounded-circle shadow p-4"
+        style="width: 250px; height: 250px; background-color: #f8f9fa"
+      >
+        <img
+          src="./images/942748.png"
+          alt="Lock"
+          class="img-fluid mb-2"
+          style="width: 50px; height: 50px"
+        />
+        <h6 class="fw-semibold mb-1">Free SSO Solution</h6>
+        <small class="text-muted text-center">
+          Secure access to your clusters with IAM, device-level restrictions,
+          and RBAC.
+        </small>
+      </div>
 
-    <div class="footer bg-dark">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 footer-item">
-        <div class="brand-text">Kubeify</div>
+      <!-- F1: Top -->
+      <div class="circle-feature f1 column-layout card p-3">
+        <div class="row align-items-center text-center text-md-start g-3">
+          <div class="col-md-4 d-flex justify-content-center">
+            <img
+              src="./images/f1.png"
+              alt="Icon 2"
+              class="img-fluid"
+              style="max-width: 100px"
+            />
+          </div>
+          <div class="col-md-8">
+            <h6>24×7×365 EXPERT SUPPORT</h6>
+            <p>
+              Our Kubernetes-certified engineers are on call to help anytime,
+              with >96% SLA adherence.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- F2: Row layout -->
+      <div class="circle-feature f2 card p-3">
+        <div class="row align-items-center text-center text-md-start g-3">
+          <div class="col-md-4 d-flex justify-content-center">
+            <img
+              src="https://storage.googleapis.com/content-website/cloudnow/gsw/c2.png"
+              alt="Icon 2"
+              class="img-fluid"
+              style="max-width: 100px"
+            />
+          </div>
+          <div class="col-md-8">
+            <h6>ANNUAL TRAINING</h6>
+            <p>
+              No-cost training for your team to ensure you make the most of
+              Google Workspace.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- F3: Row layout -->
+      <div class="circle-feature f3 card p-3">
+        <div class="row align-items-center text-center text-md-start g-3">
+          <div class="col-md-4 d-flex justify-content-center">
+            <img
+              src="https://storage.googleapis.com/content-website/cloudnow/gsw/c2.png"
+              alt="Icon 2"
+              class="img-fluid"
+              style="max-width: 100px"
+            />
+          </div>
+          <div class="col-md-8">
+            <h6>ANNUAL TRAINING</h6>
+            <p>
+              No-cost training for your team to ensure you make the most of
+              Google Workspace.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- F4 -->
+      <div class="circle-feature f4 column-layout card p-3">
+        <div class="row align-items-center text-center text-md-start g-3">
+          <div class="col-md-4 d-flex justify-content-center">
+            <img
+              src="https://storage.googleapis.com/content-website/cloudnow/gsw/c2.png"
+              alt="Icon 2"
+              class="img-fluid"
+              style="max-width: 100px"
+            />
+          </div>
+          <div class="col-md-8">
+            <h6>ANNUAL TRAINING</h6>
+            <p>
+              No-cost training for your team to ensure you make the most of
+              Google Workspace.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- F5 -->
+      <div class="circle-feature f5 row-layout card p-3">
+        <div class="row align-items-center text-center text-md-start g-3">
+          <div class="col-md-4 d-flex justify-content-center">
+            <img
+              src="https://storage.googleapis.com/content-website/cloudnow/gsw/c2.png"
+              alt="Icon 2"
+              class="img-fluid"
+              style="max-width: 100px"
+            />
+          </div>
+          <div class="col-md-8">
+            <h6>ANNUAL TRAINING</h6>
+            <p>
+              No-cost training for your team to ensure you make the most of
+              Google Workspace.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- F6 -->
+      <div class="circle-feature f6 row-layout card p-3">
+        <div class="row align-items-center text-center text-md-start g-3">
+          <div class="col-md-4 d-flex justify-content-center">
+            <img
+              src="https://storage.googleapis.com/content-website/cloudnow/gsw/c2.png"
+              alt="Icon 2"
+              class="img-fluid"
+              style="max-width: 100px"
+            />
+          </div>
+          <div class="col-md-8">
+            <h6>ANNUAL TRAINING</h6>
+            <p>
+              No-cost training for your team to ensure you make the most of
+              Google Workspace.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Layout -->
+    <div class="container mobile-features d-md-none">
+      <div class="mobile-center-offer">
+        <img
+          src="https://storage.googleapis.com/content-website/cloudnow/gsw/lock.png"
+          alt="Lock"
+        />
+        <h5>Free SSO Solution for 3 Months</h5>
+        <p class="text-muted">
+          Custom login, device restrictions, and user management with Akku IAM
+          tool.
+        </p>
+      </div>
+
+      <div class="mobile-feature-card text-center">
+        <img
+          src="https://storage.googleapis.com/content-website/cloudnow/gsw/c1.png"
+          alt="Icon 1"
+        />
+        <h6>24×7×365 DEDICATED SUPPORT</h6>
         <p>
-          Accelerate your cloud native transformation, adoption of kubernetes
-          with Kubeify's team of experts.
-        </p>
-        
-
+          Our experts are with you when you need us, with a 96% SLA record on
+          tickets.
         </p>
       </div>
-      <div class="col-md-8 mt-4 mt-md-0">
-        <div class="d-flex justify-content-between">
-          <div class="footer-item">
-            <h4 class="cta__title">Company</h4>
-            <ul class="footer-nav">
-              <li><a href="/about" title="About">About Us</a></li>
-              <li><a href="/contact" title="Contact Us">Contact Us</a></li>
-              <li>
-                <a href="/join-our-team" title="Join our team">Join our team</a>
-              </li>
-              <li>
-                <a href="/schedule-meeting" title="Schedule a meeting">Schedule a Meeting</a>
-              </li>
-            </ul>
-          </div>
 
-          <div class="footer-item">
-            <h4 class="cta__title">Services</h4>
-            <ul class="footer-nav">
-              <li><a href="/services">Services Offered</a></li>
-              <li><a href="/why-kubernetes">Why Kubernetes</a></li>
-              <li><a href="/customers" title="Customers">Customers</a></li>
-            </ul>
-          </div>
+      <div class="mobile-feature-card text-center">
+        <img
+          src="https://storage.googleapis.com/content-website/cloudnow/gsw/c2.png"
+          alt="Icon 2"
+        />
+        <h6>ANNUAL TRAINING</h6>
+        <p>
+          No-cost training for your team to ensure you make the most of Google
+          Workspace.
+        </p>
+      </div>
 
-          <div class="footer-item">
-            <h4 class="cta__title">Resources</h4>
-            <ul class="footer-nav">
-              <li><a href="/blog">Blog</a></li>
-              <li><a href="/webinars">Webinars</a></li>
-              <li><a href="/join-webinars">Join Webinars</a></li>
-              <li><a href="https://www.cncf.io/newsroom/case-studies/" target="_blank">Case Studies</a></li>
-              <!-- <li><a href="/learn-kubernetes" target="_blank">Learn Kubernetes</a></li> -->
-            </ul>
-          </div>
+      <div class="mobile-feature-card text-center">
+        <img
+          src="https://storage.googleapis.com/content-website/cloudnow/gsw/c6.png"
+          alt="Icon 3"
+        />
+        <h6>CUSTOM AUTOMATION</h6>
+        <p>
+          Reporting, backups, provisioning, deprovisioning, reminders and more.
+        </p>
+      </div>
 
-          <div class="footer-item">
-            <h4 class="cta__title">Social</h4>
-            <ul class="footer-nav">
-              <li><a href="https://www.linkedin.com/company/kubeify" title="linkedin" target="_blank">LinkedIn</a></li>
-              <li><a href="https://twitter.com/kubeify" target="_blank">Twitter</a></li>
-              <li><a href="https://www.youtube.com/@kubeifyk8s45/videos" target="_blank">YouTube</a></li>
-            </ul>
+      <div class="mobile-feature-card text-center">
+        <img
+          src="https://storage.googleapis.com/content-website/cloudnow/gsw/c5.png"
+          alt="Icon 4"
+        />
+        <h6>MAPS INTEGRATION</h6>
+        <p>
+          Harness the power of Google Maps for location-based business apps.
+        </p>
+      </div>
+
+      <div class="mobile-feature-card text-center">
+        <img
+          src="https://storage.googleapis.com/content-website/cloudnow/gsw/c3.png"
+          alt="Icon 5"
+        />
+        <h6>ACCOUNT MANAGER</h6>
+        <p>
+          A dedicated point of contact to support and guide you on Google
+          Workspace.
+        </p>
+      </div>
+
+      <div class="mobile-feature-card text-center">
+        <img
+          src="https://storage.googleapis.com/content-website/cloudnow/gsw/c4.png"
+          alt="Icon 6"
+        />
+        <h6>QUARTERLY AUDIT</h6>
+        <p>No-cost audits of your usage patterns for further optimization.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-light">
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <!-- Left: Intro -->
+        <div class="col-lg-5 mb-4 mb-lg-0">
+          <h3 class="text-primary">Built for Google Cloud</h3>
+          <h1 class="fw-bold">DevOps & Cost Optimization</h1>
+          <p class="text-muted">
+            Kubeify empowers your DevOps teams with visibility and control over
+            Kubernetes clusters on Google Cloud — ensuring high availability,
+            automation, and cost efficiency without compromising on performance.
+          </p>
+        </div>
+
+        <!-- Right: Feature Grid -->
+        <div class="col-lg-7">
+          <div class="row g-4 align-items-stretch">
+            <!-- Security & Compliance -->
+            <div class="col-md-6 text-center wow fadeInUp">
+              <div class="p-3">
+                <img
+                  src="./images/icons/security_compliance.png"
+                  alt="Security"
+                  class="img-fluid mb-3"
+                  style="width: 70px;"
+                />
+                <h5>Security & Compliance</h5>
+                <p class="text-muted small">
+                  Shift-left DevSecOps with RBAC, IAM, and custom policies built
+                  for enterprise-grade Kubernetes environments.
+                </p>
+              </div>
+            </div>
+
+            <!-- CI/CD -->
+            <div class="col-md-6 text-center wow fadeInUp">
+              <div class="h-100 p-3">
+                <img
+                  src="./images/icons/ci_cd_automation.png"
+                  alt="CI/CD"
+                  class="img-fluid mb-3"
+                  style="width: 70px;"
+                />
+                <h5>CI/CD Automation</h5>
+                <p class="text-muted small">
+                  Accelerate deployments with GitOps pipelines, policy-as-code,
+                  and Kubernetes-native continuous delivery.
+                </p>
+              </div>
+            </div>
+
+            <!-- Monitoring -->
+            <div class="col-md-6 text-center wow fadeInUp">
+              <div class="h-100 p-3">
+                <img
+                  src="./images/icons/monitoring_alerts.png"
+                  alt="Monitoring"
+                  class="img-fluid mb-3"
+                  style="width: 70px;"
+                />
+                <h5>Monitoring & Alerts</h5>
+                <p class="text-muted small">
+                  Native integration with Prometheus and Grafana dashboards for
+                  real-time cluster insights and optimization.
+                </p>
+              </div>
+            </div>
+
+            <!-- Cost Optimization -->
+            <div class="col-md-6 text-center wow fadeInUp">
+              <div class="h-100 p-3">
+                <img
+                  src="./images/icons/smart_cost_optimization.png"
+                  alt="Cost"
+                  class="img-fluid mb-3"
+                  style="width: 70px;"
+                />
+                <h5>Cost Optimization</h5>
+                <p class="text-muted small">
+                  Slash GKE bills with smart autoscaling, right-sizing, and
+                  usage-based cost breakdowns across clusters.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gradient">
+    <div class="container">
+      <img
+        class="mt-4"
+        src="./images/kubeify-logo.png"
+        alt="Kubeify Logo"
+        width="200"
+      />
+
+      <div class="row gmt align-items-center">
+        <!-- Text Column -->
+        <div class="col-lg-7">
+          <h3>Strengthen Kubernetes Access & Governance</h3>
+          <h2 class="mt-3 mb-3">One Platform. Full Control.</h2>
+          <h4 class="text-warning">
+            Unified IAM across multi-cluster environments
+          </h4>
+
+          <div class="para">
+            <p class="mt-4 mb-3">
+              Kubeify extends beyond cost optimization to deliver robust
+              Role-Based Access Control (RBAC) and Identity & Access Management
+              (IAM) built for modern DevOps teams managing Kubernetes on Google
+              Cloud.
+            </p>
+            <p class="mt-3 mb-4">
+              Enable Single Sign-On (SSO), enforce device policies, and control
+              access across clusters from one dashboard.
+            </p>
+            <p class="mt-4 mb-5">
+              Ensure compliance, audit-readiness, and lifecycle control for all
+              users and service accounts — without compromising productivity or
+              security.
+            </p>
           </div>
         </div>
 
+        <!-- Icons Column -->
+        <div class="col-lg-5">
+          <div class="row m-origin">
+            <div class="col-6 mt-4">
+              <div class="m-origin">
+                <img
+                  class="w-100"
+                  src="https://storage.googleapis.com/content-website/cloudnow/gsw/i.png"
+                  alt="IAM"
+                />
+              </div>
+            </div>
+            <div class="col-6 mt-4">
+              <div class="m-origin">
+                <img
+                  class="w-100"
+                  src="https://storage.googleapis.com/content-website/cloudnow/gsw/i2.png"
+                  alt="SSO"
+                />
+              </div>
+            </div>
+            <div class="col-6 mt-4">
+              <div class="m-origin">
+                <img
+                  class="w-100"
+                  src="https://storage.googleapis.com/content-website/cloudnow/gsw/i3.png"
+                  alt="Access Logs"
+                />
+              </div>
+            </div>
+            <div class="col-6 mt-4">
+              <div class="m-origin">
+                <img
+                  class="w-100"
+                  src="https://storage.googleapis.com/content-website/cloudnow/gsw/i4.png"
+                  alt="User Management"
+                />
+              </div>
+            </div>
+            <div class="col-6 mt-4">
+              <div class="m-origin">
+                <img
+                  class="w-100"
+                  src="https://storage.googleapis.com/content-website/cloudnow/gsw/i5.png"
+                  alt="Device Control"
+                />
+              </div>
+            </div>
+            <div class="col-6 mt-4 text-center">
+              <div class="m-origin">
+                <img
+                  class="w-100"
+                  src="https://storage.googleapis.com/content-website/cloudnow/gsw/i6.png"
+                  alt="Audit Ready"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  <br />
- 
-</div>
+  </section>
 
- <div class="lower-footer text-center py-2">
-    <span class="d-inline-block copyright">
-      Copyright &copy; <span id="year"></span> Kubeify (A CodeCrux Company). All Rights Reserved.
-    </span>
-  </div>
+  <section>
+    <div class="container py-5">
+      <div class="row align-items-center flex-column-reverse flex-sm-row">
+        <!-- Text Column -->
+        <div
+          class="col-lg-6 wow fadeInUp"
+          style="
+            visibility: visible;
+            animation-name: fadeInUp;
+            align-content: center;
+          "
+        >
+          <h2>
+            Start Optimizing Your GKE Costs in
+            <span class="api">Just a Few Clicks! </span>
+          </h2>
+          <p
+            class="mt-3 mb-5 wow fadeInUp para1 cld"
+            style="visibility: visible; animation-name: fadeInUp"
+          >
+            Kubeify helps you take control of your Kubernetes spend on Google
+            Cloud — automate savings recommendations, rightsize workloads, and
+            get full visibility into your cost structure within minutes.
+          </p>
 
-<!-- <style type="text/css">
-  .feedbackbox {
-    position: fixed;
-    top: 90vh;
-    left: 1%;
-    bottom: 0%;
-    width: 420px;
-    text-align: left;
-    z-index: 9999;
-    margin-top: -60px;
-    margin-bottom: 15px;
-    border: 1px solid #eee;
-    border-radius: 4px;
-    padding: 10px;
-    font-size: 16px;
+          <!-- Desktop CTA -->
+          <a
+            href="#"
+            class="col-lg-5 d-none d-md-block btn cta-button"
+            style="padding: 15px 25px; border-radius: 40px"
+            ><b>Get Started Now</b></a
+          >
+
+          <!-- Mobile CTA -->
+          <div class="d-lg-none text-center mt-4">
+            <button
+              class="btn btn-primary w-75"
+              data-bs-toggle="modal"
+              data-bs-target="#mobileFormModal"
+            >
+              Get Started
+            </button>
+          </div>
+        </div>
+
+        <!-- Image Column -->
+        <div
+          class="col-lg-6 p-5 wow fadeInUp"
+          style="visibility: visible; animation-name: fadeInUp"
+        >
+          <img
+            src="./images/kubeify-dashboard.png"
+            class="w-100 rounded-4"
+            alt="Kubeify Dashboard"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container py-5">
+      <div class="row">
+        <!-- Image Column -->
+        <div class="col-lg-6 p-5">
+          <img
+            class="w-100 rounded-4"
+            src="./images/kubeify-copilot-illustration.png"
+            alt="Kubeify Kubernetes Copilot"
+          />
+        </div>
+
+        <!-- Text Content -->
+        <div
+          class="col-lg-6 wow fadeInUp"
+          style="
+            visibility: visible;
+            animation-name: fadeInUp;
+            align-content: center;
+          "
+        >
+          <h2 class="mb-4 pwa">
+            Meet <span class="api">Your Kubernetes Copilot</span> for Smarter
+            <span class="api">Cost Optimization</span> on Google Cloud.
+          </h2>
+          <p class="cld">
+            Kubeify gives you complete visibility into your GKE clusters,
+            real-time cost tracking, and AI-powered recommendations to keep your
+            Kubernetes spend under control — all from a single, intuitive
+            dashboard.
+          </p>
+
+          <div class="row mt-5 listk" style="margin-left: -40px">
+            <div class="col-md-6 wow fadeInUp">
+              <div class="m-origin d-flex align-items-center">
+                <img
+                  class="cri"
+                  src="./images/icons/cluster_visibility.png"
+                  alt="Visibility"
+                />
+                <h3 class="deep">Real-Time Cost Visibility</h3>
+              </div>
+            </div>
+            <div class="col-md-6 wow fadeInUp">
+              <div class="m-origin d-flex align-items-center">
+                <img
+                  class="cri"
+                  src="./images/icons/copilot.png"
+                  alt="Copilot"
+                />
+                <h3 class="deep">Smart Copilot Insights</h3>
+              </div>
+            </div>
+            <div class="col-md-6 mt-3 wow fadeInUp">
+              <div class="m-origin d-flex align-items-center">
+                <img
+                  class="cri"
+                  src="./images/icons/recommendation.png"
+                  alt="AI Recommendations"
+                />
+                <h3 class="deep">AI-Based Optimization Tips</h3>
+              </div>
+            </div>
+            <div class="col-md-6 mt-3 wow fadeInUp">
+              <div class="m-origin d-flex align-items-center">
+                <img
+                  class="cri"
+                  src="./images/icons/alert.png"
+                  alt="Budget Alerts"
+                />
+                <h3 class="deep">Smart Budget Alerts</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5 gradient">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left Text Column -->
+        <div class="col-md-6 text-md-start text-center mb-4 mb-md-0">
+          <h1 class="fw-bold display-5">
+            Hear What <span class="text-highlight">Our Customers</span><br />Say
+            About Kubeify
+          </h1>
+          <p class="text-muted mt-3 fs-5">
+            Discover how Kubeify helped teams cut cloud spend,<br />
+            improve visibility, and optimize Kubernetes operations.
+          </p>
+        </div>
+
+        <!-- Right Carousel -->
+        <div class="col-md-6">
+          <div
+            id="testimonialCarousel"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <!-- Testimonial 1 -->
+              <div class="carousel-item active">
+                <div
+                  class="bg-white p-4 rounded-4 shadow-lg position-relative h-100 d-flex flex-column justify-content-between"
+                  style="min-height: 340px"
+                >
+                  <!-- Logo at Top Right -->
+                  <div class="d-flex justify-content-end mb-3">
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/1/13/Posidex_Logo.png/220px-Posidex_Logo.png"
+                      alt="Client Logo"
+                      class="img-fluid"
+                      style="max-height: 40px"
+                    />
+                  </div>
+
+                  <!-- Testimonial Content -->
+                  <div>
+                    <div class="fs-1 mb-3">❝</div>
+                    <p class="fst-italic text-muted">
+                      Kubeify has completely transformed our cloud cost
+                      management. With real-time insights into our Kubernetes
+                      usage, we’ve reduced our monthly GCP spend by over 30%.
+                      Their support and automation capabilities are unmatched.
+                    </p>
+                    <div class="mt-4">
+                      <h6 class="fw-bold mb-0">Anil Kumar</h6>
+                      <small class="fst-italic text-muted"
+                        >Solutions Architect,<br />Posidex Technologies</small
+                      >
+                    </div>
+                  </div>
+
+                  <!-- Arrows at Bottom Right -->
+                  <div class="d-flex justify-content-end gap-2 mt-4 pt-3">
+                    <button
+                      class="btn btn-light rounded-circle shadow-sm"
+                      type="button"
+                      data-bs-target="#testimonialCarousel"
+                      data-bs-slide="prev"
+                    >
+                      <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <button
+                      class="btn btn-light rounded-circle shadow-sm"
+                      type="button"
+                      data-bs-target="#testimonialCarousel"
+                      data-bs-slide="next"
+                    >
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Testimonial 2 -->
+              <div class="carousel-item">
+                <div
+                  class="bg-white p-4 rounded-4 shadow-lg position-relative h-100 d-flex flex-column justify-content-between"
+                  style="min-height: 340px"
+                >
+                  <div class="d-flex justify-content-end mb-3">
+                    <img
+                      src="https://via.placeholder.com/100x40?text=NextGen"
+                      alt="Logo"
+                      class="img-fluid"
+                      style="max-height: 40px"
+                    />
+                  </div>
+
+                  <div>
+                    <div class="fs-1 mb-3">❝</div>
+                    <p class="fst-italic text-muted">
+                      The insights from Kubeify allowed us to restructure our
+                      GKE workloads more effectively. With granular cost
+                      attribution, we can now charge back usage per team, which
+                      was a game-changer for finance and DevOps.
+                    </p>
+                    <div class="mt-4">
+                      <h6 class="fw-bold mb-0">Ravi Sharma</h6>
+                      <small class="fst-italic text-muted"
+                        >DevOps Manager,<br />NextGen Solutions</small
+                      >
+                    </div>
+                  </div>
+
+                  <div class="d-flex justify-content-end gap-2 mt-4 pt-3">
+                    <button
+                      class="btn btn-light rounded-circle shadow-sm"
+                      type="button"
+                      data-bs-target="#testimonialCarousel"
+                      data-bs-slide="prev"
+                    >
+                      <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <button
+                      class="btn btn-light rounded-circle shadow-sm"
+                      type="button"
+                      data-bs-target="#testimonialCarousel"
+                      data-bs-slide="next"
+                    >
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold">Frequently Asked Questions</h2>
+        <p class="lead text-muted">
+          Everything you need to know about Kubeify.
+        </p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-10 col-md-12">
+          <div class="accordion accordion-flush" id="faqAccordion">
+            <!-- FAQ 1 -->
+            <div class="accordion-item border rounded shadow-sm mb-3">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  What is Kubeify?
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Kubeify is a Kubernetes cost optimization platform that
+                  provides real-time visibility, intelligent savings
+                  recommendations, and detailed cost attribution across teams,
+                  namespaces, and workloads.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="accordion-item border rounded shadow-sm mb-3">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  How does Kubeify help reduce cloud costs?
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Kubeify analyzes your Kubernetes workloads to identify idle
+                  resources, underutilized nodes, and oversized containers. It
+                  provides actionable insights and automation hooks to help
+                  reduce waste and optimize resource usage.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="accordion-item border rounded shadow-sm mb-3">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  Does Kubeify support GKE, EKS, and AKS?
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Yes, Kubeify is cloud-agnostic and works seamlessly with
+                  Google Kubernetes Engine (GKE), Amazon EKS, Azure AKS, and
+                  self-managed clusters. It integrates easily using standard
+                  Kubernetes APIs.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="accordion-item border rounded shadow-sm mb-3">
+              <h2 class="accordion-header" id="headingFour">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour"
+                  aria-expanded="false"
+                  aria-controls="collapseFour"
+                >
+                  Can Kubeify allocate costs by team or namespace?
+                </button>
+              </h2>
+              <div
+                id="collapseFour"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingFour"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Absolutely. Kubeify breaks down Kubernetes costs by namespace,
+                  team, application, or custom labels — making chargeback and
+                  budgeting effortless for finance and DevOps teams.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="accordion-item border rounded shadow-sm mb-3">
+              <h2 class="accordion-header" id="headingFive">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive"
+                  aria-expanded="false"
+                  aria-controls="collapseFive"
+                >
+                  Is there a free trial available?
+                </button>
+              </h2>
+              <div
+                id="collapseFive"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingFive"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Yes, Kubeify offers a 14-day free trial with full access to
+                  all features. You can get started in minutes with a simple
+                  Helm installation.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="accordion-item border rounded shadow-sm mb-3">
+              <h2 class="accordion-header" id="headingSix">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseSix"
+                  aria-expanded="false"
+                  aria-controls="collapseSix"
+                >
+                  How secure is my data with Kubeify?
+                </button>
+              </h2>
+              <div
+                id="collapseSix"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingSix"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Security is a top priority. Kubeify supports on-prem and
+                  self-hosted deployments, encrypts all data in transit and at
+                  rest, and adheres to industry best practices for compliance
+                  and access control.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<style>
+  .landing-page {
+    .testimonial-section {
+      background: linear-gradient(90deg, #dff1ff, #f9ccff);
+    }
+
+    .gradient {
+      background: linear-gradient(
+        0deg,
+        hsla(220, 79%, 96%, 1) 55%,
+        hsla(221, 96%, 90%, 1) 77%,
+        hsla(221, 59%, 82%, 1) 89%
+      );
+    }
+
+    .text-highlight {
+      color: #ff0080;
+    }
+
+    .rounded-4 {
+      border-radius: 1.25rem;
+    }
+
+    .features-circle-wrapper {
+      position: relative;
+      width: 100%;
+      height: 900px;
+      margin: 0 auto;
+    }
+
+    .central-offer {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 300px;
+      height: 300px;
+      background: white;
+      border: 5px solid #9333ea;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 0 40px rgba(147, 51, 234, 0.3);
+      z-index: 2;
+    }
+
+    .circle-feature {
+      position: absolute;
+      width: 260px;
+      text-align: center;
+    }
+
+    .circle-feature img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+    }
+
+    .circle-feature h6 {
+      font-weight: bold;
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+
+    .circle-feature p {
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .f1 {
+      top: 5%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .f2 {
+      top: 25%;
+      left: 85%;
+      transform: translate(-50%, -50%);
+    }
+    .f3 {
+      top: 70%;
+      left: 85%;
+      transform: translate(-50%, -50%);
+    }
+    .f4 {
+      top: 95%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .f5 {
+      top: 70%;
+      left: 15%;
+      transform: translate(-50%, -50%);
+    }
+    .f6 {
+      top: 25%;
+      left: 15%;
+      transform: translate(-50%, -50%);
+    }
+
+    .column-layout img {
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .features-circle-wrapper {
+        display: none;
+      }
+
+      .mobile-features {
+        display: block;
+      }
+
+      .mobile-feature-card {
+        border: 1px solid #eee;
+        border-radius: 12px;
+        background-color: #f9f9f9;
+        padding: 15px;
+        margin-bottom: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      }
+
+      .mobile-feature-card img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+        margin-bottom: 10px;
+      }
+
+      .mobile-feature-card h6 {
+        font-weight: bold;
+        font-size: 1rem;
+      }
+
+      .mobile-feature-card p {
+        font-size: 0.9rem;
+        margin: 0;
+      }
+
+      .mobile-center-offer {
+        border: 5px solid #9333ea;
+        border-radius: 20px;
+        padding: 20px;
+        background: #fff;
+        margin-bottom: 30px;
+        text-align: center;
+        box-shadow: 0 0 40px rgba(147, 51, 234, 0.2);
+      }
+
+      .mobile-center-offer img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 15px;
+      }
+    }
+    /* Custom Control Positioning */
+    .custom-control {
+      /* background: #ffffff; */
+      /* border-radius: 50%; */
+      padding: 6px 12px;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+      font-size: 1.25rem;
+      color: #333;
+    }
+
+    .custom-control:hover {
+      background: #f8f9fa;
+      color: #000;
+    }
+
+    @media (max-width: 767.98px) {
+      .custom-control {
+        font-size: 1rem;
+        padding: 5px 10px;
+      }
+    }
+
+    .min-vh-50 {
+      min-height: 35vh;
+    }
+    @media (min-width: 640px) {
+      .container {
+        max-width: 640px;
+      }
+    }
+    @media (min-width: 768px) {
+      .container {
+        max-width: 768px;
+      }
+    }
+    @media (min-width: 1024px) {
+      .container {
+        max-width: 1024px;
+      }
+      .centered-bg {
+        background-image: url(./images/bg1.png);
+        background-repeat: no-repeat;
+        background-size: cover; /* ✅ fill the entire section */
+        background-position: center; /* ✅ keep image centered */
+        background-attachment: scroll; /* or fixed, if you want parallax effect */
+        width: 100%;
+        height: 100vh; /* ✅ full screen height */
+      }
+    }
+    @media (min-width: 1280px) {
+      .container {
+        max-width: 1280px;
+      }
+    }
+    @media (min-width: 1400px) {
+      .container {
+        max-width: 1320px;
+      }
+    }
+    .required-symbol {
+      color: red;
+    }
+    .m-origin {
+      margin: 24px;
+    }
+    .cri {
+      width: 60px;
+    }
+    .deep {
+      font-size: 14px;
+    }
+    /* Bottom Sheet Style for Mobile Modal */
+    @media (max-width: 992px) {
+      .modal.modal-bottom-sheet .modal-dialog {
+        position: fixed;
+        bottom: 0;
+        margin: 0;
+        width: 100%;
+        height: auto;
+      }
+
+      .modal.modal-bottom-sheet .modal-content {
+        border-radius: 1rem 1rem 0 0;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
+      }
+    }
   }
 </style>
-
-<div
-  class="feedbackbox alert alert-warning alert-dismissible fade show"
-  role="alert"
->
-  <strong>Don't Miss Out!</strong>
-  <a href="/join-webinars"
-    >Managing kubernetes Manifests using Jsonnet & Tanaka</a
-  >
-  | 1st Aug, 2020, 9:30 PM – 10:30 PM, IST &nbsp;
-  <b><a href="/join-webinars">Join us !</a></b>
 </div>
- -->
 
+    
+    <div class="footer bg-dark">
+      <div class="container py-5">
+        <div class="footer-top">
+          <div class="footer-logo-section">
+            <div class="brand-text">Kubeify</div>
+            <div class="footer-description py-2">
+              We unleash growth by helping companies adopt cloud native
+              technologies with our products and services!
+            </div>
+            <div class="footer-social-icons d-flex py-2">
+              <a href="https://www.linkedin.com/company/kubeify" target="_blank" class="footer-social-icon"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://x.com/kubeify" target="_blank" class="footer-social-icon"><i class="fa-brands fa-twitter"></i></a>
+              <a href="https://www.youtube.com/@kubeifyk8s45/videos" class="footer-social-icon" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="footer-badges">
+            <img src="/images/kubernetes-certified-engineers.svg" alt="kubernetes certified engineers" class="footer-badge" />
+            <img src="/images/gcp-cloud-certified-developer.png" alt="gcp cloud certified developer" class="footer-badge" />
+            <img src="/images/aws-certified-cloud-practitioner.png" alt="aws certified cloud practitioner" class="footer-badge" />
+            <img src="/images/partners/digitalocean.png" alt="digital ocean" class="footer-badge" />
+            <img src="/images/partners/docker.png" alt="docker" class="footer-badge" />
+          </div>
+        </div>
 
-<script src="/js/jquery.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/app.js"></script>
-<script type="text/javascript">
-  $(document).ready(function () {
-    $("#year").html(new Date().getFullYear());
-  });
-</script>
+        <div class="footer-main-content">
+          <div class="footer-item">
+            <h4>AI Cloud</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Cloud Native Product Development</a></li>
+              <li><a href="#">Cloud Native FaaS</a></li>
+              <li><a href="#">Monolith to Microservices</a></li>
+              <li><a href="#">DevSecOps as a Service</a></li>
+              <!-- <li><a href="#">Extending Kubernetes Whitepaper</a></li> -->
+              <li><a href="#">Kubernetes Zero Downtime</a></li>
+            </ul>
+            <h4 class="mt-2 pt-3">Product Engineering</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Platform Engineering Consulting</a></li>
+              <li><a href="#">Backstage Consulting</a></li>
+              <li><a href="#">Progressive Delivery</a></li>
+              <li><a href="#">CI/CD & Dev Experience</a></li>
+            </ul>
+          </div>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142118821-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag("js", new Date());
+          <div class="footer-item">
+            <h4>Application Modernization</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Monolith to Microservices</a></li>
+              <li><a href="#">Kubernetes Consulting Services</a></li>
+              <li><a href="#">GitOps Consulting</a></li>
+              <li><a href="#">CI/CD & Dev Experience</a></li>
+              <li><a href="#">DevOps Toolchain</a></li>
+              <li><a href="#">ArgoCD Consulting</a></li>
+              <li><a href="#">Jenkins Consulting</a></li>
+              <li><a href="#">Cloud Migration Consulting</a></li>
+              <li><a href="#">FinOps Consulting</a></li>
+              <li><a href="#">vCluster Consulting</a></li>
+            </ul>
+            
+          </div>
 
-  gtag("config", "UA-142118821-1");
-</script>
+          <div class="footer-item">
+            <h4>Site Reliability Engineering</h4>
+            <ul class="footer-nav">
+              <li><a href="#">SRE Consulting</a></li>
+              <li><a href="#">Service Mesh Consulting</a></li>
+              <li><a href="#">Cloud Native Networking</a></li>
+              <li><a href="#">Istio Consulting</a></li>
+              <li><a href="#">Linkerd Consulting</a></li>
+              <li><a href="#">Tetratom Consulting</a></li>
+              <li><a href="#">Backup & Disaster Recovery</a></li>
+              <li><a href="#">Bare Metal Provisioning Consulting</a></li>
+            </ul>
+            <!-- <h4 class="mt-2 pt-3">Consulting Partners</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Razorops Partner</a></li>
+              <li><a href="#">Digital Ocean Cloud Partner</a></li>
+              <li><a href="#">e2e networks cloud</a></li>
+              <li><a href="#">IBM Cloud Partner</a></li>
+              <li><a href="#">AWS Cloud Partner</a></li>
+              <li><a href="#">GCP Cloud Partner</a></li>
+              <li><a href="#">Azure Cloud Partner</a></li>
+            </ul> -->
+          </div>
 
-<!-- Start of HubSpot Embed Code -->
-<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/7280691.js"></script>
-<!-- End of HubSpot Embed Code -->
+          <div class="footer-item">
+            <h4>Enterprise Support</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Linkerd Support</a></li>
+              <li><a href="#">Istio Support</a></li>
+              <li><a href="#">Argo CD Support</a></li>
+              <li><a href="#">Prometheus Support</a></li>
+              <li><a href="#">Kasten K10 Support</a></li>
+            </ul>
+            <h4 class="pt-3">Observability & DevSecOps</h4>
+            <ul class="footer-nav">
+              <li><a href="#">DevSecOps Consulting</a></li>
+              <li><a href="#">Observability Consulting</a></li>
+              <li><a href="#">Grafana Consulting</a></li>
+              <li><a href="#">Prometheus Consulting</a></li>
+            </ul>
+            
+          </div>
+
+          <div class="footer-item">
+            <h4>Company</h4>
+            <ul class="footer-nav">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Mentoring Sessions</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+
+            <h4 class="pt-3">Resources</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Blogs</a></li>
+              <li><a href="#">Webinars</a></li>
+              <li><a href="#">Customers Stories</a></li>
+              <li><a href="#">CNCF Landscape Navigator</a></li>
+              <li><a href="#">Cloud Native & AI Talks</a></li>
+
+            </ul>
+            
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+    <div class="lower-footer text-center py-2">
+    <span class="d-inline-block copyright">
+      Copyright © <span id="year">2025</span> Kubeify (A CodeCrux Company). All Rights Reserved.
+    </span>
+  </div>
+    <!-- Year Updater -->
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <!-- jQuery + Bootstrap (if not already included) -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/app.js"></script>
+
+    <!-- Google Analytics (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-142118821-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-142118821-1");
+    </script>
+
+    <!-- HubSpot Embed Code -->
+    <script
+      type="text/javascript"
+      id="hs-script-loader"
+      async
+      defer
+      src="//js.hs-scripts.com/7280691.js"
+    ></script>
+  </body>
+</html>
+
     <!-- Include Modal Partial -->
     <div
   class="modal fade"
@@ -615,10 +1939,14 @@
     </div>
   </div>
 </div>
- <div id="cookieConsent" class="cookie-consent-banner">
-  <button type="button" class="close" id="closeCookieBox" aria-label="Close">
-    &times;
-  </button>
+ <!-- COOKIE BANNER -->
+<div id="cookieConsent" class="cookie-consent-banner">
+  <button
+    type="button"
+    class="btn-close"
+    id="closeCookieBox"
+    aria-label="Close"
+  ></button>
   <div class="container-fluid">
     <div class="row align-items-center">
       <div class="col-sm-2 text-center">
@@ -638,28 +1966,17 @@
           provided to them or that they’ve collected from your use of their
           services.
         </p>
-        <a
-          href="#"
-          id="show-details"
-          data-toggle="modal"
-          data-target="#cookieDetailsModal"
-          style="color: blue; font-weight: bold"
-        >
+        <a href="#" id="show-details" style="color: blue; font-weight: bold">
           Show details <span>&#x276F;</span>
         </a>
       </div>
       <div class="col-sm-3 text-center">
-        <button
-          id="acceptCookies"
-          class="btn btn-primary btn-lg btn-block"
-          style="background-color: blue; border-color: blue"
-        >
+        <button id="acceptCookies" class="btn btn-primary btn-lg w-100">
           Allow all
         </button>
         <button
           id="denyCookies"
-          class="btn btn-outline-secondary btn-lg btn-block mt-2"
-          style="border: 1px solid blue; color: #000"
+          class="btn btn-outline-secondary btn-lg w-100 mt-2"
         >
           Deny
         </button>
@@ -668,46 +1985,41 @@
   </div>
 </div>
 
+<!-- COOKIE DETAILS MODAL -->
 <div
   class="modal fade"
   id="cookieDetailsModal"
   tabindex="-1"
-  role="dialog"
   aria-labelledby="cookieDetailsLabel"
   aria-hidden="true"
 >
-  <div
-    class="modal-dialog modal-lg modal-dialog-centered animated fadeInDown"
-    role="document"
-  >
+  <div class="modal-dialog modal-lg modal-dialog-centered animated fadeInDown">
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title" id="cookieDetailsLabel">Cookie Details</h4>
         <button
           type="button"
-          class="close"
-          data-dismiss="modal"
+          class="btn-close"
+          data-bs-dismiss="modal"
           aria-label="Close"
-        >
-          <span>&times;</span>
-        </button>
+        ></button>
       </div>
       <div class="modal-body">
         <p>
-          <strong>Strictly Necessary Cookies</strong> – These cookies are
-          essential for the website to function.
+          <strong>Strictly Necessary Cookies</strong> – Essential for the
+          website to function.
         </p>
         <p>
-          <strong>Performance Cookies</strong> – Used to collect information
-          about how visitors use our site.
+          <strong>Performance Cookies</strong> – Collect info about how visitors
+          use our site.
         </p>
         <p>
-          <strong>Functionality Cookies</strong> – Allow the site to remember
-          user choices to provide enhanced functionality.
+          <strong>Functionality Cookies</strong> – Remember user choices for
+          enhanced functionality.
         </p>
         <p>
-          <strong>Targeting/Advertising Cookies</strong> – These are used to
-          deliver relevant ads and track campaign performance.
+          <strong>Targeting/Advertising Cookies</strong> – Deliver relevant ads
+          and track performance.
         </p>
         <hr />
         <p>
@@ -716,17 +2028,12 @@
         </p>
       </div>
       <div class="modal-footer">
-        <button
-          id="acceptCookiesmobile"
-          class="btn btn-primary btn-lg btn-block"
-          style="background-color: blue; border-color: blue"
-        >
+        <button id="acceptCookiesmobile" class="btn btn-primary btn-lg w-100">
           Allow all
         </button>
         <button
           id="denyCookiesmobile"
-          class="btn btn-outline-secondary btn-lg btn-block mt-2"
-          style="border: 1px solid blue; color: #000"
+          class="btn btn-outline-secondary btn-lg w-100 mt-2"
         >
           Deny
         </button>
@@ -735,32 +2042,19 @@
   </div>
 </div>
 
+<!-- STYLES -->
 <style>
   .cookie-consent-banner {
+    display: none;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     background-color: #fff;
     color: #000;
-    z-index: 9999;
+    z-index: 1055;
     padding: 30px 20px;
-    border-top: 4px solid #6a00ff;
     box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
-    display: none;
-  }
-
-  .cookie-consent-banner .close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 24px;
-    color: #000;
-    opacity: 0.5;
-  }
-
-  .cookie-consent-banner .close:hover {
-    opacity: 1;
   }
 
   @keyframes fadeInDown {

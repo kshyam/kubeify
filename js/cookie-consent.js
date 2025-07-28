@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   var cookieConsent = document.getElementById("cookieConsent");
+  var cookieDetailsModal = document.getElementById("cookieDetailsModal");
 
+  // Show cookie popup after 15 seconds (once per session)
   if (
     (!localStorage.getItem("cookiesAccepted") ||
       localStorage.getItem("cookiesAccepted") === "false") &&
@@ -16,21 +18,20 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("cookiesAccepted", accepted ? "true" : "false");
     cookieConsent.style.display = "none";
 
-    // Properly hide Bootstrap 3 modal
-    $("#cookieDetailsModal").modal("hide");
-
-    // Cleanup: force-remove leftover modal classes and elements
-    $("body").removeClass("modal-open");
-    $(".modal-backdrop").remove();
+    // Hide modal if open
+    const modalInstance = bootstrap.Modal.getInstance(cookieDetailsModal);
+    if (modalInstance) {
+      modalInstance.hide();
+    }
   }
 
-  var ids = [
+  // Handle accept/deny buttons
+  [
     "acceptCookies",
     "denyCookies",
     "acceptCookiesmobile",
     "denyCookiesmobile",
-  ];
-  ids.forEach(function (id) {
+  ].forEach(function (id) {
     var el = document.getElementById(id);
     if (el) {
       el.addEventListener("click", function () {
@@ -39,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // Close button on banner
   var closeBtn = document.getElementById("closeCookieBox");
   if (closeBtn) {
     closeBtn.addEventListener("click", function () {
@@ -46,17 +48,20 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Handle "Show details" link
   var showDetails = document.getElementById("show-details");
   if (showDetails) {
-    showDetails.addEventListener("click", function () {
+    showDetails.addEventListener("click", function (e) {
+      e.preventDefault();
       cookieConsent.style.display = "none";
-      // Bootstrap's data-toggle will automatically show modal
+
+      const modal = new bootstrap.Modal(cookieDetailsModal);
+      modal.show();
     });
   }
 
-  // Optional: also clean up after modal is closed any other way
-  $("#cookieDetailsModal").on("hidden.bs.modal", function () {
-    $("body").removeClass("modal-open");
-    $(".modal-backdrop").remove();
+  // Optional: cleanup after modal is closed
+  cookieDetailsModal.addEventListener("hidden.bs.modal", function () {
+    // modal closed, no need to remove any backdrop manually in Bootstrap 5
   });
 });

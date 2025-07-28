@@ -10,25 +10,12 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/css/blog.css" />
   </head>
 
-  <body class="layout-blog">
+  <body>
     {% include header.html %}
 
-    <section>
-      <div class="container mb-4">
-        <div class="row">
-          <!-- LEFT: Main Blog Content -->
-          <div class="col-lg-8 bg-white p-4 border rounded shadow-sm">
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb" style="background: transparent">
-                <li class="breadcrumb-item">
-                  <a href="/blog">Blog</a>
-                </li>
-                <li class="breadcrumb-item active" aria-current="page">
-                  {{ page.title }}
-                </li>
-              </ol>
-            </nav>
-
+      <div class="container mt-5">
+        <div class="row mt-5">
+          <div class="col-lg-8 bg-white p-2 border rounded shadow-sm mt-5 mb-5">
             <img
               src="{{ page.image }}"
               alt="{{ page.title }}"
@@ -40,12 +27,25 @@
               {{ page.date | date_to_string }} -
               <small>{{ page.author }}</small>
             </time>
-
             <div class="px-2 mt-4">{{ content }}</div>
           </div>
 
           <!-- RIGHT: Related Posts -->
-          <div class="col-lg-4 mt-4 mt-lg-0">
+          <div class="col-lg-4 mt-5">
+
+             <!-- Tag/Categories Section -->
+            <div class="mb-4 p-3 border rounded bg-white d-none d-md-block">
+              <h4 class="fw-bold mb-3">Tags</h4>
+              {% assign categories = site.categories | sort %}
+              <div class="list-inline mb-0 d-flex flex-wrap gap-2">
+                {% for category in categories %}
+                <span class="badge bg-secondary mb-1 w-auto align-self-start">
+                  {{ category[0] }}
+                </span>
+                {% endfor %}
+              </div>
+            </div>
+
             <div class="p-3 mb-4 border rounded bg-white shadow-sm">
               <h4 class="fw-bold mb-3">More in {{ page.category }}</h4>
               {% assign current_category = page.category %} {% assign
@@ -65,25 +65,10 @@
               {% endfor %}
             </div>
 
-            <!-- Tag/Categories Section -->
-            <div class="mb-4 p-3 border rounded bg-white d-none d-md-block">
-              <h4 class="fw-bold mb-3">Tags</h4>
-              {% assign categories = site.categories | sort %}
-              <div class="list-inline mb-0 d-flex flex-wrap gap-2">
-                {% for category in categories %}
-                <span
-                  class="list-inline-item btn rounded-pill btn-light px-3 py-2"
-                  style="font-size: 1.5rem"
-                >
-                  {{ category[0] }}
-                </span>
-                {% endfor %}
-              </div>
-            </div>
+           
           </div>
         </div>
       </div>
-    </section>
 
     {% include cta.html %} {% include footer.html %}
   </body>

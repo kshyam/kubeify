@@ -4,19 +4,41 @@
     <div class="row">
       {% assign classes = "slide-left,slide-up,slide-right" | split: "," %} {%
       for post in site.posts limit:3 %}
-      <div class="col-md-4 {{ classes[forloop.index0] }}">
-        <a href="{{ post.url }}" title="{{ post.title }}" style="color: unset">
-          <div class="card blog-card p-1 bg-gray-800">
+      <div class="col-md-4">
+        <a href="{{ post.url }}" class="text-decoration-none text-dark">
+          <div
+            class="card h-100 shadow-sm border-0 blog-card hover-animate-card"
+          >
             <img
               src="{{ post.image }}"
-              alt="{{ post.title }}"
               class="card-img-top"
-              title="{{ post.title }}"
+              alt="{{ post.title }}"
+              style="object-fit: cover"
             />
-            <div class="card-body">
-              <span class="time">{{ post.date | date_to_string }}</span>
-              <h5 class="card-title">{{ post.title }}</h5>
-              <p class="card-text">{{ post.description }}</p>
+            <div class="card-body d-flex flex-column">
+              <span class="badge bg-secondary mb-1 w-auto align-self-start"
+                >{{ post.category }}</span
+              >
+              <h5 class="card-title mt-2">{{ post.title }}</h5>
+              <p class="card-text">
+                {{ post.excerpt | strip_html | truncate: 100 }}
+              </p>
+              {% assign hash = post.url | size %} {% assign time = hash |
+              modulo: 6 | plus: 4 %}
+              <div
+                class="mt-auto d-flex align-items-center gap-3 small"
+                style="color: #b0b3b8"
+              >
+                <span>
+                  <i class="fa-solid fa-calendar text-custom-blue me-1"></i>
+
+                  {{ post.date | date: "%b %d, %Y" }}
+                </span>
+                <span>
+                  <i class="fa-brands fa-readme text-custom-blue me-1"></i>
+                  {{ time }} mins
+                </span>
+              </div>
             </div>
           </div>
         </a>

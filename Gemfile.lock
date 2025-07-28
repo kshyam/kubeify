@@ -18,6 +18,7 @@ GEM
     ffi (1.17.2-arm-linux-gnu)
     ffi (1.17.2-arm-linux-musl)
     ffi (1.17.2-arm64-darwin)
+    ffi (1.17.2-x64-mingw-ucrt)
     ffi (1.17.2-x86-linux-gnu)
     ffi (1.17.2-x86-linux-musl)
     ffi (1.17.2-x86_64-darwin)
@@ -34,6 +35,9 @@ GEM
       bigdecimal
       rake (>= 13)
     google-protobuf (4.31.1-arm64-darwin)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.31.1-x64-mingw-ucrt)
       bigdecimal
       rake (>= 13)
     google-protobuf (4.31.1-x86-linux-gnu)
@@ -84,7 +88,7 @@ GEM
       jekyll (>= 3.8, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
-    json (2.12.2)
+    json (2.13.1)
     kramdown (2.5.1)
       rexml (>= 3.3.9)
     kramdown-parser-gfm (1.1.0)
@@ -120,7 +124,7 @@ GEM
     rb-inotify (0.11.1)
       ffi (~> 1.0)
     rexml (3.4.1)
-    rouge (4.5.2)
+    rouge (4.6.0)
     ruby2_keywords (0.0.5)
     safe_yaml (1.0.5)
     sass-embedded (1.89.2)
@@ -147,6 +151,8 @@ GEM
     sass-embedded (1.89.2-riscv64-linux-gnu)
       google-protobuf (~> 4.31)
     sass-embedded (1.89.2-riscv64-linux-musl)
+      google-protobuf (~> 4.31)
+    sass-embedded (1.89.2-x64-mingw-ucrt)
       google-protobuf (~> 4.31)
     sass-embedded (1.89.2-x86_64-darwin)
       google-protobuf (~> 4.31)
@@ -186,6 +192,7 @@ PLATFORMS
   riscv64-linux-gnu
   riscv64-linux-musl
   ruby
+  x64-mingw-ucrt
   x86-linux
   x86-linux-gnu
   x86-linux-musl

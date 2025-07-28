@@ -1,402 +1,972 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kubeify: Kubernetes Cost & Performance Optimization</title>
-    <meta name="description" content="We help you adopt production-ready Kubernetes, maximizing performance while minimizing cloud expenditure." />
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Kubernetes Performance &amp; Cost Optimization Services | Kubeify</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Kubernetes Performance &amp; Cost Optimization Services" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Unlock the full ROI of your Kubernetes investment with our expert performance tuning and cost optimization services. Reduce cloud bills by up to 40% and boost application performance." />
+<meta property="og:description" content="Unlock the full ROI of your Kubernetes investment with our expert performance tuning and cost optimization services. Reduce cloud bills by up to 40% and boost application performance." />
+<link rel="canonical" href="https://kubeify.com/kubernetes-cost-optimization" />
+<meta property="og:url" content="https://kubeify.com/kubernetes-cost-optimization" />
+<meta property="og:site_name" content="Kubeify" />
+<meta property="og:image" content="http://localhost:4000/images/kubernetes-cost-optimization.png" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/images/kubernetes-cost-optimization.png" />
+<meta property="twitter:title" content="Kubernetes Performance &amp; Cost Optimization Services" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Unlock the full ROI of your Kubernetes investment with our expert performance tuning and cost optimization services. Reduce cloud bills by up to 40% and boost application performance.","headline":"Kubernetes Performance &amp; Cost Optimization Services","image":"http://localhost:4000/images/kubernetes-cost-optimization.png","url":"https://kubeify.com/kubernetes-cost-optimization"}</script>
+<!-- End Jekyll SEO tag -->
+ <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
 
-    <meta property="og:title" content="Kubernetes Cost & Performance Optimization" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:description" content="We help you adopt production-ready Kubernetes, maximizing performance while minimizing cloud expenditure." />
-    <link rel="canonical" href="https://kubeify.com/kubernetes-cost-optimization" />
-    <meta property="og:url" content="https://kubeify.com/" />
-    <meta property="og:site_name" content="Kubeify" />
-    <meta property="og:image" content="https://kubeify.com//images/kubernetes-cost-optimization.png" />
-    <meta property="og:type" content="website" />
+<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5a50d614079115001207f66b&product=inline-share-buttons' async='async'></script>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/blog.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #F8FAFC;
-        }
-        .chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            height: 350px;
-            max-height: 400px;
-        }
-        @media (min-width: 768px) {
-            .chart-container {
-                height: 400px;
-            }
-        }
-        .gradient-text {
-            background: linear-gradient(to right, #0A9396, #EE9B00);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .kpi-card {
-            background-color: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
-        .hero-section {
-            background-image: url('images/kubernetes-cost-optimization.webp');
-            background-size: cover;
-            background-position: center;
-        }
-        .rounded-lg{
-          border-radius: 2em !important;
-        }
-    </style>
-</head>
-<body class="text-gray-800">
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!--
+      HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+    -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
 
-    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-gray-900">Kubeify<span class="text-[#0A9396]">.</span></h1>
-            <a class="nav-link" href="/">Home</a>
-            <a class="nav-link" href="/blog">Blog</a>
-            <a class="nav-link" href="/webinars">Webinars</a>
-            <a class="nav-link" href="/about">About Us</a>
-            <a class="nav-link" href="/contact">Contact Us</a>
-            <a href="#contact" class="bg-[#0A9396] text-white font-semibold px-6 py-2 rounded-lg hover:bg-[#005F73] transition-colors">Let's Talk</a>
+  <body class="landing-page">
+    <header class="default-header cm-header"><nav class="navbar navbar-expand-lg navbar-light bg-white  fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="/"><img src="/images/kubeify-logo.png" alt=""/ height="44px;"></a>
+    <button class="navbar-toggler" type="button" id="sidebarCollapse">
+      <!-- <span class="navbar-toggler-icon"></span> -->
+      <span class="icon"></span>
+      <span class="icon"></span>
+      <span class="icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="servicesDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Services
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="/why-kubernetes">Why Kubernetes</a></li>
+              <li><a class="dropdown-item" href="/kubernetes-cost-optimization">kubernetes cost optimization</a></li>
+          </ul>
+        </li>
+
+       
+        <li class="nav-item">
+          <a class="nav-link" href="/blog">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/webinars">Webinars</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link btn cta-button btn-rounded"
+            href="/schedule-meeting"
+            style="margin-left: 10px"
+            >&nbsp; Schedule Meeting &nbsp;
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="sidebar__wrapper">
+  <!-- Sidebar -->
+  <nav id="sidebar">
+    <div class="sideBar__content">
+      <div id="dismiss">
+        <!-- <i class="fas fa-arrow-left"></i> -->
+        <span class="modal-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="24"
+            height="24"
+            viewBox="0 0 172 172"
+            style="fill: #000000"
+          >
+            <g
+              fill="none"
+              fill-rule="nonzero"
+              stroke="none"
+              stroke-width="1"
+              stroke-linecap="butt"
+              stroke-linejoin="miter"
+              stroke-miterlimit="10"
+              stroke-dasharray=""
+              stroke-dashoffset="0"
+              font-family="none"
+              font-weight="none"
+              font-size="none"
+              text-anchor="none"
+              style="mix-blend-mode: normal"
+            >
+              <path d="M0,172v-172h172v172z" fill="none"></path>
+              <g fill="#000">
+                <path
+                  d="M33.73372,23.59961l-10.13411,10.13411l52.26628,52.26628l-52.26628,52.26628l10.13411,10.13411l52.26628,-52.26628l52.26628,52.26628l10.13411,-10.13411l-52.26628,-52.26628l52.26628,-52.26628l-10.13411,-10.13411l-52.26628,52.26628z"
+                ></path>
+              </g>
+            </g>
+          </svg>
+        </span>
+      </div>
+
+      <!-- <div class="sidebar-header">
+        <h3>Bootstrap Sidebar</h3>
+      </div> -->
+      <!-- <div class="nav__title">
+        Menu
+      </div> -->
+      <ul class="navbar-nav ml-auto">
+        <!--<li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="servicesDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Services
+          </a>
+           <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                  <li><a class="dropdown-item" href="/service1">Service 1</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 2</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 3</a></li>
+                  <li><a class="dropdown-item" href="/service1">Service 4</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 5</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 6</a></li>
+                  <li><a class="dropdown-item" href="/service2">Service 7</a></li>
+                  <li><a class="dropdown-item" href="/service3">Service 8</a></li>
+              </ul> 
+        </li>-->
+
+        <li class="nav-item">
+          <a class="nav-link" href="/why-kubernetes">Why Kubernetes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blog">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/webinars">Webinars</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link btn cta-button btn-rounded"
+            href="/schedule-meeting"
+            >&nbsp;&nbsp;Schedule Meeting&nbsp;&nbsp;</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <!-- <div id="content">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <button type="button" id="sidebarCollapse" class="btn btn-info">
+          <i class="fas fa-align-left"></i>
+          <span>Toggle Sidebar</span>
+        </button>
+      </div>
+    </nav>
+  </div> -->
+  <!-- Dark Overlay element -->
+  <div class="overlay"></div>
+</div>
+<script src="/js/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    // $("#sidebar").mCustomScrollbar({
+    //   theme: "minimal",
+    // });
+
+    $("#dismiss, .overlay").on("click", function () {
+      $("#sidebar").removeClass("active");
+      $(".overlay").removeClass("active");
+    });
+
+    $("#sidebarCollapse").on("click", function () {
+      $("#sidebar").addClass("active");
+      $(".overlay").addClass("active");
+      // $(".collapse.in").toggleClass("in");
+      // $("a[aria-expanded=true]").attr("aria-expanded", "false");
+    });
+
+    // $(window).scroll(function () {
+    //   if ($(document).scrollTop() > $(".navbar").height()) {
+    //     $("header").addClass("sticky_header");
+    //     $(".navbar").addClass("navbar-light bg-white");
+    //   } else {
+    //     $("header").removeClass("sticky_header");
+    //     $(".navbar").removeClass("navbar-light bg-white");
+    //   }
+    // });
+
+    // $(".list-unstyled li.active").removeClass("active");
+    // console.log(
+    //   $("a[href*='" + location.pathname + "']")
+    //     .parent()
+    //     .addClass("active")
+    // );
+    $(".list-unstyled li.active").removeClass("active");
+
+    $(".list-unstyled li a").each(function (i, obj) {
+      console.log(obj.classList.contains("btn"));
+      if (
+        obj.pathname === location.pathname &&
+        !obj.classList.contains("btn")
+      ) {
+        $(".list-unstyled li.active").removeClass("active");
+
+        console.log($(obj).parent().addClass("active"));
+      }
+    });
+
+    // let $parent = $(this).parent();
+    // $parent.addClass("active");
+    // window.location.assign($(this).attr("href"));
+    // e.preventDefault();
+  });
+</script>
+
+<meta name="google-adsense-account" content="ca-pub-4088406505945385" />
+</header>
+    <div class="mt-5"><!-- Custom Styles -->
+<style>
+
+    .metrics-section .metric-item {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    .metric-item h3 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #007bff;
+    }
+    .metric-item p {
+        font-size: 1rem;
+        color: #6c757d;
+    }
+    .section-title {
+        font-weight: 700;
+        margin-bottom: 3rem;
+    }
+    .card {
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+        height: 100%;
+    }
+    .process-step {
+        text-align: center;
+    }
+    .process-step .step-number {
+        width: 50px;
+        height: 50px;
+        background-color: #e0f7fa;
+        color: #007bff;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .case-study-highlight {
+        font-size: 4rem;
+        font-weight: 800;
+        color: #28a745;
+    }
+    
+</style>
+
+    <!-- Hero Section -->
+    <section class="hero partners-kube dark-bg py-5">
+      <div class="container">
+        <div class="row g-3">
+          <div class="col-sm-6 hero-left-side">
+            <div class="badge-with-arrow" style="margin-bottom: 1rem;">
+              <div style="color: #000;">☸︎ Top Kubernetes experts</div>
+            </div>
+            <h1 class="index-heading blue-bg">Cloud Agnostic Kubernetes performance and cost optimization</h1>
+            <p class="sub-head">We help you master Kubernetes performance and cost optimization. Stop overspending on cloud resources, transform your infrastructure into a lean, high-performance machine, and achieve measurable business outcomes with our expert team.</p>
+            <a class="nav-link btn schedule-btn" href="/schedule-meeting">Schedule Meeting</a>
+          </div>
+          <div class="col-sm-6">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/9IPTxMwjyMY?si=tW5adAyDobcLCVh8" title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+              </iframe>
+            </div>
+
+            <div class="spacer-small"></div>
+            <div class="hero_testimonial">
+              <p style="color: #000;">One of the best team I ever worked!</p>
+              <div class="hero_testimonial-author">
+                <img
+                  src="./images/author.webp"
+                  loading="lazy" width="26" alt="author" class="hero_testimonial-photo">
+                <div class="author-designation text-bold">Mark Mooney, CTO, Biqmind, Singapore</div>
+              </div>
+            </div>
+          </div>
         </div>
-    </header>
+    </section>
 
-    <main>
-        <section class="text-center py-40 px-6 hero-section">
-            <div class="container mx-auto">
-                <h2 class="text-4xl md:text-6xl font-black mb-4 leading-tight">Unlock Your <span class="gradient-text">Kubernetes ROI</span></h2>
-                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">We help you adopt production-ready Kubernetes, maximizing performance while minimizing cloud expenditure. Transform your infrastructure into a lean, powerful, and cost-effective asset.</p>
-            </div>
-        </section>
-
-        <section class="py-40 px-6">
-            <div class="container mx-auto">
-                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-                    <div class="kpi-card p-10 rounded-xl shadow-lg border border-gray-100">
-                        <p class="text-5xl font-extrabold text-[#005F73]">10+</p>
-                        <p class="mt-2 text-gray-600 font-semibold">Years of Experience</p>
-                    </div>
-                    <div class="kpi-card p-10 rounded-xl shadow-lg border border-gray-100">
-                        <p class="text-5xl font-extrabold text-[#0A9396]">25+</p>
-                        <p class="mt-2 text-gray-600 font-semibold">Expert Engineers</p>
-                    </div>
-                    <div class="kpi-card p-10 rounded-xl shadow-lg border border-gray-100">
-                        <p class="text-5xl font-extrabold text-[#EE9B00]">200+</p>
-                        <p class="mt-2 text-gray-600 font-semibold">Global Customers</p>
-                    </div>
-                    <div class="kpi-card p-10 rounded-xl shadow-lg border border-gray-100">
-                        <p class="text-5xl font-extrabold text-[#CA6702]">24/7</p>
-                        <p class="mt-2 text-gray-600 font-semibold">Global Support</p>
+    <!-- Metrics Section -->
+    <section class="metrics-section py-5" >
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3 col-6">
+                    <div class="metric-item">
+                        <h3>10+</h3>
+                        <p>Years of Experience</p>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section class="py-16 px-6 bg-white">
-            <div class="container mx-auto">
-                <div class="text-center mb-12">
-                    <h3 class="text-3xl font-bold mb-2">Our Core Optimization Pillars</h3>
-                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">We focus on key areas that deliver the most significant impact on your cloud-native operations and budget.</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
-                        <h4 class="text-xl font-bold text-center mb-4">Key Impact Areas</h4>
-                        <p class="text-center text-gray-600 mb-4">Our services are designed to deliver measurable improvements across your infrastructure. Cost savings and performance boosts are our primary metrics for success.</p>
-                        <div class="chart-container">
-                            <canvas id="impactChart"></canvas>
-                        </div>
+                <div class="col-md-3 col-6">
+                    <div class="metric-item">
+                        <h3>25+</h3>
+                        <p>Certified Experts</p>
                     </div>
-                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
-                        <h4 class="text-xl font-bold text-center mb-4">Achieving Resource Efficiency</h4>
-                         <p class="text-center text-gray-600 mb-4">A major source of wasted cloud spend is overprovisioning. We analyze your workload patterns to right-size resources, eliminating waste and ensuring you only pay for what you need.</p>
-                        <div class="chart-container">
-                            <canvas id="efficiencyChart"></canvas>
-                        </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="metric-item">
+                        <h3>200+</h3>
+                        <p>Successful Projects</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="metric-item">
+                        <h3>24/7</h3>
+                        <p>Dedicated Support</p>
                     </div>
                 </div>
             </div>
-        </section>
-        
-        <section class="py-16 px-6">
-            <div class="container mx-auto">
-                 <div class="text-center mb-12">
-                    <h3 class="text-3xl font-bold mb-2">The Kubeify Optimization Process</h3>
-                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">We follow a proven, structured approach to guarantee results.</p>
-                </div>
-                <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-0">
-                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 w-full md:w-1/5 text-center">
-                        <div class="text-2xl font-bold text-[#005F73] mb-2">1</div>
-                        <h4 class="font-bold text-lg">Assess & Analyze</h4>
-                        <p class="text-sm text-gray-600">Deep dive into your current setup, costs, and performance bottlenecks.</p>
-                    </div>
-                    <div class="text-4xl text-[#EE9B00] font-light transform md:-rotate-0 rotate-90">→</div>
-                     <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 w-full md:w-1/5 text-center">
-                        <div class="text-2xl font-bold text-[#0A9396] mb-2">2</div>
-                        <h4 class="font-bold text-lg">Strategize</h4>
-                        <p class="text-sm text-gray-600">Develop a tailored optimization plan with clear goals and ROI projections.</p>
-                    </div>
-                    <div class="text-4xl text-[#EE9B00] font-light transform md:-rotate-0 rotate-90">→</div>
-                     <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 w-full md:w-1/5 text-center">
-                        <div class="text-2xl font-bold text-[#CA6702] mb-2">3</div>
-                        <h4 class="font-bold text-lg">Implement</h4>
-                        <p class="text-sm text-gray-600">Execute the plan, from right-sizing resources to tuning applications.</p>
-                    </div>
-                     <div class="text-4xl text-[#EE9B00] font-light transform md:-rotate-0 rotate-90">→</div>
-                     <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 w-full md:w-1/5 text-center">
-                        <div class="text-2xl font-bold text-[#9B2226] mb-2">4</div>
-                        <h4 class="font-bold text-lg">Monitor & Refine</h4>
-                        <p class="text-sm text-gray-600">Provide continuous observability and ongoing adjustments for sustained efficiency.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="py-16 px-6 bg-white">
-            <div class="container mx-auto">
-                <div class="text-center mb-12">
-                    <h3 class="text-3xl font-bold mb-2">Case Study: Y-Axis Solutions</h3>
-                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">From high operational costs on Heroku to a highly efficient, EKS-powered platform.</p>
-                </div>
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    <div class="lg:col-span-1 flex flex-col justify-center items-center bg-white p-8 rounded-xl shadow-lg border border-gray-100">
-                        <div class="text-center">
-                            <h4 class="text-2xl font-bold mb-2">Total Cloud Bill Reduction</h4>
-                            <p class="text-8xl font-black gradient-text">40%</p>
-                            <p class="text-lg text-gray-600 mt-2">Direct reduction in monthly cloud expenditure after migrating to a Kubeify-optimized AWS EKS environment.</p>
+    <!-- Core Optimization Pillars -->
+    <section id="pillars" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Our Core Optimization Pillars</h2>
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                    <div class="card p-4">
+                        <h4 class="mb-3">Key Impact Areas</h4>
+                        <p>Our focus is on delivering tangible results. We analyze your workloads and infrastructure to identify key areas for cost savings and performance gains, ensuring a direct impact on your bottom line.</p>
+                        <div class="chart-placeholder">
+                            <!-- Placeholder for Bar Chart -->
+                            <img src="/images/key-impact-areas.png" alt="Key Impact Areas Chart" class="img-fluid rounded">
                         </div>
                     </div>
-                    <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
-                         <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
-                            <h4 class="text-xl font-bold text-center mb-4">Before vs. After Cost</h4>
-                             <p class="text-center text-gray-600 mb-4">Visualizing the direct impact of our optimization strategies on the client's monthly cloud spend.</p>
-                            <div class="chart-container h-64 md:h-auto">
-                                <canvas id="costSavingChart"></canvas>
-                            </div>
-                        </div>
-                         <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
-                            <h4 class="text-xl font-bold text-center mb-4">Application Performance Boost</h4>
-                            <p class="text-center text-gray-600 mb-4">Migrating to a scalable architecture drastically improved application response times and reliability.</p>
-                            <div class="chart-container h-64 md:h-auto">
-                                <canvas id="performanceChart"></canvas>
-                            </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card p-4">
+                        <h4 class="mb-3">Achieving Resource Efficiency</h4>
+                        <p>We fine-tune your resource allocation, autoscaling, and scheduling to eliminate waste. Our data-driven approach ensures your applications have the resources they need, exactly when they need them—no more, no less.</p>
+                         <div class="chart-placeholder">
+                            <!-- Placeholder for Donut Chart -->
+                            <img src="/images/kubernetes-resource-efficiency.png" alt="Resource Efficiency Chart" class="img-fluid rounded">
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        
-        <section id="contact" class="py-20 px-6 bg-gray-900 text-white">
-            <div class="container mx-auto text-center">
-                 <h3 class="text-3xl font-bold mb-4">Ready to Optimize Your Kubernetes Investment?</h3>
-                 <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8">Let's discuss how Kubeify can help you build a 
-                  fault-tolerant, secure, and highly efficient cloud-native system. <br>Reach out and expect a response within 4 hours.</p>
-                 <a href="mailto:support@kubeify.com" class="bg-[#EE9B00] text-gray-900 font-bold px-10 py-4 rounded-lg hover:bg-[#FFB703] transition-colors text-lg">Schedule a Meeting</a>
-                 <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-                     <div class="p-10 bg-gray-800">
-                         <h4 class="text-xl font-bold mb-2">USA Office</h4>
-                         <p>5208 Cumberland Dr, Roseville, 95747, USA</p>
-                         <p>Email: <a href="mailto:support@kubeify.com" class="text-[#94D2BD] hover:underline">support@kubeify.com</a></p>
-                         <p>Phone: <a href="tel:+19162728503">+1 (916) 272 8503</a></p>
-                     </div>
-                     <div class="p-10 bg-gray-800">
-                         <h4 class="text-xl font-bold mb-2">India Office</h4>
-                         <p>T-Hub 2.0 | Technology Hub 2.0<br>
-                            1st Floor, 20, Inorbit Mall Road, Vittal Rao Nagar,<br>
-                            Madhapur, Telangana 500081</p>
-                         <p>Email: <a href="mailto:support@kubeify.com" class="text-[#94D2BD] hover:underline">support@kubeify.com</a></p>
-                         <p>Phone: <a href="tel:+918688468400">+91 868-846-8400</a></p>
-                     </div>
-                 </div>
+        </div>
+    </section>
+
+    <!-- Optimization Process -->
+    <section id="process" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="text-center section-title">The Kubeify Optimization Process</h2>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h5>Assess & Analyze</h5>
+                        <p>Deep dive into your current setup, performance metrics, and cost data.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h5>Strategize & Plan</h5>
+                        <p>Develop a custom optimization roadmap with clear goals and timelines.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h5>Implement</h5>
+                        <p>Execute the plan with minimal disruption, applying best practices.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h5>Monitor & Refine</h5>
+                        <p>Continuously track performance and costs to ensure lasting efficiency.</p>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
+    <!-- Case Study Section -->
+    <section id="casestudy" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Case Study: Y-Axis Solutions</h2>
+            <p class="text-center col-lg-8 mx-auto mb-5">See how we helped a leading tech firm slash their cloud spending while boosting application responsiveness. This is the power of targeted Kubernetes cost and performance optimization.</p>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="card p-4 text-center">
+                        <h5 class="card-title">Total Cloud Bill Reduction</h5>
+                        <p class="case-study-highlight">40%</p>
+                        <p class="card-text">Direct savings achieved within the first quarter after implementing our optimization strategies for their AWS EKS environment.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card p-4">
+                        <h5 class="card-title text-center">Before vs. After Cost</h5>
+                         <div class="chart-placeholder">
+                            <img src="/images/yaxis-monthly-cloud-spend.png" alt="Cost Comparison Chart" class="img-fluid rounded">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card p-4">
+                        <h5 class="card-title text-center">Application Performance Boost</h5>
+                         <div class="chart-placeholder">
+                            <img src="/images/yaxis-application-performance-boost.png" alt="Performance Boost Chart" class="mt-5 img-fluid rounded">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <footer class="bg-gray-900 text-center py-6">
-        <p class="text-gray-500">&copy; 2025 Kubeify (A CodeCrux Company). All Rights Reserved.</p>
-    </footer>
+    <!-- CTA / Contact Section -->
+<!-- <div class="bg-light pt-5 pb-5 work-hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <div class="media">
+          <img
+            src="/images/clients/yaron-oren.jpeg"
+            class="mr-4 rounded-circle"
+            width="120"
+            alt="yaron-oren"
+          />
+          <div class="align-self-center msg-txt-18 font-italic mt-4 mt-md-0">
+            Kubeify's team <b>decrease the time</b> it takes to adopt open
+            source technology while enabling consistent application environments
+            across deployments...letting our developers focus on application
+            code while improving speed and quality of our releases.<br />
+            <b>- Yaron Oren, Founder Maverick.ai (acquired by OutboundWorks)</b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
 
-    <script>
-        const tooltipTitleCallback = (tooltipItems) => {
-            const item = tooltipItems[0];
-            let label = item.chart.data.labels[item.dataIndex];
-            if (Array.isArray(label)) {
-              return label.join(' ');
-            }
-            return label;
-        };
+<section class="bg-light py-5 work-hero">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="d-flex flex-column flex-md-row align-items-center gap-4">
+          <!-- Client Image -->
+          <img
+            src="/images/clients/yaron-oren.jpeg"
+            alt="Yaron Oren"
+            class="rounded-circle"
+            width="120"
+            height="120"
+          />
+          <!-- Testimonial Text -->
+          <div class="fst-italic">
+            <p class="mb-2 fs-5">
+              Kubeify's team <strong>decrease the time</strong> it takes to
+              adopt open source technology while enabling consistent application
+              environments across deployments... letting our developers focus on
+              application code while improving speed and quality of our
+              releases.
+            </p>
+            <p class="mb-0 fw-semibold">
+              – Yaron Oren, Founder Maverick.ai (acquired by OutboundWorks)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        const wrapLabel = (label) => {
-            const maxLength = 16;
-            if (label.length <= maxLength) return label;
+<section class="bg-light py-4">
+  <div class="container">
+    <div class="looking-details-wraper">
+      <div class="looking-details-content">
+        <h4>Ready to get started?</h4>
+        <p>
+          Let us know what you are working on? <br />
+          We would help you to build a
+          <b>fault tolerant, secure and scalable system</b> over kubernetes.
+        </p>
+        <a class="btn schedule-btn" href="/schedule-meeting"
+          >Schedule Meeting</a
+        >
+      </div>
+      <div class="looking-details-image">
+        <img
+          src="/images/home-cta2.png"
+          alt="formore-details"
+          data-lazy-src="/images/home-cta2.png"
+          height="350px"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Contact Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="contactModalLabel">Schedule Your Free Consultation</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Take the first step towards a more efficient Kubernetes environment. Fill out the form below, and one of our experts will be in touch shortly.</p>
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="name" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Work Email</label>
+                <input type="email" class="form-control" id="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="company" class="form-label">Company</label>
+                <input type="text" class="form-control" id="company">
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">How can we help?</label>
+                <textarea class="form-control" id="message" rows="3" placeholder="e.g., Reduce our AWS bill, improve application latency..."></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Request Consultation</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+    
+    <div class="footer bg-dark">
+      <div class="container py-5">
+        <div class="footer-top">
+          <div class="footer-logo-section">
+            <div class="brand-text">Kubeify</div>
+            <div class="footer-description py-2">
+              We unleash growth by helping companies adopt cloud native
+              technologies with our products and services!
+            </div>
+            <div class="footer-social-icons d-flex py-2">
+              <a href="https://www.linkedin.com/company/kubeify" target="_blank" class="footer-social-icon"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://x.com/kubeify" target="_blank" class="footer-social-icon"><i class="fa-brands fa-twitter"></i></a>
+              <a href="https://www.youtube.com/@kubeifyk8s45/videos" class="footer-social-icon" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="footer-badges">
+            <img src="/images/kubernetes-certified-engineers.svg" alt="kubernetes certified engineers" class="footer-badge" />
+            <img src="/images/gcp-cloud-certified-developer.png" alt="gcp cloud certified developer" class="footer-badge" />
+            <img src="/images/aws-certified-cloud-practitioner.png" alt="aws certified cloud practitioner" class="footer-badge" />
+            <img src="/images/partners/digitalocean.png" alt="digital ocean" class="footer-badge" />
+            <img src="/images/partners/docker.png" alt="docker" class="footer-badge" />
+          </div>
+        </div>
+
+        <div class="footer-main-content">
+          <div class="footer-item">
+            <h4>AI Cloud</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Cloud Native Product Development</a></li>
+              <li><a href="#">Cloud Native FaaS</a></li>
+              <li><a href="#">Monolith to Microservices</a></li>
+              <li><a href="#">DevSecOps as a Service</a></li>
+              <!-- <li><a href="#">Extending Kubernetes Whitepaper</a></li> -->
+              <li><a href="#">Kubernetes Zero Downtime</a></li>
+            </ul>
+            <h4 class="mt-2 pt-3">Product Engineering</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Platform Engineering Consulting</a></li>
+              <li><a href="#">Backstage Consulting</a></li>
+              <li><a href="#">Progressive Delivery</a></li>
+              <li><a href="#">CI/CD & Dev Experience</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-item">
+            <h4>Application Modernization</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Monolith to Microservices</a></li>
+              <li><a href="#">Kubernetes Consulting Services</a></li>
+              <li><a href="#">GitOps Consulting</a></li>
+              <li><a href="#">CI/CD & Dev Experience</a></li>
+              <li><a href="#">DevOps Toolchain</a></li>
+              <li><a href="#">ArgoCD Consulting</a></li>
+              <li><a href="#">Jenkins Consulting</a></li>
+              <li><a href="#">Cloud Migration Consulting</a></li>
+              <li><a href="#">FinOps Consulting</a></li>
+              <li><a href="#">vCluster Consulting</a></li>
+            </ul>
             
-            const words = label.split(' ');
-            const lines = [];
-            let currentLine = '';
+          </div>
 
-            words.forEach(word => {
-                if ((currentLine + ' ' + word).length > maxLength && currentLine.length > 0) {
-                    lines.push(currentLine);
-                    currentLine = word;
-                } else {
-                    if (currentLine.length > 0) {
-                        currentLine += ' ' + word;
-                    } else {
-                        currentLine = word;
-                    }
-                }
-            });
-            lines.push(currentLine);
-            return lines;
-        };
+          <div class="footer-item">
+            <h4>Site Reliability Engineering</h4>
+            <ul class="footer-nav">
+              <li><a href="#">SRE Consulting</a></li>
+              <li><a href="#">Service Mesh Consulting</a></li>
+              <li><a href="#">Cloud Native Networking</a></li>
+              <li><a href="#">Istio Consulting</a></li>
+              <li><a href="#">Linkerd Consulting</a></li>
+              <li><a href="#">Tetratom Consulting</a></li>
+              <li><a href="#">Backup & Disaster Recovery</a></li>
+              <li><a href="#">Bare Metal Provisioning Consulting</a></li>
+            </ul>
+            <!-- <h4 class="mt-2 pt-3">Consulting Partners</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Razorops Partner</a></li>
+              <li><a href="#">Digital Ocean Cloud Partner</a></li>
+              <li><a href="#">e2e networks cloud</a></li>
+              <li><a href="#">IBM Cloud Partner</a></li>
+              <li><a href="#">AWS Cloud Partner</a></li>
+              <li><a href="#">GCP Cloud Partner</a></li>
+              <li><a href="#">Azure Cloud Partner</a></li>
+            </ul> -->
+          </div>
 
-        const chartColors = {
-            darkTeal: '#005F73',
-            teal: '#0A9396',
-            lightTeal: '#94D2BD',
-            orange: '#EE9B00',
-            darkOrange: '#CA6702',
-            lightGray: '#E5E7EB'
-        };
+          <div class="footer-item">
+            <h4>Enterprise Support</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Linkerd Support</a></li>
+              <li><a href="#">Istio Support</a></li>
+              <li><a href="#">Argo CD Support</a></li>
+              <li><a href="#">Prometheus Support</a></li>
+              <li><a href="#">Kasten K10 Support</a></li>
+            </ul>
+            <h4 class="pt-3">Observability & DevSecOps</h4>
+            <ul class="footer-nav">
+              <li><a href="#">DevSecOps Consulting</a></li>
+              <li><a href="#">Observability Consulting</a></li>
+              <li><a href="#">Grafana Consulting</a></li>
+              <li><a href="#">Prometheus Consulting</a></li>
+            </ul>
+            
+          </div>
+
+          <div class="footer-item">
+            <h4>Company</h4>
+            <ul class="footer-nav">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Mentoring Sessions</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+
+            <h4 class="pt-3">Resources</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Blogs</a></li>
+              <li><a href="#">Webinars</a></li>
+              <li><a href="#">Customers Stories</a></li>
+              <li><a href="#">CNCF Landscape Navigator</a></li>
+              <li><a href="#">Cloud Native & AI Talks</a></li>
+
+            </ul>
+            
+          </div>
+        </div>
+
         
-        const defaultChartOptions = {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-                legend: {
-                    position: 'bottom',
-                    labels: {
-                        color: '#4B5563',
-                        font: {
-                            family: "'Inter', sans-serif"
-                        }
-                    }
-                },
-                tooltip: {
-                    callbacks: {
-                        title: tooltipTitleCallback
-                    },
-                    backgroundColor: '#111827',
-                    titleFont: { weight: 'bold', family: "'Inter', sans-serif" },
-                    bodyFont: { family: "'Inter', sans-serif" },
-                    padding: 12,
-                    cornerRadius: 6
-                }
-            },
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    ticks: { 
-                        color: '#4B5563',
-                        font: { family: "'Inter', sans-serif" }
-                    },
-                    grid: { color: '#F3F4F6' }
-                },
-                x: {
-                    ticks: { 
-                        color: '#4B5563',
-                        font: { family: "'Inter', sans-serif" }
-                    },
-                    grid: { display: false }
-                }
-            }
-        };
-
-        new Chart(document.getElementById('impactChart'), {
-            type: 'bar',
-            data: {
-                labels: ['Cost Optimization', 'Performance Tuning', 'CI/CD Automation', 'Enhanced Security'].map(wrapLabel),
-                datasets: [{
-                    label: 'Business Impact Score',
-                    data: [95, 92, 85, 88],
-                    backgroundColor: [chartColors.teal, chartColors.orange, chartColors.darkTeal, chartColors.darkOrange],
-                    borderColor: '#ffffff',
-                    borderWidth: 2,
-                    borderRadius: 5
-                }]
-            },
-            options: {
-                ...defaultChartOptions,
-                plugins: { ...defaultChartOptions.plugins, legend: {display: false} }
-            }
-        });
-        
-        new Chart(document.getElementById('efficiencyChart'), {
-            type: 'doughnut',
-            data: {
-                labels: ['Utilized Resources', 'Wasted (Overprovisioned)'],
-                datasets: [{
-                    label: 'Resource Allocation',
-                    data: [75, 25],
-                    backgroundColor: [chartColors.teal, chartColors.lightGray],
-                    borderColor: '#ffffff',
-                    borderWidth: 4,
-                }]
-            },
-            options: {
-                ...defaultChartOptions,
-                cutout: '70%',
-                scales: {
-                    y: {display: false},
-                    x: {display: false}
-                }
-            }
-        });
-
-        new Chart(document.getElementById('costSavingChart'), {
-            type: 'doughnut',
-            data: {
-                labels: ['Optimized Cost', 'Savings'],
-                datasets: [{
-                    label: 'Monthly Cloud Spend',
-                    data: [60, 40],
-                    backgroundColor: [chartColors.lightTeal, chartColors.orange],
-                    borderColor: '#ffffff',
-                    borderWidth: 4
-                }]
-            },
-            options: {
-                ...defaultChartOptions,
-                cutout: '70%',
-                 scales: {
-                    y: {display: false},
-                    x: {display: false}
-                }
-            }
-        });
-
-        new Chart(document.getElementById('performanceChart'), {
-            type: 'line',
-            data: {
-                labels: ['Q1', 'Q2', 'Q3 (Migration)', 'Q4'],
-                datasets: [{
-                    label: 'Avg. Response Time (ms)',
-                    data: [220, 235, 110, 85],
-                    borderColor: chartColors.darkOrange,
-                    backgroundColor: 'rgba(202, 103, 2, 0.1)',
-                    fill: true,
-                    tension: 0.4,
-                    pointBackgroundColor: chartColors.darkOrange,
-                    pointBorderColor: '#fff',
-                    pointHoverRadius: 7,
-                    pointRadius: 5,
-                }]
-            },
-            options: defaultChartOptions
-        });
+      </div>
+    </div>
+    <div class="lower-footer text-center py-2">
+    <span class="d-inline-block copyright">
+      Copyright © <span id="year">2025</span> Kubeify (A CodeCrux Company). All Rights Reserved.
+    </span>
+  </div>
+    <!-- Year Updater -->
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
-</body>
+
+    <!-- jQuery + Bootstrap (if not already included) -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/app.js"></script>
+
+    <!-- Google Analytics (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-142118821-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-142118821-1");
+    </script>
+
+    <!-- HubSpot Embed Code -->
+    <script
+      type="text/javascript"
+      id="hs-script-loader"
+      async
+      defer
+      src="//js.hs-scripts.com/7280691.js"
+    ></script>
+  </body>
+</html>
+
+    <!-- Include Modal Partial -->
+    <div
+  class="modal fade"
+  id="delayedModal"
+  tabindex="-1"
+  aria-labelledby="delayedModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="text-center">
+          <img
+            src="/images/kubernetes-architecture.png"
+            alt="Popup Image"
+            class="img-responsive center-block"
+            style="max-width: 200px; margin-top: 15px; margin-bottom: 15px"
+          />
+        </div>
+
+        <h4 class="fw-bold text-center">AI-Driven Kubernetes Optimization</h4>
+        <p class="fs-5 mb-4 text-center">
+          Max Performance, Min Spend, Any Cloud.
+        </p>
+
+        <div class="d-flex justify-content-center gap-3">
+          <a href="/schedule-meeting" class="btn cta-button btn-rounded"
+            >SCHEDULE MEETING</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ <!-- COOKIE BANNER -->
+<div id="cookieConsent" class="cookie-consent-banner">
+  <button
+    type="button"
+    class="btn-close"
+    id="closeCookieBox"
+    aria-label="Close"
+  ></button>
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-sm-2 text-center">
+        <img
+          src="/images/kubeify-logo.png"
+          alt="ScaleOps Logo"
+          style="max-height: 50px"
+        />
+      </div>
+      <div class="col-sm-7">
+        <h4><strong>This website uses cookies</strong></h4>
+        <p>
+          We use cookies to personalise content and ads, to provide social media
+          features and to analyse our traffic. We also share information about
+          your use of our site with our social media, advertising and analytics
+          partners who may combine it with other information that you’ve
+          provided to them or that they’ve collected from your use of their
+          services.
+        </p>
+        <a href="#" id="show-details" style="color: blue; font-weight: bold">
+          Show details <span>&#x276F;</span>
+        </a>
+      </div>
+      <div class="col-sm-3 text-center">
+        <button id="acceptCookies" class="btn btn-primary btn-lg w-100">
+          Allow all
+        </button>
+        <button
+          id="denyCookies"
+          class="btn btn-outline-secondary btn-lg w-100 mt-2"
+        >
+          Deny
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COOKIE DETAILS MODAL -->
+<div
+  class="modal fade"
+  id="cookieDetailsModal"
+  tabindex="-1"
+  aria-labelledby="cookieDetailsLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg modal-dialog-centered animated fadeInDown">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="cookieDetailsLabel">Cookie Details</h4>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <p>
+          <strong>Strictly Necessary Cookies</strong> – Essential for the
+          website to function.
+        </p>
+        <p>
+          <strong>Performance Cookies</strong> – Collect info about how visitors
+          use our site.
+        </p>
+        <p>
+          <strong>Functionality Cookies</strong> – Remember user choices for
+          enhanced functionality.
+        </p>
+        <p>
+          <strong>Targeting/Advertising Cookies</strong> – Deliver relevant ads
+          and track performance.
+        </p>
+        <hr />
+        <p>
+          You can manage your preferences through browser settings or by
+          contacting our support.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button id="acceptCookiesmobile" class="btn btn-primary btn-lg w-100">
+          Allow all
+        </button>
+        <button
+          id="denyCookiesmobile"
+          class="btn btn-outline-secondary btn-lg w-100 mt-2"
+        >
+          Deny
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STYLES -->
+<style>
+  .cookie-consent-banner {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    color: #000;
+    z-index: 1055;
+    padding: 30px 20px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animated.fadeInDown {
+    animation: fadeInDown 0.5s ease-out;
+  }
+</style>
+
+    <script src="/js/cookie-consent.js"></script>
+    <script src="/js/modal.js"></script>
+  </body>
 </html>

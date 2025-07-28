@@ -48,13 +48,10 @@
     <link rel="stylesheet" href="/css/blog.css" />
   </head>
 
-  <body class="layout-blog">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white  fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="/"
-      ><img src="/images/kubeify-logo.png" alt=""
-    /></a>
-
+    <a class="navbar-brand" href="/"><img src="/images/kubeify-logo.png" alt=""/ height="44px;"></a>
     <button class="navbar-toggler" type="button" id="sidebarCollapse">
       <!-- <span class="navbar-toggler-icon"></span> -->
       <span class="icon"></span>
@@ -62,7 +59,7 @@
       <span class="icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" >
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown">
           <a
@@ -280,22 +277,9 @@
 <meta name="google-adsense-account" content="ca-pub-4088406505945385" />
 
 
-    <section>
-      <div class="container mb-4">
-        <div class="row">
-          <!-- LEFT: Main Blog Content -->
-          <div class="col-lg-8 bg-white p-4 border rounded shadow-sm">
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb" style="background: transparent">
-                <li class="breadcrumb-item">
-                  <a href="/blog">Blog</a>
-                </li>
-                <li class="breadcrumb-item active" aria-current="page">
-                  Kubernetes Best Practices for Resource Requests and Limits
-                </li>
-              </ol>
-            </nav>
-
+      <div class="container mt-5">
+        <div class="row mt-5">
+          <div class="col-lg-8 bg-white p-2 border rounded shadow-sm mt-5 mb-5">
             <img
               src="/images/blog/kubernetes-best-practices-for-resource-requests-and-limits.webp"
               alt="Kubernetes Best Practices for Resource Requests and Limits"
@@ -307,7 +291,6 @@
               02 Jul 2025 -
               <small>Shyam Mohan</small>
             </time>
-
             <div class="px-2 mt-4"><p>Kubernetes simplifies application deployment and scaling—but without properly setting resource requests and limits, you risk overloading nodes, wasting cloud budget, or causing unpredictable pod evictions.</p>
 
 <h2 id="table-of-contents">Table of Contents</h2>
@@ -639,7 +622,41 @@ resources:</p>
           </div>
 
           <!-- RIGHT: Related Posts -->
-          <div class="col-lg-4 mt-4 mt-lg-0">
+          <div class="col-lg-4 mt-5">
+
+             <!-- Tag/Categories Section -->
+            <div class="mb-4 p-3 border rounded bg-white d-none d-md-block">
+              <h4 class="fw-bold mb-3">Tags</h4>
+              
+              <div class="list-inline mb-0 d-flex flex-wrap gap-2">
+                
+                <span class="badge bg-secondary mb-1 w-auto align-self-start">
+                  AWS
+                </span>
+                
+                <span class="badge bg-secondary mb-1 w-auto align-self-start">
+                  AWS Cost
+                </span>
+                
+                <span class="badge bg-secondary mb-1 w-auto align-self-start">
+                  CICD
+                </span>
+                
+                <span class="badge bg-secondary mb-1 w-auto align-self-start">
+                  DevOps
+                </span>
+                
+                <span class="badge bg-secondary mb-1 w-auto align-self-start">
+                  Kubernetes
+                </span>
+                
+                <span class="badge bg-secondary mb-1 w-auto align-self-start">
+                  platform engineering
+                </span>
+                
+              </div>
+            </div>
+
             <div class="p-3 mb-4 border rounded bg-white shadow-sm">
               <h4 class="fw-bold mb-3">More in Kubernetes</h4>
                 
@@ -689,62 +706,12 @@ resources:</p>
               
             </div>
 
-            <!-- Tag/Categories Section -->
-            <div class="mb-4 p-3 border rounded bg-white d-none d-md-block">
-              <h4 class="fw-bold mb-3">Tags</h4>
-              
-              <div class="list-inline mb-0 d-flex flex-wrap gap-2">
-                
-                <span
-                  class="list-inline-item btn rounded-pill btn-light px-3 py-2"
-                  style="font-size: 1.5rem"
-                >
-                  AWS
-                </span>
-                
-                <span
-                  class="list-inline-item btn rounded-pill btn-light px-3 py-2"
-                  style="font-size: 1.5rem"
-                >
-                  AWS Cost
-                </span>
-                
-                <span
-                  class="list-inline-item btn rounded-pill btn-light px-3 py-2"
-                  style="font-size: 1.5rem"
-                >
-                  CICD
-                </span>
-                
-                <span
-                  class="list-inline-item btn rounded-pill btn-light px-3 py-2"
-                  style="font-size: 1.5rem"
-                >
-                  DevOps
-                </span>
-                
-                <span
-                  class="list-inline-item btn rounded-pill btn-light px-3 py-2"
-                  style="font-size: 1.5rem"
-                >
-                  Kubernetes
-                </span>
-                
-                <span
-                  class="list-inline-item btn rounded-pill btn-light px-3 py-2"
-                  style="font-size: 1.5rem"
-                >
-                  platform engineering
-                </span>
-                
-              </div>
-            </div>
+           
           </div>
         </div>
       </div>
-    </section>
 
-    <div class="bg-light pt-5 pb-5 work-hero">
+    <!-- <div class="bg-light pt-5 pb-5 work-hero">
   <div class="container">
     <div class="row">
       <div class="col-md-10 offset-md-1">
@@ -766,7 +733,39 @@ resources:</p>
       </div>
     </div>
   </div>
-</div>
+</div> -->
+
+<section class="bg-light py-5 work-hero">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="d-flex flex-column flex-md-row align-items-center gap-4">
+          <!-- Client Image -->
+          <img
+            src="/images/clients/yaron-oren.jpeg"
+            alt="Yaron Oren"
+            class="rounded-circle"
+            width="120"
+            height="120"
+          />
+          <!-- Testimonial Text -->
+          <div class="fst-italic">
+            <p class="mb-2 fs-5">
+              Kubeify's team <strong>decrease the time</strong> it takes to
+              adopt open source technology while enabling consistent application
+              environments across deployments... letting our developers focus on
+              application code while improving speed and quality of our
+              releases.
+            </p>
+            <p class="mb-0 fw-semibold">
+              – Yaron Oren, Founder Maverick.ai (acquired by OutboundWorks)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="bg-light py-4">
   <div class="container">
@@ -778,7 +777,7 @@ resources:</p>
           We would help you to build a
           <b>fault tolerant, secure and scalable system</b> over kubernetes.
         </p>
-        <a class="btn cta-button btn-rounded" href="/schedule-meeting"
+        <a class="btn schedule-btn" href="/schedule-meeting"
           >Schedule Meeting</a
         >
       </div>
@@ -793,133 +792,175 @@ resources:</p>
     </div>
   </div>
 </section>
- <div class="footer bg-dark">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 footer-item">
-        <div class="brand-text">Kubeify</div>
-        <p>
-          Accelerate your cloud native transformation, adoption of kubernetes
-          with Kubeify's team of experts.
-        </p>
-        
-
-        </p>
-      </div>
-      <div class="col-md-8 mt-4 mt-md-0">
-        <div class="d-flex justify-content-between">
-          <div class="footer-item">
-            <h4 class="cta__title">Company</h4>
-            <ul class="footer-nav">
-              <li><a href="/about" title="About">About Us</a></li>
-              <li><a href="/contact" title="Contact Us">Contact Us</a></li>
-              <li>
-                <a href="/join-our-team" title="Join our team">Join our team</a>
-              </li>
-              <li>
-                <a href="/schedule-meeting" title="Schedule a meeting">Schedule a Meeting</a>
-              </li>
-            </ul>
+ 
+    <div class="footer bg-dark">
+      <div class="container py-5">
+        <div class="footer-top">
+          <div class="footer-logo-section">
+            <div class="brand-text">Kubeify</div>
+            <div class="footer-description py-2">
+              We unleash growth by helping companies adopt cloud native
+              technologies with our products and services!
+            </div>
+            <div class="footer-social-icons d-flex py-2">
+              <a href="https://www.linkedin.com/company/kubeify" target="_blank" class="footer-social-icon"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://x.com/kubeify" target="_blank" class="footer-social-icon"><i class="fa-brands fa-twitter"></i></a>
+              <a href="https://www.youtube.com/@kubeifyk8s45/videos" class="footer-social-icon" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </div>
           </div>
-
-          <div class="footer-item">
-            <h4 class="cta__title">Services</h4>
-            <ul class="footer-nav">
-              <li><a href="/services">Services Offered</a></li>
-              <li><a href="/why-kubernetes">Why Kubernetes</a></li>
-              <li><a href="/customers" title="Customers">Customers</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-item">
-            <h4 class="cta__title">Resources</h4>
-            <ul class="footer-nav">
-              <li><a href="/blog">Blog</a></li>
-              <li><a href="/webinars">Webinars</a></li>
-              <li><a href="/join-webinars">Join Webinars</a></li>
-              <li><a href="https://www.cncf.io/newsroom/case-studies/" target="_blank">Case Studies</a></li>
-              <!-- <li><a href="/learn-kubernetes" target="_blank">Learn Kubernetes</a></li> -->
-            </ul>
-          </div>
-
-          <div class="footer-item">
-            <h4 class="cta__title">Social</h4>
-            <ul class="footer-nav">
-              <li><a href="https://www.linkedin.com/company/kubeify" title="linkedin" target="_blank">LinkedIn</a></li>
-              <li><a href="https://twitter.com/kubeify" target="_blank">Twitter</a></li>
-              <li><a href="https://www.youtube.com/@kubeifyk8s45/videos" target="_blank">YouTube</a></li>
-            </ul>
+          <div class="footer-badges">
+            <img src="/images/kubernetes-certified-engineers.svg" alt="kubernetes certified engineers" class="footer-badge" />
+            <img src="/images/gcp-cloud-certified-developer.png" alt="gcp cloud certified developer" class="footer-badge" />
+            <img src="/images/aws-certified-cloud-practitioner.png" alt="aws certified cloud practitioner" class="footer-badge" />
+            <img src="/images/partners/digitalocean.png" alt="digital ocean" class="footer-badge" />
+            <img src="/images/partners/docker.png" alt="docker" class="footer-badge" />
           </div>
         </div>
 
+        <div class="footer-main-content">
+          <div class="footer-item">
+            <h4>AI Cloud</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Cloud Native Product Development</a></li>
+              <li><a href="#">Cloud Native FaaS</a></li>
+              <li><a href="#">Monolith to Microservices</a></li>
+              <li><a href="#">DevSecOps as a Service</a></li>
+              <!-- <li><a href="#">Extending Kubernetes Whitepaper</a></li> -->
+              <li><a href="#">Kubernetes Zero Downtime</a></li>
+            </ul>
+            <h4 class="mt-2 pt-3">Product Engineering</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Platform Engineering Consulting</a></li>
+              <li><a href="#">Backstage Consulting</a></li>
+              <li><a href="#">Progressive Delivery</a></li>
+              <li><a href="#">CI/CD & Dev Experience</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-item">
+            <h4>Application Modernization</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Monolith to Microservices</a></li>
+              <li><a href="#">Kubernetes Consulting Services</a></li>
+              <li><a href="#">GitOps Consulting</a></li>
+              <li><a href="#">CI/CD & Dev Experience</a></li>
+              <li><a href="#">DevOps Toolchain</a></li>
+              <li><a href="#">ArgoCD Consulting</a></li>
+              <li><a href="#">Jenkins Consulting</a></li>
+              <li><a href="#">Cloud Migration Consulting</a></li>
+              <li><a href="#">FinOps Consulting</a></li>
+              <li><a href="#">vCluster Consulting</a></li>
+            </ul>
+            
+          </div>
+
+          <div class="footer-item">
+            <h4>Site Reliability Engineering</h4>
+            <ul class="footer-nav">
+              <li><a href="#">SRE Consulting</a></li>
+              <li><a href="#">Service Mesh Consulting</a></li>
+              <li><a href="#">Cloud Native Networking</a></li>
+              <li><a href="#">Istio Consulting</a></li>
+              <li><a href="#">Linkerd Consulting</a></li>
+              <li><a href="#">Tetratom Consulting</a></li>
+              <li><a href="#">Backup & Disaster Recovery</a></li>
+              <li><a href="#">Bare Metal Provisioning Consulting</a></li>
+            </ul>
+            <!-- <h4 class="mt-2 pt-3">Consulting Partners</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Razorops Partner</a></li>
+              <li><a href="#">Digital Ocean Cloud Partner</a></li>
+              <li><a href="#">e2e networks cloud</a></li>
+              <li><a href="#">IBM Cloud Partner</a></li>
+              <li><a href="#">AWS Cloud Partner</a></li>
+              <li><a href="#">GCP Cloud Partner</a></li>
+              <li><a href="#">Azure Cloud Partner</a></li>
+            </ul> -->
+          </div>
+
+          <div class="footer-item">
+            <h4>Enterprise Support</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Linkerd Support</a></li>
+              <li><a href="#">Istio Support</a></li>
+              <li><a href="#">Argo CD Support</a></li>
+              <li><a href="#">Prometheus Support</a></li>
+              <li><a href="#">Kasten K10 Support</a></li>
+            </ul>
+            <h4 class="pt-3">Observability & DevSecOps</h4>
+            <ul class="footer-nav">
+              <li><a href="#">DevSecOps Consulting</a></li>
+              <li><a href="#">Observability Consulting</a></li>
+              <li><a href="#">Grafana Consulting</a></li>
+              <li><a href="#">Prometheus Consulting</a></li>
+            </ul>
+            
+          </div>
+
+          <div class="footer-item">
+            <h4>Company</h4>
+            <ul class="footer-nav">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Mentoring Sessions</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+
+            <h4 class="pt-3">Resources</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Blogs</a></li>
+              <li><a href="#">Webinars</a></li>
+              <li><a href="#">Customers Stories</a></li>
+              <li><a href="#">CNCF Landscape Navigator</a></li>
+              <li><a href="#">Cloud Native & AI Talks</a></li>
+
+            </ul>
+            
+          </div>
+        </div>
+
+        
       </div>
     </div>
-  </div>
-  <br />
- 
-</div>
-
- <div class="lower-footer text-center py-2">
+    <div class="lower-footer text-center py-2">
     <span class="d-inline-block copyright">
-      Copyright &copy; <span id="year"></span> Kubeify (A CodeCrux Company). All Rights Reserved.
+      Copyright © <span id="year">2025</span> Kubeify (A CodeCrux Company). All Rights Reserved.
     </span>
   </div>
+    <!-- Year Updater -->
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 
-<!-- <style type="text/css">
-  .feedbackbox {
-    position: fixed;
-    top: 90vh;
-    left: 1%;
-    bottom: 0%;
-    width: 420px;
-    text-align: left;
-    z-index: 9999;
-    margin-top: -60px;
-    margin-bottom: 15px;
-    border: 1px solid #eee;
-    border-radius: 4px;
-    padding: 10px;
-    font-size: 16px;
-  }
-</style>
+    <!-- jQuery + Bootstrap (if not already included) -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/app.js"></script>
 
-<div
-  class="feedbackbox alert alert-warning alert-dismissible fade show"
-  role="alert"
->
-  <strong>Don't Miss Out!</strong>
-  <a href="/join-webinars"
-    >Managing kubernetes Manifests using Jsonnet & Tanaka</a
-  >
-  | 1st Aug, 2020, 9:30 PM – 10:30 PM, IST &nbsp;
-  <b><a href="/join-webinars">Join us !</a></b>
-</div>
- -->
+    <!-- Google Analytics (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-142118821-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-142118821-1");
+    </script>
 
+    <!-- HubSpot Embed Code -->
+    <script
+      type="text/javascript"
+      id="hs-script-loader"
+      async
+      defer
+      src="//js.hs-scripts.com/7280691.js"
+    ></script>
+  </body>
+</html>
 
-<script src="/js/jquery.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/app.js"></script>
-<script type="text/javascript">
-  $(document).ready(function () {
-    $("#year").html(new Date().getFullYear());
-  });
-</script>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142118821-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag("js", new Date());
-
-  gtag("config", "UA-142118821-1");
-</script>
-
-<!-- Start of HubSpot Embed Code -->
-<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/7280691.js"></script>
-<!-- End of HubSpot Embed Code -->
   </body>
 </html>
