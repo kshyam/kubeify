@@ -2,7 +2,7 @@
 <div id="cookieConsent" class="cookie-consent-banner">
   <button
     type="button"
-    class="btn-close"
+    class="btn-close position-absolute top-0 end-0 m-3"
     id="closeCookieBox"
     aria-label="Close"
   ></button>
@@ -17,7 +17,7 @@
       </div>
       <div class="col-sm-7">
         <h4><strong>This website uses cookies</strong></h4>
-        <p>
+        <p class="cookie-concent">
           We use cookies to personalise content and ads, to provide social media
           features and to analyse our traffic. We also share information about
           your use of our site with our social media, advertising and analytics
@@ -25,9 +25,7 @@
           provided to them or that they’ve collected from your use of their
           services.
         </p>
-        <a href="#" id="show-details" style="color: blue; font-weight: bold">
-          Show details <span>&#x276F;</span>
-        </a>
+        <a href="#" id="show-details" style="color: blue"> Show details </a>
       </div>
       <div class="col-sm-3 text-center">
         <button id="acceptCookies" class="btn btn-primary btn-lg w-100">
@@ -64,24 +62,24 @@
         ></button>
       </div>
       <div class="modal-body">
-        <p>
+        <p class="cookie-concent">
           <strong>Strictly Necessary Cookies</strong> – Essential for the
           website to function.
         </p>
-        <p>
+        <p class="cookie-concent">
           <strong>Performance Cookies</strong> – Collect info about how visitors
           use our site.
         </p>
-        <p>
+        <p class="cookie-concent">
           <strong>Functionality Cookies</strong> – Remember user choices for
           enhanced functionality.
         </p>
-        <p>
+        <p class="cookie-concent">
           <strong>Targeting/Advertising Cookies</strong> – Deliver relevant ads
           and track performance.
         </p>
         <hr />
-        <p>
+        <p class="cookie-concent">
           You can manage your preferences through browser settings or by
           contacting our support.
         </p>
@@ -103,6 +101,9 @@
 
 <!-- STYLES -->
 <style>
+  .cookie-concent {
+    font-size: 15px;
+  }
   .cookie-consent-banner {
     display: none;
     position: fixed;
