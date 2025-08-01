@@ -14,13 +14,13 @@
 <link rel="canonical" href="https://kubeify.com/join-webinars" />
 <meta property="og:url" content="https://kubeify.com/join-webinars" />
 <meta property="og:site_name" content="Kubeify" />
-<meta property="og:image" content="http://localhost:4000/images/webinars/managing-kubernetes-manifests-using-jsonnet-tanaka.jpg" />
+<meta property="og:image" content="http://0.0.0.0:4000/images/webinars/managing-kubernetes-manifests-using-jsonnet-tanaka.jpg" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="http://localhost:4000/images/webinars/managing-kubernetes-manifests-using-jsonnet-tanaka.jpg" />
+<meta property="twitter:image" content="http://0.0.0.0:4000/images/webinars/managing-kubernetes-manifests-using-jsonnet-tanaka.jpg" />
 <meta property="twitter:title" content="Join Webinars - Managing kubernetes Manifests using Jsonnet &amp; Tanaka 21st Aug, 2020, 9:30 PM – 10:30 PM, IST 9 AM - 10 AM Canada (GMT-7) 11 AM to 12 Noon CST" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Kubeify partners with DevOps leaders to provide you with the most valuable content. Check out our upcoming online webinars, meet us in person at event or Meetup, or watch one of our on-demand videos.","headline":"Join Webinars - Managing kubernetes Manifests using Jsonnet &amp; Tanaka 21st Aug, 2020, 9:30 PM – 10:30 PM, IST 9 AM - 10 AM Canada (GMT-7) 11 AM to 12 Noon CST","image":"http://localhost:4000/images/webinars/managing-kubernetes-manifests-using-jsonnet-tanaka.jpg","url":"https://kubeify.com/join-webinars"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Kubeify partners with DevOps leaders to provide you with the most valuable content. Check out our upcoming online webinars, meet us in person at event or Meetup, or watch one of our on-demand videos.","headline":"Join Webinars - Managing kubernetes Manifests using Jsonnet &amp; Tanaka 21st Aug, 2020, 9:30 PM – 10:30 PM, IST 9 AM - 10 AM Canada (GMT-7) 11 AM to 12 Noon CST","image":"http://0.0.0.0:4000/images/webinars/managing-kubernetes-manifests-using-jsonnet-tanaka.jpg","url":"https://kubeify.com/join-webinars"}</script>
 <!-- End Jekyll SEO tag -->
  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
@@ -807,7 +807,7 @@
   ></button>
   <div class="container-fluid">
     <div class="row align-items-center">
-      <div class="col-sm-2 text-center">
+      <div class="col-sm-2 text-center d-none d-md-block">
         <img
           src="/images/kubeify-logo.png"
           alt="ScaleOps Logo"
@@ -823,8 +823,18 @@
           partners who may combine it with other information that you’ve
           provided to them or that they’ve collected from your use of their
           services.
+          <a href="#" class="d-md-none" id="show-details" style="color: blue">
+            Show details
+          </a>
         </p>
-        <a href="#" id="show-details" style="color: blue"> Show details </a>
+        <a
+          href="#"
+          class="d-none d-md-block"
+          id="show-details"
+          style="color: blue"
+        >
+          Show details
+        </a>
       </div>
       <div class="col-sm-3 text-center">
         <button id="acceptCookies" class="btn btn-primary btn-lg w-100">

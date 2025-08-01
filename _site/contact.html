@@ -14,13 +14,13 @@
 <link rel="canonical" href="https://kubeify.com/contact" />
 <meta property="og:url" content="https://kubeify.com/contact" />
 <meta property="og:site_name" content="Kubeify" />
-<meta property="og:image" content="http://localhost:4000/images/about-kubeify.png" />
+<meta property="og:image" content="http://0.0.0.0:4000/images/about-kubeify.png" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="http://localhost:4000/images/about-kubeify.png" />
+<meta property="twitter:image" content="http://0.0.0.0:4000/images/about-kubeify.png" />
 <meta property="twitter:title" content="Contact Kubeify team support@kubeify.com" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Get in Touch with Kubeify - If you have any questions or need assistance in Container Native DevOps, Please feel free to reach out using the form here. We’ll be sure to respond within 4 hours.","headline":"Contact Kubeify team support@kubeify.com","image":"http://localhost:4000/images/about-kubeify.png","url":"https://kubeify.com/contact"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Get in Touch with Kubeify - If you have any questions or need assistance in Container Native DevOps, Please feel free to reach out using the form here. We’ll be sure to respond within 4 hours.","headline":"Contact Kubeify team support@kubeify.com","image":"http://0.0.0.0:4000/images/about-kubeify.png","url":"https://kubeify.com/contact"}</script>
 <!-- End Jekyll SEO tag -->
  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
@@ -792,7 +792,7 @@
   ></button>
   <div class="container-fluid">
     <div class="row align-items-center">
-      <div class="col-sm-2 text-center">
+      <div class="col-sm-2 text-center d-none d-md-block">
         <img
           src="/images/kubeify-logo.png"
           alt="ScaleOps Logo"
@@ -808,8 +808,18 @@
           partners who may combine it with other information that you’ve
           provided to them or that they’ve collected from your use of their
           services.
+          <a href="#" class="d-md-none" id="show-details" style="color: blue">
+            Show details
+          </a>
         </p>
-        <a href="#" id="show-details" style="color: blue"> Show details </a>
+        <a
+          href="#"
+          class="d-none d-md-block"
+          id="show-details"
+          style="color: blue"
+        >
+          Show details
+        </a>
       </div>
       <div class="col-sm-3 text-center">
         <button id="acceptCookies" class="btn btn-primary btn-lg w-100">

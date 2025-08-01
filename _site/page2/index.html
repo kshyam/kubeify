@@ -14,15 +14,15 @@
 <link rel="canonical" href="https://kubeify.com/" />
 <meta property="og:url" content="https://kubeify.com/" />
 <meta property="og:site_name" content="Kubeify" />
-<meta property="og:image" content="http://localhost:4000/images/kubeify.png" />
+<meta property="og:image" content="http://0.0.0.0:4000/images/kubeify.png" />
 <meta property="og:type" content="website" />
-<link rel="prev" href="http://localhost:4000/" />
-<link rel="next" href="http://localhost:4000/page3" />
+<link rel="prev" href="http://0.0.0.0:4000/" />
+<link rel="next" href="http://0.0.0.0:4000/page3" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="http://localhost:4000/images/kubeify.png" />
+<meta property="twitter:image" content="http://0.0.0.0:4000/images/kubeify.png" />
 <meta property="twitter:title" content="Get Enterprise Kubernetes support for multi cloud environments" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Accelerate your cloud native transformation and adoption of kubernetes with Kubeify’s team of experts.","headline":"Get Enterprise Kubernetes support for multi cloud environments","image":"http://localhost:4000/images/kubeify.png","url":"https://kubeify.com/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Accelerate your cloud native transformation and adoption of kubernetes with Kubeify’s team of experts.","headline":"Get Enterprise Kubernetes support for multi cloud environments","image":"http://0.0.0.0:4000/images/kubeify.png","url":"https://kubeify.com/"}</script>
 <!-- End Jekyll SEO tag -->
  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
@@ -2166,7 +2166,7 @@ Focused on Docker, Kubernetes, GitO...
   ></button>
   <div class="container-fluid">
     <div class="row align-items-center">
-      <div class="col-sm-2 text-center">
+      <div class="col-sm-2 text-center d-none d-md-block">
         <img
           src="/images/kubeify-logo.png"
           alt="ScaleOps Logo"
@@ -2182,8 +2182,18 @@ Focused on Docker, Kubernetes, GitO...
           partners who may combine it with other information that you’ve
           provided to them or that they’ve collected from your use of their
           services.
+          <a href="#" class="d-md-none" id="show-details" style="color: blue">
+            Show details
+          </a>
         </p>
-        <a href="#" id="show-details" style="color: blue"> Show details </a>
+        <a
+          href="#"
+          class="d-none d-md-block"
+          id="show-details"
+          style="color: blue"
+        >
+          Show details
+        </a>
       </div>
       <div class="col-sm-3 text-center">
         <button id="acceptCookies" class="btn btn-primary btn-lg w-100">
