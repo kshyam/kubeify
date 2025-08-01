@@ -14,13 +14,13 @@
 <link rel="canonical" href="https://kubeify.com/about" />
 <meta property="og:url" content="https://kubeify.com/about" />
 <meta property="og:site_name" content="Kubeify" />
-<meta property="og:image" content="http://localhost:4000/images/about-kubeify.png" />
+<meta property="og:image" content="http://0.0.0.0:4000/images/about-kubeify.png" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="http://localhost:4000/images/about-kubeify.png" />
+<meta property="twitter:image" content="http://0.0.0.0:4000/images/about-kubeify.png" />
 <meta property="twitter:title" content="Read about" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Kubeify helps developers and operators build, deploy, manage, and scale their applications on top of Kubernetes.","headline":"Read about","image":"http://localhost:4000/images/about-kubeify.png","url":"https://kubeify.com/about"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Kubeify helps developers and operators build, deploy, manage, and scale their applications on top of Kubernetes.","headline":"Read about","image":"http://0.0.0.0:4000/images/about-kubeify.png","url":"https://kubeify.com/about"}</script>
 <!-- End Jekyll SEO tag -->
  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
@@ -604,50 +604,164 @@
 </html>
 
     <!-- Include Modal Partial -->
-    <div
+    <!-- Modal -->
+<div
   class="modal fade"
   id="delayedModal"
   tabindex="-1"
   aria-labelledby="delayedModalLabel"
   aria-hidden="true"
 >
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-body">
-        <div class="text-center">
-          <img
-            src="/images/kubernetes-architecture.png"
-            alt="Popup Image"
-            class="img-responsive center-block"
-            style="max-width: 200px; margin-top: 15px; margin-bottom: 15px"
+  <div class="modal-dialog modal-dialog">
+    <div class="modal-content border-0 rounded-4 shadow-lg">
+      <!-- Modal Header with title and close -->
+      <div class="modal-header border-0 pb-0">
+        <h3 class="modal-title fw-bold" id="delayedModalLabel">
+          Request a Call Back
+        </h3>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <div class="modal-body p-3 pt-3">
+        <form id="contactForm">
+          <div
+            id="responseMessage"
+            class="text-success fw-semibold text-center mb-3"
+          ></div>
+
+          <div class="mb-3">
+            <label for="name" class="form-label">Full Name *</label>
+            <input
+              type="text"
+              class="form-control rounded-3"
+              id="name"
+              name="name"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Email *</label>
+            <input
+              type="email"
+              class="form-control rounded-3"
+              id="email"
+              name="email"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="phone" class="form-label"
+              >Mobile (with country code) *</label
+            >
+            <input
+              type="tel"
+              class="form-control rounded-3"
+              id="phone"
+              name="phone"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="message" class="form-label">Message *</label>
+            <textarea
+              class="form-control rounded-3"
+              id="message"
+              name="message"
+              rows="3"
+              required
+            ></textarea>
+          </div>
+
+          <!-- Hidden Inputs -->
+          <input
+            type="hidden"
+            id="lead_source"
+            name="lead_source"
+            value="jenkins-alternative"
           />
-        </div>
+          <input
+            type="hidden"
+            id="campaign_id"
+            name="campaign_id"
+            value="280"
+          />
 
-        <h4 class="fw-bold text-center">AI-Driven Kubernetes Optimization</h4>
-        <p class="fs-5 mb-4 text-center">
-          Max Performance, Min Spend, Any Cloud.
-        </p>
-
-        <div class="d-flex justify-content-center gap-3">
-          <a href="/schedule-meeting" class="btn cta-button btn-rounded"
-            >SCHEDULE MEETING</a
-          >
-        </div>
+          <button type="submit" class="btn btn-primary w-100 rounded-3 py-2">
+            Submit
+          </button>
+        </form>
       </div>
     </div>
   </div>
 </div>
+
+<!-- JavaScript -->
+<script>
+  document
+    .getElementById("contactForm")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const formData = {
+        lead: {
+          first_name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          phone: document.getElementById("phone").value,
+          linkedin_profile: document.getElementById("message").value,
+          lead_source: document.getElementById("lead_source").value,
+          campaign_id: document.getElementById("campaign_id").value,
+        },
+      };
+
+      fetch("https://app.blinkcrm.in/api/leads", {
+        method: "POST",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json; charset=utf-8",
+          api_key: "19a5c89fb2ef43c1969d00e4554ab99e",
+        },
+        body: JSON.stringify(formData),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          const messageDiv = document.getElementById("responseMessage");
+          messageDiv.textContent = "Thank you for your message!";
+          document.getElementById("contactForm").reset();
+
+          setTimeout(() => {
+            const modal = bootstrap.Modal.getInstance(
+              document.getElementById("delayedModal")
+            );
+            modal.hide();
+            messageDiv.textContent = "";
+          }, 2000);
+        })
+        .catch((error) => {
+          document.getElementById("responseMessage").textContent =
+            "Something went wrong. Please try again.";
+          console.error("Error:", error);
+        });
+    });
+</script>
  <!-- COOKIE BANNER -->
 <div id="cookieConsent" class="cookie-consent-banner">
   <button
     type="button"
-    class="btn-close"
+    class="btn-close position-absolute top-0 end-0 m-3"
     id="closeCookieBox"
     aria-label="Close"
   ></button>
   <div class="container-fluid">
     <div class="row align-items-center">
-      <div class="col-sm-2 text-center">
+      <div class="col-sm-2 text-center d-none d-md-block">
         <img
           src="/images/kubeify-logo.png"
           alt="ScaleOps Logo"
@@ -656,16 +770,24 @@
       </div>
       <div class="col-sm-7">
         <h4><strong>This website uses cookies</strong></h4>
-        <p>
+        <p class="cookie-concent">
           We use cookies to personalise content and ads, to provide social media
           features and to analyse our traffic. We also share information about
           your use of our site with our social media, advertising and analytics
           partners who may combine it with other information that you’ve
           provided to them or that they’ve collected from your use of their
           services.
+          <a href="#" class="d-md-none" id="show-details" style="color: blue">
+            Show details
+          </a>
         </p>
-        <a href="#" id="show-details" style="color: blue; font-weight: bold">
-          Show details <span>&#x276F;</span>
+        <a
+          href="#"
+          class="d-none d-md-block"
+          id="show-details"
+          style="color: blue"
+        >
+          Show details
         </a>
       </div>
       <div class="col-sm-3 text-center">
@@ -703,24 +825,24 @@
         ></button>
       </div>
       <div class="modal-body">
-        <p>
+        <p class="cookie-concent">
           <strong>Strictly Necessary Cookies</strong> – Essential for the
           website to function.
         </p>
-        <p>
+        <p class="cookie-concent">
           <strong>Performance Cookies</strong> – Collect info about how visitors
           use our site.
         </p>
-        <p>
+        <p class="cookie-concent">
           <strong>Functionality Cookies</strong> – Remember user choices for
           enhanced functionality.
         </p>
-        <p>
+        <p class="cookie-concent">
           <strong>Targeting/Advertising Cookies</strong> – Deliver relevant ads
           and track performance.
         </p>
         <hr />
-        <p>
+        <p class="cookie-concent">
           You can manage your preferences through browser settings or by
           contacting our support.
         </p>
@@ -742,6 +864,9 @@
 
 <!-- STYLES -->
 <style>
+  .cookie-concent {
+    font-size: 15px;
+  }
   .cookie-consent-banner {
     display: none;
     position: fixed;
