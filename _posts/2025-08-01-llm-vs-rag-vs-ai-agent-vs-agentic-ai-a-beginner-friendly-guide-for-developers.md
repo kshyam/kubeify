@@ -11,7 +11,7 @@ author: Shyam Mohan
 category: DevOps, MLOps, AI
 date: 2025-07-31T18:49:00.000+05:30
 ---
-# LLM vs RAG vs AI Agent vs Agentic AI: A Beginner-Friendly Guide For Developers
+
 
 Understanding the world of **LLMs, RAG, AI Agents, and Agentic AI** is essential for today’s developers, whether you’re just starting out or looking to solidify your grasp on modern AI architectures. Let’s break down each term, compare them, and show how they fit together in practical applications—and how you can learn to master them!
 
@@ -133,4 +133,7 @@ A: Check GitHub repos of LangChain or CrewAI, and YouTube tutorials for practica
 
 **Q10: How fast is this field changing?**  
 A: Extremely fast! Join forums, follow dev blogs, and stay updated—the best practices and tools evolve every month.
+
+
+
 
