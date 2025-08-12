@@ -5,21 +5,34 @@ description: Your developers enjoy the benefits of Kubernetes. We do everything 
 canonical_url: "https://kubeify.com/services"
 image: /images/services.png
 ---
-<section id="service-header">
+
+<section class="page-bg-header dark-bg">
   <div class="container">
-    <div class="row" style="row-gap: 30px;">
+    <div class="row" style="row-gap: 30px">
       <div class="col-sm-6 hero-left-side">
-        <h1 class="index-heading blue-bg">Kubernetes as a Service on Your Infrastructure</h1>
-        <p class="sub-head">Your developers enjoy the benefits of Kubernetes. We do everything else. We are your
-          Kubernetes ops team.</p>
-        <a class="btn schedule-btn" href="/schedule-meeting">Schedule Meeting</a>
+        <h1 class="index-heading blue-bg">
+          Kubernetes as a Service on Your Infrastructure
+        </h1>
+        <p class="sub-head">
+          Your developers enjoy the benefits of Kubernetes. We do everything
+          else. We are your Kubernetes ops team.
+        </p>
+        <a class="btn schedule-btn" href="/schedule-meeting"
+          >Schedule Meeting</a
+        >
       </div>
       <div class="col-sm-6">
         <div class="video-container">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/tD6v7tkp42k?rel=0"
-            title="YouTube video player" frameborder="0"
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/tD6v7tkp42k?rel=0"
+            title="YouTube video player"
+            frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          >
           </iframe>
         </div>
       </div>
@@ -27,7 +40,5 @@ image: /images/services.png
   </div>
 </section>
 
-
-{% include kubernetes-services.html %}
-{% include kubernetes-performance.html %}
+{% include kubernetes-services.html %} {% include kubernetes-performance.html %}
 {% include cta.html %}
