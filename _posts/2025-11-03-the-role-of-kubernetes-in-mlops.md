@@ -1,7 +1,7 @@
 ---
 title: The Role of Kubernetes in MLOps
 description: Machine learning (ML) has moved beyond research labs into mainstream business applications—powering recommendation engines, fraud detection, personalized healthcare, and much more.
-image: /images/blog/the-role-of-kubernetes-in-mlops.jpg
+image: /images/blog/the-role-of-kubernetes-in-mlops.webp
 layout: post
 permalink: blog/:title
 author: Pooja Reddy
