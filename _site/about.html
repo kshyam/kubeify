@@ -636,8 +636,8 @@
           We would help you to build a
           <b>fault tolerant, secure and scalable system</b> over kubernetes.
         </p>
-        <a class="btn schedule-btn" href="/schedule-meeting"
-          >Schedule Meeting</a
+        <a class="btn schedule-btn" href="/contact"
+          >Contact Us</a
         >
       </div>
       <div class="looking-details-image">
@@ -762,20 +762,18 @@
           <div class="footer-item">
             <h4>Company</h4>
             <ul class="footer-nav">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Mentoring Sessions</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li><a href="/about" alt="About Kubeify">About Us</a></li>
+              <li><a href="/join-our-team" alt="Kubeify Jobs">Join our team</a></li>
+              <li><a href="/contact" alt="Contact Kubeify">Contact Us</a></li>
             </ul>
 
             <h4 class="pt-3">Resources</h4>
             <ul class="footer-nav">
-              <li><a href="#">Blogs</a></li>
-              <li><a href="#">Webinars</a></li>
-              <li><a href="#">Customers Stories</a></li>
-              <li><a href="#">CNCF Landscape Navigator</a></li>
-              <li><a href="#">Cloud Native & AI Talks</a></li>
-
+              <li><a href="/blog" alt="Kubeify Blogs">Blogs</a></li>
+              <li><a href="/webinars" alt="Kubeify Webinars">Webinars</a></li>
+              <li><a href="/customers" alt="Kubeify Customers">Customers Stories</a></li>
+              <li><a href="https://landscape.cncf.io/" target="_blank" alt="CNCF Landscape Navigator">CNCF Landscape Navigator</a></li>
+              <li><a href="https://www.cncf.io/events/" target="_blank">Cloud Native & AI Talks</a></li>
             </ul>
             
           </div>
@@ -838,87 +836,36 @@
       <!-- Modal Header with title and close -->
       <div class="modal-header border-0 pb-0">
         <h3 class="modal-title fw-bold" id="delayedModalLabel">
-          Request a Call Back
-        </h3>
+          Cut Kubernetes Cloud Spend
+        </h3> 
         <button
           type="button"
           class="btn-close"
           data-bs-dismiss="modal"
           aria-label="Close"
         ></button>
+        
       </div>
 
       <div class="modal-body p-3 pt-3">
-        <form id="contactForm">
-          <div
-            id="responseMessage"
-            class="text-success fw-semibold text-center mb-3"
-          ></div>
+        <p>Request a callback to get a tailored cloud cost optimization 
+and Kubernetes performance plan FREE!</p>
 
-          <div class="mb-3">
-            <label for="name" class="form-label">Full Name *</label>
-            <input
-              type="text"
-              class="form-control rounded-3"
-              id="name"
-              name="name"
-              required
-            />
-          </div>
+       <style>
+        .img-frame {
+        border: none;
+        /* Optional: Add rounded corners */
+        border-radius: 8px;
+        }
+        </style>
 
-          <div class="mb-3">
-            <label for="email" class="form-label">Email *</label>
-            <input
-              type="email"
-              class="form-control rounded-3"
-              id="email"
-              name="email"
-              required
-            />
-          </div>
-
-          <div class="mb-3">
-            <label for="phone" class="form-label"
-              >Mobile (with country code) *</label
-            >
-            <input
-              type="tel"
-              class="form-control rounded-3"
-              id="phone"
-              name="phone"
-              required
-            />
-          </div>
-
-          <div class="mb-3">
-            <label for="message" class="form-label">Message *</label>
-            <textarea
-              class="form-control rounded-3"
-              id="message"
-              name="message"
-              rows="3"
-              required
-            ></textarea>
-          </div>
-
-          <!-- Hidden Inputs -->
-          <input
-            type="hidden"
-            id="lead_source"
-            name="lead_source"
-            value="jenkins-alternative"
-          />
-          <input
-            type="hidden"
-            id="campaign_id"
-            name="campaign_id"
-            value="6280"
-          />
-
-          <button type="submit" class="btn btn-primary w-100 rounded-3 py-2">
-            Submit
-          </button>
-        </form>
+        <iframe 
+        width="460" 
+        height="350" 
+        target="_parent" 
+        src="https://app.blinkcrm.in/forms/1d6c45e6-bf1f-470f-9f8f-a1da6ec3e0eb?output=embed" 
+        class="img-frame">
+        </iframe>
       </div>
     </div>
   </div>
