@@ -45,7 +45,7 @@ image: /images/kubeify.png
               >
               <h5 class="card-title mt-2">{{ post.title }}</h5>
               <p class="card-text text-muted">
-                {{ post.excerpt | strip_html | truncate: 100 }}
+                {{ post.description | strip_html | truncate: 100 }}
               </p>
               {% assign hash = post.url | size %} {% assign time = hash |
               modulo: 6 | plus: 4 %}

@@ -6,7 +6,8 @@ layout: post
 permalink: blog/:title
 author: Pooja Reddy
 category: Kubernetes
-date: 2026-1-15T10:41:00.000+05:30
+layout: post
+date: 2026-1-15T10:41:00.000+05:30 
 ---
 
 
