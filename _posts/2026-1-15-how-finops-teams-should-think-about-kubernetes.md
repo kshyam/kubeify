@@ -2,6 +2,7 @@
 title: How FinOps Teams Should Think About Kubernetes
 description: Learn how FinOps teams should approach Kubernetes, balancing cost visibility, performance, governance, and efficient cloud spending.
 image: /images/blog/how-finops-teams-should-think-about-kubernetes.webp
+layout: post
 permalink: blog/:title
 author: Pooja Reddy
 category: Kubernetes
