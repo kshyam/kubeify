@@ -1,6 +1,6 @@
 ---
 title: "Azure Cost Optimisation in 2026: New Tools, New Rules"
-description: "Azure Cost Optimisation in 2026: Explore new tools, pricing changes, governance rules, and proven strategies to reduce cloud spend without impacting performance."
+description: "Azure Cost Optimisation in 2026 Explore new tools, pricing changes, governance rules, and proven strategies to reduce cloud spend without impacting performance."
 image: "/images/blog/azure-cost-optimisation-in-2026-new-tools-new-rules.webp"
 layout: post
 permalink: /blog/:title/
