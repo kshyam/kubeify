@@ -1,7 +1,7 @@
 ---
-title: HPA vs VPA vs KEDA Performance and Cost Trade-offs Explained
-description: HPA vs VPA vs KEDA explained: understand performance behavior, scaling triggers, and cost trade-offs in Kubernetes autoscaling.
-image: /images/blog/hpa-vs-vpa-vs-keda-performance-and-cost-trade-offs-explained.webp
+title: "HPA vs VPA vs KEDA Performance and Cost Trade-offs Explained"
+description: "HPA vs VPA vs KEDA explained: understand performance behavior, scaling triggers, and cost trade-offs in Kubernetes autoscaling."
+image: "/images/blog/hpa-vs-vpa-vs-keda-performance-and-cost-trade-offs-explained.webp"
 layout: post
 permalink: blog/:title
 author: Pooja Reddy
