@@ -1,15 +1,13 @@
 ---
-title: Azure Cost Optimisation in 2026 New Tools, New Rules
-description: Azure Cost Optimisation in 2026: Explore new tools, pricing changes, governance rules, and proven strategies to reduce cloud spend without impacting performance.
-image: /images/blog/azure-cost-optimisation-in-2026-new-tools-new-rules.webp
+title: "Azure Cost Optimisation in 2026: New Tools, New Rules"
+description: "Azure Cost Optimisation in 2026: Explore new tools, pricing changes, governance rules, and proven strategies to reduce cloud spend without impacting performance."
+image: "/images/blog/azure-cost-optimisation-in-2026-new-tools-new-rules.webp"
 layout: post
-permalink: blog/:title
+permalink: /blog/:title/
 author: Pooja Reddy
 category: Kubernetes
-date: 2026-01-20T10:41:00.000+05:30
+date: 2026-01-19T10:41:00 +05:30
 ---
-
-
 
 ## Table of Contents
 
