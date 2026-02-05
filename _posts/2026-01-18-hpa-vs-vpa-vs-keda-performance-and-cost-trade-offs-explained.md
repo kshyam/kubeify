@@ -9,7 +9,6 @@ category: Kubernetes
 date: 2026-01-18T10:41:00.000+05:30
 ---
 
-
 ## Table of Contents
 
 1.  Introduction to Kubernetes Autoscaling
