@@ -11,6 +11,8 @@ github_username: kubeify
 
 # Build settings
 markdown: kramdown
+exclude:
+  - blog_automation
 paginate: 1
 # paginate_path: "/_posts/page:num/"
 
